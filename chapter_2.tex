@@ -1,0 +1,1988 @@
+\documentclass{article}
+
+% Language setting
+\usepackage[english]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UK/EU standard size
+\usepackage[a4paper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{lineno} % For line numbering
+
+\title{Summary of Zucchini’s lessons}
+\author{Marta Barbieri, Stefano Doria, Rossella Fioralli, Giuseppe Luciano}
+
+\begin{document}
+
+\maketitle
+\begin{abstract}
+    Ammetto che possa sembrare già incasinato ma così è strutturato in modo da essere cliccabile, le sezioni ci sono già l'unica cosa che dovete fare per iniziare il lavoro è scrivere nella regione che vi serve come nel miniesempio che sparirà. sarebbe bello fare tutto cliccabile ma solo se proprio ci annoiamo a morte da tutto il tempo che abbiamo a disposizione. se diventa troppo lungo probabilmente ci toccherà spezzettarlo però
+    Regole:
+    \begin{itemize}
+\item \textbf{1} 
+ si ha un tot di tempo dopo la lezione per aggiungere il riassunto così tutti possono studiare e non si accumula tutto alla fine. 
+ 
+\item \textbf{2} 
+Si ha l'obbligo di seguire, tranne causa di forza maggiore, la lezione da riassumere e si riassumono i pezzi spiegati nella specifica lezione seguendo le linee guida del prof 
+\item \textbf{3}
+Bisogna firmarsi nel capitolo riassunto così potete darmi la colpa
+\item \textbf{4}
+fare sempre prima un pull e poi un push sulla repository
+\item \textbf{5}
+altre regole?
+\end{itemize}
+   
+\end{abstract}
+
+\tableofcontents
+\section*{Quantum theory and atoms}
+\subsection*{2.1. Atomic spectra}
+
+Electromagnetic radiation normally is not monochromatic, but it is a superposition of monochromatic components. A spectrometer is an experimental device capable of detecting the presence or the absence, as the case may be, of the monochromatic component of any given wave length. Refraction spectrometers deflect the radiation associated with the different monochromatic components at different angles, making it possible to detect and record them separately rather than combined in a superposition. They so produce an image called a spectrum.
+
+Heated matter emits electromagnetic radiation, which can be analyzed with a spectrometer. Heated solids, liquids, or dense gases emit radiation whose monochromatic components have every wave length. They produce therefore a continuous spectrum, which is roughly that of black body radiation studied in sect. 1.11 (cf. fig. 2.1.1).
+
+Heated dilute gases, conversely, emit radiation whose monochromatic components have only certain wave lengths forming a discrete set of wave lengths specific of each and not shared by any other substance. The spectrum they produce is no longer a continuum, but rather it consists of a set of isolated bright spectral lines on a dark background called emission spectrum (e. g. the upper element of each pair fig. 2.1.2).
+
+When approximately black body radiation goes through a cold dilute gas, the monochromatic components of only certain wave lengths are absorbed forming again a discrete set of wave lengths specific of each and not shared by any other substance. The spectrum they produce is no longer a continuum, but rather
+
+Figure 2.1.1. Continuous black body spectrum.
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0128.jpg?height=1646&width=1421&top_left_y=513&top_left_x=322)
+Figure 2.1.2. Emission and absorption spectra of some elements in the monoatomic gas form.
+it consists of a set of isolated dark lines superimposed to a bright black body continuum called absorption spectrum. (e. g. the lower element of each pair fig. 2.1.2).
+
+Though the emission and absorption spectra vary to a considerable extent from a substance to another, the following general rule holds. For any given substance, the sets of wave lengths of the emission and absorption spectral lines coincide.
+
+For monoatomic gases, spectral lines organize in spectral series consisting in sets of lines which cumulate at certain limit virtual lines. The wave length of the radiation of each series can be described quantitatively by empirical laws.
+
+The spectral series of hydrogen are particularly simple. The wave lengths of the lines are given by the Rydberg formula (J. Rydberg, 1888)
+$$
+\begin{equation*}
+\frac{1}{\lambda_{n, m}}=R\left(\frac{1}{n^{2}}-\frac{1}{m^{2}}\right), \quad n, m=1,2,3, \ldots, \quad n<m \tag{2.1.1}
+\end{equation*}
+$$
+where $R$ is the Rydberg constant, a universal inverse length scale given by
+$$
+\begin{equation*}
+R=1.0973731568539(55) \times 10^{5} \mathrm{~cm}^{-1} \tag{2.1.2}
+\end{equation*}
+$$
+
+There is a series for each value of $n$. The series of $n=1,2,3,4,5$ and 6 are called Lyman, Balmer, Paschen, Brackett, Pfund and Humphreys series. The Lyman series lies in the ultraviolet domain, the Balmer series lies in the visible range, the other series lie in the infrared domain.
+
+An analogous pattern is observed in the spectra of sodium. The wave length of the observed lines are all given by an expression of the form
+$$
+\begin{align*}
+& \frac{1}{\lambda_{a, b ; n, m}}=R\left(\frac{1}{(n+a)^{2}}-\frac{1}{(m+b)^{2}}\right), \quad n=n_{a, b}, n_{a, b}+1, n_{a, b}+2, \ldots,  \tag{2.1.3}\\
+& m=m_{a, b}, m_{a, b}+1, m_{a, b}+2, \ldots, \quad n+a<m+b,
+\end{align*}
+$$
+for certain constants $a, b$ such that $0<a, b<1$ and non negative integers $n_{a, b}, m_{a, b}$. However, there are further restrictions. $a, b$ can take only a few values and not all the combinations of $a, b$ do occur. So, not all the lines given by (2.1.3) are actually observed. As for hydrogen, spectral line organize in series, which are defined by a fixed assignment of $a, b$ and $n=n_{a, b}$. The main ones are the principal, sharp, diffuse and Bergmann series.
+
+\subsection*{2.2. The Bohr theory}
+
+In 1913, N. H. D. Bohr devised a fundamental theoretical atomic model capable of explaining the empirical observation that the emission and absorption spectra of dilute gaseous substances exhibit a system of discrete spectral lines organized in series. Bohr's theory led to a profound overhaul of our fundamental physical principles.
+
+Bohr's theory is based on the following premises.
+(1) Electromagnetic radiation is a flux of photons each endowed with an energy $w$ related to the radiation's frequency $\omega$ according to the first PlanckEinstein relation (1.12.1).
+(2) The stationary states which an atom can be in form a discrete set of states. The values which the energy of an atom in a stationary state can take, so, form correspondingly a discrete set of energy values.
+
+We enumerate the atom's states by a quantum number $n=1,2, \ldots$ and denote the atom's energy levels by $w_{n}$, where $w_{n}<w_{m}$ for $n<m$ for convenience.
+(3) An atom can shift from a state of higher to one of lower energy by emitting a photon. Similarly, an atom can pass from a state of lower to one of higher energy by absorbing a photon. In either cases, by conservation of energy, the energy of the photon equals in magnitude the energy difference of the initial and final states.
+
+By the Planck-Einstein relation (1.12.1), if the energies of the states are $w_{n}, w_{m}$, the frequency $\omega_{n, m}$ of the photon is given by
+$$
+\begin{equation*}
+\omega_{n, m}=\left|w_{n}-w_{m}\right| / \hbar \tag{2.2.1}
+\end{equation*}
+$$
+$\omega_{n, m}$ is called the Bohr frequency of the atomic transition.
+(4) The bright lines of the emission spectrum of a monoatomic gas are produced by the photons released by the gas' atoms in the course of transitions from states of higher to others of lower energy. Similarly, the dark lines of the absorption spectrum of the gas are caused by the photons taken in by the gas' atoms during transitions from states of lower to others of higher energy.
+
+The frequency of the spectral lines, so, are precisely the Bohr frequencies. See fig. 2.2.1 for a pictorial representation of the relationship between the atomic transitions and spectral series.
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0131.jpg?height=760&width=968&top_left_y=1303&top_left_x=554)
+
+Figure 2.2.1. Schematic representation of all possible energetic transitions in a atom leading to emission. Each arrow corresponds to a spectral line. The length of the arrow is proportional to the frequency of the associated radiation. Arrows of the same color correspond to lines of the same spectral series.
+
+Bohr's theory can be tested as follows. Suppose that an atom is excited and jumps from the state of energy $w_{1}$ to one of higher energy $w_{n}$ where $n>2$. The atom can de-excite by returning to its initial state carrying out state transitions in more than one way. It can go back directly to the initial state emitting a single photon of frequency $\omega_{n, 1}$, but it can also transit through $p$ states of intermediate energies $w_{n_{1}}, \ldots, w_{n_{p}}$ with $n>n_{1}>\ldots>n_{p}>1$ emitting $p+1$ photons of frequencies $\omega_{n, n_{1}}, \ldots, \omega_{n_{p}, 1}$ in a sequence. Relation (2.2.1) implies that these frequencies satisfy the relation
+$$
+\begin{equation*}
+\omega_{n, 1}=\omega_{n, n_{1}}+\cdots+\omega_{n_{p}, 1} \tag{2.2.2}
+\end{equation*}
+$$
+
+The spectra, therefore, should contain lines whose corresponding frequencies fulfil (2.2.2). This is indeed observed and this experimental fact goes under the name of Ritz recombination principle (W. Ritz, 1908).
+
+The merit of Bohr's theory lies not so much in its capability of explaining atomic spectra in simple terms as in the fact of having discovered one of the most fundamental features of the atomic world, the quantization of energy. The atom is unlike a classical mechanical system. While a classical system can have any energy and emit or absorb arbitrarily small amounts of it, an atom can have only discrete energies and release or take in only discrete amounts of it.
+
+\subsection*{2.3. The Franck and Hertz experiment}
+
+The Franck and Hertz experiment, first carried out by J. Franck and G. L. Hertz in 1914, furnished the first experimental evidence in favour of quantization of energy at the atomic level.
+
+Franck and Hertz's experimental set-up consists a tube $T$ filled by a dilute monoatomic gas and endowed with three electrodes, a cathode $N$ kept at a fixed potential $V_{N}$, a mesh grid $G$ held at a potential $V_{G}$, which can be adjusted with a potentiometer, and an anode $P$ kept at a fixed potential $V_{P}$ (cf fig. 2.3.1). The potentials $V_{N}, V_{G}$ and $V_{P}$ are such that $V_{N}<V_{P}<V_{G}$. The cathode is heated and emits electrons by thermoionic effect. Because of the relative values of the electrodes' potentials, the electrons accelerate toward the grid, traverse its apertures and then decelerate toward the anode. Those of them which reach the anode generate a current whose intensity $I$ is recorded by an ammeter.
+
+In their path, the electrons generally collide with the atoms of the gas contained in the tube. Since the grid $G$ is placed very close to the anode $P$ and the gas is dilute, most of the collisions take place in the spacial region between the
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0133.jpg?height=589&width=1094&top_left_y=1776&top_left_x=510)
+
+Figure 2.3.1. The Franck and Hertz experimental set-up.
+cathode $N$ and the grid. Being $V_{N}<V_{P}$, if no collisons with the gas' atoms occurred, all electrons released by the cathode would be eventually captured by the anode. However, collisions do occur and because of these impacts the electrons cede part of their kinetik energy. Thus, only a part of the electrons, possibly none, eventually reach the anode. Those which do give rise to a current $I$.
+
+Let us now analyze quantitatively under which conditions an electron emitted by the cathode gets to the anode. In the absence of collisions, the kinetic energy of an electron when reaching the grid would be
+$$
+\begin{equation*}
+K_{G}=e\left(V_{G}-V_{N}\right)-A_{N} \tag{2.3.1}
+\end{equation*}
+$$
+where $e$ is the absolute value of the electron charge and $A_{N}$ is the work function of cathode, that is the energy that an electron looses when it leaves the cathode metal's attractive force field. The kinetic energy of the electron when attaining the anode would then be
+$$
+\begin{equation*}
+K_{P}=K_{G}-e\left(V_{G}-V_{P}\right)+A_{P}=e\left(V_{P}-V_{N}\right)+A_{P}-A_{N} \tag{2.3.2}
+\end{equation*}
+$$
+where $A_{P}$ is the work function of the anode, here the energy which an electron gains when it enters the anode metal's attractive force field.
+
+In the presence of collisions, however, an electron cedes a part $\Delta K$ of its kinetic energy to the atoms of the gas. Since all collisions take place in the region of space between the cathode $N$ and the grid $G$ and the kinetic energy an electrons acquires in this region when no collisions occur is $K_{G}$ (cf. eq. (2.3.1)), $\Delta K$ varies from 0 to $K_{G}$. The final kinetic energy $K$ of the electron is thus generally smaller than $K_{P}$ by the amount $\Delta K$,
+$$
+\begin{equation*}
+K=K_{P}-\Delta K \tag{2.3.3}
+\end{equation*}
+$$
+
+The electron strikes the anode only if $K \geq 0$. Being $V_{P}<V_{G}$, a negative value of $K$ indicates that the electron fails to reach the anode and is attracted back to the grid.
+
+An electron-atom collision can be either elastic or inelastic. In an elastic collision, the internal state of the atom does not change and the energy the atom receives from the electron is entirely added to the atom's kinetic energy. In an inelastic collision, instead, the internal state of the atom does change, only a part of the energy transferred from the electron to the atom increases the latter's kinetic energy, while the rest is turned into excitation energy. Since the atom is typically $10^{4}$ times heavier than the electron, the energy loss $\Delta K$ suffered by an electron in an elastic collision is quite negligible. Conversely, in an inelastic collision, $\Delta K$ can vary from 0 to its maximum value $K_{G}$.
+
+By (2.3.3), by virtue of the non negativity of the electronic kinetic energy $K$, the electrons which reach the anode $P$ and contribute to the current $I$ are those which either have undergone elastic collisions only with energy loss $\Delta K=0$ or have been involved in inelastic collisions with energy loss $\Delta K \leq K_{P}$ (cf. eq. (2.3.2)). All others do not. Hence, a sharp drop in $I$ signals a sharp increase of the fraction of inelastic events with $\Delta K>K_{P}$.
+
+The detected current $I$ is roughly an increasing function of the grid voltage $V_{G}$, since the stronger the electrostatic field of the grid is, the smaller the deflection suffered by the electrons in collisions is and, so, the larger the number of those which strike the anode gets. Direct measurement shows that the current $I$ goes through a series of maxima and minima as $V_{G}$ is varied as shown in fig. 2.3.2. The minima occur for certain values of $V_{G}$ such that
+$$
+\begin{equation*}
+\Delta V=V_{G}-V_{N}=n V_{0}, \quad n=1,2,3, \ldots \tag{2.3.4}
+\end{equation*}
+$$
+where $V_{0}$ is a characteristic voltage. If the gas filling the tube is mercury vapor, the situation historically considered by Franck and Hertz, $V_{0} \simeq 1.6 \times 10^{-2}$ statvolt $\equiv$ 4.9 volt. Since the maximum energy $K_{G}$ electrons can reach before reaching the grid grows linearly with $V_{G}$ by (2.3.1), this indicates that the gas' atoms absorb energy from the electrons in inelastic impacts only when the electrons reach certain discrete resonant energies. This is quite consistent with the basic
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0136.jpg?height=598&width=1010&top_left_y=506&top_left_x=582)
+
+Figure 2.3.2. The Franck and Hertz current $I$ as a function of the applied voltage $\Delta V=V_{G}-V_{N}$.
+assumption of Bohr's theory that an atom can take energy in amounts that are equal to the energy difference of a pair of states from a discrete set of stationary states (cf. sect. 2.2).
+
+\subsection*{2.4. The Bohr atomic model of hydrogen-like atoms}
+
+When Bohr formulated his atomic theory in 1913 to explain the discrete structure of atomic spectra (cf. sect. 2.2), he also worked out a model of the hydrogen atom. Nowadays Bohr's model is not interesting in itself, surpassed as it is by the powerful modern quantum theory, but for what it teaches us about the relationship between classical and quantum mechanics (see sect. 2.5 below).
+
+In 1909, by examining the results of his experiments on the scattering of alpha rays by gold, E. Rutherford concluded that atoms consisted of a diffuse cloud of negatively charged electrons surrounding a small, dense, positively charged nucleus. In 1911, Rutherford proposed a model of the atom, the Rutherford model, in which the electrons orbit around the nucleus much as the planets orbit around the sun. The Rutherford model, unfortunately, was plagued by deep concep-
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0137.jpg?height=633&width=640&top_left_y=1570&top_left_x=710)
+
+Figure 2.4.1. According to classical electrodynamics, an electron orbiting around a nucleus gradually looses energy by emitting electromagnetic radiation and spirals toward the nucleus.
+tual problems. Classical electrodynamics predicts that the electrons spinning around the nucleus, being accelerated, will emit electromagnetic radiation, gradually loose their energy, spiralling towards and eventually falling into the nucleus as shown in fig. 2.4.1. Rutherford's atom, so, would be unstable. Moreover, the emitted radiation would progressively increase in frequency as the electrons' orbits get smaller and their angular velocity larger. This would give rise to continuous atomic emission spectra only.
+
+To overcome this difficulty, Bohr proposed in 1913 what is now called the Bohr atomic model. Some of Bohr's hypotheses have been already illustrated in sect. 2.2. In the case of hydrogen, a more detailed quantitative theory can be formulated. Hydrogen is the simplest atom, because it has a single electron and, so, there is no need to account for the mutual electrostatic repulsion of electrons occurring in many electron atoms. Bohr's approach works also for hydrogen-like ions, atoms which have lost all electrons but one.
+
+Bohr's atomic model is an improvement of Rutherford's. A single electron of mass $m_{e}$ and charge $-e$ orbits around a nucleus of mass $m_{N}$ and charge $Z e$ and is kept bound to this latter by the attractive Coulomb force field it generates. By the
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0138.jpg?height=621&width=592&top_left_y=1755&top_left_x=734)
+
+Figure 2.4.2. The quantized circular orbits of a Bohr atom.
+central nature of the Coulomb interaction, the model is conveniently formulated in the center of mass frame, in which the relative motion of the electron with respect to the nucleus can be described as that of an electron of reduced mass
+$$
+\begin{equation*}
+m_{r}=\frac{m_{e} m_{N}}{m_{e}+m_{N}} \tag{2.4.1}
+\end{equation*}
+$$
+around a fixed nucleus of infinite mass. $m_{r}$ and $m_{e}$ differ little, but their difference is still detectable because of the precision of spectroscopic data.
+
+Bohr's model is a classical atomic model modified by a quantization condition. The basic postulates of the model are the following.
+(1) The electron's orbits are circular.
+(2) Only those orbits are allowed for which the electron's angular momentum is an integer multiple of Planck's constant $\hbar$,
+$$
+\begin{equation*}
+l_{n}=n \hbar, \quad n=1,2,3, \ldots \tag{2.4.2}
+\end{equation*}
+$$
+
+Let us first elaborate the classical aspects of the model. By assumption 1, the electron motion proceeds on a circular orbit of radius $r$ at angular velocity $\omega$. We now shall demonstrate that $r$ and $\omega$ are determined by the atom's angular momentum $l$.
+
+The angular momentum of the atom is
+$$
+\begin{equation*}
+l=m_{r} \omega r^{2} \tag{2.4.3}
+\end{equation*}
+$$
+
+Further, as the centrifugal and the attractive electrostatic forces are equal,
+$$
+\begin{equation*}
+m_{r} \omega^{2} r=\frac{Z e^{2}}{r^{2}} \tag{2.4.4}
+\end{equation*}
+$$
+
+Solving eqs. (2.4.3)-(2.4.4) for $r$ and $\omega$, we obtain
+$$
+\begin{align*}
+& r=\frac{l^{2}}{Z e^{2} m_{r}}  \tag{2.4.5}\\
+& \omega=\frac{\left(Z e^{2}\right)^{2} m_{r}}{l^{3}} \tag{2.4.6}
+\end{align*}
+$$
+
+Proof. From (2.4.3), (2.4.4), one has
+$$
+\begin{equation*}
+r=\frac{\left(m_{r} \omega r^{2}\right)^{2}}{\left(m_{r} \omega^{2} r^{3}\right) m_{r}}=\frac{l^{2}}{Z e^{2} m_{r}} \tag{2.4.7}
+\end{equation*}
+$$
+showing (2.4.5). From (2.4.3), (2.4.4) again, one has
+$$
+\begin{equation*}
+\omega=\frac{\left(m_{r} \omega^{2} r^{3}\right)^{2} m_{r}}{\left(m_{r} \omega r^{2}\right)^{3}}=\frac{\left(Z e^{2}\right)^{2} m_{r}}{l^{3}} \tag{2.4.8}
+\end{equation*}
+$$
+proving $(2.4 .6)$.
+
+The energy of the atom is given by
+$$
+\begin{equation*}
+w=\frac{1}{2} m_{r} \omega^{2} r^{2}-\frac{Z e^{2}}{r} \tag{2.4.9}
+\end{equation*}
+$$
+
+This can also be expressed in terms of $l$
+$$
+\begin{equation*}
+w=-\frac{\left(Z e^{2}\right)^{2} m_{r}}{2 l^{2}} \tag{2.4.10}
+\end{equation*}
+$$
+
+Proof. From (2.4.4), we have that
+$$
+\begin{equation*}
+\frac{1}{2} m_{r} \omega^{2} r^{2}=\frac{Z e^{2}}{2 r} \tag{2.4.11}
+\end{equation*}
+$$
+
+Inserting (2.4.11) into (2.4.9) and using (2.4.5), we find then
+$$
+\begin{equation*}
+w=-\frac{Z e^{2}}{2 r}=-\frac{Z e^{2}}{2} \frac{Z e^{2} m_{r}}{l^{2}}=-\frac{\left(Z e^{2}\right)^{2} m_{r}}{2 l^{2}} \tag{2.4.12}
+\end{equation*}
+$$
+showing (2.4.10).
+
+To proceed next to the quantum theory, we have to take the quantization condition (2.4.2) of assumption 2 into account. The quantization of $l$ determines the quantization of all the quantities that are functions of $l$ such as $r, \omega$ and $w$. Setting $l=l_{n}$ into (2.4.5) and (2.4.6), we obtain the radius $r_{n}$ of the orbit
+$$
+\begin{equation*}
+r_{n}=\frac{\hbar^{2} n^{2}}{Z e^{2} m_{r}} \tag{2.4.13}
+\end{equation*}
+$$
+and angular velocity $\omega_{n}$ of the motion
+$$
+\begin{equation*}
+\omega_{n}=\frac{\left(Z e^{2}\right)^{2} m_{r}}{\hbar^{3} n^{3}} \tag{2.4.14}
+\end{equation*}
+$$
+
+Similarly, putting $l=l_{n}$ into (2.4.10), we get the atomic energy
+$$
+\begin{equation*}
+w_{n}=-\frac{\left(Z e^{2}\right)^{2} m_{r}}{2 \hbar^{2} n^{2}} \tag{2.4.15}
+\end{equation*}
+$$
+
+Like $l, r, \omega$ and $w$ are quantized. The quantization is encoded in the integer $n$, which is called a principal quantum number.
+
+Bohr's model predicts the existence of a fundamental atomic length scale, the Bohr radius, given by
+$$
+\begin{equation*}
+r_{B}=\frac{\hbar^{2}}{e^{2} m_{e}}=5.2917721092(17) \times 10^{-9} \mathrm{~cm} \tag{2.4.16}
+\end{equation*}
+$$
+
+It also finds that the strength of the atomic electromagnetic interaction is set by the fine structure constant
+$$
+\begin{equation*}
+\alpha=\frac{e^{2}}{\hbar c}=7.2973525698(24) \times 10^{-3}=1 / 137.035999074(44) \tag{2.4.17}
+\end{equation*}
+$$
+
+In terms of these, the orbital radius $r_{n}$, the rotation angular velocity $\omega_{n}$ are
+$$
+\begin{align*}
+& r_{n}=\frac{\gamma r_{B} n^{2}}{Z}  \tag{2.4.18}\\
+& \omega_{n}=\frac{m_{e} c^{2} \alpha^{2} Z^{2}}{\gamma \hbar n^{3}} \tag{2.4.19}
+\end{align*}
+$$
+while the energy $w_{n}$ are given by
+$$
+\begin{equation*}
+w_{n}=-\frac{m_{e} c^{2} \alpha^{2} Z^{2}}{2 \gamma n^{2}} \tag{2.4.20}
+\end{equation*}
+$$
+where we have set
+$$
+\begin{equation*}
+\gamma=m_{e} / m_{r}=1+m_{e} / m_{N} \tag{2.4.21}
+\end{equation*}
+$$
+$\gamma$ is very close to 1 . For hydrogen, $\gamma-1=.00054461702178 \ldots$ For heavier hydrogen-like ions, $\gamma-1$ is even smaller.
+
+For hydrogen, substituting formula (2.4.20) into relation (2.2.1), we recover the spectroscopic formula (2.1.1) with the Rydberg constant given by
+$$
+\begin{equation*}
+R=\frac{m_{e} c \alpha^{2}}{4 \pi \gamma \hbar} \tag{2.4.22}
+\end{equation*}
+$$
+
+The numerical evaluation of the right hand side of (2.4.22) furnishes a value of $R$ in excellent agreement with the experimental value (2.1.2).
+
+\subsection*{2.5. The correspondence principle}
+
+Bohr's atomic theory assumes the validity of classical mechanics in that it postulates that the electron spins around the nucleus along an orbit determined by the classical mechanical laws. But is also hypothesises that not all the classically possible orbits are realized at the atomic level. The ones which actually occur are determined by the quantization condition (2.4.2), which has no grounding in classical theory and is ultimately justified only by the agreement of the predictions which it leads to with experimental evidence.
+
+The success of Bohr's model shows that the quantum mechanics governing the atomic world is not like the classical mechanics controlling the macroscopic one, but it is also not completely different from it. However,
+quantum physics must agree with classical physics in the conditions under which this latter is known to provide an accurate description of physical phenomena.
+
+This is the correspondence principle formulated by N. H. D. Bohr in 1923. It furnishes at the same time a method of constructing quantum theory and a way of checking its consistency. Its applicability is completely general.
+
+One can invoke the correspondence principle to test the Bohr model itself. It is known that classical mechanics describes quite well the large scale motion of atoms and molecules. Therefore, the model should reproduce the results of classical theory in the limit of a large electron orbit.
+
+In classical electrodynamics, an electric charge carrying out a periodic motion of period $\tau_{0}$ radiates electromagnetic radiation whose monochromatic components have angular frequencies which are integer multiples of the fundamental frequency $\omega_{0}=2 \pi / \tau_{0}$. We thus have to check whether this is the case, when the electron emits radiation passing from a large orbit to a nearby smaller one.
+
+By (2.4.5), the orbit is large when the quantum number $n$ is. We thus suppose that $n \gg 1$. For a transition $n+\Delta n \rightarrow n$, where $0<\Delta n \ll n$, the emitted radiation has angular frequency $\omega_{n+\Delta n, n}$ is given by
+$$
+\begin{equation*}
+\omega_{n+\Delta n, n} \simeq \omega_{n} \Delta n \tag{2.5.1}
+\end{equation*}
+$$
+where $\omega_{n}$ is the electron angular velocity given by (2.4.14).
+
+Proof. By substituting the expression (2.4.15) of the energy levels $w_{n}$ into Bohr's formula (2.2.1), we get
+$$
+\begin{align*}
+\omega_{n+\Delta n, n} & =\hbar^{-1}\left(w_{n+\Delta n}-w_{n}\right)  \tag{2.5.2}\\
+& =-\frac{\left(Z e^{2}\right)^{2} m_{r}}{2 \hbar^{3}}\left(\frac{1}{(n+\Delta n)^{2}}-\frac{1}{n^{2}}\right) \simeq \frac{\left(Z e^{2}\right)^{2} m_{r}}{\hbar^{3} n^{3}} \Delta n=\omega_{n} \Delta n
+\end{align*}
+$$
+as claimed.
+
+We note that the motion of the electron on the orbit, having angular velocity $\omega_{n}$, is periodic of period $\tau_{0}=2 \pi / \omega_{n}$ and, so, the fundamental frequency is $\omega_{0}=\omega_{n}$. (2.5.1) shows that, as predicted by classical electrodynamics, the monochromatic components of the radiation emitted by the atom have angular frequencies which are integer multiples of a fundamental frequency, here $\omega_{n}$, as required by the correspondence principle.
+
+The above findings constitute a an instance of a general fact.
+A quantum system behaves as a classical one in the limit of large quantum numbers.
+
+\subsection*{2.6. Adiabatic invariants and Wilson-Sommerfeld quantization}
+
+The quantization conditions of atomic angular momentum (2.4.2) hypothesized by Bohr is the key to the success of his model, as it leads to the quantization of atomic energy. These findings indicate that certain physical quantities are fundamentally quantized. The problem arises about how to identify them.
+
+In 1916, P. Ehrenfest proposed the following theory. A quantized quantity can assume only discrete values. So, when it changes its value, it does so by finite amounts. Under an infinitesimal change of the external conditions, the value of any quantity can change at most infinitesimally. The values of quantized quantities, so, being capable of varying only by finite amounts, must remain unaltered. It follows that the quantized quantities must correspond to those classical quantities which remain invariant in value under very slow change of external conditions. Quantities with this property are called adiabatic invariants.
+
+Not all mechanical systems possess adiabatic invariants. The mechanical systems considered in atomic physics, however, are often separable and multiperiodic. For such systems, adiabatic invariants can be shown to exist. We shall now analyze this issue in detail.
+
+In Hamilton theory, the dynamical states of a mechanical system with $f$ degrees of freedom form a phase space described by $2 f$ canonical variables $q_{i}, p_{i}$. The dynamics of the system, the time evolution of its dynamical state, is governed by the Hamiltonian function $H(q, p)$ through the Hamilton equations
+$$
+\begin{align*}
+& \frac{d q_{i}}{d t}=\frac{\partial H(q, p)}{\partial p_{i}}  \tag{2.6.1a}\\
+& \frac{d p_{i}}{d t}=-\frac{\partial H(q, p)}{\partial q_{i}} \tag{2.6.1b}
+\end{align*}
+$$
+
+Since the (2.6.1) constitute a set of $2 f$ first order ordinary differential equations, their general solution is a family of phase trajectories parametrized by $2 f$ integration constants $q^{0}{ }_{i}, p^{0}{ }_{i}$,
+$$
+\begin{align*}
+& q_{i}(t)=q_{i}\left(t ; q^{0}, p^{0}\right)  \tag{2.6.2a}\\
+& p_{i}(t)=p_{i}\left(t ; q^{0}, p^{0}\right) \tag{2.6.2~b}
+\end{align*}
+$$
+
+In Hamilton-Jacobi theory, the general solution of the (2.6.1) is codified in the Hamilton characteristic function $A$, which is defined as the complete integral of the Hamilton-Jacobi equation
+$$
+\begin{equation*}
+H\left(q, \frac{\partial A}{\partial q}\right)=w \tag{2.6.3}
+\end{equation*}
+$$
+with $w$ is an energy parameter. Mathematically, the complete integral is a function $A(q, \alpha)$ of the $q_{i}$ depending on $f$ arbitrary integration constants $\alpha_{i}$ satisfying (2.6.3) with the energy parameter $w$ equal to a certain function $w(\alpha)$ of the $\alpha_{i}$. The determination of the general solution of the Hamilton equations now proceeds as follows. The characteristic function $A$ acts as the generating function of a canonical transformation $q_{i}, p_{i} \leftrightarrow \beta_{i}, \alpha_{i}$ implicitly given by
+$$
+\begin{align*}
+& p_{i}=\frac{\partial A(q, \alpha)}{\partial q_{i}}  \tag{2.6.4a}\\
+& \beta_{i}=\frac{\partial A(q, \alpha)}{\partial \alpha_{i}} \tag{2.6.4~b}
+\end{align*}
+$$
+seen as equations which can be solved either to express the $\beta_{i}, \alpha_{i}$ as functions of the $q_{i}, p_{i}$ or viceversa. The Hamiltonian of the new canonical variables $H(\beta, \alpha)$ equals that of the old variables $H(q, p)$ expressed in terms of the new ones,
+$$
+\begin{equation*}
+H(\beta, \alpha)=H(q, p) \tag{2.6.5}
+\end{equation*}
+$$
+
+The Hamilton-Jacobi equation and relation (2.6.4a) imply then that
+$$
+\begin{equation*}
+H(\beta, \alpha)=w(\alpha) \tag{2.6.6}
+\end{equation*}
+$$
+$H(\beta, \alpha)$ thus does not depend on the new canonical coordinates $\beta_{i}$. The Hamilton equations for the new variables thus take the simple form
+$$
+\begin{equation*}
+\frac{d \beta_{i}}{d t}=\frac{\partial H(\beta, \alpha)}{\partial \alpha_{i}}=\kappa_{i}(\alpha) \tag{2.6.7a}
+\end{equation*}
+$$
+$$
+\begin{equation*}
+\frac{d \alpha_{i}}{d t}=-\frac{\partial H(\beta, \alpha)}{\partial \beta_{i}}=0 \tag{2.6.7b}
+\end{equation*}
+$$
+where $\kappa_{i}(\alpha)$ is given by
+$$
+\begin{equation*}
+\kappa_{i}(\alpha)=\frac{\partial w(\alpha)}{\partial \alpha_{i}} \tag{2.6.8}
+\end{equation*}
+$$
+
+The general solution of the (2.6.7) is immediately found to be
+$$
+\begin{align*}
+& \beta_{i}(t)=\kappa_{i}\left(\alpha^{0}\right) t+\beta_{i}^{0}  \tag{2.6.9a}\\
+& \alpha_{i}(t)=\alpha^{0} \tag{2.6.9b}
+\end{align*}
+$$
+the $\beta^{0}{ }_{i}, \alpha_{i}^{0}$ being $2 f$ arbitrary constants. The general solution $q_{i}(t), p_{i}(t)$ of the old Hamilton equation (2.6.1) can now be obtained from the general solution $\beta_{i}(t), \alpha_{i}(t)$ just obtained by expressing the $q_{i}(t), p_{i}(t)$ in terms of the $\beta_{i}(t), \alpha_{i}(t)$ using the relations (2.6.4).
+
+By virtue of $(2.6 .9 \mathrm{~b})$, the values of the $\alpha_{i}$ remain constant during the time evolution of the system. Therefore, the new momenta $\alpha_{i}$ are integrals of motion. They are called primary first integrals in what follows. Each phase trajectory $(q(t), p(t))$ of the system is characterized by the constant values of the primary first integral $\alpha_{i}$ have on it. Such values are obtained by expressing the $\alpha_{i}$ in terms of the $q_{i}, p_{i}$ using (2.6.4a).
+
+Since the old and new canonical variables must obey relations (2.6.4) defining implicitly their relationship, the coordinate and momenta $q_{i}(t), p_{i}(t)$ of a phase trajectory characterized by values $\alpha_{i}$ of the primary first integrals satisfy relation (2.6.4a) identically in $t$. Therefore, the trajectory lies on the $f$-dimensional hypersurface $T(\alpha)$ defined by the $f$ constraints
+$$
+\begin{equation*}
+p_{i}=\frac{\partial A(q, \alpha)}{\partial q_{i}} \tag{2.6.10}
+\end{equation*}
+$$
+$T(\alpha)$ is called invariant surface, because the evolving phase of the system cannot depart from it. Since eq. (2.6.4a) also gives implicitly the primary first integrals as functions of the old variables $q_{i}, p_{i}, T(\alpha)$ is just the hypersurface in phase
+space, where the first integrals have the indicated values. By the HamiltonJacobi equation (2.6.3), on $T(\alpha)$ we have further
+$$
+\begin{equation*}
+H(q, p)=w(\alpha) \tag{2.6.11}
+\end{equation*}
+$$
+as required by energy conservation. In this way, Hamilton-Jacobi theory describes the system's phase trajectories from a geometrical and topological point of view.
+
+In general, the determination of the Hamilton characteristic function $A$ by solving the Hamilton-Jacobi equation (2.6.3) is as difficult a problem as the integration of the Hamilton equations (2.6.1). In certain cases, however, (2.6.3) can be solved relatively easily by separation of variables. The system is separable if there is a choice of the canonical variables $q_{i}, p_{i}$ such that the characteristic function $A$ has the form
+$$
+\begin{equation*}
+A(q, \alpha)=\sum_{i} A_{i}\left(q_{i}, \alpha\right) \tag{2.6.12}
+\end{equation*}
+$$
+where each $A_{i}$ satisfies an equation of the form
+$$
+\begin{equation*}
+H_{i}\left(q_{i}, \frac{\partial A_{i}}{\partial q_{i}} ; \alpha\right)=\alpha_{i} \tag{2.6.13}
+\end{equation*}
+$$
+by virtue of the Hamilton-Jacobi equation (2.6.3). In this way, this latter, which is a first order partial differential equation in the $f$ variables $q$, has been reduced to a set of $f$ equations, the $i-$ th of which is just a first order ordinary differential equation in the variable $q_{i}$ only. Notice that the separability of the system is not an accidental albeit computationally advantageous mathematical property of the Hamilton-Jacobi equation, but it reflects basic physically relevant symmetry properties of the system considered.
+
+By the decomposition (2.6.12), in a separable system the constraints (2.6.10) defining the invariant surface $T(\alpha)$ take the form
+$$
+\begin{equation*}
+p_{i}=\frac{\partial A_{i}\left(q_{i}, \alpha\right)}{\partial q_{i}} \tag{2.6.14}
+\end{equation*}
+$$
+
+For each $i$, therefore, the pair $\left(q_{i}, p_{i}\right)$ with $p_{i}$ given by (2.6.14) belongs by virtue of (2.6.13) to the locus $C_{i}(\alpha)$ of the points of the phase space plane $q_{i}, p_{i}$ satisfying
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0149.jpg?height=405&width=614&top_left_y=562&top_left_x=731)
+
+Figure 2.6.1. The invariant torus $T\left(\alpha_{1}, \alpha_{2}\right)$ for $f=2$.
+the condition
+$$
+\begin{equation*}
+H_{i}\left(q_{i}, p_{i} ; \alpha\right)=\alpha_{i} \tag{2.6.15}
+\end{equation*}
+$$
+$C_{i}(\alpha)$ is clearly a curve in the $q_{i}, p_{i}$ phase plane. The system is said multiperiodic if the curves $C_{i}(\alpha)$ are closed for all $i$. In such case, the invariant hypersurface $T(\alpha)$ is topologically the Cartesian product of the circles $C_{i}(\alpha)$, thus an $f$ dimensional hypertorus. In this case, so, the invariant surface is called invariant torus. The toroidal topology is shown in fig. 2.6.1.
+
+From now on, we concentrate on separable and multiperiodic systems. It is important to have a physical intuition of what is distinctive in systems of this kind. Mechanical systems can be classified according to the recurrence properties of their phase space trajectories. In a separable and multiperiodic system, the projections $\left(q_{i}(t), p_{i}(t)\right)$ of a trajectory $(q(t), p(t))$ characterized by the values $\alpha$ of the primary first integrals on the $f$ phase space planes $q_{i}, p_{i}$ satisfy equation (2.6.14) and therefore are contained in the closed curves $C_{i}(\alpha)$. Consequently, the $\left(q_{i}(t), p_{i}(t)\right)$ are all periodic, that is $q_{i}\left(t+\tau_{i}\right)=q_{i}(t), p_{i}\left(t+\tau_{i}\right)=p_{i}(t)$ for minimal times $\tau_{i}>0$, called periods of the trajectory, which are functions of the first integrals $\alpha$. Notice that the motion of the system as a whole is not periodic and consequently the trajectory $(q(t), p(t))$ fills densely the invariant torus $T(\alpha)$ unless the ratios of the $\tau_{i}$ are all rational, as shown in fig. 2.6.2.
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0150.jpg?height=617&width=1184&top_left_y=518&top_left_x=446)
+
+Figure 2.6.2. Configuration space trajectory of a multiperiodic system with 2 degrees of freedom and periods $\tau_{1}, \tau_{2}$. In $a, \tau_{1} / \tau_{2}=$ .8 is rational and the trajectory is a closed Lissajous curve; in $b$, $\tau_{1} / \tau_{2}=.8149 \ldots$ is irrational and the trajectory is an open curve.
+
+The set of the new canonical variables $\beta_{i}, \alpha_{i}$ depends on the choice of the parametrization of the Hamilton characteristic function $A$ in terms of the new momenta $\alpha_{i}$, which is not unique. From a mathematical point of view there are indeed infinitely many such parametrizations, but from a physical point of view only a few of them are such that the primary first integrals $\alpha_{i}$ can be identified with relevant conserved quantities. There is no general method for selecting a physically meaningful parametrization. The issue must be examined on a case by case basis.
+
+For a separable and multiperiodic system, there is however a distinguished choice of the new canonical variables, the angle-action variables $Z_{i}, J_{i}$, which we introduce next.
+
+Since the curves $C_{i}(\alpha)$ are closed, we can endow them with an orientation, say the clockwise one. In this way, the $C_{i}(\alpha)$ become cycles. As such, the $C_{i}(\alpha)$ bound regions $D_{i}(\alpha)$ of their respective phase space planes. The geometry is shown in fig. 2.6.3.
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0151.jpg?height=573&width=874&top_left_y=532&top_left_x=601)
+
+Figure 2.6.3. Pictorial representation of the cycle $C_{i}(\alpha)$.
+The action variables $J_{i}$ are defined to be the line integrals
+$$
+\begin{equation*}
+J_{i}(\alpha)=\frac{1}{2 \pi} \oint_{C_{i}(\alpha)} p_{i} d q_{i}=\frac{1}{2 \pi} \int_{D_{i}(\alpha)} d p_{i} d q_{i} \tag{2.6.16}
+\end{equation*}
+$$
+
+The equality of the two expressions follows from Stokes' theorem. The $J_{i}$ are generically independent functions of the $\alpha_{i}$, which can be inverted furnishing $\alpha_{i}$ as independent functions of $J_{i}$. The characteristic function $A$ can then be expressed in function of the $q_{i}$ and the $J_{i}$,
+$$
+\begin{equation*}
+A(q, J)=A(q, \alpha) \tag{2.6.17}
+\end{equation*}
+$$
+
+Proceeding in this way, the role of the new canonical momenta $\alpha_{i}$ can be taken by the action variables $J_{i}$ and that of the new canonical coordinates $\beta_{i}$ by their canonical conjugate angle variables $Z_{i}$ defined in accordance with (2.6.4b) by
+$$
+\begin{equation*}
+Z_{i}=\frac{\partial A(q, J)}{\partial J_{i}} \tag{2.6.18}
+\end{equation*}
+$$
+
+The general analysis carried out above then tells us that the Hamiltonian $H(Z ; J)$ with respect to the angle-action variables is energy expressed as a function $w(J)$ of the $J_{i}$ only,
+$$
+\begin{equation*}
+H(Z, J)=w(J) \tag{2.6.19}
+\end{equation*}
+$$
+
+In accordance with (2.6.8), (2.6.9), integration of the associated Hamilton equations then yields
+$$
+\begin{align*}
+Z_{i}(t) & =\omega_{i}\left(J^{0}\right) t+Z_{i}^{0}  \tag{2.6.20a}\\
+J_{i}(t) & ={J^{0}}_{i} \tag{2.6.20b}
+\end{align*}
+$$
+where the $Z^{0}{ }_{i}, J^{0}{ }_{i}$ are $2 f$ arbitrary constants and
+$$
+\begin{equation*}
+\omega_{i}(J)=\frac{\partial w(J)}{\partial J_{i}} \tag{2.6.21}
+\end{equation*}
+$$
+
+As the $\alpha_{i}$, the $J_{i}$ are integrals of motion called secondary first integrals.
+From combining (2.6.14), (2.6.16), we find
+$$
+\begin{equation*}
+J_{i}(\alpha)=\frac{1}{2 \pi} \oint_{C_{i}(\alpha)} \frac{\partial A_{i}\left(q_{i}, \alpha\right)}{\partial q_{i}} d q_{i} \tag{2.6.22}
+\end{equation*}
+$$
+
+Since $C_{i}(\alpha)$ is a cycle, this integral vanishes identically if $A_{i}$ is a singlevalued function of $q_{i}$. Therefore, by consistency, the characteristic function $A$ must be a multivalued function. It is indeed and the reason for this is not difficult to see. The derivatives $\partial A_{i} / \partial q_{i}$ solve the equations (2.6.13), which, because of the quadratic nature of kinetic energy in momenta, are typically degree 2 algebraic equations with two distinct solutions.
+
+Computationally, the angle-action variables $Z_{i}, J_{i}$ are more or less as good as the variables $\beta_{i}, \alpha_{i}$. Their importance stems from their physical interpretation, to which we now turn. This will lead us to the identification of the adiabatic invariants relevant in the problem of quantization according to Ehrenfest.
+
+The angle variables $Z_{i}$ are not single valued. The variation $\Delta_{C_{i}(\alpha)} Z_{j}$ of $Z_{j}$ along the cycle $C_{i}(\alpha)$ of the invariant torus $T(\alpha)$ is
+$$
+\begin{equation*}
+\Delta_{C_{i}(\alpha)} Z_{j}=2 \pi \delta_{i j} \tag{2.6.23}
+\end{equation*}
+$$
+
+Proof. Since the proof is rather lengthy, we shall divide it in a few steps for clarity.
+
+Step 1. Let us show that
+$$
+\begin{equation*}
+\frac{\partial J_{i}(\alpha)}{\partial \alpha_{j}}=\frac{1}{2 \pi} \oint_{C_{i}(\alpha)} \frac{\partial^{2} A_{i}\left(q_{i}, \alpha\right)}{\partial q_{i} \partial \alpha_{j}} d q_{i} \tag{2.6.24}
+\end{equation*}
+$$
+
+By (2.6.16), the variation $\delta J_{i}(\alpha)$ of $J_{i}(\alpha)$ is given by
+$$
+\begin{equation*}
+\delta J_{i}(\alpha)=J_{i}(\alpha+\delta \alpha)-J_{i}(\alpha)=\frac{1}{2 \pi}\left[\oint_{C_{i}(\alpha+\delta \alpha)} p_{i} d q_{i}-\oint_{C_{i}(\alpha)} p_{i} d q_{i}\right] \tag{2.6.25}
+\end{equation*}
+$$
+
+Integrating the differential $p_{i} d q_{i}$ on the varied cycle $C_{i}(\alpha+\delta \alpha)$ is equivalent to integrating a suitably varied differential $\left(p_{i}+\delta p_{i}\right) d\left(q_{i}+\delta q_{i}\right)$ on the cycle $C_{i}(\alpha)$, as shown in fig. 2.6.4. In this way, (2.6.25) can be written as
+$$
+\begin{align*}
+\delta J_{i}(\alpha)=\frac{1}{2 \pi} & {\left[\oint_{C_{i}(\alpha)}\left(p_{i}+\delta p_{i}\right) d\left(q_{i}+\delta q_{i}\right)-\oint_{C_{i}(\alpha)} p_{i} d q_{i}\right] }  \tag{2.6.26}\\
+& =\frac{1}{2 \pi} \oint_{C_{i}(\alpha)}\left(\delta p_{i} d q_{i}+p_{i} d \delta q_{i}\right)=\frac{1}{2 \pi} \oint_{C_{i}(\alpha)}\left(\delta p_{i} d q_{i}-\delta q_{i} d p_{i}\right) .
+\end{align*}
+$$
+
+As integration is extended to $C_{i}(\alpha), q_{i}, p_{i}$ satisfy the constraint (2.6.15). Their differentials $d q_{i}, d p_{i}$ obey so the linear relation $\partial H_{i} / \partial q_{i}\left(q_{i}, p_{i}, \alpha\right) d q_{i}+\partial H_{i} / \partial p_{i}\left(q_{i}, p_{i}, \alpha\right) d p_{i}=0$, It follows then that, along $C_{i}(\alpha)$,
+$$
+\begin{equation*}
+d p_{i}=-\left[\frac{\partial H_{i}\left(q_{i}, p_{i}, \alpha\right)}{\partial q_{i}} / \frac{\partial H_{i}\left(q_{i}, p_{i}, \alpha\right)}{\partial p_{i}}\right] d q_{i} \tag{2.6.27}
+\end{equation*}
+$$
+
+Substituting (2.6.27) into (2.6.26), we get then
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0153.jpg?height=579&width=871&top_left_y=1738&top_left_x=603)
+
+Figure 2.6.4. Pictorial representation of the variations $\delta q_{i}, \delta p_{i}$.
+$$
+\begin{align*}
+& \delta J_{i}(\alpha)=\frac{1}{2 \pi} \oint_{C_{i}(\alpha)}\left[\frac{\partial H_{i}\left(q_{i}, p_{i}, \alpha\right)}{\partial q_{i}} \delta q_{i}\right.  \tag{2.6.28}\\
+& \left.+\frac{\partial H_{i}\left(q_{i}, p_{i}, \alpha\right)}{\partial p_{i}} \delta p_{i}\right] d q_{i} / \frac{\partial H_{i}\left(q_{i}, p_{i}, \alpha\right)}{\partial p_{i}} .
+\end{align*}
+$$
+
+Next, we expand of this expression to first order in the variations $\delta \alpha_{k}$.
+The variations $\delta q_{i}, \delta p_{i}$ of are not uniquely determined by the condition by which they were defined, but must obey a certain variational relation. Since the coordinates $q_{i}+\delta q_{i}, p_{i}+\delta p_{i}$ and $q_{i}, p_{i}$ of $C_{i}(\alpha+\delta \alpha)$ and $C_{i}(\alpha)$ satisfy the appropriate version of condition (2.6.15), namely $H_{i}\left(q_{i}+\delta q_{i}, p_{i}+\delta p_{i} ; \alpha+\delta \alpha\right)=\alpha_{i}+\delta \alpha_{i}$ and $H_{i}\left(q_{i}, p_{i} ; \alpha\right)=\alpha_{i}$ respectively, we have
+$$
+\begin{equation*}
+\frac{\partial H_{i}\left(q_{i}, p_{i}, \alpha\right)}{\partial q_{i}} \delta q_{i}+\frac{\partial H_{i}\left(q_{i}, p_{i}, \alpha\right)}{\partial p_{i}} \delta p_{i}=\delta \alpha_{i}-\sum_{j} \frac{\partial H_{i}\left(q_{i}, p_{i}, \alpha\right)}{\partial \alpha_{j}} \delta \alpha_{j} \tag{2.6.29}
+\end{equation*}
+$$
+as is straightforwardly shown. Expanding to first order in the variations, we obtain (2.6.29) readily. Varying instead relation (2.6.13), that is $H_{i}\left(q_{i}, \partial A_{i} / \partial q_{i} ; \alpha\right)=\alpha_{i}$, with respect to $\alpha$ at fixed $q_{i}$ we get
+$$
+\begin{equation*}
+\frac{\partial H_{i}\left(q_{i}, p_{i}, \alpha\right)}{\partial p_{i}} \sum_{j} \frac{\partial^{2} A_{i}\left(q_{i}, \alpha\right)}{\partial q_{i} \partial \alpha_{j}} \delta \alpha_{j}=\delta \alpha_{i}-\sum_{j} \frac{\partial H_{i}\left(q_{i}, p_{i}, \alpha\right)}{\partial \alpha_{j}} \delta \alpha_{j} . \tag{2.6.30}
+\end{equation*}
+$$
+
+Combining (2.6.29), (2.6.30), we obtain
+$$
+\begin{equation*}
+\frac{\partial H_{i}\left(q_{i}, p_{i}, \alpha\right)}{\partial q_{i}} \delta q_{i}+\frac{\partial H_{i}\left(q_{i}, p_{i}, \alpha\right)}{\partial p_{i}} \delta p_{i}=\frac{\partial H_{i}\left(q_{i}, p_{i}, \alpha\right)}{\partial p_{i}} \sum_{j} \frac{\partial^{2} A_{i}\left(q_{i}, \alpha\right)}{\partial q_{i} \partial \alpha_{j}} \delta \alpha_{j} \tag{2.6.31}
+\end{equation*}
+$$
+
+Substituting (2.6.29) into (2.6.28), we get
+$$
+\begin{equation*}
+\delta J_{i}(\alpha)=\frac{1}{2 \pi} \oint_{C_{i}(\alpha)} \sum_{j} \frac{\partial^{2} A_{i}\left(q_{i}, \alpha\right)}{\partial q_{i} \partial \alpha_{j}} d q_{i} \delta \alpha_{j} \tag{2.6.32}
+\end{equation*}
+$$
+from which (2.6.24) follows.
+Step 2. Let us show that the variation of $\beta_{j}$ along $C_{i}(\alpha)$ is given by
+$$
+\begin{equation*}
+\Delta_{C_{i}(\alpha)} \beta_{j}=\oint_{C_{i}(\alpha)} \frac{\partial^{2} A_{i}\left(q_{i}, \alpha\right)}{\partial q_{i} \partial \alpha_{j}} d q_{i} \tag{2.6.33}
+\end{equation*}
+$$
+
+The variation $\Delta_{C_{i}(\alpha)} \beta_{j}$ of $\beta_{j}$ along the cycle $C_{i}(\alpha)$ is given by
+$$
+\begin{equation*}
+\Delta_{C_{i}(\alpha)} \beta_{j}=\oint_{C_{i}(\alpha)}\left[\frac{\partial \beta_{j}(q, p)}{\partial q_{i}} d q_{i}+\frac{\partial \beta_{j}(q, p)}{\partial p_{i}} d p_{i}\right] \tag{2.6.34}
+\end{equation*}
+$$
+
+Since $p_{i}$ is given by (2.6.14) along $C_{i}(\alpha)$, we have
+$$
+\begin{equation*}
+d p_{i}=\frac{\partial^{2} A_{i}\left(q_{i}, \alpha\right)}{\partial q_{i}{ }^{2}} d q_{i} \tag{2.6.35}
+\end{equation*}
+$$
+
+Substituting this identity into (2.6.34), we obtain
+$$
+\begin{equation*}
+\Delta_{C_{i}(\alpha)} \beta_{j}=\oint_{C_{i}(\alpha)}\left[\frac{\partial \beta_{j}(q, p)}{\partial q_{i}}+\frac{\partial \beta_{j}(q, p)}{\partial p_{i}} \frac{\partial^{2} A_{i}\left(q_{i}, \alpha\right)}{\partial q_{i}{ }^{2}}\right] d q_{i} \tag{2.6.36}
+\end{equation*}
+$$
+
+We now observe that
+$$
+\begin{align*}
+& \frac{\partial q_{k}(q, \alpha)}{\partial q_{i}}=\delta_{k i}  \tag{2.6.37}\\
+& \frac{\partial^{2} A(q, \alpha)}{\partial q_{i} \partial q_{k}}=\frac{\partial^{2}}{\partial q_{i} \partial q_{k}} \sum_{l} A_{l}\left(q_{l}, \alpha\right)=\delta_{i k} \frac{\partial^{2} A_{i}\left(q_{i}, \alpha\right)}{\partial q_{i}{ }^{2}} \tag{2.6.38}
+\end{align*}
+$$
+on account of (2.6.12). (2.6.37), (2.6.38) allow rewriting (2.6.36) as
+$$
+\begin{align*}
+\Delta_{C_{i}(\alpha)} \beta_{j} & =\oint_{C_{i}(\alpha)}\left[\sum_{k} \frac{\partial \beta_{j}(q, p)}{\partial q_{k}} \frac{\partial q_{k}(q, \alpha)}{\partial q_{i}}+\sum_{k} \frac{\partial \beta_{j}(q, p)}{\partial p_{k}} \frac{\partial^{2} A(q, \alpha)}{\partial q_{i} \partial q_{k}}\right] d q_{i}  \tag{2.6.39}\\
+& =\oint_{C_{i}(\alpha)} \frac{\partial \beta_{j}(q, \alpha)}{\partial q_{i}} d q_{i}
+\end{align*}
+$$
+
+By (2.6.4b) and (2.6.12), we can write the above derivative as
+$$
+\begin{equation*}
+\frac{\partial \beta_{j}(q, \alpha)}{\partial q_{i}}=\frac{\partial^{2} A(q, \alpha)}{\partial q_{i} \partial \alpha_{j}}=\frac{\partial^{2}}{\partial q_{i} \partial \alpha_{j}} \sum_{k} A_{k}\left(q_{k}, \alpha\right)=\frac{\partial^{2} A_{i}\left(q_{i}, \alpha\right)}{\partial q_{i} \partial \alpha_{j}} \tag{2.6.40}
+\end{equation*}
+$$
+
+Inserting (2.6.40) into (2.6.39), we obtain (2.6.33).
+Step 3. Combining (2.6.24) and (2.6.33), we obtain
+$$
+\begin{equation*}
+\Delta_{C_{i}(\alpha)} \beta_{j}=2 \pi \frac{\partial J_{i}(\alpha)}{\partial \alpha_{j}} \tag{2.6.41}
+\end{equation*}
+$$
+
+By eq. (2.6.4b), we have further
+$$
+\begin{equation*}
+Z_{j}=\frac{\partial A(q, J)}{\partial J_{j}}=\sum_{k} \frac{\partial A(q, \alpha)}{\partial \alpha_{k}} \frac{\partial \alpha_{k}(J)}{\partial J_{j}}=\sum_{k} \beta_{k} \frac{\partial \alpha_{k}(J)}{\partial J_{j}} \tag{2.6.42}
+\end{equation*}
+$$
+
+From (2.6.41) and (2.6.42), it follows that
+$$
+\begin{align*}
+& \Delta_{C_{i}(\alpha)} Z_{j}=\sum_{k} \Delta_{C_{i}(\alpha)} \beta_{k} \frac{\partial \alpha_{k}(J)}{\partial J_{j}}  \tag{2.6.43}\\
+&=\sum_{k} 2 \pi \frac{\partial J_{i}(\alpha)}{\partial \alpha_{k}} \frac{\partial \alpha_{k}(J)}{\partial J_{j}}=2 \pi \frac{\partial J_{i}(J)}{\partial J_{j}}=2 \pi \delta_{i j}
+\end{align*}
+$$
+showing (2.6.23).
+(2.6.23) states that $Z_{i}$ changes by $2 \pi$ along the cycle $C_{i}(\alpha)$ of the invariant torus $T(\alpha)$, while it is unchanged along the cycles $C_{j}(\alpha)$ with $j \neq i$. Therefore, the
+angle variables $Z_{i}$ are generalized angles, as suggested by their name. These angles coordinatize the $C_{j}(\alpha)$ and consequently $T(\alpha)$ itself.
+
+As already remarked, by the multiperiodic nature of the system, the projection $\left(q_{i}(t), p_{i}(t)\right)$ on the phase plane $q_{i}, p_{i}$ of a phase space trajectory $(q(t), p(t))$ with values $\alpha_{j}$ of primary first integrals treads the cycle $C_{i}(\alpha)$ once in a period $\tau_{i}(\alpha)$. $\operatorname{By}(2.6 .16)$, so, the action $J_{i}(\alpha)$ can be cast as
+$$
+\begin{equation*}
+J_{i}(\alpha)=\frac{1}{2 \pi} \int_{t}^{t+\tau_{i}(\alpha)} d t^{\prime} p_{i}^{\prime} \frac{d q_{i}^{\prime}}{d t} \tag{2.6.44}
+\end{equation*}
+$$
+where, in the right hand side, the ' denotes evaluation at time $t^{\prime}$. $J_{i}$ is actually independent from $t$ because of the projection $\left(q_{i}(t), p_{i}(t)\right)$ is periodic with period $\tau_{i}$. As appears, the action variable $J_{i}$ represents the contribution of the pair of canonical variables $q_{i}, p_{i}$ to the abbreviated Maupertuis action of a segment of the trajectory of the system corresponding to a full orbit in the $q_{i}, p_{i}$ plane. This explains the name given to the variables $J_{i}$. However, the $J_{i}$ have a more fitting physical interpretation. As the angle variables $Z_{i}$ are generalized angles and the $J_{i}$ are canonically conjugate to the $Z_{i}$, the action variables $J_{i}$ are generalized angular momenta.
+
+Every physically meaningful quantity must be represented mathematically by a single valued phase function. The angle variables $Z_{i}$ do not have this property, as we have just seen, and, therefore, cannot be considered such. Together with the action variables $J_{i}$, they constitute however a natural set of canonical variables in terms of which phase functions can be expressed. Therefore, if $\phi$ is any physical quantity, we have a relation
+$$
+\begin{equation*}
+\phi=\phi(Z, J) \tag{2.6.45}
+\end{equation*}
+$$
+
+Since $\phi$ is single valued, $\phi(Z, J)$ is a periodic function of the $Z_{i}$ with period $2 \pi$
+$$
+\begin{align*}
+\phi\left(Z_{1}, \ldots, Z_{i}+2 \pi, \ldots, Z_{f}, J_{1}\right. & \left., \ldots, J_{f}\right)  \tag{2.6.46}\\
+& =\phi\left(Z_{1}, \ldots, Z_{i}, \ldots, Z_{f}, J_{1}, \ldots, J_{f}\right)
+\end{align*}
+$$
+
+If we now let time flow, the angle-action variables $Z_{i}(t), J_{i}(t)$ evolve according to (2.6.20). From (2.6.45), we have so
+$$
+\begin{equation*}
+\phi(t)=\phi\left(Z_{1}(t), \ldots, Z_{f}(t), J_{1}(t), \ldots, J_{f}(t)\right) \tag{2.6.47}
+\end{equation*}
+$$
+
+Since the $J_{i}$ are actually constant, the only source of time dependence comes from the $Z_{i}$. The fact that $\phi(Z, J)$ is periodic in the $Z_{i}$ implies then that $\phi(t)$ is conditionally periodic, that is, for each $i$, the function of time
+$$
+\begin{equation*}
+\phi_{i}(t)=\phi\left(Z_{1}, \ldots, Z_{i}(t), \ldots, Z_{f}, J_{1}, \ldots, J_{f}\right) \tag{2.6.48}
+\end{equation*}
+$$
+where $Z_{1}, \ldots, Z_{i-1}, Z_{i+1}, \ldots, Z_{f}, J$ are fixed, is periodic. Its period $\tau_{i}$ is determined by the condition $Z_{i}\left(t+\tau_{i}\right)=Z_{i}(t)+2 \pi$. From (2.6.20a), it follows immediately that $\tau_{i}=\tau_{i}\left(J^{0}\right)$, where
+$$
+\begin{equation*}
+\tau_{i}(J)=2 \pi / \omega_{i}(J) \tag{2.6.49}
+\end{equation*}
+$$
+where $\omega_{i}(J)$ is defined by (2.6.21). For this reason, the $\tau_{i}$ and $\omega_{i}$ are called the $i$-th fundamental period and fundamental angular frequency of the system, respectively. It must be remarked that $\phi(t)$ being conditionally periodic does not imply it being periodic in general. $\phi(t)$ is periodic only when all possible ratios of the fundamental periods $\tau_{i}(J)$ are rational for all values of $J$.
+
+Since our system is multiperiodic, the projections $\left(q_{i}(t), p_{i}(t)\right)$ of a phase space trajectory $(q(t), p(t))$ with values $\alpha_{i}$ of the primary first integrals on the phase planes $q_{i}, p_{i}$ are periodic with periods $\tau_{i}(\alpha)$. It is easy to see that the periods $\tau_{i}(\alpha)$ are precisely the fundamental period $\tau_{i}(J)$. Indeed, as we found out above, $\left(q_{i}(t), p_{i}(t)\right)$ treads the cycle $C_{i}(\alpha)$ once in a period $\tau_{i}(\alpha)$. Simultaneously, by (2.6.23), the angle variable $Z_{i}(t)$ varies of $2 \pi$, which requires a time $\tau_{i}(J)$. It follows that $\tau_{i}(\alpha)=\tau_{i}(J)$.
+
+We shall now show explicitly that the action variables $J_{i}$ are the adiabatic invariants looked for.
+
+The Hamiltonian $H$ of the system depends on the values of the parameters
+$\gamma$ defining quantitatively the external conditions to which the system is subject. To this point, we have tacitly assumed that the $\gamma$ are assigned constants, but nothing forbids letting them vary. Therefore, below we distinguish the constant external condition case, when the $\gamma$ are maintained constant, and the varying external condition case, when the $\gamma$ are allowed to vary.
+
+The adiabatic invariance of the action variables $J_{i}$ is just the invariance of the value of $J_{i}$ under a slow variation of the $\gamma$ interpreted in the appropriate sense defined below. Henceforth, for simplicity, we shall assume that there is just one parameter $\gamma$.
+
+For constant external conditions, the projections $\left(q_{i}(t), p_{i}(t)\right)$ of a trajectory on the various planes $q_{i}, p_{i}$ are periodic, since the system is assumed to be multiperiodic. Further, the new momenta $\alpha_{i}$ are integrals of motion, on account of (2.6.9b). For varying external conditions, instead, the projections $\left(q_{i}(t), p_{i}(t)\right)$ are no longer periodic and the new momenta $\alpha_{i}$ are no longer integrals of motion. Intuitively, however, we expect that, if $\gamma$ varies sufficiently slowly, the projections $\left(q_{i}(t), p_{i}(t)\right)$ are almost periodic, as shown in fig. 2.6.5, and the $\alpha_{i}$ are almost constant. So, just as the projections $\left(q_{i}(t), p_{i}(t)\right)$ are characterized by a period $\tau_{i}$ during which the $\alpha_{i}$ are constant in constant external conditions, so the projections $\left(q_{i}(t), p_{i}(t)\right)$ are characterized by a quasi-period $\tau_{i}$ during which the $\alpha_{i}$ are near constant in varying external condition with slowly varying $\gamma$. Self consistency requires that $\gamma$ be almost constant over a time $\tau \sim \max \tau_{i}$, which is the case if the Taylor expansion of $\gamma$ for a time increment $\tau$ is rapidly convergent,
+$$
+\begin{equation*}
+1 \gg\left|\frac{\tau}{\gamma} \frac{d \gamma}{d t}\right| \gg\left|\frac{\tau^{2}}{\gamma} \frac{d^{2} \gamma}{d t^{2}}\right| \gg \ldots \tag{2.6.50}
+\end{equation*}
+$$
+
+We assume this condition to be satisfied henceforth.
+In constant external conditions, the action variable $J_{i}(\alpha, \gamma)$ reads
+$$
+\begin{equation*}
+J_{i}(\alpha, \gamma)=\frac{1}{2 \pi} \oint_{C_{i}(\alpha, \gamma)} p_{i} d q_{i} \tag{2.6.51}
+\end{equation*}
+$$
+where $C_{i}(\alpha, \gamma)$ is the phase space cycle defined by the condition
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0159.jpg?height=519&width=1186&top_left_y=521&top_left_x=448)
+
+Figure 2.6.5. For constant external conditions, the projection of a phase space trajectory on a phase plane is periodic and, as a curve of the plane, it is closed $(a)$. For slowly varying external conditions, the projection is instead almost periodic and an almost closed curve (b). It still makes sense however to attribute a period to the projection.
+$$
+\begin{equation*}
+H_{i}\left(q_{i}, p_{i} ; \alpha, \gamma\right)=\alpha_{i} \tag{2.6.52}
+\end{equation*}
+$$
+with the appropriate orientation, by $(2.6 .15)$ and (2.6.16). The action $J_{i}$ is thus a function of both the $\alpha_{i}$ and $\gamma$. For varying external conditions with $\gamma$ satisfying (2.6.50), the action variable $J_{i}$ can be meaningfully defined to be the action variables $J_{i}(\alpha, \gamma)$ for constant external conditions with $\alpha, \gamma$ equal to their instantaneous values, respectively. It can now be shown that the rate of variation of $J_{i}(\alpha, \gamma)$ satisfies
+$$
+\begin{equation*}
+\left|\frac{\tau}{J_{i}} \frac{d J_{i}}{d t}\right|=O\left(\left|\frac{\tau}{\gamma} \frac{d \gamma}{d t}\right|^{2}\right) \ll O\left(\left|\frac{\tau}{\gamma} \frac{d \gamma}{d t}\right|\right) \tag{2.6.53}
+\end{equation*}
+$$
+
+The time variation of $J_{i}(\alpha, \gamma)$, so, is much slower than that of $\gamma$. In this precise sense, $J_{i}$ is an adiabatic invariant.
+
+Proof. Since the proof is rather lengthy, we shall divide it in several steps for the sake of clarity.
+
+Step 1. We assume first constant external conditions. Then,
+$$
+\begin{align*}
+\delta J_{i}(\alpha, \gamma)=\frac{1}{2 \pi} \oint_{C_{i}(\alpha, \gamma)} & {\left[\frac{\partial H_{i}\left(q_{i}, p_{i}, \alpha, \gamma\right)}{\partial q_{i}} \delta q_{i}\right.}  \tag{2.6.54}\\
+& \left.+\frac{\partial H_{i}\left(q_{i}, p_{i}, \alpha, \gamma\right)}{\partial p_{i}} \delta p_{i}\right] d q_{i} / \frac{\partial H_{i}\left(q_{i}, p_{i}, \alpha, \gamma\right)}{\partial p_{i}}
+\end{align*}
+$$
+
+This is formally analogous to (2.6.28) and is proved by going through analogous steps. From (2.6.52), the variations $\delta q_{i}, \delta p_{i}$ obey the relation
+$$
+\begin{align*}
+\frac{\partial H_{i}\left(q_{i}, p_{i}, \alpha, \gamma\right)}{\partial q_{i}} \delta q_{i} & +\frac{\partial H_{i}\left(q_{i}, p_{i}, \alpha, \gamma\right)}{\partial p_{i}} \delta p_{i}  \tag{2.6.55}\\
+& =\delta \alpha_{i}-\sum_{j} \frac{\partial H_{i}\left(q_{i}, p_{i}, \alpha, \gamma\right)}{\partial \alpha_{j}} \delta \alpha_{j}-\frac{\partial H_{i}\left(q_{i}, p_{i}, \alpha, \gamma\right)}{\partial \gamma} \delta \gamma
+\end{align*}
+$$
+generalizing (2.6.29). Combining (2.6.54) and (2.6.55), we obtain
+$$
+\begin{align*}
+\delta J_{i}(\alpha, \gamma)=\frac{1}{2 \pi} \oint_{C_{i}(\alpha, \gamma)}\left[\delta \alpha_{i}\right. & -\sum_{j} \frac{\partial H_{i}\left(q_{i}, p_{i}, \alpha, \gamma\right)}{\partial \alpha_{j}} \delta \alpha_{j}  \tag{2.6.56}\\
+& \left.-\frac{\partial H_{i}\left(q_{i}, p_{i}, \alpha, \gamma\right)}{\partial \gamma} \delta \gamma\right] d q_{i} / \frac{\partial H_{i}\left(q_{i}, p_{i}, \alpha, \gamma\right)}{\partial p_{i}}
+\end{align*}
+$$
+
+Step 2. We assume constant external conditions again. We recall that the projection $\left(q_{i}(t), p_{i}(t)\right)$ of a phase space trajectory with values $\alpha_{i}$ of the primary first integrals on the phase plane $q_{i}, p_{i}$ lies in the cycle $C_{i}(\alpha, \gamma)$ and that, in a period $\tau_{i},\left(q_{i}(t), p_{i}(t)\right)$ covers $C_{i}(\alpha, \gamma)$ precisely once. Now, by the Hamilton equations (2.6.1), we have
+$$
+\begin{equation*}
+d q_{i}=\frac{\partial H(q, p, \gamma)}{\partial p_{i}} d t \tag{2.6.57}
+\end{equation*}
+$$
+
+From (2.6.56), by the remarks made above and (2.6.57), we have then
+$$
+\begin{align*}
+\delta J_{i}(\alpha, \gamma)=\frac{1}{2 \pi} \int_{t}^{t+\tau_{i}} d t^{\prime}\left[\delta \alpha_{i}-\sum_{j} \frac{\partial H_{i}\left(q_{i}, p_{i}, \alpha, \gamma\right)}{\partial \alpha_{j}}\right. & \delta \alpha_{j}  \tag{2.6.58}\\
+& \left.-\frac{\partial H_{i}\left(q_{i}, p_{i}, \alpha, \gamma\right)}{\partial \gamma} \delta \gamma\right]^{\prime} \lambda_{i}^{\prime}
+\end{align*}
+$$
+where $\lambda_{i}$ is defined as
+$$
+\begin{equation*}
+\lambda_{i}=\frac{\partial H(q, p, \gamma)}{\partial p_{i}} / \frac{\partial H_{i}\left(q_{i}, p_{i}, \alpha, \gamma\right)}{\partial p_{i}} \tag{2.6.59}
+\end{equation*}
+$$
+and the ' denotes evaluation at time $t^{\prime}$ and
+Step 3. We now switch to varying external conditions, so that $\gamma$ depends on time. Then, the primary first integrals $\alpha_{i}$ are no longer constants and depending as they do on
+time as well. As we have argued above, when $\gamma$ varies slowly in accordance with (2.6.50), the action $J_{i}$ can be defined as the action $J_{i}(\alpha, \gamma)$ for constant external conditions with $\alpha, \gamma$ equal to their instantaneous values. The variational formula (2.6.59) then implies that
+$$
+\begin{align*}
+& \frac{d J_{i}}{d t}=\frac{1}{2 \pi} \int_{t}^{t+\tau_{i}} d t^{\prime}\left[\frac{d \alpha_{i}}{d t}-\left.\sum_{j} \frac{\partial H_{i}\left(q_{i}, p_{i}, \alpha, \gamma\right)}{\partial \alpha_{j}}\right|_{\operatorname{tr} \alpha} \frac{d \alpha_{j}}{d t}\right.  \tag{2.6.60}\\
+&\left.-\left.\frac{\partial H_{i}\left(q_{i}, p_{i}, \alpha, \gamma\right)}{\partial \gamma}\right|_{\operatorname{tr} \alpha} \frac{d \gamma}{d t}\right]\left.^{\prime} \lambda_{i}\right|_{\operatorname{tr} \alpha} ^{\prime}
+\end{align*}
+$$
+
+Here, $t$ is conveniently taken to be current time. $\left.\right|_{\operatorname{tr} \alpha}$ denotes restriction to a constant external condition trajectory the values $\alpha_{i}$ of whose primary first integrals equals their instantaneous values at time $t$. Note that this trajectory is different from the actual varying external condition trajectory, though for very slowly varying conditions it is very close to it.
+
+Step 4. We assume varying external conditions again. Let us show that
+$$
+\begin{equation*}
+\frac{d \alpha_{i}}{d t}-\sum_{j} \frac{\partial H_{i}}{\partial \alpha_{j}}\left(q_{i}, p_{i}, \alpha, \gamma\right) \frac{d \alpha_{j}}{d t}-\frac{\partial H_{i}}{\partial \gamma}\left(q_{i}, p_{i}, \alpha, \gamma\right) \frac{d \gamma}{d t}=0 \tag{2.6.61}
+\end{equation*}
+$$
+where the derivatives of $H_{i}$ are evaluated at the relevant trajectory. This relation is shown as follows. In constant external conditions, the new momenta $\alpha_{i}$ satisfy the relations (2.6.52) as phase space functions. In varying external conditions, the $\alpha_{i}$ must still fulfil the (2.6.52), since these are simply some of the constraints defining implicitly the canonical transformation from the old canonical variables $q_{i}, p_{i}$ to the new ones $\beta_{i}, \alpha_{i}$ generated by the characteristic function $A$. Taking the constraints (2.6.52) into account, we find that
+$$
+\begin{align*}
+\frac{d \alpha_{i}}{d t}=\frac{\partial H_{i}\left(q_{i}, p_{i}, \alpha, \gamma\right)}{\partial q_{i}} \frac{d q_{i}}{d t} & +\frac{\partial H_{i}\left(q_{i}, p_{i}, \alpha, \gamma\right)}{\partial p_{i}} \frac{d p_{i}}{d t}  \tag{2.6.62}\\
+& +\sum_{j} \frac{\partial H_{i}\left(q_{i}, p_{i}, \alpha, \gamma\right)}{\partial \alpha_{j}} \frac{d \alpha_{j}}{d t}+\frac{\partial H_{i}\left(q_{i}, p_{i}, \alpha, \gamma\right)}{\partial \gamma} \frac{d \gamma}{d t}
+\end{align*}
+$$
+
+Using the Hamilton equations, the first two terms can be computed
+$$
+\begin{align*}
+& \frac{\partial H_{i}\left(q_{i}, p_{i}, \alpha, \gamma\right)}{\partial q_{i}} \frac{d q_{i}}{d t}+\frac{\partial H_{i}\left(q_{i}, p_{i}, \alpha, \gamma\right)}{\partial p_{i}} \frac{d p_{i}}{d t}  \tag{2.6.63}\\
+& \quad=\frac{\partial H_{i}\left(q_{i}, p_{i}, \alpha, \gamma\right)}{\partial q_{i}} \frac{\partial H(q, p, \gamma)}{\partial p_{i}}-\frac{\partial H_{i}\left(q_{i}, p_{i}, \alpha, \gamma\right)}{\partial p_{i}} \frac{\partial H(q, p, \gamma)}{\partial q_{i}}
+\end{align*}
+$$
+or, denoting by $\{\cdot, \cdot\}$ the canonical Poisson brackets at fixed $\alpha, \gamma$.
+$$
+\begin{equation*}
+\frac{\partial H_{i}\left(q_{i}, p_{i}, \alpha, \gamma\right)}{\partial q_{i}} \frac{d q_{i}}{d t}+\frac{\partial H_{i}\left(q_{i}, p_{i}, \alpha, \gamma\right)}{\partial p_{i}} \frac{d p_{i}}{d t}=-\left\{H, H_{i}\right\}(q, p, \alpha, \gamma) \tag{2.6.64}
+\end{equation*}
+$$
+
+Thus, (2.6.62) can be written as
+$$
+\begin{align*}
+\frac{d \alpha_{i}}{d t}=-\{H, & \left.H_{i}\right\}(q, p, \alpha, \gamma)  \tag{2.6.65}\\
+& +\sum_{j} \frac{\partial H_{i}\left(q_{i}, p_{i}, \alpha, \gamma\right)}{\partial \alpha_{j}} \frac{d \alpha_{j}}{d t}+\frac{\partial H_{i}\left(q_{i}, p_{i}, \alpha, \gamma\right)}{\partial \gamma} \frac{d \gamma}{d t}
+\end{align*}
+$$
+
+Now, in the limit as $d \gamma / d t$ vanishes, the $\alpha_{k}$ must become again integrals of motion, so that the $d \alpha_{k} / d t$ also vanish. In that case, (2.6.65) leads to
+$$
+\begin{equation*}
+\left\{H, H_{i}\right\}(q, p, \alpha, \gamma)=0 \tag{2.6.66}
+\end{equation*}
+$$
+
+Now, (2.6.66) entails that the phase space function in the left hand side vanishes for all values of the $\alpha_{k}$ and $\gamma$. It no longer matters whether those values are constant in time or not. In this way, (2.6.65) reduces to (2.6.61).
+
+Step 5. Subtracting (2.6.61) from the integrand of (2.6.60), we obtain
+$$
+\begin{align*}
+& \frac{d J_{i}}{d t}=\frac{1}{2 \pi} \int_{t}^{t+\tau_{i}} d t^{\prime}\left[\left.\sum_{j} \Delta \frac{\partial H_{i}\left(q_{i}, p_{i}, \alpha, \gamma\right)}{\partial \alpha_{j}}\right|_{\operatorname{tr}} \frac{d \alpha_{j}}{d t}\right.  \tag{2.6.67}\\
+&\left.+\left.\Delta \frac{\partial H_{i}\left(q_{i}, p_{i}, \alpha, \gamma\right)}{\partial \gamma}\right|_{\operatorname{tr}} \frac{d \gamma}{d t}\right]\left.^{\prime} \lambda_{i}\right|_{\mathrm{tr} \alpha} ^{\prime}
+\end{align*}
+$$
+where we have set
+$$
+\begin{align*}
+& \left.\Delta \frac{\partial H_{i}\left(q_{i}, p_{i}, \alpha, \gamma\right)}{\partial \alpha_{j}}\right|_{\operatorname{tr}}=\left.\frac{\partial H_{i}\left(q_{i}, p_{i}, \alpha, \gamma\right)}{\partial \alpha_{j}}\right|_{\operatorname{tr}}-\left.\frac{\partial H_{i}\left(q_{i}, p_{i}, \alpha, \gamma\right)}{\partial \alpha_{j}}\right|_{\operatorname{tr} \alpha}  \tag{2.6.68a}\\
+& \left.\Delta \frac{\partial H_{i}\left(q_{i}, p_{i}, \alpha, \gamma\right)}{\partial \gamma}\right|_{\operatorname{tr}}=\left.\frac{\partial H_{i}\left(q_{i}, p_{i}, \alpha, \gamma\right)}{\partial \gamma}\right|_{\operatorname{tr}}-\left.\frac{\partial H_{i}\left(q_{i}, p_{i}, \alpha, \gamma\right)}{\partial \gamma}\right|_{\operatorname{tr} \alpha} \tag{2.6.68b}
+\end{align*}
+$$
+and $\left.\right|_{\operatorname{tr}}$ and $\left.\right|_{\operatorname{tr} \alpha}$ denote evaluation at the relevant varying external condition trajectory and a constant external condition trajectory, the values $\alpha_{i}$ of whose primary first integrals equals their instantaneous values at time $t$. The latter trajectory is not determine uniquely by the requirement just stated. To determine it, we proceed as follows. Among all the constant external condition trajectories with the above property, there is just one to which the varying external conditions trajectory reduces to in the limit as $d \gamma / d t$ vanishes at time $t$. This is the trajectory that we choose to insert into the above expressions. Since the variation of the Hamiltonian in a time interval $t \rightarrow t+\delta t$
+is $\partial H / \partial \gamma \cdot \delta t d \gamma / d t$ to lowest order, the deviation of the relevant varying external condition trajectory from the corresponding constant external condition one so picked is of order $O\left(\tau \gamma^{-1} d \gamma / d t\right)$ (in appropriate units). Consequently, $\Delta \partial H_{i} / \partial \alpha_{j}, \Delta \partial H_{i} / \partial \gamma$ and the derivatives $d \alpha_{k} / d t$ are of order $O\left(\tau \gamma^{-1} d \gamma / d t\right)$ too, again in appropriate units. It follows that the right hand side of (2.6.67) is of order $O\left(\left(\tau \gamma^{-1} d \gamma / d t\right)^{2}\right)$ and, so, that (2.6.53) holds.
+W. Wilson in 1915 and A. Sommerfeld in 1916 put forward a quantization scheme that included both Planck and Bohr quantization rules as special cases and could be extended to other cases. Their theory runs as follows. A separable and multiperiodic system with $f$ degrees of freedom is characterized by $f$ action variables $J_{i}(\alpha)$ given by (2.6.16). On one hand, the $J_{i}(\alpha)$ are adiabatic invariants and, so, as argued by Ehrenfest, they are the quantities that are fundamentally quantized. On the other, the $J_{i}(\alpha)$ are generalized angular momenta and, so, by generalization of Bohr's original theory, they should quantized as integer multiples of Planck's constant $\hbar$. The Wilson-Sommerfeld quantization rule states so that the action variables $J_{i}(\alpha)$ of each pair is quantized according to
+$$
+\begin{equation*}
+J_{i}(\alpha)=n_{i} \hbar, \quad \text { with } n_{i} \text { integer } \tag{2.6.69}
+\end{equation*}
+$$
+
+The range of the integers $n_{i}$ may be restricted depending on the physical interpretation of the $J_{i}$. As a rule, the new momenta $\alpha_{i}$ and certain of their functions can be identified with relevant physical quantities. (2.6.69), then, entails the quantization of such quantities.
+
+Energy, being a function $w(\alpha)$ of the first integrals $\alpha_{i}$, is quantized. By (2.6.69), expressing energy directly as a function $w(J)$ of the action variables $J_{i}$, the energy levels are given by
+$$
+\begin{equation*}
+w_{n_{1}, \ldots, n_{f}}=\left.w(J)\right|_{J_{i}=n_{i} \hbar} \tag{2.6.70}
+\end{equation*}
+$$
+
+Energy degeneration is the phenomenon by which distinct assignments of the quantum numbers $n_{i}$ yield the same level $w_{n_{1}, \ldots, n_{f}}$. It occurs in particular when a number $d<f$ of the frequencies $\omega_{i}(J)$ given by (2.6.21) are equal for all values of the $J_{i}$ since then $w(J)$ depends on the corresponding $J_{i}$ through their sum. The integer $d-1$ is then the degree of degeneracy of the energy level set. In this case, degeneration is normally related to specific symmetry properties of the underlying interactions. It is removed by modifying these latter by adding small perturbations.
+
+Wilson-Sommerfeld quantization has an intuitive interpretation proposed by de Broglie. To each pair of conjugate canonical variables $q_{i}, p_{i}$, one can associate a de Broglie wave length according to formula (1.12.2)
+$$
+\begin{equation*}
+\lambda_{i}=h / p_{i} \tag{2.6.71}
+\end{equation*}
+$$
+
+Then, the quantization conditions can be cast as
+$$
+\begin{equation*}
+\oint_{C_{i}} \frac{d q_{i}}{\lambda_{i}}=n_{i} \tag{2.6.72}
+\end{equation*}
+$$
+with $n_{i}$ an integer. Suppose that $\lambda_{i}$ is constant. Then, the quantization condition reduces to $l_{i}=n_{i} \lambda_{i}$, where $l_{i}$ is the length of the projection of the configuration space trajectory on the $q_{i}$ axis. This projection is closed since the projection of the phase space trajectory on the plane $q_{i}, p_{i}$ is. The quantization condition is then equivalent to the de Broglie wave not undergoing destructive self interference. See fig. 2.6.6 for the case of an atom. When $\lambda_{i}$ is not a constant a similar mechanism still works. Wilson-Sommerfeld quantization works remarkably well when applied to a variety of separable and periodic mechanical systems. However, it cannot be a fundamental quantum theory. There are certain systems, e. g. the three body helium atom, which, on one hand, are unquestionably quantum systems and, on the other, are not separable and, so, cannot be treated in this way. Modern quantum theory has the general applicability old quantum theory lacks. For this reason, Wilson-Sommerfeld theory is nowadays considered outdated.
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0165.jpg?height=654&width=1224&top_left_y=508&top_left_x=426)
+
+Figure 2.6.6. For an atom, the Wilson-Sommerfeld quantization condition is equivalent to the de Broglie wave of the electron being a standing wave around the nucleus and guarantees the stationarity of its state $(a)$. When the condition fails to hold, destructive interference of the wave makes the state unstable $(b)$.
+
+\subsection*{2.7. Elementary applications of Wilson-Sommerfeld quantization}
+
+As a first illustrative example of the Wilson-Sommerfeld quantization procedure of sect. 2.6 , we consider a 1-dimensional harmonic oscillator, which is a simple mechanical system with one degree of freedom. The Hamiltonian of the oscillator has the well-known form
+$$
+\begin{equation*}
+H(x, p)=\frac{p^{2}}{2 m}+\frac{m \omega^{2} x^{2}}{2} \tag{2.7.1}
+\end{equation*}
+$$
+where $m$ and $\omega$ are the mass and angular frequency of the oscillator, respectively. The Hamilton-Jacobi equation 2.6 .3 so reads
+$$
+\begin{equation*}
+\frac{1}{2 m}\left(\frac{\partial A}{\partial x}\right)^{2}+\frac{m \omega^{2} x^{2}}{2}=w \tag{2.7.2}
+\end{equation*}
+$$
+
+The unique primary first integral is naturally chosen to be the oscillator's energy $w$ itself. By having only one degree of freedom, the oscillator is trivially a separable system and the separated form (2.6.13) of the Hamiltonian-Jacobi equation is precisely eq. (2.7.2). The curve $C(w)$ defined by $(2.6 .15)$ is so the locus of the phase space points such that
+$$
+\begin{equation*}
+\frac{p^{2}}{2 m}+\frac{m \omega^{2} x^{2}}{2}=w \tag{2.7.3}
+\end{equation*}
+$$
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0166.jpg?height=421&width=572&top_left_y=1882&top_left_x=706)
+
+Figure 2.7.1. The cycle $C(w)$ for a harmonic oscillator is an ellipsis.
+
+From elementary geometry, $C(w)$ is an ellipse of semiaxes $a=(2 m w)^{1 / 2}, b=$ $\left(2 w / m \omega^{2}\right)^{1 / 2}$ (cf. fig. 2.7.1). The action variable $J$ is so
+$$
+\begin{equation*}
+J(w)=\frac{1}{2 \pi} \oint_{C(w)} p d x \tag{2.7.4}
+\end{equation*}
+$$
+(cf. eq. (2.6.16)). $J(w)$ is easily computed by recalling that equals the area of the part of phase space enclosed by the ellipse $C(w)$,
+$$
+\begin{equation*}
+J(w)=\pi a b / 2 \pi=w / \omega \tag{2.7.5}
+\end{equation*}
+$$
+
+The Wilson-Sommerfeld quantization prescription (2.6.69) imposes that
+$$
+\begin{equation*}
+J(w)=n \hbar, \quad n=0,1,2,3, \ldots \tag{2.7.6}
+\end{equation*}
+$$
+$n$ is restricted to be non negative, since, by (2.7.5), $J(w)$ has the same sign as $w$ and $w \geq 0$ for an oscillator. By (2.7.5), (2.7.6), the energy is quantized as
+$$
+\begin{equation*}
+w_{n}=\hbar \omega n, \quad n=0,1,2,3, \ldots \tag{2.7.7}
+\end{equation*}
+$$
+
+We recover in this way as a theorem Planck's energy quantization prescription of an oscillator. The result is not correct. It misses a fixed contribution $\hbar \omega / 2$. This is however negligible for large $n$.
+
+The above example can be generalized to the case of a particle confined by a conservative force field in one dimension. Again, this is a system with only one degree of freedom. The Hamiltonian of the particle governing its motion is therefore of the form
+$$
+\begin{equation*}
+H(x, p)=\frac{p^{2}}{2 m}+U(x) \tag{2.7.8}
+\end{equation*}
+$$
+where $m$ is the mass of the particle and $U(x)$ is a potential energy such that $U(x) \rightarrow \infty$ as $|x| \rightarrow \infty$. The Hamilton-Jacobi equation 2.6 .3 so reads
+$$
+\begin{equation*}
+\frac{1}{2 m}\left(\frac{\partial A}{\partial x}\right)^{2}+U(x)=w \tag{2.7.9}
+\end{equation*}
+$$
+
+As in the oscillator's case, the unique primary first integral can be chosen to be the particle's energy $w$. Further, by having one degree of freedom, the particle is
+trivially a separable system and the separated form (2.6.13) of the HamiltonianJacobi equation (2.6.3) is just eq. (2.7.9). The curve $C(w)$ defined by (2.6.15) is so the locus of the phase space points such that
+$$
+\begin{equation*}
+\frac{p^{2}}{2 m}+U(x)=w \tag{2.7.10}
+\end{equation*}
+$$
+
+To determine the shape of $C(w)$, we observe that, by the growth of the potential at large $|x|,(2.7 .10)$ can be satisfied only for $x$ varying in the configuration space region defined by the condition $U(x) \leq w$ and $p$ is correspondingly given by
+$$
+\begin{equation*}
+p= \pm(2 m(w-U(x)))^{1 / 2} \tag{2.7.11}
+\end{equation*}
+$$
+(cf. fig. 2.7.2 a). $C(w)$ is so a closed contour (cf. fig. 2.7.2 b). The action variable $J$ is then
+$$
+\begin{equation*}
+J(w)=\frac{1}{2 \pi} \oint_{C(w)} p d x=\frac{1}{\pi} \int_{x_{\min }(w)}^{x_{\max }(w)} d x(2 m(w-U(x)))^{1 / 2} \tag{2.7.12}
+\end{equation*}
+$$
+where in the last step we used the fact that the contribution of the upper and lower arch of the contour $C(w)$ are equal. This relation allows us in principle to express the energy $w$ as a function $w(J)$ of $J$. The Wilson-Sommerfeld quantization prescription (2.6.69) predicts that
+$$
+\begin{equation*}
+J(w)=n \hbar, \quad n=0,1,2,3, \ldots \tag{2.7.13}
+\end{equation*}
+$$
+where $n$ is restricted to be non negative as $J(w)$ is. The energy levels are thus
+$$
+\begin{equation*}
+w_{n}=\left.w(J)\right|_{J=n \hbar}, \quad n=0,1,2,3, \ldots \tag{2.7.14}
+\end{equation*}
+$$
+
+As a further example, consider a rigid rotator with a fixed rotation axis. This sytem also has one degree of freedom. Denoting by $\varphi$ and $l$ the rotator's rotation angle and angular momentum respectively, the Hamiltonian reads
+$$
+\begin{equation*}
+H(\varphi, l)=\frac{l^{2}}{2 I} \tag{2.7.15}
+\end{equation*}
+$$
+where $I$ is the moment of inertia of the rotator. In this case, the Hamilton-Jacobi equation 2.6.3 takes the form
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0169.jpg?height=982&width=968&top_left_y=509&top_left_x=535)
+
+Figure 2.7.2. The allowed configuration space region for an energy $w(a)$. The corresponding phase space cycle $C(w)(b)$.
+$$
+\begin{equation*}
+\frac{1}{2 I}\left(\frac{\partial A}{\partial \varphi}\right)^{2}=w \tag{2.7.16}
+\end{equation*}
+$$
+
+As in the previous examples, the unique primary first integral can be chosen to be the rotators's energy $w$, the rotator is trivially a separable system and the separated form (2.6.13) of the Hamiltonian-Jacobi equation (2.6.3) is eq. (2.7.16). The curve $C(w)$ defined by $(2.6 .15)$ is now the locus of the phase space points satisfying the condition
+$$
+\begin{equation*}
+\frac{l^{2}}{2 I}=w \tag{2.7.17}
+\end{equation*}
+$$
+$C(w)$ is so a segment $(\varphi, l)$ with $\varphi$ in the range $-\pi \leq \varphi \leq \pi$ and $l= \pm(2 I w)^{1 / 2}$. The restriction on $\varphi$ is due to the fact that $\varphi$ is an angular variable and values of an angle differing by an integer multiple of $2 \pi$, albeit numerically distinct, are
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0170.jpg?height=468&width=573&top_left_y=514&top_left_x=727)
+
+Figure 2.7.3. The cycle $C(w)$ for a rotator. The curve $C(w)$ is actually closed since the angle $2 \pi$ is geometrically equivalent to the angle 0 .
+geometrically equivalent. For the same reason, $C(w)$ is geometrically closed. The system is therefore periodic. The action variable $J$ is then
+$$
+\begin{equation*}
+J(w)=\frac{1}{2 \pi} \oint_{C(w)} l d \varphi \tag{2.7.18}
+\end{equation*}
+$$
+
+Its computation is immediate
+$$
+\begin{equation*}
+J(w)=\frac{1}{2 \pi} \int_{-\pi}^{\pi} \pm(2 I w)^{1 / 2} d \varphi= \pm(2 I w)^{1 / 2} \tag{2.7.19}
+\end{equation*}
+$$
+
+The Wilson-Sommerfeld quantization prescription (2.6.69) predicts that
+$$
+\begin{equation*}
+J(w)=m \hbar, \quad m=0, \pm 1, \pm 2, \pm 3, \ldots \tag{2.7.20}
+\end{equation*}
+$$
+where $m$ can have both signs as $J(w)$ does. The energy levels are thus
+$$
+\begin{equation*}
+w_{m}=\frac{\hbar^{2} m^{2}}{2 I}, \quad m=0, \pm 1, \pm 2, \pm 3, \ldots \tag{2.7.21}
+\end{equation*}
+$$
+
+Degeneration occurs, as $w_{-m}=w_{m}$.
+
+\subsection*{2.8. The Sommerfeld atomic theory}
+
+Bohr's theory turned out to be successful in explaining both qualitatively and quantitatively the spectra of hydrogen and hydrogenlike atoms. High resolution spectrometers were however able to detect a series of small deviations of the actual structure of the hydrogen spectrum from that predicted by Bohr's theory. What at low resolution appeared to be single lines at higher resolution turned out to be multiplets of closely spaced lines, a phenomenon called fine structure (A. A. Michelson and E. W. Morley, 1887). Furthermore, Bohr's theory was incapable to explain the Stark effect (J. Stark, 1913), the shift and splitting of the spectral lines caused by an external static electric field and the Zeeman effect (P. Zeeman, 1896), the multiple subdivision of spectral lines in the presence of a static magnetic field.
+
+The fine structure separation of the spectral lines into multiplets of adjacent lines could be explained only by a divergence of the electron-proton interaction from the purely Coulombic form hypothesized by Bohr. The Stark and Zeeman splitting of the spectral lines showed also that distinct atomic transitions were characterized by equal energy variations in the absence of a perturbing external field but different ones in the presence of it. All these phenomena indicated that Bohr's theory had to be revised at several points, particularly in its assumptions that the electron dynamics could be considered as non relativistic and that energy levels were non degenerate, that is that only one atomic stationary state corresponded to each level.
+
+Sommerfeld's theory (A. Sommerfeld, 1916) was a refinement of Bohr's theory designed for this goal incorporating relativistic mass variation effects and allowing for elliptic orbits. This new and more general theory described the atom in terms of three quantum numbers, while Bohr had originally used only one, and could explain the fine structure and the Stark and Zeeman effects. Here, we shall limit
+ourselves limit ourselves to illustrate only the basic features of Bohr-Sommerfeld theory, because it is now surpassed by the modern quantum theory which has a far wider range of applicability.
+
+The problem of the Wilson-Sommerfeld quantization of an hydrogen-like atom is best tackled using the standard spherical coordinates $r, \vartheta, \varphi$ and their conjugate momenta $p_{r}, p_{\vartheta}, p_{\varphi}$. The Hamiltonian of the atom is
+$$
+\begin{equation*}
+H=\frac{1}{2 m_{r}}\left(p_{r}^{2}+\frac{p_{\vartheta}{ }^{2}}{r^{2}}+\frac{p_{\varphi}{ }^{2}}{r^{2} \sin ^{2} \vartheta}\right)-\frac{Z e^{2}}{r} \tag{2.8.1}
+\end{equation*}
+$$
+
+As a Hamiltonian system, the atom is formally identical to the Kepler planetary system which is known to be separable and multiperiodic with degree of degeneration 2. We shall not go through the details of the proof of this well-known classical result limiting ourselves to use it to implement the Wilson-Sommerfeld quantization program.
+
+For the atom, the Hamilton-Jacobi equation (2.6.3) reads
+$$
+\begin{equation*}
+\frac{1}{2 m_{r}}\left[\left(\frac{\partial A}{\partial r}\right)^{2}+\frac{1}{r^{2}}\left(\frac{\partial A}{\partial \vartheta}\right)^{2}+\frac{1}{r^{2} \sin ^{2} \vartheta}\left(\frac{\partial A}{\partial \varphi}\right)^{2}\right]-\frac{Z e^{2}}{r}=w \tag{2.8.2}
+\end{equation*}
+$$
+
+If the system is separable, this differential equation must reduce to three ordinary differential equations by substituting in an expression of $A$ of the form (2.6.12),
+$$
+\begin{equation*}
+A(r, \vartheta, \varphi)=A_{r}(r)+A_{\vartheta}(\vartheta)+A_{\varphi}(\varphi) \tag{2.8.3}
+\end{equation*}
+$$
+
+Indeed, inserting (2.8.3) into (2.8.2), this latter becomes
+$$
+\begin{equation*}
+\frac{1}{2 m_{r}}\left[\left(\frac{d A_{r}}{d r}\right)^{2}+\frac{1}{r^{2}}\left(\frac{d A_{\vartheta}}{d \vartheta}\right)^{2}+\frac{1}{r^{2} \sin ^{2} \vartheta}\left(\frac{d A_{\varphi}}{d \varphi}\right)^{2}\right]-\frac{Z e^{2}}{r}=w \tag{2.8.4}
+\end{equation*}
+$$
+which holds identically for $r, \vartheta, \varphi$ varying independently provided
+$$
+\begin{align*}
+& \frac{d A_{\varphi}}{d \varphi}=l_{z}  \tag{2.8.5a}\\
+& \left(\frac{d A_{\vartheta}}{d \vartheta}\right)^{2}+\frac{l_{z}{ }^{2}}{\sin ^{2} \vartheta}=l^{2}  \tag{2.8.5~b}\\
+& \frac{1}{2 m_{r}}\left[\left(\frac{d A_{r}}{d r}\right)^{2}+\frac{l^{2}}{r^{2}}\right]-\frac{Z e^{2}}{r}=w \tag{2.8.5c}
+\end{align*}
+$$
+where $l_{z}, l^{2}$ are constants. In the treatment of sect. 2.6, $l_{z}, l^{2}$ and $w$ are the new momenta $\alpha_{i}$ and eqs. (2.8.5) are just eqs. (2.6.13). Since $l_{z}, l^{2}$ and $w$ are the primary first integrals of the system, their physical interpretation is required. To this end, from (2.8.5), using (2.6.14), we read off the relations
+$$
+\begin{align*}
+& p_{\varphi}=l_{z}  \tag{2.8.6a}\\
+& p_{\vartheta}{ }^{2}+\frac{l_{z}^{2}}{\sin ^{2} \vartheta}=l^{2}  \tag{2.8.6b}\\
+& \frac{1}{2 m_{r}}\left(p_{r}{ }^{2}+\frac{l^{2}}{r^{2}}\right)-\frac{Z e^{2}}{r}=w \tag{2.8.6c}
+\end{align*}
+$$
+corresponding to eqs. (2.6.15), which can be cast in the form
+$$
+\begin{align*}
+& p_{\varphi}=l_{z}  \tag{2.8.7a}\\
+& p_{\vartheta}^{2}+\frac{p_{\varphi}^{2}}{\sin ^{2} \vartheta}=l^{2}  \tag{2.8.7b}\\
+& \frac{1}{2 m_{r}}\left({p_{r}^{2}}^{2}+\frac{p_{\vartheta}^{2}}{r^{2}}+\frac{p_{\varphi}^{2}}{r^{2} \sin ^{2} \vartheta}\right)-\frac{Z e^{2}}{r}=w \tag{2.8.7c}
+\end{align*}
+$$
+
+The three phase space functions in the right hand side of (2.8.7) identify the primary first integrals $l_{z}, l^{2}$ and $w$. They are respectively the component along the polar axis of angular momentum, $p_{\varphi}$, the square magnitude of angular momentum, $p_{\psi}{ }^{2}$, and the energy, $H$, of the atom.
+
+Proof. The Hamilton equations
+$$
+\begin{align*}
+& \dot{\vartheta}=\frac{\partial H}{\partial p_{\vartheta}}=\frac{p_{\vartheta}}{m_{r} r^{2}}  \tag{2.8.8a}\\
+& \dot{\varphi}=\frac{\partial H}{\partial p_{\varphi}}=\frac{p_{\varphi}}{m_{r} r^{2} \sin ^{2} \vartheta} \tag{2.8.8b}
+\end{align*}
+$$
+allow to express the momenta $p_{\vartheta}, p_{\varphi}$ in terms of the angular velocities $\dot{\vartheta}, \dot{\varphi}$,
+$$
+\begin{align*}
+& p_{\vartheta}=m_{r} r^{2} \dot{\vartheta}  \tag{2.8.9a}\\
+& p_{\varphi}=m_{r} r^{2} \sin ^{2} \vartheta \dot{\varphi} \tag{2.8.9b}
+\end{align*}
+$$
+
+In particular, the second relation shows that $p_{\varphi}$ is the component of angular momentum
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0174.jpg?height=762&width=922&top_left_y=535&top_left_x=561)
+
+Figure 2.8.1. The spherical angles $\vartheta, \varphi$, their differentials $d \vartheta$, $d \varphi$ and the angular distance $d \psi$. The spherical sector here has conventionally unit radius.
+along the polar axis, as it is apparent from fig. 2.8.1.
+The magnitude of angular momentum is given by
+$$
+\begin{equation*}
+p_{\psi}=m_{r} r^{2} \dot{\psi} \tag{2.8.10}
+\end{equation*}
+$$
+where the angle $\psi$ is defined by the condition that $d \psi^{2}$ is the square angular distance of two infinitesimally close positions
+$$
+\begin{equation*}
+d \psi^{2}=d \vartheta^{2}+\sin ^{2} \vartheta d \varphi^{2} \tag{2.8.11}
+\end{equation*}
+$$
+as shown in fig. 2.8.1. By (2.8.11), we have
+$$
+\begin{equation*}
+\dot{\psi}^{2}=\dot{\vartheta}^{2}+\sin ^{2} \vartheta \dot{\varphi}^{2} \tag{2.8.12}
+\end{equation*}
+$$
+
+Using (2.8.9), (2.8.12), we find so
+$$
+\begin{equation*}
+p_{\vartheta}{ }^{2}+\frac{p_{\varphi}{ }^{2}}{\sin ^{2} \vartheta}=m_{r}{ }^{2} r^{4} \dot{\vartheta}^{2}+m_{r}{ }^{2} r^{4} \sin ^{2} \vartheta \dot{\varphi}^{2}=m_{r}{ }^{2} r^{4} \dot{\psi}^{2}=p_{\psi}{ }^{2} . \tag{2.8.13}
+\end{equation*}
+$$
+
+Thus, the phase space function appearing in the left hand side of (2.8.7b) is the square magnitude of angular momentum.
+
+The phase space function appearing in the left hand side of (2.8.7c) is energy, as it coincides with the Hamiltonian (2.8.1).
+
+The lines $C_{\varphi}\left(l_{z}, l, w\right), C_{\vartheta}\left(l_{z}, l, w\right), C_{r}\left(l_{z}, l, w\right)$ defined by the relations (2.8.6) answering to the (2.6.15) are closed for $\left|l_{z}\right| \leq l$ and $-1 \leq 2 l^{2} w / m_{r}\left(Z e^{2}\right)^{2}<0$. The action variables $J_{\varphi}\left(l_{z}, l, w\right), J_{\vartheta}\left(l_{z}, l, w\right), J_{r}\left(l_{z}, l, w\right)$ as functions of the primary first integrals $l_{z}, l$ and $w$ are thus defined and their expressions are
+$$
+\begin{align*}
+& J_{\varphi}\left(l_{z}, l, w\right)=\frac{1}{2 \pi} \oint_{C_{\varphi}\left(l_{z}, l, w\right)} p_{\varphi} d \varphi  \tag{2.8.14a}\\
+& J_{\vartheta}\left(l_{z}, l, w\right)=\frac{1}{2 \pi} \oint_{C_{\vartheta}\left(l_{z}, l, w\right)} p_{\vartheta} d \vartheta  \tag{2.8.14b}\\
+& J_{r}\left(l_{z}, l, w\right)=\frac{1}{2 \pi} \oint_{C_{r}\left(l_{z}, l, w\right)} p_{r} d r \tag{2.8.14c}
+\end{align*}
+$$
+in accordance with (2.6.16). One finds
+$$
+\begin{align*}
+& J_{\varphi}\left(l_{z}, l, w\right)=l_{z}  \tag{2.8.15a}\\
+& J_{\vartheta}\left(l_{z}, l, w\right)=l-\left|l_{z}\right|  \tag{2.8.15b}\\
+& J_{r}\left(l_{z}, l, w\right)=-l+\left(-\frac{m_{r}\left(Z e^{2}\right)^{2}}{2 w}\right)^{1 / 2} \tag{2.8.15c}
+\end{align*}
+$$
+
+The Wilson-Sommerfeld quantization scheme of sect. 2.6 can hence be applied to the present problem.
+
+Proof. On the line $C_{\varphi}\left(l_{z}, l, w\right)$, defined by condition (2.8.6a), $\varphi$ ranges from 0 to $2 \pi$ and $p_{\varphi}$ takes the constant value $l_{z}$ (cf. fig. 2.8.2). Since the value $0,2 \pi$ of the angular variable are geometrically equivalent $C_{\varphi}\left(l_{z}, l, w\right)$ is in fact a closed line. Because of its simplicity, the calculation of $J_{\varphi}\left(l_{z}, l, w\right)$ is trivial. We find
+$$
+\begin{equation*}
+J_{\varphi}\left(l_{z}, l, w\right)=\frac{1}{2 \pi} \int_{0}^{2 \pi} d \varphi l_{z}=l_{z} \tag{2.8.16}
+\end{equation*}
+$$
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0176.jpg?height=343&width=676&top_left_y=528&top_left_x=708)
+
+Figure 2.8.2. The azimuthal cycle $C_{\varphi}\left(l_{z}, l, w\right)$ for $l_{z}>0$. Since the angles $\varphi=0,2 \pi$ are geometrically equivalent, the curve $C_{\varphi}\left(l_{z}, l, w\right)$ is actually closed.
+and (2.8.15a) is therewith shown.
+For $\left|l_{z}\right| \leq l$, on the line $C_{\vartheta}\left(l_{z}, l, w\right)$ defined by condition (2.8.6b), $\vartheta$ grows first from $\vartheta_{\min }$ to $\vartheta_{\max }$ and then decreases from $\vartheta_{\max }$ to $\vartheta_{\min }$, where
+$$
+\begin{equation*}
+\vartheta_{\min }=\sin ^{-1}\left(\left|l_{z}\right| / l\right), \quad \vartheta_{\max }=\pi-\sin ^{-1}\left(\left|l_{z}\right| / l\right) \tag{2.8.17}
+\end{equation*}
+$$
+and $p_{\vartheta}$ takes correspondingly the values
+$$
+\begin{equation*}
+p_{\vartheta}= \pm l\left(1-\frac{l_{z}^{2}}{l^{2} \sin ^{2} \vartheta}\right)^{1 / 2} \tag{2.8.18}
+\end{equation*}
+$$
+with the upper/lower sign in the first/second half of the $\vartheta$ variation range. Above, $\vartheta_{\min / \max }$ are the ends of the angular interval where the radicand in the right hand side of $(2.8 .18)$ is non negative and condition (2.8.6b) has a real solution. $C_{\vartheta}\left(l_{z}, l, w\right)$ is thus also a closed curve (cf. fig. 2.8.2). The expression of $J_{\vartheta}\left(l_{z}, l, w\right)$ can now be obtained by computing the integral
+$$
+\begin{equation*}
+J_{\vartheta}\left(l_{z}, l, w\right)=\frac{l}{\pi} \int_{\sin ^{-1}\left(\left|l_{z}\right| / l\right)}^{\pi-\sin ^{-1}\left(\left|l_{z}\right| / l\right)} d \vartheta\left(1-\frac{l_{z}^{2}}{l^{2} \sin ^{2} \vartheta}\right)^{1 / 2} \tag{2.8.19}
+\end{equation*}
+$$
+
+A bit of work is required to carry out this task. To begin with, we note that, since the angular range $\sin ^{-1}\left(\left|l_{z}\right| / l\right) \leq \vartheta \leq \pi-\sin ^{-1}\left(\left|l_{z}\right| / l\right)$ is symmetric with respect to $\pi / 2$ and furthermore
+$$
+\int_{\pi / 2}^{\pi-\vartheta_{0}} d \vartheta f(\vartheta)=\int_{\vartheta_{0}}^{\pi / 2} d \vartheta f(\pi-\vartheta)=\int_{\vartheta_{0}}^{\pi / 2} d \vartheta f(\vartheta)
+$$
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0177.jpg?height=429&width=654&top_left_y=512&top_left_x=733)
+
+Figure 2.8.3. The polar cycle $C_{\vartheta}\left(l_{z}, l, w\right)$ for $l_{z} / l= \pm .5$.
+whenever $f(\pi-\vartheta)=f(\vartheta)$, we have
+$$
+\begin{equation*}
+J_{\vartheta}\left(l_{z}, l, w\right)=\frac{2 l}{\pi} \int_{\sin ^{-1}\left(\left|l_{z}\right| / l\right)}^{\pi / 2} d \vartheta\left(1-\frac{l_{z}{ }^{2}}{l^{2} \sin ^{2} \vartheta}\right)^{1 / 2} \tag{2.8.20}
+\end{equation*}
+$$
+
+Next, we perform the change of variable $u=\sin ^{2} \vartheta$. Noting that $d u=2 \sin \vartheta \cos \vartheta d \vartheta=$ $2 u^{1 / 2}(1-u)^{1 / 2} d \vartheta$, we find
+$$
+\begin{equation*}
+J_{\vartheta}\left(l_{z}, l, w\right)=\frac{l}{\pi} \int_{\left(l_{z} / l\right)^{2}}^{1} \frac{d u}{u}\left(\frac{u-l_{z}^{2} / l^{2}}{1-u}\right)^{1 / 2} \tag{2.8.21}
+\end{equation*}
+$$
+
+On the integral tables, one finds
+$$
+\int_{a}^{b} \frac{d u}{u}\left(\frac{u-a}{b-u}\right)^{1 / 2}=\pi\left[1-\left(\frac{a}{b}\right)^{1 / 2}\right]
+$$
+for $0<a<b$. Thus,
+$$
+\begin{equation*}
+J_{\vartheta}\left(l_{z}, l, w\right)=l\left[1-\left(\frac{l_{z}^{2}}{l^{2}}\right)^{1 / 2}\right]=l-\left|l_{z}\right| \tag{2.8.22}
+\end{equation*}
+$$
+showing $(2.8 .15 b)$.
+$$
+\text { For }-1 \leq 2 l^{2} w / m_{r}\left(Z e^{2}\right)^{2}<0 \text {, on the line } C_{r}\left(l_{z}, l, w\right) \text { defined by condition (2.8.6c), }
+$$
+$r$ grows first from $r_{\min }$ to $r_{\max }$ and then decreases from $r_{\max }$ to $r_{\min }$, where
+$$
+\begin{equation*}
+r_{\max / \min }=-\frac{Z e^{2}}{2 w}\left[1 \pm\left(1+\frac{2 l^{2} w}{m_{r}\left(Z e^{2}\right)^{2}}\right)^{1 / 2}\right] \tag{2.8.23}
+\end{equation*}
+$$
+and $p_{r}$ takes correspondingly the values
+$$
+\begin{equation*}
+p_{r}= \pm \frac{1}{r}\left[2 m_{r} w\left(r^{2}+\frac{Z e^{2} r}{w}-\frac{l^{2}}{2 m_{r} w}\right)\right]^{1 / 2} \tag{2.8.24}
+\end{equation*}
+$$
+with the upper/lower sign in the first/second half of the $r$ variation range. Above,
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0178.jpg?height=421&width=914&top_left_y=516&top_left_x=584)
+
+Figure 2.8.4. The radial cycle $C_{r}\left(l_{z}, l, w\right)$ for $2 l^{2}|w| /\left(Z e^{2}\right)^{2} m_{r}=$ .7975 .
+$r_{\min / \max }$ are the ends of the radial interval where the radicand in the right hand side of (2.8.24) is non negative and condition (2.8.6c) has a real solution. $r_{\min / \max }$ are the roots of the second degree polynomial of $r$ in the radicand in the right hand side of (2.8.24). Since $-1 \leq 2 l^{2} w / m_{r}\left(Z e^{2}\right)^{2}<0, r_{\min / \max }$ are both real and positive and represent the ends of the radial interval where the radicand is non negative. In that case, $C_{r}\left(l_{z}, l, w\right)$ is also a closed curve (cf. fig. 2.8.4). The expression of $J_{r}\left(l_{z}, l, w\right)$ can now be obtained by computing the integral
+$$
+\begin{equation*}
+J_{r}\left(l_{z}, l, w\right)=\frac{1}{\pi} \int_{r_{\min }}^{r_{\max }} \frac{d r}{r}\left[2 m_{r} w\left(r^{2}+\frac{Z e^{2} r}{w}-\frac{l^{2}}{2 m_{r} w}\right)\right]^{1 / 2} \tag{2.8.25}
+\end{equation*}
+$$
+
+Since $r_{\min / \max }$ are the roots of the radicand in the integrand, (2.8.25) can be cast as
+$$
+\begin{equation*}
+J_{r}\left(l_{z}, l, w\right)=\frac{\left(-2 m_{r} w\right)^{1 / 2}}{\pi} \int_{r_{\min }}^{r_{\max }} \frac{d r}{r}\left[\left(r-r_{\min }\right)\left(r_{\max }-r\right)\right]^{1 / 2} \tag{2.8.26}
+\end{equation*}
+$$
+
+On the integral tables, one finds
+$$
+\int_{a}^{b} \frac{d u}{u}((u-a)(b-u))^{1 / 2}=\frac{\pi}{2}\left(b^{1 / 2}-a^{1 / 2}\right)^{2}=\frac{\pi}{2}\left(a+b-2(a b)^{1 / 2}\right)
+$$
+for $0<a<b$. Observing that
+$$
+\begin{equation*}
+r_{\max }+r_{\min }=-\frac{Z e^{2}}{w}, \quad r_{\max } r_{\min }=-\frac{l^{2}}{2 m_{r} w} \tag{2.8.27}
+\end{equation*}
+$$
+we have therefore
+$$
+\begin{equation*}
+J_{r}\left(l_{z}, l, w\right)=\left(\frac{-m_{r} w}{2}\right)^{1 / 2}\left[-\frac{Z e^{2}}{w}-2\left(-\frac{l^{2}}{2 m_{r} w}\right)^{1 / 2}\right] \tag{2.8.28}
+\end{equation*}
+$$
+$$
+=\left(-\frac{m_{r}\left(Z e^{2}\right)^{2}}{2 w}\right)^{1 / 2}-l
+$$
+showing $(2.8 .15 \mathrm{c})$.
+
+Using the relations (2.8.15), we express $l_{z}, l$ and $w$ in function of $J_{\varphi}, J_{\vartheta}, J_{r}$,
+$$
+\begin{align*}
+& l_{z}\left(J_{\varphi}, J_{\vartheta}, J_{r}\right)=J_{\varphi}  \tag{2.8.29a}\\
+& l\left(J_{\varphi}, J_{\vartheta}, J_{r}\right)=\left|J_{\varphi}\right|+J_{\vartheta}  \tag{2.8.29b}\\
+& w\left(J_{\varphi}, J_{\vartheta}, J_{r}\right)=-\frac{m_{r}\left(Z e^{2}\right)^{2}}{2\left(\left|J_{\varphi}\right|+J_{\vartheta}+J_{r}\right)^{2}} \tag{2.8.29c}
+\end{align*}
+$$
+
+By $(2.8 .29 \mathrm{c}), w\left(J_{\varphi}, J_{\vartheta}, J_{r}\right)$ depends on $J_{\varphi}, J_{\vartheta}, J_{r}$ through the sum $\left|J_{\varphi}\right|+J_{\vartheta}+$ $J_{r}$. By (2.6.21), so, the fundamental frequencies $\omega_{\varphi}\left(J_{\varphi}, J_{\vartheta}, J_{r}\right), \omega_{\vartheta}\left(J_{\varphi}, J_{\vartheta}, J_{r}\right)$, $\omega_{r}\left(J_{\varphi}, J_{\vartheta}, J_{r}\right)$ of the electron are equal, perhaps up to sign. The periodic projections of a phase space trajectory $\left(\varphi(t), \vartheta(t), r(t), p_{\varphi}(t), p_{\vartheta}(t), p_{r}(t)\right)$ with assigned values of $l_{z}, l, w$ on the phase space planes $\varphi, p_{\varphi}, \vartheta, p_{\vartheta}, r, p_{r}$ have so the same period. The configuration space trajectory $(\varphi(t), \vartheta(t), r(t))$ is consequently periodic and thus closed.
+
+It is a classical result that such trajectory is elliptical with one of the two foci in the force center, see fig. 2.8.5 a . The distance of the charge from the center as a function of the orbital angle $\psi$ is given by the well known expression
+$$
+\begin{equation*}
+r=\frac{\rho}{1-\epsilon \cos \psi} \tag{2.8.30}
+\end{equation*}
+$$
+where $\rho=a\left(1-\epsilon^{2}\right)$ with $a$ the semi-major axis and $\epsilon$ is the eccentricity of the ellipse as shown in fig. $2.8 .5 b$. If the electron has the values $l_{z}, l$ and $w$ of the primary first integrals, $\rho$ and $\epsilon$ are given
+$$
+\begin{align*}
+\rho(l, w) & =\frac{l^{2}}{m_{r} Z e^{2}}  \tag{2.8.31}\\
+\epsilon(l, w) & =\left(1+\frac{2 w l^{2}}{m_{r}\left(Z e^{2}\right)^{2}}\right)^{1 / 2} \tag{2.8.32}
+\end{align*}
+$$
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0180.jpg?height=1362&width=771&top_left_y=490&top_left_x=707)
+
+Figure 2.8.5. The electron orbit as seen in a spherical coordinate system. Here the orbit is positioned with its major axis in the $x, z$ plane along the $O A$ direction $(a)$. The orbit as seen on the orbital plane plane $(b)$. Here, $\epsilon=0.8$.
+
+Proof. The extremal distances $r_{\min / \max }$ of the charge from the center obey
+$$
+\begin{equation*}
+\frac{1}{r_{\min / \max }}=\frac{1 \pm \epsilon}{\rho} \tag{2.8.33}
+\end{equation*}
+$$
+
+By (2.8.30). From these relations, it follows that
+$$
+\begin{equation*}
+\frac{1}{\rho}=\frac{1}{2}\left(\frac{1}{r_{\min }}+\frac{1}{r_{\max }}\right), \quad \frac{\epsilon}{\rho}=\frac{1}{2}\left(\frac{1}{r_{\min }}-\frac{1}{r_{\max }}\right) \tag{2.8.34}
+\end{equation*}
+$$
+
+The (2.8.34) can be solved for $\rho$ and $\epsilon$ yielding
+$$
+\begin{align*}
+& \rho=\frac{2 r_{\max } r_{\min }}{r_{\max }+r_{\min }}  \tag{2.8.35}\\
+& \epsilon=\frac{r_{\max }-r_{\min }}{r_{\max }+r_{\min }} \tag{2.8.36}
+\end{align*}
+$$
+
+Inserting the expressions (2.8.23) of $r_{\min / \max }$ into (2.8.35), (2.8.36), we obtain (2.8.31), $(2.8 .32)$.
+
+According to the Wilson-Sommerfeld quantization prescription (2.6.69), the adiabatic invariants $J_{\varphi}\left(l_{z}, l, w\right), J_{\vartheta}\left(l_{z}, l, w\right), J_{r}\left(l_{z}, l, w\right)$ are quantized as
+$$
+\begin{align*}
+& J_{\varphi}\left(l_{z}, l, w\right)=n_{\varphi} \hbar  \tag{2.8.37a}\\
+& J_{\vartheta}\left(l_{z}, l, w\right)=n_{\vartheta} \hbar  \tag{2.8.37b}\\
+& J_{r}\left(l_{z}, l, w\right)=n_{r} \hbar \tag{2.8.37c}
+\end{align*}
+$$
+for certain integer quantum numbers $n_{\varphi}, n_{\vartheta}, n_{r}$.
+Relations (2.8.37) imply the quantization of the first integrals $l_{z}, l, w$. The quantized values of $l_{z}, l, w$ are obtained substituting the (2.8.37) in (2.8.29). There are however restrictions on the values the quantum numbers $n_{\varphi}, n_{\vartheta}, n_{r}$ can take for reasons which we illustrate next.
+
+The allowed ranges of the quantum numbers $n_{\varphi}, n_{\vartheta}, n_{r}$ become apparent once we switch to a more natural set of quantum numbers suggested by the form of relations (2.8.29), namely
+$$
+\begin{align*}
+& m_{k}=n_{\varphi}  \tag{2.8.38a}\\
+& k=n_{\vartheta}+\left|n_{\varphi}\right|  \tag{2.8.38b}\\
+& n=n_{\vartheta}+\left|n_{\varphi}\right|+n_{r} \tag{2.8.38c}
+\end{align*}
+$$
+$m_{k}, k, n$ are called magnetic, orbital and principal quantum numbers, respectively.
+
+In terms of these, the quantized values of $l_{z}, l$ and $w$ are
+$$
+\begin{align*}
+& l_{z m_{k}}=\hbar m_{k}  \tag{2.8.39a}\\
+& l_{k}=\hbar k  \tag{2.8.39b}\\
+& w_{n}=-\frac{m_{r}\left(Z e^{2}\right)^{2}}{2 \hbar^{2} n^{2}} \tag{2.8.39c}
+\end{align*}
+$$
+
+Combining $(2.8 .31)$, (2.8.32) with (2.8.39b), (2.8.39c), we get similarly the quantized values of the length $\rho$ and the eccentricity $\epsilon$,
+$$
+\begin{align*}
+& \rho_{k}=\frac{\hbar^{2} k^{2}}{m_{r} Z e^{2}}  \tag{2.8.40}\\
+& \epsilon_{k, n}=\left(1-\frac{k^{2}}{n^{2}}\right)^{1 / 2} \tag{2.8.41}
+\end{align*}
+$$
+
+By (2.8.39a), since $l_{z}$ can take all real values, $m_{k}$ can take all integer values,
+$$
+\begin{equation*}
+m_{k}=0, \pm 1, \pm 2, \ldots \tag{2.8.42}
+\end{equation*}
+$$
+
+Similarly, by (2.8.39b), since $l$ can take all non negative real values, $k$ can take all non negative integer values. However, $k=0$ cannot occur, as it would yield an orbit of eccentricity 1, which is parabolic rather than elliptic. Hence,
+$$
+\begin{equation*}
+k=1,2,3 \ldots \tag{2.8.43}
+\end{equation*}
+$$
+
+However, $m_{k}$ and $k$ do not vary independently in their respective ranges, as
+$$
+\begin{equation*}
+\left|m_{k}\right| \leq k \tag{2.8.44}
+\end{equation*}
+$$
+
+Proof. Since the magnitude of a vector is not smaller than that of any of its Cartesian components, we have $l-\left|l_{z}\right| \geq 0$. (2.8.39a), (2.8.39b) imply therefore the bound (2.8.44).
+
+As to $n$, it can take values in the range
+$$
+\begin{equation*}
+n=1,2,3 \ldots \tag{2.8.45}
+\end{equation*}
+$$
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0183.jpg?height=562&width=812&top_left_y=519&top_left_x=662)
+
+Figure 2.8.6. The electron orbits for $n=5$ in Sommerfeld's atomic theory.
+with the restriction that
+$$
+\begin{equation*}
+k \leq n \tag{2.8.46}
+\end{equation*}
+$$
+
+Proof. By the relations (2.8.15), we have $\left|J_{\varphi}\left(l_{z}, l, w\right)\right|+J_{\vartheta}\left(l_{z}, l, w\right)+J_{r}\left(l_{z}, l, w\right)=$ $\left(-m_{r}\left(Z e^{2}\right)^{2} / 2 w\right)^{1 / 2}>0$. The quantization conditions (2.8.37) then imply that $\left|n_{\varphi}\right|+$ $n_{\vartheta}+n_{r}>0$. By (2.8.38c), then, $n>0$. (2.8.45) so follows. By (2.8.41), as $\epsilon$ must be real valued, (2.8.46) must hold.
+
+In fig. 2.8.6, the possible electronic orbits are depicted for a value of $n$ and all possible values of $k$. Bohr's circular orbit corresponds to the highest $k$ value, $k=n$.
+
+Unlike Bohr's atomic model, in Sommerfeld's theory the atom's stationary states are labelled by three quantum numbers, $m_{k}, k, n$. Thus, the energy levels are degenerate as states characterized by the same value of the principal number $n$ but different values of the magnetic and orbital numbers $m_{k}$ and $k$ are distinct but have the same energy, viz $w_{n}$. The degeneration is removed when the atom
+is acted upon by an external electric or magnetic field, as in Stark and Zeeman effects. Then the energy levels becomes dependent on the magnitude of the applied fields with the coupling strength depending on $m_{k}$ and $k$.
+
+Sommerfeld's atomic model is defective in a few points. First of all, the correct quantized values of the component $l_{z}$ and the magnitude $l$ of the angular momentum are of the form $l_{z m_{l}}=\hbar m_{l}$ and $l_{l}=\hbar[l(l+1)]^{1 / 2}$, respectively, with $m_{l}=0, \pm 1, \ldots$ and $l=0,1, \ldots$ such that $\left|m_{l}\right| \leq l$, which equal (2.8.39a) (2.8.39b) for large $l$ only. Second, the correct range of values of the orbital quantum number $l$ is $l=0,1, \ldots, n-1$. With (2.8.39c), however, the model reproduces the Bohr atomic levels $w_{n}$ (cf. eq. (2.4.15)). It also predicts their degeneracy: the $n(n+2)$ triples $\left(m_{k}, k, n\right)$ with $\left|m_{k}\right| \leq k, 1 \leq k \leq n$ all yield the same level $w_{n}$. The correct degeneracy accounting for the electron spin is $2 n^{2}$.
+
+\subsection*{2.9. The Stern and Gerlach experience}
+
+The Stern and Gerlach experiment, first performed by O. Stern and W. Gerlach in 1922, provided the first direct evidence of the quantization of atomic angular momentum.
+
+The Stern-Gerlach apparatus is shown in fig. 2.9.1. Vapor of a metallic element is produced by an oven $O$ providing a source of individual unbound atoms. Through a system of slits $F$, the vapor is turned into a precisely collimated beam of atoms. The beam is made enter a chamber whose interior is kept in high vacuum and pass through the gap in between the polar expansions $N, S$ of a magnet built in such a way to generate a highly inhomogeneous intense magnetic field. The coupling of the magnetic moments of the atoms of the beam to the magnetic field causes a deflection of the atoms from the beam's axis. The extent of the deflection can be measured by inspection of the metallic deposit the atoms form on a slab of glass $G$.
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0185.jpg?height=646&width=912&top_left_y=1694&top_left_x=585)
+
+Figure 2.9.1. A schematic representation of the Stern and Gerlach experimental set-up.
+
+The classical and quantum theory both offer predictions about the distribution of the deflection angles of the atoms in the beam, We are now going to derive them and compare them with experiments.
+
+According to classical electrodynamics, an atom whose electrons have total angular momentum $\boldsymbol{l}$ has a magnetic dipole moment $\boldsymbol{\mu}$ given by
+$$
+\begin{equation*}
+\boldsymbol{\mu}=-\frac{e}{2 m_{e} c} \boldsymbol{l} \tag{2.9.1}
+\end{equation*}
+$$
+
+Proof. By definition, the magnetic moment of the electrons orbiting around the nucleus in an atom is given by
+$$
+\begin{equation*}
+\boldsymbol{\mu}=\frac{1}{2 c} \sum_{i} \boldsymbol{r}_{i} \times(-e) \boldsymbol{v}_{i} \tag{2.9.2}
+\end{equation*}
+$$
+where $\boldsymbol{r}_{i}, \boldsymbol{v}_{i}$ are the position and the velocity of the $i$-th electron, respectively. Now, we can cast this relation as
+$$
+\begin{equation*}
+\boldsymbol{\mu}=-\frac{e}{2 m_{e} c} \sum_{i} \boldsymbol{r}_{i} \times m_{e} \boldsymbol{v}_{i}=-\frac{e}{2 m_{e} c} \boldsymbol{l} \tag{2.9.3}
+\end{equation*}
+$$
+proving $(2.9 .1)$.
+
+In classical electrodynamics, the coupling of $\boldsymbol{\mu}$ to the external magnetic field $\boldsymbol{B}$ yields a force $\boldsymbol{f}$ acting on the atom given by
+$$
+\begin{equation*}
+f=\boldsymbol{\mu} \cdot \boldsymbol{\nabla} \boldsymbol{B}(\boldsymbol{q}) \tag{2.9.4}
+\end{equation*}
+$$
+where $\boldsymbol{q}$ is the atom's position. According to classical mechanics, then, the time rate of the atom's momentum $\boldsymbol{p}$ is given by
+$$
+\begin{equation*}
+\frac{d \boldsymbol{p}}{d t}=\boldsymbol{\mu} \cdot \boldsymbol{\nabla} \boldsymbol{B}(\boldsymbol{q}) \tag{2.9.5}
+\end{equation*}
+$$
+
+Eq. (2.9.5) determines the trajectory of the atom as it passes through the polar expansions of the magnet. Regardless its difficulty, the solution of (2.9.5) cannot be attempted as long as the time dependence of the magnetic dipole moment $\boldsymbol{\mu}$ is not known.
+
+In classical electrodynamics, the coupling of $\boldsymbol{\mu}$ to the external magnetic field
+$\boldsymbol{B}$ yields a torque $\boldsymbol{t}$ acting on the atom given by
+$$
+\begin{equation*}
+\boldsymbol{t}=\boldsymbol{\mu} \times \boldsymbol{B}(\boldsymbol{q}) \tag{2.9.6}
+\end{equation*}
+$$
+
+By the laws of classical mechanics, then, the time rate of the atom's angular momentum $\boldsymbol{l}$ is given by
+$$
+\begin{equation*}
+\frac{d \boldsymbol{l}}{d t}=\boldsymbol{\mu} \times \boldsymbol{B}(\boldsymbol{q}) \tag{2.9.7}
+\end{equation*}
+$$
+
+Here, however, $\boldsymbol{l}$ and $\boldsymbol{\mu}$ are not independent. Using (2.9.1), (2.9.7) can be cast as an equation for the magnetic dipole moment $\boldsymbol{\mu}$ only. The Larmor equation
+$$
+\begin{equation*}
+\frac{d \boldsymbol{\mu}}{d t}=\boldsymbol{\omega}(\boldsymbol{q}) \times \boldsymbol{\mu} \tag{2.9.8}
+\end{equation*}
+$$
+where $\boldsymbol{\omega}$ is the vector Larmor frequency
+$$
+\begin{equation*}
+\boldsymbol{\omega}=\frac{e \boldsymbol{B}}{2 m_{e} c} \tag{2.9.9}
+\end{equation*}
+$$
+is so obtained (J. Larmor, 1898). This equation determines the time evolution of the magnetic dipole moment as the atom passes through the magnet.
+
+Because of the simultaneous dependence of the magnetic field $\boldsymbol{B}$ and the vector Larmor frequency $\boldsymbol{\omega}$ on the atom's instantaneous position $\boldsymbol{q}$, eqs. (2.9.5), (2.9.8) are coupled making it impossible to solve them in a sequence. (2.9.5), (2.9.8) can however be approximately decoupled and solved exploiting the particular symmetry of the field, as we shall now show.
+
+The dynamics of the atom in the magnetic field is determined to a considerable extent by symmetry of the magnet. For this reason, it is necessary to analyze this latter in detail. In fig. 2.9.2, the geometry of the magnet is shown. The magnet is characterized by two mutually orthogonal vertical symmetry planes $\Sigma_{s}, \Lambda_{s}$ dividing it into two pairs of mirror halves (cf. fig. 2.9.2 a). Further, the magnet enjoys an approximate translational symmetry because of which the section of the magnet through any vertical plane $\Pi$ parallel to $\Lambda_{s}$ has the same shape and size regardless where $\Pi$ is placed (cf. fig. 2.9.2 b).
+
+Because of this special conformation of the experimental set-up, any vector
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0188.jpg?height=779&width=1052&top_left_y=500&top_left_x=431)
+
+Figure 2.9.2. Sections of the Stern-Gerlach apparatus through the mutually orthogonal vertical symmetry planes $\Sigma_{s}, \Lambda_{s}(a)$. Sections through any vertical plane $\Pi$ parallel to $\Lambda_{s}(b)$.
+$\boldsymbol{a}$ decomposes naturally as a sum
+$$
+\begin{equation*}
+\boldsymbol{a}=a_{\|} \boldsymbol{n}+\boldsymbol{a}_{\perp} \tag{2.9.10}
+\end{equation*}
+$$
+of its components parallel and normal to the direction of a vertical upward pointing unit vector $\boldsymbol{n}$,
+$$
+\begin{equation*}
+a_{\|}=a \cdot n, \quad a_{\perp}=a-a \cdot n \boldsymbol{n}=\boldsymbol{n} \times(\boldsymbol{a} \times \boldsymbol{n}) \tag{2.9.11}
+\end{equation*}
+$$
+as shown in fig. 2.9.3. We shall use this property systematically in the analysis below.
+
+Because of the symmetry properties of the magnet, the magnetic field $\boldsymbol{B}(\boldsymbol{x})$ at any point $\boldsymbol{x}$ of the line of intersection of the symmetry planes $\Sigma_{s}, \Lambda_{s}$ is oriented as the vertical unit vector $\boldsymbol{n}$, since a component of $\boldsymbol{B}(\boldsymbol{x})$ normal to $\boldsymbol{n}$ would break the mirror symmetry that the field $\boldsymbol{B}$ must have with respect to the symmetry planes $\Sigma_{s}, \Lambda_{s}$. Furthermore, by virtue of the rough translation symmetry of the
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0189.jpg?height=443&width=578&top_left_y=505&top_left_x=730)
+
+Figure 2.9.3. Decomposition of a generic vector $\boldsymbol{a}$ in the components $a_{\|} \boldsymbol{n}$ and $\boldsymbol{a}_{\perp}$ parrallel and orthogonal to the unit vector $\boldsymbol{n}$.
+magnet in the direction normal to the plane $\Lambda_{s}$, the magnetic field $\boldsymbol{B}(\boldsymbol{x})$ at any point $\boldsymbol{x}$ of the plane $\Sigma_{s}$ must be equal the magnetic field $\boldsymbol{B}\left(\boldsymbol{x}^{\prime}\right)$ at the point $\boldsymbol{x}^{\prime}$ of the intersection line of $\Sigma_{s}, \Lambda_{s}$ at the same height. It follows that on $\Sigma_{s} \boldsymbol{B}(\boldsymbol{x})$ is approximately of the form
+$$
+\begin{equation*}
+\boldsymbol{B}(\boldsymbol{x})=B\left(x_{\|}\right) \boldsymbol{n} \tag{2.9.12}
+\end{equation*}
+$$
+where $B$ is a scalar field. Since the atomic beam must lie in the plane $\Sigma_{s}$ again by symmetry reasons, this is the magnetic field felt by the atoms of the beam.
+
+We can now write eqs. (2.9.5), (2.9.8) in a way more suitable for their solution by decomposing $\boldsymbol{p}$ and $\boldsymbol{\mu}$ in their parallel and normal components $p_{\|}, \boldsymbol{p}_{\perp}$ and $\mu_{\|}$, $\boldsymbol{\mu}_{\perp}$, respectively. (2.9.5) takes then the form
+$$
+\begin{align*}
+& \frac{d p_{\|}}{d t}=\mu_{\|} \frac{d B\left(q_{\|}\right)}{d x_{\|}}  \tag{2.9.13}\\
+& \frac{d \boldsymbol{p}_{\perp}}{d t}=\mathbf{0} \tag{2.9.14}
+\end{align*}
+$$
+
+Similarly, (2.9.8) reads as
+$$
+\begin{align*}
+& \frac{d \mu_{\|}}{d t}=0  \tag{2.9.15}\\
+& \frac{d \boldsymbol{\mu}_{\perp}}{d t}=\omega\left(q_{\|}\right) \boldsymbol{n} \times \boldsymbol{\mu}_{\perp} \tag{2.9.16}
+\end{align*}
+$$
+where the scalar Larmor frequency $\omega$ is given by
+$$
+\begin{equation*}
+\omega=\frac{e B}{2 m_{e} c} \tag{2.9.17}
+\end{equation*}
+$$
+
+Proof. Using relation (2.9.12), we can express (2.9.5) as
+$$
+\begin{equation*}
+\frac{d \boldsymbol{p}}{d t}=\mu_{\|} \frac{d B\left(q_{\|}\right)}{d x_{\|}} \boldsymbol{n} \tag{2.9.18}
+\end{equation*}
+$$
+
+By the first relation (2.9.11) and (2.9.18), we have
+$$
+\begin{equation*}
+\frac{d p_{\|}}{d t}=\frac{d \boldsymbol{p}}{d t} \cdot \boldsymbol{n}=\mu_{\|} \frac{d B\left(q_{\|}\right)}{d x_{\|}} \boldsymbol{n} \cdot \boldsymbol{n}=\mu_{\|} \frac{d B\left(q_{\|}\right)}{d x_{\|}} \tag{2.9.19}
+\end{equation*}
+$$
+
+Similarly, by the second relation (2.9.11) and (2.9.18), we have
+$$
+\begin{equation*}
+\frac{d \boldsymbol{p}_{\perp}}{d t}=\boldsymbol{n} \times\left(\frac{d \boldsymbol{p}}{d t} \times \boldsymbol{n}\right)=\boldsymbol{n} \times\left(\mu_{\|} \frac{d B\left(q_{\|}\right)}{d x_{\|}} \boldsymbol{n} \times \boldsymbol{n}\right)=\mathbf{0} . \tag{2.9.20}
+\end{equation*}
+$$
+(2.9.13), (2.9.14) are thus shown.
+
+Using relation (2.9.12), we can express the vector Larmor frequency $\boldsymbol{\omega}$ as
+$$
+\begin{equation*}
+\boldsymbol{\omega}=\frac{e B \boldsymbol{n}}{2 m_{e} c}=\omega \boldsymbol{n} \tag{2.9.21}
+\end{equation*}
+$$
+where $\omega$ is given by (2.9.17). In this way, eq. (2.9.8) can be written as
+$$
+\begin{equation*}
+\frac{d \boldsymbol{\mu}}{d t}=\omega\left(q_{\|}\right) \boldsymbol{n} \times \boldsymbol{\mu} \tag{2.9.22}
+\end{equation*}
+$$
+
+By the first relation (2.9.11) and (2.9.22), we have
+$$
+\begin{equation*}
+\frac{d \mu_{\|}}{d t}=\frac{d \boldsymbol{\mu}}{d t} \cdot \boldsymbol{n}=\omega\left(q_{\|}\right) \boldsymbol{n} \times \boldsymbol{\mu} \cdot \boldsymbol{n}=0 \tag{2.9.23}
+\end{equation*}
+$$
+
+Similarly, by the second relation (2.9.11) and (2.9.22), we have
+$$
+\begin{align*}
+\frac{d \boldsymbol{\mu}_{\perp}}{d t}=\boldsymbol{n} \times\left(\frac{d \boldsymbol{\mu}}{d t} \times \boldsymbol{n}\right) & =\boldsymbol{n} \times\left(\left(\omega\left(q_{\|}\right) \boldsymbol{n} \times \boldsymbol{\mu}\right) \times \boldsymbol{n}\right)  \tag{2.9.24}\\
+= & \omega\left(q_{\|}\right) \boldsymbol{n} \times(\boldsymbol{\mu}-\boldsymbol{\mu} \cdot \boldsymbol{n} \boldsymbol{n})=\omega\left(q_{\|}\right) \boldsymbol{n} \times \boldsymbol{\mu}_{\perp}
+\end{align*}
+$$
+
+So also (2.9.15), (2.9.16) are proven.
+
+Eqs. (2.9.13)-(2.9.16) are now partially decoupled so that their solution can now be attempted.
+
+To get an idea of what goes on, suppose for a moment that the scalar Larmor frequency $\omega$ is independent from the atom's parallel coordinate $q_{\|}$. As $\omega$ is now a fixed constant, the solution of eqs. (2.9.15), (2.9.16) with the initial conditions $\boldsymbol{\mu}(0)=\boldsymbol{\mu}_{0}$ is easily found to be
+$$
+\begin{align*}
+& \mu_{\|}(t)=\mu_{0 \|}  \tag{2.9.25}\\
+& \boldsymbol{\mu}_{\perp}(t)=\cos (\omega t) \boldsymbol{\mu}_{0 \perp}+\sin (\omega t) \boldsymbol{n} \times \boldsymbol{\mu}_{0 \perp} \tag{2.9.26}
+\end{align*}
+$$
+
+Proof. (2.9.25) follows immediately from (2.9.15).
+To show (2.9.26), we check that $\boldsymbol{\mu}_{\perp}$ as given by (2.9.26) satisfies eq. (2.9.16) and the required initial condition. (2.9.16) holds since
+$$
+\begin{align*}
+\omega \boldsymbol{n} \times \boldsymbol{\mu}_{\perp}(t)= & \omega \boldsymbol{n} \times\left(\cos (\omega t) \boldsymbol{\mu}_{0 \perp}+\sin (\omega t) \boldsymbol{n} \times \boldsymbol{\mu}_{0 \perp}\right)  \tag{2.9.27}\\
+& =-\omega \sin (\omega t) \boldsymbol{\mu}_{0 \perp}+\omega \cos (\omega t) \boldsymbol{n} \times \boldsymbol{\mu}_{0 \perp}=\frac{d \boldsymbol{\mu}_{\perp}(t)}{d t}
+\end{align*}
+$$
+
+The initial condition also is fulfilled since $\boldsymbol{\mu}_{\perp}(0)=\boldsymbol{\mu}_{0 \perp} \cdot(2.9 .26)$ is therefore also proven.
+
+As appears from $(2.9 .25),(2.9 .26), \mu_{\|}$is constant while $\boldsymbol{\mu}_{\perp}$ spins with angular velocity $\omega$ about the axis of versor $\boldsymbol{n}$ as shown in fig. 2.9.4. $\boldsymbol{\mu}$, so, undergoes a Larmor precession around the direction $\boldsymbol{n}$ of period $\tau=2 \pi / \omega$ resembling in this way an ordinary top.
+
+In the actual experiment, due to the inhomogeneity of the magnetic field, the scalar Larmor frequency $\omega\left(q_{\|}\right)$does depend on the atom's parallel coordinate $q_{\|}$ and so it changes as the atom moves along its path. If however the relative variation $\Delta \varrho=\left(1 / \omega\left(q_{\|}\right)\right) \Delta q_{\|}\left|\partial \omega\left(q_{\|}\right) / \partial x_{\|}\right|$undergone by $\omega\left(q_{\|}\right)$due to the deflection $\Delta q_{\|}=\left|p_{\|}\right| \Delta t / m_{e}$ suffered by a beam's atom during a time $\Delta t=2 \pi / \omega\left(q_{\|}\right)$equal to the instantaneous period of the Larmor precession, which by (2.9.17) is
+$$
+\begin{equation*}
+\Delta \varrho=\frac{4 \pi c}{e}\left|\frac{p_{\|}}{B\left(x_{\|}\right)^{2}} \frac{d B\left(x_{\|}\right)}{d x_{\|}}\right| \tag{2.9.28}
+\end{equation*}
+$$
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0192.jpg?height=535&width=530&top_left_y=508&top_left_x=776)
+
+Figure 2.9.4. The Larmor precession of the magnetic moment $\boldsymbol{\mu}$ around the direction of $\boldsymbol{n}$ at angular speed $\omega$.
+is uniformly small during the atom's flight, we expect that the magnetic dipole moment still undergoes an approximate precession around the direction $\boldsymbol{n}$ with period roughly $\tau\left(\bar{q}_{\|}\right)=2 \pi / \omega\left(\bar{q}_{\|}\right)$, where $\bar{q}_{\|}$is the time average of $q_{\|}$during one precession. This is what normally happens.
+
+Combining (2.9.13) and (2.9.25), we obtain the equation
+$$
+\begin{equation*}
+\frac{d p_{\|}}{d t}=\mu_{0 \|} \frac{d B\left(q_{\|}\right)}{d x_{\|}} \tag{2.9.29}
+\end{equation*}
+$$
+
+Eq. (2.9.29) together with the equation
+$$
+\begin{equation*}
+p_{\|}=m_{A} \frac{d q_{\|}}{d t} \tag{2.9.30}
+\end{equation*}
+$$
+where $m_{A}$ is the atomic mass, leads to the differential equation
+$$
+\begin{equation*}
+m_{A} \frac{d^{2} q_{\|}}{d t^{2}}=\mu_{0 \|} \frac{d B\left(q_{\|}\right)}{d x_{\|}} \tag{2.9.31}
+\end{equation*}
+$$
+(2.9.31) can be integrated, at least in principle, and its solution can be substituted back in (2.9.29). From (2.9.29) and (2.9.14), we get then
+$$
+\begin{align*}
+& p_{\|}(t)=p_{0 \|}+\mu_{0 \|} \int_{0}^{t} d t^{\prime} \frac{d B\left(q_{\|}^{\prime}\right)}{d x_{\|}}  \tag{2.9.32}\\
+& \boldsymbol{p}_{\perp}(t)=\boldsymbol{p}_{0 \perp} \tag{2.9.33}
+\end{align*}
+$$
+for the initial condition $\boldsymbol{p}(0)=\boldsymbol{p}_{0}$.
+We have now all the information required by a quantitative analysis of the deflection suffered by the beam's atoms caused by the action of the magnetic field. Suppose that the atoms leave the slits $F$ at the time $t=0$ and reach the slab of glass $G$ after a flight time $t_{f}$ (cf. fig. 2.9.1). Since the atoms are released by the oven through the slit horizontally, the parallel and orthogonal components $p_{0 \|}$ and $\boldsymbol{p}_{0 \perp}$ of the initial momentum $\boldsymbol{p}_{0}$ of the atoms equal respectively 0 and $\boldsymbol{p}_{0}$. An inspection of fig. 2.9.5 reveals then that the deflection angle $\theta$ of the atom is roughly given by the expression
+$$
+\begin{equation*}
+\theta \simeq \tan \theta \simeq \frac{p_{\|}\left(t_{f}\right)}{\left|\boldsymbol{p}_{\perp}\left(t_{f}\right)\right|} \tag{2.9.34}
+\end{equation*}
+$$
+(2.9.32), (2.9.33) furnish
+$$
+\begin{equation*}
+\theta \simeq \frac{\mu_{0 \|}}{\left|\boldsymbol{p}_{0}\right|} \int_{0}^{t_{f}} d t \frac{d B\left(q_{\|}\right)}{d x_{\|}} \tag{2.9.35}
+\end{equation*}
+$$
+
+Using (2.9.1) to express the the magnetic moment $\boldsymbol{\mu}$ of an atom through its angular momentum $\boldsymbol{l}$, this relation can be cast as
+$$
+\begin{equation*}
+\theta \simeq-\frac{e l_{\|}}{2 m_{e} c\left|\boldsymbol{p}_{0}\right|} \int_{0}^{t_{f}} d t \frac{d B\left(q_{\|}\right)}{d x_{\|}} \tag{2.9.36}
+\end{equation*}
+$$
+
+In classical theory, the magnitude $l$ and the parallel component $l_{\|}$of $\boldsymbol{l}$ can take all continuous values satisfying the restriction $\left|l_{\|}\right| \leq l$. However, while the value of $l$ is the same for each atom of the beam, that of $l_{\|}$is different depending on the atom's initial orientation. In the beam, hence, $l_{\|}$and thus $\mu_{\|}$ vary continuously. On account of (2.9.35), one expects then that the deflection
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0193.jpg?height=213&width=942&top_left_y=2162&top_left_x=578)
+
+Figure 2.9.5. The deflection angle $\theta$ of the beam of atoms.
+angles $\theta$ of the atoms of the beam to have a continuous distribution if classical theory holds. In quantum theory, $l$ and $l_{\|}$can take only quantized values which are integer multiples of $\hbar$ subject again to the restriction $\left|l_{\|}\right| \leq l$. As before, $l$ is the same for each atom, while $l_{\|}$is different depending on the atom's initial orientation but still quantized. In the beam, so, $l_{\|}$vary discretely. By (2.9.35), one expects then that the deflection angles $\theta$ of the atoms to have a discrete distribution if quantum theory holds.
+
+Carrying out the experiment using silver atoms, Stern and Gerlach found that the angular distribution exhibits two peaks, as shown in fig. 2.9.6, confirming the angular momentum quantization predicted by quantum theory. Nowadays, we know that the quantum theory used to explain the results of the experiment is actually wrong. The magnetic moment of the atoms is not due to their orbital angular momentum, which vanishes, but to the electron's intrinsic angular momentum or spin as we shall see in greater detail in sect. 2.10. The Stern and Gerlach experiment nevertheless revealed the quantization of angular momentum
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0194.jpg?height=488&width=687&top_left_y=1656&top_left_x=708)
+
+Figure 2.9.6. The metallic deposit on the slab in the absence of a magnetic field (a) and in the presence of a strong magnetic field (b). In the second case, the distribution of the deposit clearly shows two peaks.
+in the quantum realm: the component along a fixed axis of the intrinsic angular momentum of an atom can take only discrete values. The property of quantization is fundamental, as it enables us to understand atomic magnetism, the Zeeman and Paschen-Back effect, etc.
+
+\subsection*{2.10. Spin angular momentum}
+
+Angular momentum is a physical quantity playing a crucial role atomic physics. It so requires a special study. According to classical mechanics, the total angular momentum $\boldsymbol{j}$ of a body of point particles around the origin is the vector
+$$
+\begin{equation*}
+\boldsymbol{j}=\sum_{a} \boldsymbol{x}_{a} \times m_{a} \boldsymbol{v}_{a} \tag{2.10.1}
+\end{equation*}
+$$
+where $m_{a}, \boldsymbol{x}_{a}$ and $\boldsymbol{v}_{a}$ are the mass, the position and velocity of the $a$-th particle, respectively. $\boldsymbol{j}$ turns out to be a sum of two contributions: the orbital angular momentum $\boldsymbol{l}$, yielded by the rotation of the body's center of mass around the origin, and the spin angular momentum $\boldsymbol{s}$, stemming from the body's rotation around its center of mass,
+$$
+\begin{equation*}
+j=l+s \tag{2.10.2}
+\end{equation*}
+$$
+(cf. fig. 2.10.1). Explicitly, $\boldsymbol{l}$ and $\boldsymbol{s}$ are given by
+$$
+\begin{align*}
+& \boldsymbol{l}=\boldsymbol{x}_{c} \times m_{c} \boldsymbol{v}_{c}  \tag{2.10.3}\\
+& \boldsymbol{s}=\sum_{a}\left(\boldsymbol{x}_{a}-\boldsymbol{x}_{c}\right) \times m_{a} \boldsymbol{v}_{a} \tag{2.10.4}
+\end{align*}
+$$
+where $m_{c}, \boldsymbol{x}_{c}$ and $\boldsymbol{v}_{c}$ are the total mass, the position and velocity of the center of mass of the body, respectively.
+
+Proof. From classical mechanics, the relation
+$$
+\begin{equation*}
+\sum_{a} m_{a} \boldsymbol{v}_{a}=m_{c} \boldsymbol{v}_{c} \tag{2.10.5}
+\end{equation*}
+$$
+holds. From (2.10.1), using this relation $\boldsymbol{j}$ can be written as
+$$
+\begin{equation*}
+\boldsymbol{j}=\boldsymbol{x}_{c} \times m_{c} \boldsymbol{v}_{c}+\sum_{a}\left(\boldsymbol{x}_{a}-\boldsymbol{x}_{c}\right) \times m_{a} \boldsymbol{v}_{a} \tag{2.10.6}
+\end{equation*}
+$$
+$(2.10 .2)-(2.10 .4)$ so follow.
+
+For a body consisting of a single point mass, the total, orbital and spin angular
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0197.jpg?height=627&width=863&top_left_y=559&top_left_x=574)
+
+Figure 2.10.1. A rogid body, e. g. a sphere, is endowed both with orbital angular momentum $\boldsymbol{l}$ and spin angular momentum $\boldsymbol{s}$.
+momenta are respectively $\boldsymbol{j}=\boldsymbol{x} \times m \boldsymbol{v}, \boldsymbol{l}=\boldsymbol{x} \times m \boldsymbol{v}$ and $\boldsymbol{s}=\mathbf{0}$. Thus, the total momentum reduces to the orbital momentum and there is no spin momentum. Only a composite body can have a non zero spin momentum.
+
+According to classical electrodynamics, if the particles constituting the body carry charges $e_{a}$, the body possesses a total magnetic moment
+$$
+\begin{equation*}
+\boldsymbol{\mu}=\frac{1}{2 c} \sum_{a} \boldsymbol{x}_{a} \times e_{a} \boldsymbol{v}_{a} \tag{2.10.7}
+\end{equation*}
+$$
+
+If the charge to mass ratio $e_{a} / m_{a}$ of each particle equals the total charge to total mass ratio $e / m$ of the body, $\boldsymbol{\mu}$ is related to the body's angular momentum $\boldsymbol{j}$ as
+$$
+\begin{equation*}
+\boldsymbol{\mu}=\frac{e \boldsymbol{j}}{2 m c} \tag{2.10.8}
+\end{equation*}
+$$
+
+Proof. From (2.10.1) and (2.10.7), using that $e_{a} / m_{a}=e / m$, we have
+$$
+\begin{equation*}
+\boldsymbol{\mu}=\frac{e}{2 m c} \sum_{a} \boldsymbol{x}_{a} \times m_{a} \boldsymbol{v}_{a}=\frac{e}{2 m c} \boldsymbol{j} \tag{2.10.9}
+\end{equation*}
+$$
+showing (2.10.8).
+
+By (2.10.8), the decomposition (2.10.2) of the total angular momentum $\boldsymbol{j}$ as a sum of the orbital and spin angular momenta $\boldsymbol{l}$ and $\boldsymbol{s}$ entails a corresponding decomposition of the total magnetic dipole moment $\boldsymbol{\mu}$ as a sum of the orbital and spin magnetic dipole moments $\boldsymbol{\mu}_{\text {orb }}$ and $\boldsymbol{\mu}_{\text {spin }}$. Explicitly,
+$$
+\begin{equation*}
+\boldsymbol{\mu}=\boldsymbol{\mu}_{\text {orb }}+\boldsymbol{\mu}_{\text {spin }} \tag{2.10.10}
+\end{equation*}
+$$
+with $\boldsymbol{\mu}_{\text {orb }}$ and $\boldsymbol{\mu}_{\text {spin }}$ given by expressions analogous to (2.10.8),
+$$
+\begin{align*}
+& \boldsymbol{\mu}_{\text {orb }}=\frac{e}{2 m c} \boldsymbol{l}  \tag{2.10.11}\\
+& \boldsymbol{\mu}_{\mathrm{spin}}=\frac{e}{2 m c} \boldsymbol{s} \tag{2.10.12}
+\end{align*}
+$$
+
+In the generic case when the ratio $e_{a} / m_{a}$ does depend on $a$, the total magnetic dipole moment $\boldsymbol{\mu}$ and angular momentum $\boldsymbol{j}$ are no longer related as in (2.10.8). However, if the mass and charge distribution is particularly symmetric, $\boldsymbol{\mu}$ still enjoys a decomposition in orbital and spin contributions of the form (2.10.10) but with $\boldsymbol{\mu}_{\text {orb }}, \boldsymbol{\mu}_{\text {spin }}$ given by the modified expressions
+$$
+\begin{align*}
+& \boldsymbol{\mu}_{\text {orb }}=\frac{e g_{\mathrm{orb}}}{2 m c} \boldsymbol{l}  \tag{2.10.13}\\
+& \boldsymbol{\mu}_{\mathrm{spin}}=\frac{e g_{\mathrm{spin}}}{2 m c} \boldsymbol{s} \tag{2.10.14}
+\end{align*}
+$$
+where $g_{\text {orb }}, g_{\text {spin }}$ are dimensionless factors called orbital and spin gyromagnetic ratios.
+
+For a body consisting of a single point charge, the total, orbital and spin magnetic moments are $\boldsymbol{\mu}=\boldsymbol{x} \times e \boldsymbol{v} / 2 c, \boldsymbol{\mu}_{\text {orb }}=\boldsymbol{x} \times e \boldsymbol{v} / 2 c$ and $\boldsymbol{\mu}_{\text {spin }}=\mathbf{0}$. Thus, the total moment reduces to the orbital contribution and there is no spin contribution. Only in a composite charged body the moment can have a non vanishing spin contribution.
+
+By what observed in the previous paragraph, for a single point charge the orbital gyromagnetic ratio $g_{\text {orb }}=1$. When the body has many charged constituents but these are densely packed in a sufficiently small region of space, so that the body can be considered approximately a pointlike charge, we have $g_{\text {orb }} \simeq 1$.
+
+Below, we shall assume that
+$$
+\begin{equation*}
+g_{\text {orb }}=1 \tag{2.10.15}
+\end{equation*}
+$$
+$g_{\text {spin }} \neq 1$ in general, though of order 1.
+When a homogeneous external magnetic field $\boldsymbol{B}$ is applied, it acts on the charged constituents of the body. In electrodynamics, the interaction potential energy can be expressed in terms of the body's magnetic moment $\boldsymbol{\mu}$ as
+$$
+\begin{equation*}
+U=-\boldsymbol{\mu} \cdot \boldsymbol{B} \tag{2.10.16}
+\end{equation*}
+$$
+
+The orbital-spin partition (2.10.11) of $\boldsymbol{\mu}$ entails an orbital-spin partition of $U$,
+$$
+\begin{equation*}
+U=-\boldsymbol{\mu}_{\text {orb }} \cdot \boldsymbol{B}-\boldsymbol{\mu}_{\text {spin }} \cdot \boldsymbol{B} \tag{2.10.17}
+\end{equation*}
+$$
+
+Therefore, the potential energy is proportional to the components $\mu_{\text {orb } \|}, \mu_{\text {spin } \|}$ of $\boldsymbol{\mu}_{\text {orb }}, \boldsymbol{\mu}_{\text {spin }}$ along the magnetic field $\boldsymbol{B}$ and so, by (2.10.13), (2.10.14), the components $l_{\|}, s_{\|}$of $\boldsymbol{l}, \boldsymbol{s}$.
+
+Does the same type of description apply to quantum particles such as electrons, protons and neutrons and to the molecules, atoms and nuclei they form? What kind of angular momenta and magnetic dipole moments do such particles have and how are these related? The question is closely related to whether such atomic particles are pointlike or made of more elementary charged constituents. In the first case, they have no spin and spin magnetic moment, in the second, conversely, they do.
+
+The Zeeman effect (P. Zeeman, 1896) consists in the splitting of a spectral line into a multiplet of narrowly spaced lines when an external static magnetic field $\boldsymbol{B}$ is applied. At the atomic level, the effect can be explained by the coupling of the total magnetic moments $\boldsymbol{\mu}_{i}$ of the electrons to the field. If electrons are pointlike, we have $\boldsymbol{\mu}_{i}=\boldsymbol{\mu}_{\text {iorb }}$ and $\boldsymbol{\mu}_{i \text { spin }}=\mathbf{0}$ and, by (2.10.11) and (2.10.16), the interaction potential energy reduces to
+$$
+\begin{equation*}
+U=\frac{e B L_{\|}}{2 m_{e} c} \tag{2.10.18}
+\end{equation*}
+$$
+where $m_{e}$ and $-e$ are the electronic mass and charge, $\boldsymbol{L}=\sum_{i} \boldsymbol{l}_{i}$ is the total orbital angular momentum of the electrons and $L_{\|}$the component of $\boldsymbol{L}$ along the field. For a magnetic field $B \ll 10^{9}$ gauss, one has $U \ll 10^{-12} \operatorname{erg} \sim 1 \mathrm{eV}$, which is the typical atomic energy scale. Thus, except for ultra strong magnetic fields, the coupling to the magnetic field alters only perturbatively the atomic energies.
+
+Bohr-Sommerfeld theory (cf. sect. 2.8) indicates that the values of $|\boldsymbol{L}|$ and $L_{\|}$are quantized as $\hbar K$ and $\hbar M_{K}$, respectively, where the orbital and magnetic quantum numbers $K$ and $M_{K}$ are integers satisfying $\left|M_{K}\right| \leq K$. Thus, for a given value of $K, M_{K}$ can take altogether $2 K+1$ values. In the Zeeman effect, because of the small interaction energy (2.10.18), the atomic states organize in groups of states of close energies characterized by the same value $K$ but distinct values of $M_{K}$ and so containing $2 K+1$ elements. As intuited by Bohr (cf. sect. 2.2), spectral lines are produced by transitions between atomic states. The Zeeman multiplets produced by transitions between states characterized by distinct values $K, K^{\prime}$ of the orbital quantum number, so, should contain a number of lines equal to that of the pairs of the magnetic quantum numbers $M_{K}, M_{K}{ }^{\prime}$ allowed by $K, K^{\prime}$, viz the odd number $(2 K+1)\left(2 K^{\prime}+1\right)$ (non anomalous Zeeman effect). However, for certain substances the effect results sometimes in multiplets containing an even number of lines (anomalous Zeeman effect). The theory thus cannot explain all available experimental data. A possible way out from this problem is assuming that electrons may have an internal structure after all and thus also have spin magnetic moments $\boldsymbol{\mu}_{i \text { spin }}$. The potential energy (2.10.18) then would become
+$$
+\begin{equation*}
+U=\frac{e B\left(L_{\|}+g_{e} S_{\|}\right)}{2 m_{e} c} \tag{2.10.19}
+\end{equation*}
+$$
+where $g_{e}$ is the electronic gyromagnetic ratio, $\boldsymbol{S}=\sum_{i} \boldsymbol{s}_{i}$ is the total spin angular momentum of the electrons and $S_{\|}$the component of $\boldsymbol{S}$ along the field. To account for the anomalous effect, however, one has to admit that the spin angular momentum $\boldsymbol{S}$ has properties which are not quite the same as those of orbital angular momentum, namely that the values of $|\boldsymbol{S}|$ and $S_{\|}$are quantized as $\hbar S$
+and $\hbar M_{S}$, respectively, where $S$ and $M_{s}$ are integer or halfodd and $\left|M_{s}\right| \leq S$. By allowing integer and halfodd values of $S$, the number $2 S+1$ of values $M_{S}$ can take for given $S$ is respectively odd and even. The atomic states now gather in groups of states of close energies characterized by the same values of $K, S$ but distinct values of $M_{K}, M_{S}$ and so containing $(2 K+1)(2 S+1)$ elements. The Zeeman multiplets produced by transitions between states characterized by distinct values $K, S, K^{\prime}, S^{\prime}$ of the orbital and spin quantum number contain then a number of lines equal to that of the quadruples of the magnetic quantum numbers $M_{K}, M_{S}$, $M_{K}{ }^{\prime}, M_{S}{ }^{\prime}$ allowed by $K, S, K^{\prime}, S^{\prime}$, viz $(2 K+1)\left(2 K^{\prime}+1\right)(2 S+1)\left(2 S^{\prime}+1\right)$. When either $S$ or $S^{\prime}$ is halfodd the number of these lines is even and the anomalous Zeeman effect is produced.
+
+The spectra of alkali substances show that what at low resolution appear as single lines, at higher resolution are in fact multiplets of closely spaced lines. This effect is known as atomic fine structure. It may be explained by hypothesizing that in an atom the orbital motions of the electrons creates an internal magnetic field and that electrons have spin magnetic dipole moments coupling to this field. This produces a kind of internal Zeeman effect that can be observed in atomic spectra. The fact that the fine structure multiplets may contain both an odd and an even number of lines further supports the hypothesis of occurrence of halfodd spin quantum numbers (W. Pauli, 1924).
+
+In sect. 2.9, we described the Stern and Gerlach experience, in which atoms endowed with magnetic dipole moments are deflected by an external intense and highly inhomogeneous magnetic field $\boldsymbol{B}$ of the form $\boldsymbol{B}(\boldsymbol{x})=B\left(x_{\|}\right) \boldsymbol{n}$, where $\boldsymbol{n}$ is a vertical upward pointing unit vector and $x_{\|}$is the component of the position vector $\boldsymbol{x}$ along $\boldsymbol{n}$. If electrons are assumed pointlike, the potential energy of an atom in the magnetic field is
+$$
+\begin{equation*}
+U\left(x_{\|}\right)=\frac{e B\left(x_{\|}\right) L_{\|}}{2 m_{e} c} \tag{2.10.20}
+\end{equation*}
+$$
+in analogy to (2.10.18). For reasons explained in the previous paragraph, for a
+coupling of this type, the beam should split in an odd number of branches. Stern and Gerlach observed instead an even number of branches. Again, the discrepancy between theory and evidence can be corrected assuming that electrons are not pointlike and thus endowed with spin and amending (2.10.20) accordingly as
+$$
+\begin{equation*}
+U\left(x_{\|}\right)=\frac{e B\left(x_{\|}\right)\left(L_{\|}+g_{e} S_{\|}\right)}{2 m_{e} c} \tag{2.10.21}
+\end{equation*}
+$$
+in analogy to (2.10.19). If the spin quantum numbers are allowed to take halfodd values then and even number of branches may result in the experience as is actually found (R. Kronig, 1925).
+
+The above theoretical models of atomic structure assumed that the electron was not a pointlike particle but was instead endowed with an internal structure and hence with a spin angular momentum. W. Pauli rejected this idea on the following basis. As recalled earlier, classically the spin is due to the rotation of a body around its own center of mass. Then, in order to legitimately speak of spin in the first place, one has to assume that an electron is a body, say a sphere. The size of this latter is presumably estimated by the electron classical radius, a length scale determined by the electron charge and mass
+$$
+\begin{equation*}
+r_{e}=\frac{e^{2}}{m_{e} c^{2}}=2.8179403267(27) \times 10^{-13} \mathrm{~cm} \tag{2.10.22}
+\end{equation*}
+$$
+
+From (2.10.14), the intrinsic magnetic moment of an electron can be expressed in the form
+$$
+\begin{equation*}
+\boldsymbol{\mu}_{\text {spin }}=-\mu_{B} g_{e} \hbar^{-1} \boldsymbol{s} \tag{2.10.23}
+\end{equation*}
+$$
+where $\mu_{B}$ is the atomic Bohr's magneton
+$$
+\begin{equation*}
+\mu_{B}=\frac{e \hbar}{2 m_{e} c}=9.27400968(20) \times 10^{-21} \mathrm{erg} \cdot \text { gauss }^{-1} \tag{2.10.24}
+\end{equation*}
+$$
+
+The electron gyromagnetic ratio $g_{e}$ is found to have a value very close to 2 by independent methods
+$$
+\begin{equation*}
+g_{e}=2.00231930436153(53) \tag{2.10.25}
+\end{equation*}
+$$
+
+Then, argued Pauli, the surface of the electron would have to move at a speed faster than that of light in order for it to rotate quickly enough to produce the observed magnetic moment $\boldsymbol{\mu}_{\text {spin }}$. This would violate the theory of relativity. At the end, the spin theory was accepted and extended to all quantum particles, including pointlike elementary ones, as it allows to understand a variety of nuclear, atomic and molecular phenomena as well as low temperature thermodynamics and compact star physics, but with a radical reinterpretation (G. Uhlenbeck and S. Goudsmit, 1925). Spin is an essentially quantum non-classical feature not reducible to the motion of any form of elementary constituents of particles. Any attempt to give a explanation of spin along such classical lines is doomed to failure. Quantically,
+spin is a fundamental property of quantum particles akin to mass and charge: it cannot be defined in terms of more fundamental properties.
+3. Wave mechanics
+
+\end{document}

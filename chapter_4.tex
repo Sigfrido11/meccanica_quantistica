@@ -1,0 +1,2848 @@
+\documentclass{article}
+
+% Language setting
+\usepackage[english]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UK/EU standard size
+\usepackage[a4paper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{lineno} % For line numbering
+
+\title{Summary of Zucchini’s lessons}
+\author{Marta Barbieri, Stefano Doria, Rossella Fioralli, Giuseppe Luciano}
+
+\begin{document}
+
+\maketitle
+\begin{abstract}
+    Ammetto che possa sembrare già incasinato ma così è strutturato in modo da essere cliccabile, le sezioni ci sono già l'unica cosa che dovete fare per iniziare il lavoro è scrivere nella regione che vi serve come nel miniesempio che sparirà. sarebbe bello fare tutto cliccabile ma solo se proprio ci annoiamo a morte da tutto il tempo che abbiamo a disposizione. se diventa troppo lungo probabilmente ci toccherà spezzettarlo però
+    Regole:
+    \begin{itemize}
+\item \textbf{1} 
+ si ha un tot di tempo dopo la lezione per aggiungere il riassunto così tutti possono studiare e non si accumula tutto alla fine. 
+ 
+\item \textbf{2} 
+Si ha l'obbligo di seguire, tranne causa di forza maggiore, la lezione da riassumere e si riassumono i pezzi spiegati nella specifica lezione seguendo le linee guida del prof 
+\item \textbf{3}
+Bisogna firmarsi nel capitolo riassunto così potete darmi la colpa
+\item \textbf{4}
+fare sempre prima un pull e poi un push sulla repository
+\item \textbf{5}
+altre regole?
+\end{itemize}
+   
+\end{abstract}
+
+\tableofcontents
+
+\section*{4. The Schroedinger equation}
+
+\subsection*{4.1. Generalities on the 1-dimensional Schroedinger problem}
+
+The 1-dimensional Schroedinger problem emerges in the study of the 3 dimensional one when the potential has special symmetry properties as we shall see. The 1-dimensional problem, however, is interesting in itself as it provides a simplified version of the 3-dimensional one, which was studied in full generality in sect. 3.17 and will be reconsidered again in more detail later on, capable of highlighting basic quantum features. In this section, we study the 1-dimensional problem from a general point of view.
+
+A quantum particle of mass $m$ is confined in a 1-dimensional space region $\xi_{-}<x<\xi_{+}$, where $-\infty \leq \xi_{-}<\xi_{+} \leq+\infty$. The potential energy $U(x)$ of the particle is assumed to be a piecewise continuous function there. The Schroedinger problem consists if finding the energy values $w$ such that there exists a non identically vanishing wave function $\phi$ solving the Schroedinger equation
+$$
+\begin{equation*}
+\frac{d^{2} \phi}{d x^{2}}+\frac{2 m}{\hbar^{2}}(w-U) \phi=0, \quad \xi_{-}<x<\xi_{+} \tag{4.1.1}
+\end{equation*}
+$$
+and satisfying the following conditions. $\phi$ and its first derivative $d \phi / d x$ must be continuous throughout space,
+$$
+\begin{align*}
+& \phi(x+0)-\phi(x-0)=0, \quad \xi_{-}<x<\xi_{+},  \tag{4.1.2a}\\
+& \frac{d \phi(x+0)}{d x}-\frac{d \phi(x-0)}{d x}=0, \tag{4.1.2b}
+\end{align*}
+$$
+where $f(x \pm 0)$ is a shorthand for $\lim _{\epsilon \rightarrow 0+} f(x \pm \epsilon)$. This requirement is automatically satisfied at every point $x$ where the potential $U$ is continuous, since then $d^{2} \phi / d x^{2}$ is continuous at that point in virtue of the Schroedinger equation (4.1.1). Thus, it is necessary to verify (4.1.2) only at those point $x$ where $U$ suffers a jump discontinuity. Further, $\phi$ must satisfy vanishing boundary conditions at the finite ends of the space region
+$$
+\begin{array}{ll}
+\phi\left(\xi_{-}\right) \equiv \phi\left(\xi_{-}+0\right)=0 & \text { if } \xi_{-}>-\infty \\
+\phi\left(\xi_{+}\right) \equiv \phi\left(\xi_{+}-0\right)=0 & \text { if } \xi_{+}<+\infty \tag{4.1.3~b}
+\end{array}
+$$
+
+Finally, $\phi$ must be bounded at spatial infinity when reachable,
+$$
+\begin{align*}
+& |\phi(x)|<C_{+} \quad \text { as } x \rightarrow+\infty \quad \text { if } \xi_{+}=+\infty \text {, }  \tag{4.1.4a}\\
+& |\phi(x)|<C_{-} \quad \text { as } x \rightarrow-\infty \quad \text { if } \xi_{-}=-\infty \text {, } \tag{4.1.4~b}
+\end{align*}
+$$
+where the $C_{ \pm}$are finite constants. $w$ is then an energy eigenvalue and $\phi$ an energy eigenfunction belonging to $w$.
+
+Next, we shall analyze the structure of the energy spectrum. We assume first that the particle moves in the whole 1-dimensional space $-\infty<x<\infty$. We set
+$$
+\begin{equation*}
+U_{*}=\min _{-\infty<x<\infty} U(x) \tag{4.1.5}
+\end{equation*}
+$$
+(cf. fig. 4.1.1). We further assume that the limits
+$$
+\begin{equation*}
+U_{ \pm}=\lim _{x \rightarrow \pm \infty} U(x) \tag{4.1.6}
+\end{equation*}
+$$
+exist. $U_{ \pm}$may be infinite. We then define for convenience
+$$
+\begin{equation*}
+U_{<}=\min \left(U_{-}, U_{+}\right), \quad U_{>}=\max \left(U_{-}, U_{+}\right) \tag{4.1.7}
+\end{equation*}
+$$
+
+The following spectral structure theorem holds.
+The whole energy spectrum is contained in the energy range $U_{*}<w$. It consists of a possible discrete non degenerate part in the range $U_{*}<w<U_{<}$, a continuous non degenerate part in the range $U_{<} \leq w \leq U_{>}$and a continuous doubly degenerate part in the range $U_{>}<w$. Further, the eigenfunctions belonging to the discrete energy eigenvalues are normalizable, while those belonging to the continuous energy eigenvalues are not
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0396.jpg?height=467&width=1224&top_left_y=490&top_left_x=445)
+
+Figure 4.1.1. A generic potential shape of the type considered in the text in the whole space case. Here, $U_{<}=U_{-}, U_{>}=U_{+}$.
+(cf. figs. 4.1.2-4.1.4). We remark that some of the above energy ranges may be empty depending on the form of the potential.
+
+Proof. We divide the proof in a number of steps for the sake of clarity.
+Step 1. Let $\phi_{1}, \phi_{2}$ be two non trivial solutions of the Schroedinger equation (4.1.1). Their Wronskian is defined as
+$$
+\begin{equation*}
+W\left(\phi_{1}, \phi_{2}\right)=\phi_{1} \frac{d \phi_{2}}{d x}-\phi_{2} \frac{d \phi_{1}}{d x} \tag{4.1.8}
+\end{equation*}
+$$
+$W\left(\phi_{1}, \phi_{2}\right)$ turns out to be constant. Indeed
+$$
+\begin{align*}
+\frac{d W\left(\phi_{1}, \phi_{2}\right)}{d x} & =\frac{d}{d x}\left(\phi_{1} \frac{d \phi_{2}}{d x}-\phi_{2} \frac{d \phi_{1}}{d x}\right)  \tag{4.1.9}\\
+& =\frac{d \phi_{1}}{d x} \frac{d \phi_{2}}{d x}+\phi_{1} \frac{d^{2} \phi_{2}}{d x^{2}}-\frac{d \phi_{2}}{d x} \frac{d \phi_{1}}{d x}-\phi_{2} \frac{d^{2} \phi_{1}}{d x^{2}} \\
+& =-\phi_{1} \frac{2 m}{\hbar^{2}}(w-U) \phi_{2}+\phi_{2} \frac{2 m}{\hbar^{2}}(w-U) \phi_{1}=0
+\end{align*}
+$$
+
+Next, we note that
+$$
+\begin{equation*}
+\frac{d}{d x} \ln \left(\frac{\phi_{2}}{\phi_{1}}\right)=\frac{1}{\phi_{2}} \frac{d \phi_{2}}{d x}-\frac{1}{\phi_{1}} \frac{d \phi_{1}}{d x}=\frac{W\left(\phi_{1}, \phi_{2}\right)}{\phi_{1} \phi_{2}} \tag{4.1.10}
+\end{equation*}
+$$
+
+Therefore, $\phi_{2} / \phi_{1} \neq$ const, and thus $\phi_{1}, \phi_{2}$ are linearly independent, precisely when $W\left(\phi_{1}, \phi_{2}\right) \neq 0$.
+
+Step 2. Suppose first that the limit energies $U_{ \pm}$are both finite. (We shall lift this restriction later on.) Then, for any real energy value $w$, the large $x$ asymptotic form of
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0397.jpg?height=911&width=1226&top_left_y=496&top_left_x=447)
+
+Figure 4.1.2. The discrete spectrum energy levels in the whole space case. The levels are drawn as if they were bound in the lowest energy region of the potential because it is there where the corresponding energy eigenfunctions are localized. As that region is bounded, the eigenfunctions represents bound states of the particle, in which the particle is confined in a finite volume space region.
+the Schroedinger equation (4.1.1) reads
+$$
+\begin{equation*}
+\frac{d^{2} \phi}{d x^{2}}+\frac{2 m}{\hbar^{2}}\left(w-U_{ \pm}\right) \phi=0, \quad \text { as } x \rightarrow \pm \infty \tag{4.1.11}
+\end{equation*}
+$$
+
+To simplify the notation, we introduce the wave vectors
+$$
+\begin{equation*}
+k_{ \pm}=\frac{\left(2 m\left(w-U_{ \pm}\right)\right)^{\frac{1}{2}}}{\hbar} \tag{4.1.12}
+\end{equation*}
+$$
+where here and in the following the sign of the square root is fixed according to the standard convention
+$$
+\begin{equation*}
+\operatorname{Re} k_{ \pm} \geq 0 \quad \text { if } w-U_{ \pm} \geq 0 \tag{4.1.13a}
+\end{equation*}
+$$
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0398.jpg?height=914&width=1226&top_left_y=497&top_left_x=447)
+
+Figure 4.1.3. A typical pattern of energy eigenvalues of the non degenerated continuous spectrum in the whole space case. The values are drawn as if they were bound in the intermediate energy region of the potential because it is there where the corresponding energy eigenfunctions are localized.
+$$
+\begin{equation*}
+\operatorname{Im} k_{ \pm}>0 \quad \text { if } w-U_{ \pm}<0 \tag{4.1.13b}
+\end{equation*}
+$$
+
+The asymptotic Schroedinger equation therefore can be cast as
+$$
+\begin{equation*}
+\frac{d^{2} \phi}{d x^{2}}+k_{ \pm}^{2} \phi=0, \quad \text { as } x \rightarrow \pm \infty \tag{4.1.14}
+\end{equation*}
+$$
+
+For $k_{ \pm} \neq 0$, the general solution of (4.1.14) is a linear combination of $\exp \left(i k_{ \pm} x\right)$, $\exp \left(-i k_{ \pm} x\right)$. The behaviour of any solution $\phi$ of (4.1.1) at spatial infinity is then
+$$
+\begin{equation*}
+\phi(x)=c_{ \pm 1}(\phi) \exp \left(i k_{ \pm} x\right)+c_{ \pm 2}(\phi) \exp \left(-i k_{ \pm} x\right) \quad \text { as } x \rightarrow \pm \infty \tag{4.1.15}
+\end{equation*}
+$$
+where the $c_{ \pm i}(\phi)$ are complex constants. For $k_{ \pm}=0$, the general solution of (4.1.14) is a linear combination of $1, x$. The behaviour of any solution $\phi$ of (4.1.1) at spatial
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0399.jpg?height=912&width=1237&top_left_y=498&top_left_x=433)
+
+Figure 4.1.4. A typical pattern of energy eigenvalues of the doubly degenerated continuous spectrum in the whole space case. Now, the values are drawn as if they were unbound, as the corresponding energy eigenfunctions spread out in the whole space.
+infinity is modified takes then the form
+$$
+\begin{equation*}
+\phi(x)=a_{ \pm}(\phi)+b_{ \pm}(\phi) x \quad \text { as } x \rightarrow \pm \infty \tag{4.1.16}
+\end{equation*}
+$$
+where the $a_{ \pm}(\phi), b_{ \pm}(\phi)$ are complex constants. We observe now that the $c_{ \pm i}(\phi)$ as well as $a_{ \pm}(\phi), b_{ \pm}(\phi)$ depend linearly on $\phi$.
+
+Step 3. Suppose now that the energy value $w \neq U_{ \pm}$, so that $k_{ \pm} \neq 0$. In step 1 , we have seen that the Wronskian $W\left(\phi_{1}, \phi_{2}\right)$ of any two non trivial solutions $\phi_{1}, \phi_{2}$ of the Schroedinger equation (4.1.1) is a constant and that $W\left(\phi_{1}, \phi_{2}\right)$ is non vanishing precisely when $\phi_{1}, \phi_{2}$ are linearly independent. Being constant, $W\left(\phi_{1}, \phi_{2}\right)$ can be computed using the large $x$ asymptotic expressions (4.1.15) of the $\phi_{i}$, obtaining
+$$
+\begin{equation*}
+W\left(\phi_{1}, \phi_{2}\right)=\phi_{1} \frac{d \phi_{2}}{d x}-\phi_{2} \frac{d \phi_{1}}{d x} \tag{4.1.17}
+\end{equation*}
+$$
+$$
+\begin{aligned}
+& =\left(c_{ \pm 1}\left(\phi_{1}\right) \exp \left(i k_{ \pm} x\right)+c_{ \pm 2}\left(\phi_{1}\right) \exp \left(-i k_{ \pm} x\right)\right) \\
+& \quad \times i k_{ \pm}\left(c_{ \pm 1}\left(\phi_{2}\right) \exp \left(i k_{ \pm} x\right)-c_{ \pm 2}\left(\phi_{2}\right) \exp \left(-i k_{ \pm} x\right)\right) \\
+& -\left(c_{ \pm 1}\left(\phi_{2}\right) \exp \left(i k_{ \pm} x\right)+c_{ \pm 2}\left(\phi_{2}\right) \exp \left(-i k_{ \pm} x\right)\right) \\
+& \quad \times i k_{ \pm}\left(c_{ \pm 1}\left(\phi_{1}\right) \exp \left(i k_{ \pm} x\right)-c_{ \pm 2}\left(\phi_{1}\right) \exp \left(-i k_{ \pm} x\right)\right) \\
+& =-2 i k_{ \pm}\left(c_{ \pm 1}\left(\phi_{1}\right) c_{ \pm 2}\left(\phi_{2}\right)-c_{ \pm 1}\left(\phi_{2}\right) c_{ \pm 2}\left(\phi_{1}\right)\right)
+\end{aligned}
+$$
+
+Thus, if $\phi_{1}, \phi_{2}$ are linearly independent, then
+$$
+\begin{equation*}
+c_{ \pm 1}\left(\phi_{1}\right) c_{ \pm 2}\left(\phi_{2}\right)-c_{ \pm 1}\left(\phi_{2}\right) c_{ \pm 2}\left(\phi_{1}\right) \neq 0 \tag{4.1.18}
+\end{equation*}
+$$
+
+It follows that the two $2 \times 2$ complex matrices $\Omega_{ \pm}(w)$ defined by
+$$
+\begin{equation*}
+\Omega_{ \pm}(w)_{i j}=c_{ \pm i}\left(\phi_{j}\right) \tag{4.1.19}
+\end{equation*}
+$$
+are invertible, where we have explicitly indicated their dependence on $w$.
+Now, suppose that $w$ is an energy eigenvalue and that $\phi$ is an energy eigenfunction belonging to $w$. Since $\phi$ can be expressed as
+$$
+\begin{equation*}
+\phi=\sum_{j=1}^{2} a_{j} \phi_{j} \tag{4.1.20}
+\end{equation*}
+$$
+for certain complex constants $a_{i}$, we have
+$$
+\begin{equation*}
+c_{ \pm i}(\phi)=c_{ \pm i}\left(\sum_{j=1}^{2} a_{j} \phi_{j}\right)=\sum_{j=1}^{2} c_{ \pm i}\left(\phi_{j}\right) a_{j}=\sum_{j=1}^{2} \Omega_{ \pm}(w)_{i j} a_{j} \tag{4.1.21}
+\end{equation*}
+$$
+
+By the invertibility of the matrices $\Omega_{ \pm}(w)$, we have
+$$
+\begin{equation*}
+a_{i}=\sum_{j=1}^{2} \Omega_{ \pm}(w)^{-1}{ }_{i j} c_{ \pm j}(\phi) \tag{4.1.22}
+\end{equation*}
+$$
+
+Combining (4.1.21), (4.1.22), we get
+$$
+\begin{gather*}
+c_{ \pm i}(\phi)=\sum_{k=1}^{2} \Omega_{ \pm}(w)_{i k} a_{k}  \tag{4.1.23}\\
+=\sum_{k=1}^{2} \Omega_{ \pm}(w)_{i k} \sum_{j=1}^{2} \Omega_{\mp}(w)^{-1}{ }_{k j} c_{\mp j}(\phi)=\sum_{j=1}^{2} S(w)^{ \pm 1}{ }_{i j} c_{\mp j}(\phi)
+\end{gather*}
+$$
+where we have introduced the $S$-matrix
+$$
+\begin{equation*}
+S(w)_{i j}=\sum_{k=1}^{2} \Omega_{+}(w)_{i k} \Omega_{-}(w)^{-1}{ }_{k j} \tag{4.1.24}
+\end{equation*}
+$$
+
+Adapting the arguments of sect. 3.17 to the present 1-dimensional setting, we recover readily that the energy spectrum is completely contained in the range $U_{*}<w$.
+
+Let $w$ be an energy eigenvalue such that $U_{*}<w<U_{<}$. By (4.1.12), (4.1.13), we have that $k_{ \pm}=i \tilde{k}_{ \pm}$with $\tilde{k}_{ \pm}>0$. From (4.1.15) and the large $x$ boundedness requirement (4.1.4), we find that $c_{+2}(\phi)=c_{-1}(\phi)=0$, since $\exp \left(\tilde{k}_{+} x\right)$ and $\exp \left(-\tilde{k}_{-} x\right)$ diverge as $x \rightarrow \infty$ and $x \rightarrow-\infty$, respectively. From eq. (4.1.22), we get
+$$
+\begin{equation*}
+a_{i}=\Omega_{+}(w)^{-1}{ }_{i 1} c_{+1}(\phi)=\Omega_{-}(w)^{-1}{ }_{i 2} c_{-2}(\phi) \tag{4.1.25}
+\end{equation*}
+$$
+
+It follows that necessarily $c_{+1}(\phi) \neq 0$ and $c_{-2}(\phi) \neq 0$. Else, it would be $a_{i}=0$ and, thus, $\phi=0$ by eq. (4.1.20), which is absurd since $\phi$ is an eigenfunction and, so, non vanishing. The identities
+$$
+\begin{equation*}
+0=c_{+2}(\phi)=S(w)_{22} c_{-2}(\phi), \quad 0=c_{-1}(\phi)=S(w)^{-1}{ }_{11} c_{+1}(\phi) \tag{4.1.26}
+\end{equation*}
+$$
+following from by (4.1.23) imply that
+$$
+\begin{equation*}
+S(w)_{22}=S(w)^{-1}{ }_{11}=0 \tag{4.1.27}
+\end{equation*}
+$$
+
+The two relations are actually equivalent, since for any invertible $2 \times 2$ matrix $A$, $A_{22}=\operatorname{det} A A^{-1}{ }_{11} \cdot(4.1 .27)$ is an equation that the energy value $w$ must obey. Since the matrix elements $S(w)_{i j}$ are as a rule non trivial functions of the variable $w$, the solutions of (4.1.27) in the range $U_{*}<w<U_{<}$, if any, form a discrete set of values. Hence, the energy eigenvalue $w$ is a discrete one. Any eigenfunction $\phi$ belonging to $w$ is normalized, as it falls off as $\exp \left(-\tilde{k}_{+} x\right)$ and $\exp \left(\tilde{k}_{-} x\right)$ as $x \rightarrow \infty$ and $x \rightarrow-\infty$, respectively, by (4.1.15) and the fact that $c_{+2}(\phi)=c_{-1}(\phi)=0$ and $c_{+1}(\phi) \neq 0$ and $c_{-2}(\phi) \neq 0 . \phi$ is determined up to normalization, since from (4.1.25) the coefficients $a_{i}$ in the expansion (4.1.20) are in a fixed ratio. We conclude that part of the spectrum contained in the energy range $U_{*}<w<U_{<}$, if any, is discrete and non degenerate and that the eigenfunctions belonging to the discrete eigenvalues in it are normalized.
+
+Next, let $w$ be an energy eigenvalue such that $U_{<}<w<U_{>}$. Assume first that $U_{<}=U_{-}$. Then, by (4.1.12), (4.1.13), $k_{+}=i \tilde{k}_{+}$with $\tilde{k}_{+}>0$. From (4.1.15) and the large $x$ boundedness requirement (4.1.4), we have then that $c_{+2}(\phi)=0$, since $\exp \left(\tilde{k}_{+} x\right)$ diverges as $x \rightarrow \infty$. From eq. (4.1.22), we obtain then
+$$
+\begin{equation*}
+a_{i}=\Omega_{+}(w)^{-1}{ }_{i 1} c_{+1}(\phi)=\sum_{j=1}^{2} \Omega_{-}(w)^{-1}{ }_{i j} c_{-j}(\phi) \tag{4.1.28}
+\end{equation*}
+$$
+
+It follows that necessarily $c_{+1}(\phi) \neq 0$ and that the $c_{-i}(\phi)$ cannot be both vanishing. Else, it would be $a_{i}=0$ and, thus, $\phi=0$ by eq. (4.1.20), which is absurd since $\phi$ is an eigenfunction and, so, non vanishing. The identities
+$$
+\begin{equation*}
+0=c_{+2}(\phi)=\sum_{j=1}^{2} S(w)_{2 j} c_{-j}(\phi) \quad c_{-i}(\phi)=S(w)^{-1}{ }_{i 1} c_{+1}(\phi) \tag{4.1.29}
+\end{equation*}
+$$
+following from by (4.1.23) do not imply any restriction on $w$ but only certain linear relations obeyed by $c_{+1}(\phi)$ and the $c_{-i}(\phi)$. Hence, the energy eigenvalue $w$ is a continuous one. Any eigenfunction $\phi$ belonging to $w$ is unnormalized, as it is a linear combination of the wave functions $\exp \left(i k_{-} x\right), \exp \left(-i k_{-} x\right)$ as $x \rightarrow-\infty$ by (4.1.15) and the fact that the $c_{-i}(\phi)$ cannot be both vanishing. $\phi$ is determined up to normalization, since from the first identity (4.1.28) the coefficients $a_{i}$ in the expansion (4.1.20) are in a fixed ratio. Assume next that $U_{<}=U_{+}$. Proceeding in analogous way, we reach the same results. We conclude that part of the spectrum contained in the energy range $U_{<}<w<U_{\rangle}$is continuous and non degenerate and that the eigenfunctions belonging to the continuous eigenvalues in it are unnormalized.
+
+Next, let $w$ be an energy eigenvalue such that $U_{>}<w$. Then, by (4.1.12), (4.1.13), none of the $k_{ \pm}$is imaginary. From (4.1.15), it follows then that $\phi$ is automatically bounded at large $x$. Therefore, there are no restrictions on the energy value $w$ and no constraints on the coefficients $c_{ \pm i}(\phi)$. We conclude that part of the spectrum contained in the energy range $U_{>}<w$ is continuous and doubly degenerate and that the eigenfunctions belonging to the continuous eigenvalues in it are unnormalized.
+
+Step 4. Consider finally the special cases where either $w=U_{+}$or $w=U_{-}$, so that the $k_{+} 0$ or $k_{-}=0$, respectively. Then, (4.1.15) has to be modified into (4.1.16) accordingly. From (4.1.16) and the large $x$ boundedness requirement (4.1.4), we have that $b_{ \pm}(\phi)=0$, since $x$ diverges both as $x \rightarrow \infty$ and $x \rightarrow-\infty$. Thus, $w$ belongs to the continuous energy spectrum, is non degenerate and any eigenfunction belonging to it is unnormalized.
+
+Step 5. So far we have assume that both the limit energies $U_{ \pm}$are finite. Our analysis extends however to potentials $U$ such that one or both of the $U_{ \pm}$are not finite
+as follows. We consider a sequence of potentials $U_{n}$ such that both energies $U_{n \pm}$ are finite and that $\lim _{n \rightarrow \infty} U_{n}=U$ is some suitable sense. It is natural to expect that the structure and the properties of the energy spectrum of $U_{n}$ go over to those of the energy spectrum of $U$ in the limit, if the latter is sufficiently regular. We get then to the conclusions stated above also in this more general situation.
+
+The spectral structure theorem can be extended to the case where the particle moves in a general 1-dimensional space region $\xi_{-}<x<\xi_{+}$by the following physical reasoning. We assume that the particle can access the whole 1-dimensional space $-\infty<x<\infty$, but it is effectively confined in the region $\xi_{-}<x<\xi_{+}$by an infinitely strong repulsive potential barrier $U_{c}$ of the form
+$$
+\begin{align*}
+& U_{c}(x)=\infty \quad \text { for }-\infty<x<\xi_{-} \text {if } \xi_{-}>-\infty  \tag{4.1.30a}\\
+& U_{c}(x)=0 \quad \text { for } \xi_{-}<x<\xi_{+}  \tag{4.1.30b}\\
+& U_{c}(x)=\infty \quad \text { for } \xi_{+}<x<\infty \text { if } \xi_{+}<\infty \tag{4.1.30c}
+\end{align*}
+$$
+which is superimposed to the potential $U$, assumed to vanish beyond $\xi_{-}, \xi_{+}$, so that the effective potential turns out to be given by
+$$
+\begin{equation*}
+U_{\mathrm{eff}}=U+U_{c} \tag{4.1.31}
+\end{equation*}
+$$
+as shown in fig. 4.1.5. We can then apply the spectral structure theorem. The energy spectrum is contained in the energy range $U_{\text {eff }}<w$. It consists of a possible discrete non degenerate part in the range $U_{\text {eff }}<w<U_{\text {eff }<}$, a continuous non degenerate part in the range $U_{\text {eff }}<\leq w \leq U_{\text {eff }}>$ and a continuous doubly degenerate part in the range $U_{\text {eff }}>w$. Further, the eigenfunctions belonging to the discrete energy eigenvalues are normalizable, while those belonging to the continuous energy eigenvalues are not. This result has several corollaries.
+
+If $\xi_{-}>-\infty$ and $\xi_{+}<\infty$, the energy spectrum is completely discrete and non degenerate. Further, all energy eigenfunctions are normalizable
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0404.jpg?height=974&width=1266&top_left_y=494&top_left_x=424)
+
+Figure 4.1.5. The real, confining and effective potentials compared. Here, $\xi_{-}, \xi_{+}$are both finite.
+(cf. fig. 4.1.6).
+
+Proof. In this case, $U_{\text {eff* }}=U_{*}$ and $U_{\text {eff }+}=U_{\text {eff- }}=\infty$ and so $U_{\text {eff }<}=U_{\text {eff }>}=\infty$ as well. Therefore, of the three relevant energy ranges established by the spectral structure theorem, only the first one, $U_{*}<w<\infty$, is non empty. In the range, the energy spectrum is completely discrete and non degenerate with normalizable eigenfunctions.
+
+If $\xi_{-}>-\infty$ and $\xi_{+}=\infty$, the energy spectrum comprises a discrete non degenerate part in the range $U_{*}<w<U_{+}$and a continuous non degenerate part in the range $U_{+} \leq w<\infty$, where $U_{+}$is defined as in (4.1.6). If $\xi_{-}=-\infty$ and $\xi_{+}<\infty$, the energy spectrum comprises a discrete non de-
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0405.jpg?height=981&width=879&top_left_y=498&top_left_x=666)
+
+Figure 4.1.6. In the bounded space case, the energy spectrum is totally discrete and the energy eigenfunctions are all localized.
+generate part in the range $U_{*}<w<U_{-}$and a continuous non degenerate part in the range $U_{-} \leq w<\infty$, where $U_{-}$is defined as in (4.1.6). Further, the eigenfunctions belonging to the discrete energy eigenvalues are normalizable, while those belonging to the continuous energy eigenvalues are not.
+(cf. figs. 4.1.7, 4.1.8)
+
+Proof. We prove the the first half of the proposition, the demonstration of the second half being totally analogous. Let $\xi_{-}>-\infty$ and $\xi_{+}=\infty$. Then, $U_{\text {eff* }}=U_{*}$ and $U_{\text {eff }+}=U_{+}$and $U_{\text {eff }-}=\infty$ entailing that $U_{\text {eff }<}=U_{+}$and $U_{\text {eff }>}=\infty$. Thus, of the three relevant energy ranges established by the spectral structure theorem, only
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0406.jpg?height=974&width=900&top_left_y=497&top_left_x=645)
+
+Figure 4.1.7. The discrete spectrum energy levels in the half space case. Again, the levels are drawn as if they were bound in the lower energy region of the potential where the corresponding energy eigenfunctions are localized.
+the first two, $U_{*}<w<U_{+}$and $U_{+} \leq w<\infty$, are non emepty. In the first range the spectrum is discrete and non degenerate with normalizable eigenfunctions, in the second it is continuous and non degenerate with non normalizable eigenfunctions.
+
+When manipulating the Shroedinger equation, it is convenient to cast it in a more manageable form by redefining the parameters and rescaling the variables. To this end, we introduce a wave vector $k$ via the standard relation
+$$
+\begin{equation*}
+k=\frac{(2 m w)^{1 / 2}}{\hbar} \tag{4.1.32}
+\end{equation*}
+$$
+
+Since $w$ can be both positive and negative, we assume that $k \geq 0$ if $w \geq 0$ and
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0407.jpg?height=968&width=906&top_left_y=500&top_left_x=642)
+
+Figure 4.1.8. A typical pattern of energy eigenvalues of the non degenerated continuous spectrum in the half space case. As usual, the values are drawn as if they were bound in the higher energy region of the potential where the corresponding energy eigenfunctions are localized.
+that $k=i \tilde{k}$ with $\tilde{k}>0$ if $w<0$. We further define a rescaled potential
+$$
+\begin{equation*}
+u(x)=\frac{2 m}{\hbar^{2}} U(x) \tag{4.1.33}
+\end{equation*}
+$$
+having the dimension of an inverse square length. In terms of these, the Schroedinger equation (4.1.1) takes the form
+$$
+\begin{equation*}
+\frac{d^{2} \phi}{d x^{2}}+\left(k^{2}-u\right) \phi=0 \tag{4.1.34}
+\end{equation*}
+$$
+
+The Schroedinger problem reduces so to finding the wave vectors $k$ for which there exists a non trivial wave function $\phi$ satisfying eq. (4.1.34) with the boundary and
+boundedness conditions and the regularity requirements, which we have listed above. Note that the energy eigenvalue is expressed in terms of terms of the wave vector $k$ through the relation
+$$
+\begin{equation*}
+w=w_{k}=\frac{\hbar^{2} k^{2}}{2 m} \tag{4.1.35}
+\end{equation*}
+$$
+and that the energy eigenfunctions $\phi_{k}$ belonging to $w$ are labelled by $k$.
+
+\subsection*{4.2. Properties of the energy eigenfunctions in 1-dimension}
+
+In 1-dimensional space, the energy eigenfunctions have special properties, which are the topic of the present section.
+
+If $w$ is a non degenerate energy eigenvalue, every eigenfunction $\phi$ belonging to $w$ is real up to a constant. If $w$ is a doubly degenerate energy eigenvalue, there are two linearly independent eigenfunctions $\phi_{1}, \phi_{2}$ belonging to $w$ which are real up to a constant.
+
+Proof. If a wave function $\phi$ satisfies the Schroedinger equation (4.1.1) with the regularity requirements (4.1.2) and the boundary and boundedness conditions (4.1.3) and (4.1.4), then $\operatorname{Re} \phi, \operatorname{Im} \phi$ also do, since (4.1.1)-(4.1.3) are obviously preserved when passing to real and imaginary parts. Thus, if $w$ is an energy eigenvalue and $\phi$ is an eigenfunction belonging to $w$, then the real wave functions $\operatorname{Re} \phi, \operatorname{Im} \phi$, when non identically vanishing, also are.
+
+Suppose that $w$ is non degenerate energy eigenvalue. Then, there is at most one linearly independent eigenfunction belonging to $w$. Let $\phi$ be one such eigenfunction. Since $\phi=\operatorname{Re} \phi+i \operatorname{Im} \phi$, one of the two real wave functions $\operatorname{Re} \phi, \operatorname{Im} \phi$, call it $\phi_{r}$, must be non vanishing, hence an eigenfunction belonging to $w$. By the non degeneracy of $w$, we must have $\phi=c \phi_{r}$ for some complex constant $c$. This means that $\phi$ is real up to constant.
+
+Next, suppose that $w$ is doubly degenerate energy eigenvalue Then, there are at most two linearly independent eigenfunctions belonging to $w$. Let $\phi_{1}, \phi_{2}$ be two such eigenfunctions. Since $\phi_{1}=\operatorname{Re} \phi_{1}+i \operatorname{Im} \phi_{1}, \phi_{2}=\operatorname{Re} \phi_{2}+i \operatorname{Im} \phi_{2}$, we have that two of the four real wave functions $\operatorname{Re} \phi_{1}, \operatorname{Im} \phi_{1}, \operatorname{Re} \phi_{2}, \operatorname{Im} \phi_{2}$, call them $\phi_{r 1}, \phi_{r 2}$, must be linearly independent, hence eigenfunctions belonging to $w$. We conclude in this way that there two real linearly independent eigenfunctions belonging to $w$.
+
+A node of a wave function $\phi$ is a point $x_{0}$ in the accessible space region $\xi_{-}<x<\xi_{+}$where $\phi$ vanishes, $\phi\left(x_{0}\right)=0$. Note that the points $\xi_{ \pm}$, if they are finite, are not considered nodes of $\phi$, although $\phi$ vanishes there by the boundary conditions (4.1.3).
+
+The eigenfunctions belonging to the discrete energy eigenvalues have generically nodes. Suppose that we write the discrete energy spectrum as a sequence $w_{n}, n=0,1,2, \ldots$, of energy values such that $w_{n}<w_{n+1}$. Then, according to the node theorem,
+any eigenfunction $\phi_{n}$ belonging to $w_{n}$ has precisely $n$ nodes.
+(Such eigenfunctions are all proportional to each other, as $w_{n}$ is non degenerate.) In particular, the ground energy eigenfunction $\phi_{0}$ has no nodes.
+
+Proof. We provide a heuristic argument (M. Moriconi, 2007). Suppose that $w$ is an energy eigenvalue and that $\phi$ is an eigenfunction belonging to $w$. Then, $\phi$ may have no nodes or may have finitely or infinitely many nodes. In any case, if $x_{0}$ is a node of $\phi$, then $\phi\left(x_{0}\right)=0$ but $d \phi\left(x_{0}\right) / d x \neq 0$. In fact, since the Schroedinger equation (4.1.1) is an
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0410.jpg?height=529&width=1286&top_left_y=1714&top_left_x=387)
+
+Figure 4.2.1. The energy eigenfunction $\phi_{n}$ of the discrete spectrum energy eigenvalue $w_{n}$ exhibits $n$ nodes. Here, the particle is confined in the semispace $0<x<\infty$ and $n=2$.
+ordinary second order linear differential equation, its solution $\phi$ is uniquely determined once $\phi\left(x_{0}\right)$ and $d \phi\left(x_{0}\right) / d x$ are assigned for any given point $x_{0}$. If both these values vanished, by the linearity of the equation, we would have that $\phi(x)=0$ identically, which is impossible, since $\phi$ is an eigenfunction.
+
+As explained in sect. 4.1, we can assume without loss of generality that our particle can access the whole 1-dimensional space $-\infty<x<\infty$ by perhaps substituting the potential $U$ with the effective potential $U_{\text {eff }}$ defined in (4.1.30), (4.1.31). We denote by $w_{n}, n=0,1,2, \ldots$, the energy eigenvalues of $U$ numbered in order of increasing magnitude and by $\phi_{n}$ an eigenfunction belonging to $w_{n}$. (Recall that, the eigenfunctions belonging to $w_{n}$ are all proportional, since $w_{n}$ is non degenerate, and that they are consequently real up to a constant.)
+
+To tackle the problem of node counting, we construct a family of potentials $U_{a}$, such that $U_{a}(x)=U(x)$, for $|x|<a$, and $U(x)=\infty$ for $|x|>a$. We then denote by $w_{n ; a}, n=$ $0,1,2, \ldots$, the energy eigenvalues of $U_{a}$ numbered in order of increasing magnitude and by $\phi_{n ; a}$ an eigenfunction belonging to $w_{n ; a}$. When $a$ diverges, $U_{a}$ tends to the true potential $U$ and, therefore, $w_{n ; a}$ and $\phi_{n ; a}$ approximate $w_{n}$ and $\phi_{n}$, respectively.
+
+For $a$ sufficiently small, we can consider the potential to have some constant value $U_{a 0}$ in the region $|x|<a$. Then $U_{a}$ is to high accuracy the potential of a 1-dimensional potential box of width $2 a$. For this, it is known that the energy eigenvalues are $w_{n ; a} \simeq$ $\hbar^{2} / 2 m \cdot(\pi(n+1) / 2 a)^{2}+U_{a 0}$ and that an eigenfunction belonging to $w_{n ; a}$ is $\phi_{n ; a}(x) \simeq$ $\sin ((n+1) \pi x / 2 a)$ for $n$ odd and $\phi_{n ; a}(x) \simeq \cos ((n+1) \pi x / 2 a)$ for $n$ even (cf. sect. 4.4 below). $\phi_{n ; a}$ has precisely $n$ nodes, as it is readily verified from its expression.
+
+When we let $a$ diverge, the energy eigenvalues $w_{n ; a}$ approximate the true ones $w_{n}$ and the eigenfunctions $\phi_{n ; a}$ similarly approximate the true ones $\phi_{n}$. Can $\phi_{n ; a}$ develop or shed one or more nodes in the process? Well, for a node $x_{0}$ to be produced or absorbed when $a$ takes a certain value of $a_{0}$, we must necessarily have $\phi_{n ; a_{0}}\left(x_{0}\right)=0$ and $d \phi_{n ; a_{0}}\left(x_{0}\right) / d x=0$, as it becomes evident by plotting $\phi_{n ; a}$ and deforming its graph aiming to change its number of nodes. But this is impossible as we found out above. Therefore, $\phi_{n}$ has precisely $n$ nodes as required.
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0412.jpg?height=809&width=703&top_left_y=482&top_left_x=706)
+
+Figure 4.2.2. The plot of a parity invariant potential such as $U_{1}$ is symmetric with respect to the ordinate axis. The plot of a non parity invariant potential such as $U_{2}$, instead, is not.
+
+Let the space region accessible to the particle be symmetric with respect to the origin, so that $\xi_{-}=-\xi_{+}$. The potential energy $U$ is said parity invariant if
+$$
+\begin{equation*}
+U(-x)=U(x) \tag{4.2.1}
+\end{equation*}
+$$
+(cf. fig. 4.2.2). A wave function $\phi$ is said to have defined parity $\pm$ if
+$$
+\begin{equation*}
+\phi(-x)= \pm \phi(x) \tag{4.2.2}
+\end{equation*}
+$$
+(cf. fig. 4.2.3).
+Let the potential energy $U$ be parity invariant. If $w$ is a non degenerate energy eigenvalue, every eigenfunction $\phi$ belonging to $w$ has definite parity. If $w$ is a doubly degenerate energy eigenvalue, there are two linearly independent eigenfunctions $\phi_{1}, \phi_{2}$ belonging to $w$ which have definite parity. Furthermore, $\phi_{1}, \phi_{2}$ can also be taken to be real up to a constant.
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0413.jpg?height=469&width=876&top_left_y=519&top_left_x=619)
+
+Figure 4.2.3. The plot of a parity + wave function (blue) is symmetric with respect to the ordinate axis. The plot of a parity wave function (red) is symmetric with respect to the axes' origin.
+
+Proof. The parity transform $\phi^{P}$ wave function of a wave function $\phi$ is defined by
+$$
+\begin{equation*}
+\phi^{P}(x)=\phi(-x) \tag{4.2.3}
+\end{equation*}
+$$
+
+Clearly, $\phi^{P}$ depends linearly on $\phi$. Further,
+$$
+\begin{equation*}
+\phi^{P P}=\phi \tag{4.2.4}
+\end{equation*}
+$$
+
+Finally, $\phi$ has definite parity $\pm$ precisely when
+$$
+\begin{equation*}
+\phi^{P}= \pm \phi \tag{4.2.5}
+\end{equation*}
+$$
+
+If a wave function $\phi$ satisfies the Schroedinger equation (4.1.1) with the regularity requirements (4.1.2) and boundary and boundedness conditions (4.1.3) and (4.1.4), then $\phi^{P}$ also does. Indeed, by (4.2.1), on account of (4.1.1), we have
+$$
+\begin{align*}
+& \frac{d^{2} \phi^{P}(x)}{d x^{2}}+\frac{2 m}{\hbar^{2}}(w-U(x)) \phi^{P}(x)  \tag{4.2.6}\\
+&=\left[\frac{d^{2} \phi\left(x^{\prime}\right)}{d x^{\prime 2}}+\frac{2 m}{\hbar^{2}}\left(w-U\left(x^{\prime}\right)\right) \phi\left(x^{\prime}\right)\right]_{x^{\prime}=-x}=0
+\end{align*}
+$$
+
+As $\phi, d \phi / d x$ are continuous, $\phi^{P}, d \phi^{P} / d x$ also are. As $\phi$ is bounded at spatial infinity when reachable, $\phi^{P}$ also is. Finally, since $\phi$ vanish at the ends of the allowed space region when finite, $\phi^{P}$ also does. Thus, if $w$ is an energy eigenvalue and $\phi$ is an
+eigenfunction belonging to $w$, then the wave functions $\phi^{P}$, being non vanishing, also is.
+Suppose that $w$ is non degenerate energy eigenvalue. Then, there is precisely one linearly independent eigenfunction belonging to $w$. Let $\phi$ be such eigenfunction. Then, $\phi^{P}$ is another one. By the non degeneracy of $w$, we must have $\phi^{P}=c \phi$ for some complex constant $c$. Since $\phi=\phi^{P P}=c \phi^{P}=c^{2} \phi$ and $\phi$ is not identically vanishing, $c= \pm 1$. It follows that $\phi^{P}= \pm \phi$, i. e. $\phi$ has definite parity.
+
+Next, suppose that $w$ is doubly degenerate energy eigenvalue. Then, there are two linearly independent eigenfunctions belonging to $w$, which can be taken real up to a constant. Let $\phi_{1}, \phi_{2}$ be such eigenfunctions. If both $\phi_{1}, \phi_{2}$ have definite parity, there is nothing to show. If one of $\phi_{1}, \phi_{2}$, call it $\phi$, does not, we proceed as follows. As $\phi$ is an eigenfunction of $w, \phi^{P}$ also is. As $\phi$ has no definite parity, the wave functions
+$$
+\begin{equation*}
+\phi_{ \pm}=2^{-1 / 2}\left(\phi \pm \phi^{P}\right) \tag{4.2.7}
+\end{equation*}
+$$
+are both non vanishing. Thus, the $\phi_{ \pm}$are eigenfunctions belonging to $w$ too. Now, by construction, the $\phi_{ \pm}$have parity $\pm$, respectively,
+$$
+\begin{equation*}
+\phi_{ \pm}^{P}=2^{-1 / 2}\left(\phi^{P} \pm \phi^{P P}\right)= \pm 2^{-1 / 2}\left(\phi \pm \phi^{P}\right)= \pm \phi_{ \pm} \tag{4.2.8}
+\end{equation*}
+$$
+
+The $\phi_{ \pm}$are linearly independent. In fact, if they were not, we would have $\phi_{+}=c \phi_{-}$ for some complex constant $c$. But then $\phi_{+}=\phi_{+}{ }^{P}=c \phi_{-}{ }^{P}=-c \phi_{-}=-\phi_{+}$implying that $\phi_{+}=0$ which is absurd. Now, we redefine $\phi_{1}=\phi_{+}, \phi_{2}=\phi_{-}$. We conclude that there two real linearly independent eigenfunctions $\phi_{1}, \phi_{2}$ belonging to $w$ with definite parity.
+$A$ parity + energy eigenfunction $\phi$ cannot vanish at $x=0$.
+
+Proof. To begin with, we recall that if $f$ is a solution of an ordinary second order linear differential equation and $f(0)=0$ and $d f(0) / d x=0$, then $f(x)=0$ identically. Suppose by absurd that $\phi$ is a parity + eigenfunction such that $\phi(0)=0$. Then, $\phi$ solves the Schroedinger equation, which is an ordinary second order linear differential equation. Further, as $\phi(x)-\phi(-x)=0$, one has that $d \phi(x) / d x+d \phi(-x) / d x=0$ so
+that $d \phi(0) / d x=0$. It follows that $\phi(x)=0$ identically. This is not possible, since by being an energy eigenfunction $\phi$ cannot vanish identically.
+
+A parity - energy eigenfunction $\phi$ necessarily vanishes at $x=0$.
+
+Proof. If $\phi$ has parity -, then $\phi(x)+\phi(-x)=0$ When $x=0$, one has that $\phi(0)=0$, proving the statement.
+
+Suppose that $U$ is a parity invariant potential having a discrete energy spectrum. Let the discrete energy eigenvalues $w_{n}$ be ordered so that $w_{0}<$ $w_{1}<w_{2}<\ldots$ Then, an eigenfunction $\phi_{n}$ belonging to $w_{n}$ has definite parity $\pm$ according to whether $n$ is even or odd. In particular, the energy eigenfunction $\phi_{0}$ belonging to the lowest eigenvalue $w_{0}$ has parity + .
+
+Proof. Since $w_{n}$ belongs to the discrete energy spectrum, it is non degenerate. Since $w_{n}$ is non degenerate, an eigenfunction $\phi_{n}$ belonging to $w_{n}$ has definite parity. Since further $w_{n}$ is the $n$-th eigenvalue by magnitude, $\phi_{n}$ has $n$ nodes, by the node theorem.
+
+Suppose that $x_{0}$ is a node of $\phi_{n}$, so that $\phi_{n}\left(x_{0}\right)=0$. Then, $\phi_{n}\left(-x_{0}\right)= \pm \phi_{n}\left(x_{0}\right)=0$, implying that $-x_{0}$ is also a node of $\phi_{n}$. The number of non zero nodes of $\phi_{n}$ is thus always even. If $\phi_{n}$ has parity $+, \phi_{n}(x) \neq 0, x=0$ is not a further node of $\phi_{n}$ and so $\phi_{n}$ has an even number of nodes. If $\phi_{n}$ has parity $-, \phi_{n}(x)=0, x=0$ is a further node of $\phi_{n}$ and so $\phi_{n}$ has an odd number of nodes. It follows that $\phi_{n}$ has parity $\pm$ according to whether $n$ is even or odd.
+
+\subsection*{4.3. Piece wise constant 1-dimensional potentials}
+
+A 1-dimensional potential $U(x)$ is said to be piece wise constant if the interval where the relevant particle is confined can be divided in subintervals within each of which the potential takes a constant value. Fig. 4.3.1 shows the plot of an example of a potential of this kind. The main reason to consider piece wise constant potentials is that for this class of potentials the Schroedinger problem is solvable analytically and relatively simple expressions of the energy eigenvalues and eigenfunctions can be obtained.
+
+A piece wise constant potential can be used to approximate a potential that is mathematically very complicated, as shown in an example in fig. 4.3.2, rendering the determination of the energy eigenvalues and eigenfunctions possible. The finer the subdivision of the confinement interval in constancy subintervals is taken, the better the accuracy of the approximation is. The qualitative features of a real physical potential can often be approximated reasonably well by a judiciously chosen piece wise constant approximant.
+
+Instances of this approach are numerous. Although the form of the potential $U(r)$ binding a proton and a neutron in a deuteron is not precisely known in nuclear theory, it is known that it has a short range since nuclear forces extend
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0416.jpg?height=418&width=1050&top_left_y=1900&top_left_x=516)
+
+Figure 4.3.1. A piece wise constant 1-dimensional potential $U(x)$.
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0417.jpg?height=636&width=917&top_left_y=506&top_left_x=645)
+
+Figure 4.3.2. A smooth potential $U(x)$ can be approximated by a piece wise constant potential $U_{\mathrm{pwc}}(x)$.
+only to a distance of the order of the nuclear size and fall off to zero very fast beyond that distance. In the simplest model, the potential has the standard Yukawa form, $U(r)=-U_{0} \lambda_{\pi} e^{-r / \lambda_{\pi}} / r$, where $U_{0}$ is is the potential depth, $U_{0} \simeq 35$ Mev, and $\lambda_{\pi}$ is the the pion Compton wave length, $\lambda_{\pi} \simeq 1.41 \mathrm{fm}$. The potential can be approximated by a rectangular potential well, a central potential with $U_{\text {pwc }}(r)=0$ for $r>\lambda_{\pi}$ and $U_{\mathrm{pwc}}(r)=-U_{0}$ for $r<\lambda_{\pi}$ (cf. fig. 4.3.3).
+
+An $\alpha$ particle is bound inside a ${ }^{212} \mathrm{Po}_{84}$ polonium nucleus by a potential $U(r)$ that combines an attractive short range nuclear potential $U_{\text {ncl }}(r)$ and a repulsive
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0417.jpg?height=389&width=927&top_left_y=1974&top_left_x=599)
+
+Figure 4.3.3. A rectangular potential well modelling the nuclear potential binding a proton and a neutron in a deuteron.
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0418.jpg?height=391&width=770&top_left_y=493&top_left_x=710)
+
+Figure 4.3.4. A piece wise constant potential modelling the combined nuclear and electrostatic potential binding an $\alpha$-particle to a nucleus.
+long range electrostatic potential $U_{\mathrm{el}}(r)=164 e^{2} / r$. The exact form of $U_{\text {ncl }}$ is not known, but it is known that $U_{\text {ncl }}$ is strong for $r \leq r_{0}$ while it falls off very rapidly for $r \gg r_{0}$, where $r_{0} \simeq 9.1 \mathrm{fm}$ is the nuclear radius. Therefore, the attractive nuclear force predominates within a distance $r_{0}$ while it makes way to the repulsive electrostatic force at to a separation well above $r_{0}$ resulting in a potential well of depth $U_{0} \simeq 12 \mathrm{Mev}$ followed by a potential barrier of height $U_{1} \simeq 26 \mathrm{MeV}$. The potential $U(r)$ is therefore quite complicated but it can be conveniently modelled by a piece wise constant potential $U_{\mathrm{pwc}}(r)$ as shown in fig. 4.3.4. $\alpha$ decay of polonium ${ }^{212} \mathrm{Po}_{84}$ into lead ${ }^{208} \mathrm{~Pb}_{82}$ occurs because the $\alpha$ particle has positive energy and can tunnel through the electrostatic barrier.
+
+In solid state physics electrons are bound in a ionic crystal lattice by a potential $U(\boldsymbol{x})$ that has the same periodicity properties of the lattice. Again, the potential $U$ can be rather complicated due to the non trivial spacial arrangement of the lattice ions. However, in a simple 1-dimensional reduction the picture simplifies and it gets even simpler if the potential $U(x)$ is approximated by a piece wise constant potential $U_{p w c}(x)$ given by a periodic alternation of identical rectangular potential barriers and wells as shown in fig. 4.3.5. Such extremely simplified model captures many of the basic features of a realistic periodic lattice potential.
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0419.jpg?height=372&width=1267&top_left_y=486&top_left_x=407)
+
+Figure 4.3.5. A piece wise constant potential modelling the periodic potential binding an electron in 1-dimensional crystal.
+
+There are many other cases in which a schematic piece wise constant potential approximates a realistic one sufficiently well to provide a satisfactory description of the interaction while at the same time the associated Schroedinger problem is is simple enough and can be solved with relative little mathematical effort.
+
+In applications requiring the solution of the Schroedinger equation for a $1-$ dimensional piece wise constant potential, one encounters as a rule equations of the form
+$$
+\begin{equation*}
+\frac{d^{2} \phi}{d x^{2}}+\kappa^{2} \phi=0 \tag{4.3.1}
+\end{equation*}
+$$
+in an interval $\xi_{1} \leq x \leq \xi_{2}$ with $\xi_{1} \leq \xi_{2}$, where $\kappa$ is a complex parameter.
+Replacing $x$ with the dimensionless variable
+$$
+\begin{equation*}
+z=\kappa x \tag{4.3.2}
+\end{equation*}
+$$
+(4.3.1) takes a form no longer dependent on $\kappa$
+$$
+\begin{equation*}
+\frac{d^{2} \phi}{d z^{2}}+\phi=0 \tag{4.3.3}
+\end{equation*}
+$$
+(4.3.3) is an ordinary second order linear differential equation. Thus, it admits precisely two linearly independent solutions. All other solutions can be expressed as linear combinations of the two independent solutions. The identity of the independent solutions is not unique, but there are standard choices. There are the trigonometric basis
+$$
+\begin{equation*}
+\cos z, \quad \sin z \tag{4.3.4}
+\end{equation*}
+$$
+and the exponential basis
+$$
+\begin{equation*}
+\exp ( \pm i z) \tag{4.3.5}
+\end{equation*}
+$$
+
+They are related by the classic Euler relations:
+$$
+\begin{align*}
+& \exp ( \pm i z)=\cos z \pm i \sin z  \tag{4.3.6}\\
+& \cos z=\frac{1}{2}(\exp (i z)+\exp (-i z)), \quad \sin z=\frac{1}{2 i}(\exp (i z)-\exp (-i z)) \tag{4.3.7}
+\end{align*}
+$$
+
+The general solution of (4.3.1) can thus be written either as
+$$
+\begin{equation*}
+\phi(x)=A \cos (\kappa x)+B \sin (\kappa x) \tag{4.3.8}
+\end{equation*}
+$$
+or as
+$$
+\begin{equation*}
+\phi(x)=C_{+} \exp (i \kappa x)+C_{-} \exp (-i \kappa x) \tag{4.3.9}
+\end{equation*}
+$$
+where $A, B, C_{ \pm}$are arbitrary complex constants. Note that $\phi(x)$ will be bounded as $x \rightarrow \pm \infty$, if allowed, only if $\kappa$ is real.
+
+We know from Chapter 2 that the solutions are harmonic plane waves, with wave number $k$.
+
+\subsection*{4.4. 1-dimensional potential box}
+
+The dynamics of a particle confined in a finite 1-dimensional space region bounded by impenetrable barriers can be described by thinking of the particle as subject to a potential of the form
+$$
+\begin{equation*}
+U(x)=0 \quad \text { for }|x|<a \tag{4.4.1}
+\end{equation*}
+$$
+called potential box of width $2 a$ (cf. fig. 4.4.1). We want to find the energy eigenvalues and eigenfunctions of the particle. Since $a$ is finite, the energy spectrum is totally discrete and non degenerate and the energy eigenfunctions are normalizable and real up to a constant. Furthermore, sine $U(x)=U(-x)$, the eigenfunctions have a definite parity.
+
+The energy eigenvalues $w$ and eigenfunctions $\phi$ are yielded by solving the time independent Schroedinger equation (4.1.34), presently reading as
+$$
+\begin{equation*}
+\frac{d^{2} \phi}{d x^{2}}+k^{2} \phi=0, \quad \text { if }|x|<a \tag{4.4.2}
+\end{equation*}
+$$
+with the wave vector $k$ given by (4.1.32), with the requirement that $\phi(x)$ is non
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0421.jpg?height=567&width=982&top_left_y=1755&top_left_x=558)
+
+Figure 4.4.1. A potential box. The origin has been chosen so that the potential is symmetric with respect to it.
+identically zero and vanishes at the ends of the allowed spacial region,
+$$
+\begin{equation*}
+\phi(-a)=\phi(a)=0 \tag{4.4.3}
+\end{equation*}
+$$
+
+The solution of (4.4.2) is simplified by the knowledge that $\phi$ has definite parity,
+$$
+\begin{equation*}
+\phi(-x)= \pm \phi(x) \tag{4.4.4}
+\end{equation*}
+$$
+
+Then, the general solution of (4.4.2) satisfying (4.4.4) reads as
+$$
+\begin{align*}
+& \phi^{(+)}(x)=A^{(+)} \cos (k x)  \tag{4.4.5a}\\
+& \phi^{(-)}(x)=A^{(-)} \sin (k x) \tag{4.4.5~b}
+\end{align*}
+$$
+where the sign $\pm$ refers to parity and $A^{( \pm)}$are arbitrary complex constants. To complete solve the problem, we have to impose the boundary conditions (4.4.3). This will determine the allowed values of the wave vector $k$ and, through (4.1.35), the energy eigenvalues $w_{k}$. Via (4.4.5), it will determine also the energy eigenfunctions $\phi^{( \pm)}{ }_{k}(x)$ belonging to $w_{k}$, once a normalization convention has been chosen to fix the value of the constants $A^{( \pm)}$.
+
+If $w \geq 0$, one has that $k>0$ by (4.1.32). From the boundary conditions (4.4.5), we find the eigenvalue equations
+$$
+\begin{array}{ll}
+\cos (k a)=0 & \text { for parity }+ \\
+\sin (k a)=0 & \text { for parity }- \tag{4.4.6~b}
+\end{array}
+$$
+whose solutions is given by
+$$
+\begin{align*}
+& k^{(+)}{ }_{n}=\frac{(n-1 / 2) \pi}{a}, \quad n=1,2,3, \ldots  \tag{4.4.7a}\\
+& k^{(-)}{ }_{n}=\frac{n \pi}{a} \tag{4.4.7~b}
+\end{align*}
+$$
+
+Non positive values of $n$ are excluded because, upon substitution in (4.4.5), either yield the same eigenfunction as the positive ones up to sign or a vanishing wave function, which is not allowed. By virtue of (4.1.35), the energy eigenvalues are
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0423.jpg?height=1002&width=789&top_left_y=472&top_left_x=649)
+
+Figure 4.4.2. First three energy levels of a potential box for each parity
+therefore given by
+$$
+\begin{align*}
+& w^{(+)}{ }_{n}=\frac{\hbar^{2} k^{(+)}{ }_{n}{ }^{2}}{2 m}=\frac{(\hbar \pi)^{2}}{2 m a^{2}}(n-1 / 2)^{2}  \tag{4.4.8a}\\
+& w^{(-)}{ }_{n}=\frac{\hbar^{2} k^{(-)}{ }_{n}{ }^{2}}{2 m}=\frac{(\hbar \pi)^{2}}{2 m a^{2}} n^{2} \tag{4.4.8b}
+\end{align*}
+$$
+
+They are represented in fig. 4.4.2 for an intuitive visualization. The associated eigenfunctions are of the form
+$$
+\begin{align*}
+& \phi^{(+)}{ }_{n}(x)=\frac{1}{a^{1 / 2}} \cos \left(\frac{(n-1 / 2) \pi x}{a}\right),  \tag{4.4.9a}\\
+& \phi^{(-)}{ }_{n}(x)=\frac{1}{a^{1 / 2}} \sin \left(\frac{n \pi x}{a}\right), \tag{4.4.9b}
+\end{align*}
+$$
+, where the normalization constant is determined by requiring for instance that they are positive and satisfy the normalization condition
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0424.jpg?height=1031&width=817&top_left_y=449&top_left_x=665)
+
+Figure 4.4.3. Eigenfunctions of a potential box for $n=1,2,3$ (blue, red, green) for each parity.
+$$
+\begin{equation*}
+\int_{-a}^{a} d x \phi^{( \pm)}{ }_{n_{1}}{ }^{*} \phi^{( \pm)}{ }_{n_{2}}=\delta_{n_{1}, n_{2}} \tag{4.4.10}
+\end{equation*}
+$$
+
+They are plotted in fig. 4.4.3.
+
+Proof. We have
+$$
+\begin{align*}
+\int_{-a}^{a} d x \cos ^{2}\left(\frac{(n-1 / 2) \pi x}{a}\right)= & \frac{a}{(n-1 / 2) \pi} \int_{-(n-1 / 2) \pi}^{(n-1 / 2) \pi} d \xi \cos ^{2} \xi  \tag{4.4.11a}\\
+=\frac{a}{(n-1 / 2) \pi} & {\left[\frac{\xi}{2}+\frac{\sin (2 \xi)}{4}\right]_{-(n-1 / 2) \pi}^{(n-1 / 2) \pi}=a } \\
+\int_{-a}^{a} d x \sin ^{2}\left(\frac{n \pi x}{a}\right)=\frac{a}{n \pi} \int_{-n \pi}^{n \pi} & d \xi \sin ^{2} \xi  \tag{4.4.11b}\\
+& =\frac{a}{n \pi}\left[\frac{\xi}{2}-\frac{\sin (2 \xi)}{4}\right]_{-n \pi}^{n \pi}=a
+\end{align*}
+$$
+where $\xi=(n-1 / 2) \pi x / a, \xi=n \pi x / a$ in the first and second integration, respectively. Hence, the eigenfunctions $\phi^{( \pm)}{ }_{n}$, as given by (4.4.9), satsisfy the normalization condition $(4.4 \cdot 5 a)$.
+
+Thus, in the energy range $0<w$, one has a non degenerate discrete spectrum with normalizable eigenfunctions real up to a constant and with definite parity, as expected from the general theory.
+
+The potential box is an analytically simple model illustrating quite clearly the differences between classical and quantum dynamics. Classically, a point particle confined inside a large box can have any non negative energy and, by bouncing back and forth between the box's walls, it is equally likely to be found at any position within the box. Quantically, because of quantum effects, the particle can have only certain positive energies or energy levels. In particular, the particle's energy cannot vanish, meaning that it cannot stand still. Furthermore, it is more likely to be found at certain positions than at others, as described by the magnitude square of its energy eigenfunction. In particular, the particle may never be detected at the nodes of the eigenfunction.
+
+\subsection*{4.5. Square 1-dimensional potential barrier/well}
+
+The dynamics of a particle in a parity invariant potential force field acting only in a finite 1-dimensional space region can be described qualitatively by thinking of the particle as subject to a potential of the form
+$$
+\begin{align*}
+& U(x)=U_{0} \quad \text { if }|x|<a,  \tag{4.5.1a}\\
+& U(x)=0 \quad \text { if }|x|>a, \tag{4.5.1b}
+\end{align*}
+$$
+where $U_{0}$ is an energy scale, called a rectangular potential barrier or well according to whether $U_{0}>0$ or $U_{0}<0$ (cf. fig. 4.5.1). We want to find the
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0426.jpg?height=1018&width=892&top_left_y=1301&top_left_x=603)
+
+Figure 4.5.1. A potential barrier/well. The origin has been chosen so that the potential is symmetric with respect to it.
+energy eigenvalues and eigenfunctions of the particle. As $U_{*}=\min \left(0, U_{0}\right)$ and $U_{+}=U_{-}=0$ presently, the energy spectrum is discrete and non degenerate with normalizable eigenfunctions real up to a constant in the energy range $U_{0}<w<0$, when $U_{0}$ is negative and of sufficiently large magnitude, and continuous and doubly degenerated with non normalizable eigenfunction which may be chosen to be real up to a constant in the energy range $w \geq 0$. Finally, since $U(x)=U(-x)$, the energy eigenfunctions (can be chosen to) have a definite parity.
+
+The energy eigenvalues $w$ and eigenfunctions $\phi$ are yielded by solving the time independent Schroedinger problem for the potential $U(x)$. In the present case, this involves solving the Schroedinger equation (4.1.34), here reading as
+$$
+\begin{align*}
+& \frac{d^{2} \phi}{d x^{2}}+\left(k^{2}-u_{0}\right) \phi=0, \quad \text { if }|x|<a  \tag{4.5.2a}\\
+& \frac{d^{2} \phi}{d x^{2}}+k^{2} \phi=0, \quad \text { if }|x|>a \tag{4.5.2~b}
+\end{align*}
+$$
+with the wave vector $k$ given by (4.1.32) and
+$$
+\begin{equation*}
+u_{0}=\frac{2 m U_{0}}{\hbar^{2}} \tag{4.5.3}
+\end{equation*}
+$$
+with the requirements that $\phi(x)$ and $d \phi(x) / d x$ are continuous at $x=-a, a$
+$$
+\begin{align*}
+& \phi( \pm a+0)=\phi( \pm a-0)  \tag{4.5.4}\\
+& \frac{d \phi( \pm a+0)}{d x}=\frac{d \phi( \pm a-0)}{d x} \tag{4.5.5}
+\end{align*}
+$$
+and that $\phi(x)$ is not identically zero and bounded as $|x| \rightarrow \infty$. The solution of the differential equations is simplified by requiring that $\phi$ has definite parity
+$$
+\begin{equation*}
+\phi(-x)= \pm \phi(x) \tag{4.5.6}
+\end{equation*}
+$$
+
+Let us now pass to the explicit solution of the Schroedinger problem. To this end, we introduce the wave vectors
+$$
+\begin{equation*}
+k^{\prime}=\left(k^{2}-u_{0}\right)^{1 / 2} \tag{4.5.7}
+\end{equation*}
+$$
+
+Then, by (4.3.9), the general solution $\phi^{( \pm)}$of the differential equation (4.5.2)
+satisfying the definite parity condition (4.5.6) reads as
+$$
+\begin{align*}
+& \phi^{( \pm)}(x)=A^{( \pm)}\left[\exp \left(i k^{\prime} x\right) \pm \exp \left(-i k^{\prime} x\right)\right] \quad \text { if }|x|<a  \tag{4.5.8a}\\
+& \begin{align*}
+\phi^{( \pm)}(x) & =\sigma_{ \pm}(x)\left[B^{( \pm)} \exp (i k(|x|-a))\right. \\
+& \left.+C^{( \pm)} \exp (-i k(|x|-a))\right] \quad \text { if }|x|>a
+\end{align*} \tag{4.5.8~b}
+\end{align*}
+$$
+where the sign $\pm$ refers to parity, $\sigma_{ \pm}(x)=1$ for $x>0$ and $\sigma_{ \pm}(x)= \pm 1$ for $x<0$ and $A^{( \pm)}, B^{( \pm)}, C^{( \pm)}$are arbitrary complex constants. The relation $\sigma_{ \pm}(-x)=$ $\pm \sigma_{ \pm}(x)$ ensures that (4.5.6) holds. The factors $\exp (\mp i k a)$ have been extracted from $B^{( \pm)}$and $C^{( \pm)}$for later convenience.
+
+Proof. The general solution of the Schroedinger equation (4.5.2) is an arbitrary linear combination of $\exp \left( \pm i k^{\prime} x\right)$ in the interval $-a<x<a$ and $\exp ( \pm i k x)$ in the symmetrical intervals $a<x$ and $x<-a$. Hence, $\phi^{( \pm)}$can be expressed as
+$$
+\begin{align*}
+& \phi^{( \pm)}(x)=A^{( \pm)} \exp \left(i k^{\prime} x\right)+\tilde{A}^{( \pm)} \exp \left(-i k^{\prime} x\right) \quad \text { if }-a<x<a  \tag{4.5.9a}\\
+& \phi^{( \pm)}(x)=B^{( \pm)} \exp (i k(x-a))+C^{( \pm)} \exp (-i k(x-a)) \quad \text { if } a<x  \tag{4.5.9b}\\
+& \phi^{( \pm)}(x)=\tilde{B}^{( \pm)} \exp (-i k(x+a))+\tilde{C}^{( \pm)} \exp (i k(x+a)) \quad \text { if } x<-a \tag{4.5.9c}
+\end{align*}
+$$
+where $A^{( \pm)}, \tilde{A}^{( \pm)}, B^{( \pm)}, \tilde{B}^{( \pm)}, C^{( \pm)}, \tilde{C}^{( \pm)}$are arbitrary complex coefficients. From here, it follows that
+$$
+\begin{align*}
+& \phi^{( \pm)}(-x)=A^{( \pm)} \exp \left(-i k^{\prime} x\right)+\tilde{A}^{( \pm)} \exp \left(i k^{\prime} x\right) \quad \text { if }-a<x<a  \tag{4.5.10a}\\
+& \phi^{( \pm)}(-x)=\tilde{B}^{( \pm)} \exp (i k(x-a))+\tilde{C}^{( \pm)} \exp (-i k(x-a)) \quad \text { if } a<x  \tag{4.5.10b}\\
+& \phi^{( \pm)}(-x)=B^{( \pm)} \exp (-i k(x+a))+C^{( \pm)} \exp (i k(x+a)) \quad \text { if } x<-a \tag{4.5.10c}
+\end{align*}
+$$
+
+Requiring that (4.5.6) holds entails that
+$$
+\begin{align*}
+& \tilde{A}^{( \pm)}= \pm A^{( \pm)}  \tag{4.5.11a}\\
+& \tilde{B}^{( \pm)}= \pm B^{( \pm)}, \quad \tilde{C}^{( \pm)}= \pm C^{( \pm)} \tag{4.5.11b}
+\end{align*}
+$$
+
+Using the relaltions (4.5.11) into (4.5.9), one gets
+$$
+\begin{align*}
+& \phi^{( \pm)}(x)=A^{( \pm)}\left[\exp \left(i k^{\prime} x\right) \pm \exp \left(-i k^{\prime} x\right)\right] \quad \text { if }-a<x<a  \tag{4.5.12a}\\
+& \phi^{( \pm)}(x)=B^{( \pm)} \exp (i k(x-a))+C^{( \pm)} \exp (-i k(x-a)) \quad \text { if } a<x  \tag{4.5.12b}\\
+& \phi^{( \pm)}(x)= \pm\left[B^{( \pm)} \exp (-i k(x+a))+C^{( \pm)} \exp (i k(x+a))\right] \quad \text { if } x<-a \tag{4.5.12c}
+\end{align*}
+$$
+(4.5.12a) is manifestly equivalent to (4.5.8a). Noting that $x=|x|$ for $a<x$ and $x=-|x|$ for $x<-a$, (4.5.12b), (4.5.12c) aresummarized by the single expression $(4.5 .8 a)$.
+
+Next, we have to impose the regularity conditions at $x=-a,+a$. As $\phi^{( \pm)}$ has definite parity by construction, it is sufficient to do so at $x=a$ only. This yields the linear system
+$$
+\begin{align*}
+& B^{( \pm)}+C^{( \pm)}=A^{( \pm)}\left[\exp \left(i k^{\prime} a\right) \pm \exp \left(-i k^{\prime} a\right)\right]  \tag{4.5.13a}\\
+& B^{( \pm)}-C^{( \pm)}=A^{( \pm)} \frac{k^{\prime}}{k}\left[\exp \left(i k^{\prime} a\right) \mp \exp \left(-i k^{\prime} a\right)\right] \tag{4.5.13b}
+\end{align*}
+$$
+
+Proof. From (4.5.8), we have that
+$$
+\begin{align*}
+& \phi^{( \pm)}(x)=A^{( \pm)}\left[\exp \left(i k^{\prime} x\right) \pm \exp \left(-i k^{\prime} x\right)\right] \quad \text { if } 0<x<a  \tag{4.5.14a}\\
+& \begin{align*}
+\phi^{( \pm)}(x) & =B^{( \pm)} \exp (i k(x-a)) \\
+& +C^{( \pm)} \exp (-i k(x-a)) \quad \text { if } x>a
+\end{align*} \tag{4.5.14b}
+\end{align*}
+$$
+and consequently that
+$$
+\begin{align*}
+& \frac{d \phi^{( \pm)}(x)}{d x}=i k^{\prime} A^{( \pm)}\left[\exp \left(i k^{\prime} x\right) \mp \exp \left(-i k^{\prime} x\right)\right] \quad \text { if } 0<x<a  \tag{4.5.15a}\\
+& \frac{d \phi^{( \pm)}(x)}{d x}=i k\left[B^{( \pm)} \exp (i k(x-a))\right.  \tag{4.5.15b}\\
+& \left.-C^{( \pm)} \exp (-i k(x-a))\right] \quad \text { if } x>a
+\end{align*}
+$$
+
+Imposing the conditions (4.5.4), (4.5.5) at $+a$, we get eqs. (4.5.13) immediately.
+
+The linear equations (4.5.13) are solved by
+$$
+\begin{align*}
+& B^{( \pm)}=\frac{A^{( \pm)}}{2}\left[\left(1+\frac{k^{\prime}}{k}\right) \exp \left(i k^{\prime} a\right) \pm\left(1-\frac{k^{\prime}}{k}\right) \exp \left(-i k^{\prime} a\right)\right]  \tag{4.5.16a}\\
+& C^{( \pm)}=\frac{A^{( \pm)}}{2}\left[\left(1-\frac{k^{\prime}}{k}\right) \exp \left(i k^{\prime} a\right) \pm\left(1+\frac{k^{\prime}}{k}\right) \exp \left(-i k^{\prime} a\right)\right] \tag{4.5.16b}
+\end{align*}
+$$
+
+Substituting (4.5.16) into (4.5.8), one has
+$$
+\begin{align*}
+& \phi^{( \pm)}(x)=A^{( \pm)}\left[\exp \left(i k^{\prime} x\right) \pm \exp \left(-i k^{\prime} x\right)\right] \quad \text { if }|x|<a  \tag{4.5.17a}\\
+& \phi^{( \pm)}(x)=\frac{A^{( \pm)}}{2} \sigma_{ \pm}(x)\left\{\left[\left(1+\frac{k^{\prime}}{k}\right) \exp \left(i k^{\prime} a\right)\right.\right.  \tag{4.5.17b}\\
+&\left. \pm\left(1-\frac{k^{\prime}}{k}\right) \exp \left(-i k^{\prime} a\right)\right] \exp (i k(|x|-a)) \\
+&+\left[\left(1-\frac{k^{\prime}}{k}\right) \exp \left(i k^{\prime} a\right)\right. \\
+&\left.\left. \pm\left(1+\frac{k^{\prime}}{k}\right) \exp \left(-i k^{\prime} a\right)\right] \exp (-i k(|x|-a))\right\} \quad \text { if }|x|>a
+\end{align*}
+$$
+
+To complete the solution of the problem, we must impose the boundedness condition of the energy eigenfunction $\phi^{( \pm)}(x)$ as $|x| \rightarrow \infty$. This will determine the allowed values of the wave vector $k$ and, through (4.1.32), the energy eigenvalues $w_{k}$. Via (4.5.17), it will determine also the eigenfunctions $\phi^{( \pm)}{ }_{k}(x)$ belonging to $w_{k}$, once a normalization convention has been chosen to fix the value of the constant $A^{( \pm)}$.
+
+If $w>0$, one has that $k>0$ by (4.1.32). Then, by (4.5.17b), as $\mid \exp ( \pm i k(|x|-$ $a)) \mid=1, \phi^{( \pm)}(x)$ is automatically bounded as $|x| \rightarrow \infty$. Therefore, from (4.1.32), for each $k>0$, we have the energy eigenvalue
+$$
+\begin{equation*}
+w_{k}=\frac{\hbar^{2} k^{2}}{2 m} \tag{4.5.18}
+\end{equation*}
+$$
+
+By (4.5.17), there are two linearly independent eigenfunctions $\phi^{( \pm)}{ }_{k}$ belonging to $w_{k}$ with opposite parity
+$$
+\begin{align*}
+& \phi_{k}^{(+)}(x)=2 N^{(+)}{ }_{k} \cos \left(k^{\prime} x\right) \quad \text { if }|x|<a  \tag{4.5.19a}\\
+& \phi_{k}^{(+)}(x)=N^{(+)}\left[\left(1+\frac{k^{\prime}}{k}\right) \cos \left(k|x|-\left(k-k^{\prime}\right) a\right)\right. \tag{4.5.19b}
+\end{align*}
+$$
+$$
+\begin{align*}
+& \left.+\left(1-\frac{k^{\prime}}{k}\right) \cos \left(k|x|-\left(k+k^{\prime}\right) a\right)\right] \quad \text { if }|x|>a, \\
+& \phi^{(-)}{ }_{k}(x)=2 N^{(-)}{ }_{k} \sin \left(k^{\prime} x\right) \quad \text { if }|x|<a,  \tag{4.5.19c}\\
+& \phi^{(-)}{ }_{k}(x)=N^{(-)}{ }_{k} \operatorname{sgn} x\left[\left(1+\frac{k^{\prime}}{k}\right) \sin \left(k|x|-\left(k-k^{\prime}\right) a\right)\right.  \tag{4.5.19d}\\
+& \left.-\left(1-\frac{k^{\prime}}{k}\right) \sin \left(k|x|-\left(k+k^{\prime}\right) a\right)\right] \quad \text { if }|x|>a,
+\end{align*}
+$$
+where the normalization constants $N^{( \pm)}{ }_{k}$ are given by
+$$
+\begin{align*}
+& N_{k}^{(+)}=\left|2\left(\cos ^{2}\left(k^{\prime} a\right)+\frac{k^{\prime 2}}{k^{2}} \sin ^{2}\left(k^{\prime} a\right)\right)\right|^{-1 / 2}  \tag{4.5.20a}\\
+& N_{k}^{(-)}=\left|2\left(\sin ^{2}\left(k^{\prime} a\right)+\frac{k^{\prime 2}}{k^{2}} \cos ^{2}\left(k^{\prime} a\right)\right)\right|^{-1 / 2} \tag{4.5.20b}
+\end{align*}
+$$
+(cf. figs. 4.5.2, 4.5.3). They are determined by the normalization condition
+$$
+\begin{equation*}
+\int_{-\infty}^{\infty} d x \phi^{( \pm)}{ }_{k_{1}}^{*} \phi^{( \pm)}{ }_{k_{2}}=2 \pi \delta\left(k_{1}-k_{2}\right) \tag{4.5.21}
+\end{equation*}
+$$
+
+Proof. Using the Euler relations $\exp ( \pm i z)=\cos z \pm i \sin z$, we can express the exponentials $\exp \left( \pm i k^{\prime} x\right)$ and $\exp \left( \pm i\left(k|x|-\left(k-k^{\prime}\right) a\right)\right), \exp \left( \pm i\left(k|x|-\left(k+k^{\prime}\right) a\right)\right)$ appearing in (4.5.17) in terms of $\cos \left(k^{\prime} x\right), \sin \left(k^{\prime} x\right)$ and $\cos \left(k|x|-\left(k-k^{\prime}\right) a\right), \sin \left(k|x|-\left(k-k^{\prime}\right) a\right)$, $\cos \left(k|x|-\left(k+k^{\prime}\right) a\right), \sin \left(k|x|-\left(k+k^{\prime}\right) a\right)$. After a straightforward algebraic arrangement, this allows one to recast the expressions (4.5.17) in the form (4.5.19) with arbitrary non vanishing coefficients $N^{( \pm)}{ }_{k}$.
+
+The constants $N^{( \pm)}{ }_{k}$ are determined by imposing the normalization conditions (4.5.21). The delta function singularity in (4.5.21) is yielded solely by the contributions to the integral in the left hand side which diverge as $k_{1}, k_{2}$ approach each other. In turn, the divergence arises necessarily in the large $|x|$ portion of the integration domain. For the purpose of our computation, we can therefore use the expression of the integrand valid for $|x|>a$ and retain only the terms which lead to integration divergences.
+
+Expanding $\cos \left(k|x|-\left(k-k^{\prime}\right) a\right), \sin \left(k|x|-\left(k-k^{\prime}\right) a\right), \cos \left(k|x|-\left(k+k^{\prime}\right) a\right), \sin (k|x|-$ $\left.\left(k+k^{\prime}\right) a\right)$ using the trigonometric identities $\cos (u-v)=\cos u \cos v+\sin u \sin v, \sin (u-$
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0432.jpg?height=1015&width=879&top_left_y=471&top_left_x=669)
+
+Figure 4.5.2. Continuous spectrum energy eigenfunctions of a potential barrier for $k a=13.00,15.00$ (blue, red) corresponding to $w_{k} \lessgtr U_{0}$, respectively, for each parity. In the first case, $\phi^{(+)}(0)>0$. The apparent vanishing of $\phi^{(+)}(0)$ in the plot is due the small . 0045 vertical scale used.
+$v)=\sin u \cos v-\cos u \sin v$, we can cast the expressions of $\phi^{( \pm)}{ }_{k}$ in the domain $|x|>a$ as linear combinations of $\cos (k|x|), \sin (k|x|)$. Thus, we write
+$$
+\begin{equation*}
+\phi^{( \pm)}{ }_{k}(x)=N^{( \pm)}{ }_{k} \sigma_{ \pm}(x)\left[a^{( \pm)}\left(k, k^{\prime}\right) \cos (k|x|)+b^{( \pm)}\left(k, k^{\prime}\right) \sin (k|x|)\right] \tag{4.5.22}
+\end{equation*}
+$$
+where $a^{( \pm)}\left(k, k^{\prime}\right), b^{( \pm)}\left(k, k^{\prime}\right)$ are certain real or imaginary valued functions of $k, k^{\prime}$, which we shall explicitly compute later on. Using this identity as an approximant of the integrand in the right hand side of (4.5.21), we obtain
+$$
+\begin{equation*}
+\frac{1}{N^{( \pm)}{ }_{k_{1}}{ }^{*} N^{( \pm)}{ }_{k_{2}}} \int_{-\infty}^{\infty} d x \phi^{( \pm)}{ }_{k_{1}}{ }^{*} \phi^{( \pm)}{ }_{k_{2}} \tag{4.5.23}
+\end{equation*}
+$$
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0433.jpg?height=1018&width=895&top_left_y=472&top_left_x=669)
+
+Figure 4.5.3. Continuous spectrum energy eigenfunctions of a potential well for $k a=6.00$ for each parity.
+$$
+\begin{aligned}
+& \simeq \int_{-\infty}^{\infty} d x\left[a^{( \pm)}\left(k_{1}, k_{1}{ }^{\prime}\right)^{*} \cos \left(k_{1}|x|\right)+b^{( \pm)}\left(k_{1}, k_{1}{ }^{\prime}\right)^{*} \sin \left(k_{1}|x|\right)\right] \\
+& \times\left[a^{( \pm)}\left(k_{2}, k_{2}{ }^{\prime}\right) \cos \left(k_{2}|x|\right)+b^{( \pm)}\left(k_{2}, k_{2}{ }^{\prime}\right) \sin \left(k_{2}|x|\right)\right] \\
+& =2 \int_{0}^{\infty} d x\left[a^{( \pm)}\left(k_{1}, k_{1}{ }^{\prime}\right)^{*} \cos \left(k_{1} x\right)+b^{( \pm)}\left(k_{1}, k_{1}{ }^{\prime}\right)^{*} \sin \left(k_{1} x\right)\right] \\
+& \times\left[a^{( \pm)}\left(k_{2}, k_{2}{ }^{\prime}\right) \cos \left(k_{2} x\right)+b^{( \pm)}\left(k_{2}, k_{2}{ }^{\prime}\right) \sin \left(k_{2} x\right)\right] \\
+& =2 a^{( \pm)}\left(k_{1}, k_{1}^{\prime}\right)^{*} a^{( \pm)}\left(k_{2}, k_{2}{ }^{\prime}\right) \int_{0}^{\infty} d x \cos \left(k_{1} x\right) \cos \left(k_{2} x\right) \\
+& +2 b^{( \pm)}\left(k_{1}, k_{1}{ }^{\prime}\right)^{*} b^{( \pm)}\left(k_{2}, k_{2}{ }^{\prime}\right) \int_{0}^{\infty} d x \sin \left(k_{1} x\right) \sin \left(k_{2} x\right) \\
+& +2 b^{( \pm)}\left(k_{1}, k_{1}{ }^{\prime}\right)^{*} a^{( \pm)}\left(k_{2}, k_{2}{ }^{\prime}\right) \int_{0}^{\infty} d x \sin \left(k_{1} x\right) \cos \left(k_{2} x\right) \\
+& +2 a^{( \pm)}\left(k_{1}, k_{1}{ }^{\prime}\right)^{*} b^{( \pm)}\left(k_{2}, k_{2}{ }^{\prime}\right) \int_{0}^{\infty} d x \cos \left(k_{1} x\right) \sin \left(k_{2} x\right) .
+\end{aligned}
+$$
+
+The integrals appearing in (4.5.23) must be understood in the distributional sense. To compute them, we use the distributional relations (14.16.1) into (4.5.23) (cf. app. 14.16). As $k_{1}, k_{2}>0, \delta\left(k_{1}+k_{2}\right)$ and $P 1 /\left(k_{1}+k_{2}\right)$ are not singular and so their contribution can be neglected in our calculation. We find so
+$$
+\begin{align*}
+\frac{1}{N^{( \pm)}{ }_{k_{1}}{ }^{*} N^{( \pm)}} & \int_{k_{2}}^{\infty} d x \phi^{( \pm)}{ }_{k_{1}}{ }^{*} \phi^{( \pm)}{ }_{k_{2}}  \tag{4.5.24}\\
+& \simeq \pi\left(a^{( \pm)}\left(k_{1}, k_{1}{ }^{\prime}\right)^{*} a^{( \pm)}\left(k_{2}, k_{2}{ }^{\prime}\right)+b^{( \pm)}\left(k_{1}, k_{1}{ }^{\prime}\right)^{*} b^{( \pm)}\left(k_{2}, k_{2}{ }^{\prime}\right)\right) \delta\left(k_{1}-k_{2}\right) \\
+& \left.+\left(b^{( \pm)}\left(k_{1}, k_{1}{ }^{\prime}\right)^{*} a^{( \pm)}\left(k_{2}, k_{2}{ }^{\prime}\right)-a^{( \pm)}\left(k_{1}, k_{1}\right)^{\prime}\right)^{*} b^{( \pm)}\left(k_{2}, k_{2}{ }^{\prime}\right)\right) P \frac{1}{k_{1}-k_{2}}
+\end{align*}
+$$
+
+When $k_{1}, k_{2}$ tend to each other, the coefficient of $\delta\left(k_{1}-k_{2}\right)$ becomes real while that of $P 1 /\left(k_{1}-k_{2}\right)$ gets imaginary. Thus, the second term in the right hand side of (4.5.24) cannot contribute in such limit. We are therefore left with
+$$
+\begin{align*}
+& \frac{1}{N^{( \pm)}{ }_{k_{1}}{ }^{*} N^{( \pm)}{ }_{k_{2}}} \int_{-\infty}^{\infty} d x \phi^{( \pm)}{ }_{k_{1}}{ }^{*} \phi^{( \pm)}{ }_{k_{2}}  \tag{4.5.25}\\
+& \simeq \pi\left(\left|a^{( \pm)}\left(k_{1}, k_{1}{ }^{\prime}\right)\right|^{2}+\left|b^{( \pm)}\left(k_{1}, k_{1}{ }^{\prime}\right)\right|^{2}\right) \delta\left(k_{1}-k_{2}\right) .
+\end{align*}
+$$
+
+Imposing (4.5.21) so implies that
+$$
+\begin{equation*}
+N^{( \pm)}{ }_{k}{ }^{*} N^{( \pm)}{ }_{k}=\frac{2}{\left|a^{( \pm)}\left(k, k^{\prime}\right)\right|^{2}+\left|b^{( \pm)}\left(k, k^{\prime}\right)\right|^{2}} \tag{4.5.26}
+\end{equation*}
+$$
+
+To obtain the expression of $N^{( \pm)}{ }_{k}$, we must now compute the coefficients $a^{( \pm)}\left(k, k^{\prime}\right)$, $b^{( \pm)}\left(k, k^{\prime}\right)$.
+
+Expanding $\cos \left(k|x|-\left(k-k^{\prime}\right) a\right), \sin \left(k|x|-\left(k-k^{\prime}\right) a\right), \cos \left(k|x|-\left(k+k^{\prime}\right) a\right), \sin (k|x|-$ $\left.\left(k+k^{\prime}\right) a\right)$ using the trigonometric identities $\cos (u-v)=\cos u \cos v+\sin u \sin v, \sin (u-$ $v)=\sin u \cos v-\cos u \sin v$, we can cast the expressions (4.5.19b), (4.5.19d) as
+$$
+\begin{align*}
+& \phi^{(+)}{ }_{k}(x)  \tag{4.5.27a}\\
+& =N^{(+)}{ }_{k}\left\{\left[\left(1+\frac{k^{\prime}}{k}\right) \cos \left(\left(k-k^{\prime}\right) a\right)+\left(1-\frac{k^{\prime}}{k}\right) \cos \left(\left(k+k^{\prime}\right) a\right)\right] \cos (k|x|)\right. \\
+& \left.+\left[\left(1+\frac{k^{\prime}}{k}\right) \sin \left(\left(k-k^{\prime}\right) a\right)+\left(1-\frac{k^{\prime}}{k}\right) \sin \left(\left(k+k^{\prime}\right) a\right)\right] \sin (k|x|)\right\} \\
+& =2 N^{(+)}{ }_{k}\left\{\left[\cos (k a) \cos \left(k^{\prime} a\right)+\frac{k^{\prime}}{k} \sin (k a) \sin \left(k^{\prime} a\right)\right] \cos (k|x|)\right. \\
+& \left.\left[\sin (k a) \cos \left(k^{\prime} a\right)-\frac{k^{\prime}}{k} \cos (k a) \sin \left(k^{\prime} a\right)\right] \sin (k|x|)\right\},
+\end{align*}
+$$
+$$
+\begin{align*}
+& \phi^{(-)}{ }_{k}(x)  \tag{4.5.27b}\\
+& =N^{(-)}{ }_{k} \operatorname{sgn} x\left\{\left[\left(1-\frac{k^{\prime}}{k}\right) \sin \left(\left(k+k^{\prime}\right) a\right)-\left(1+\frac{k^{\prime}}{k}\right) \sin \left(\left(k-k^{\prime}\right) a\right)\right] \cos (k|x|)\right. \\
+& \left.+\left[\left(1+\frac{k^{\prime}}{k}\right) \cos \left(\left(k-k^{\prime}\right) a\right)-\left(1-\frac{k^{\prime}}{k}\right) \cos \left(\left(k+k^{\prime}\right) a\right)\right] \sin (k|x|)\right\} \\
+& =2 N^{(-)}{ }_{k} \operatorname{sgn} x\left\{\left[\cos (k a) \sin \left(k^{\prime} a\right)-\frac{k^{\prime}}{k} \sin (k a) \cos \left(k^{\prime} a\right)\right] \cos (k|x|)\right. \\
+& \left.+\left[\sin (k a) \sin \left(k^{\prime} a\right)+\frac{k^{\prime}}{k} \cos (k a) \cos \left(k^{\prime} a\right)\right] \sin (k|x|)\right\} .
+\end{align*}
+$$
+
+From (4.5.27), we can read off immediately the expressions of the coefficients $a^{( \pm)}\left(k, k^{\prime}\right)$, $b^{( \pm)}\left(k, k^{\prime}\right):$
+$$
+\begin{align*}
+& a^{(+)}\left(k, k^{\prime}\right)=2\left[\cos (k a) \cos \left(k^{\prime} a\right)+\frac{k^{\prime}}{k} \sin (k a) \sin \left(k^{\prime} a\right)\right]  \tag{4.5.28a}\\
+& b^{(+)}\left(k, k^{\prime}\right)=2\left[\sin (k a) \cos \left(k^{\prime} a\right)-\frac{k^{\prime}}{k} \cos (k a) \sin \left(k^{\prime} a\right)\right]  \tag{4.5.28b}\\
+& a^{(-)}\left(k, k^{\prime}\right)=2\left[\cos (k a) \sin \left(k^{\prime} a\right)-\frac{k^{\prime}}{k} \sin (k a) \cos \left(k^{\prime} a\right)\right]  \tag{4.5.28c}\\
+& b^{(-)}\left(k, k^{\prime}\right)=2\left[\sin (k a) \sin \left(k^{\prime} a\right)+\frac{k^{\prime}}{k} \cos (k a) \cos \left(k^{\prime} a\right)\right] \tag{4.5.28d}
+\end{align*}
+$$
+
+Inserting the (4.5.28) into (4.5.26) and choosing conventionally $N^{( \pm)}{ }_{k}$ to be positive, we obtain finally the expressions (4.5.20) of $N^{( \pm)}{ }_{k}$ after some simple algebraic manipulations.
+
+Therefore, in the energy range $w \geq 0$, one has a doubly degenerate continuous spectrum with non normalizable eigenfunctions real up to a constant and with definite parity, as expected on general grounds.
+
+If $U_{0}<w<0$, which of course can happen only when $U_{0}<0$, one has that $k=i \tilde{k}$ with $\tilde{k}>0$. Then, by (4.5.17b), as $|\exp ( \pm i k(|x|-a))|=\exp (\mp \tilde{k}(|x|-a))$, $\phi^{( \pm)}(x)$ is not bounded as $|x| \rightarrow \infty$, unless the coefficient of $\exp (-i k(|x|-a))$ in (4.5.17b) vanishes. This yields the eigenvalue equation
+$$
+\begin{equation*}
+\left(1-\frac{k^{\prime}}{i \tilde{k}}\right) \exp \left(i k^{\prime} a\right) \pm\left(1+\frac{k^{\prime}}{i \tilde{k}}\right) \exp \left(-i k^{\prime} a\right)=0 \tag{4.5.29}
+\end{equation*}
+$$
+
+This can be written more explicitly as
+$$
+\begin{align*}
+& \cot \left(k^{\prime} a\right)=\frac{k^{\prime}}{\tilde{k}} \quad \text { for parity }+  \tag{4.5.30a}\\
+& \tan \left(k^{\prime} a\right)=-\frac{k^{\prime}}{\tilde{k}} \quad \text { for parity }- \tag{4.5.30b}
+\end{align*}
+$$
+
+Proof. Indeed using that $\exp \left( \pm i k^{\prime} a\right)=\cos \left(k^{\prime} a\right) \pm i \sin \left(k^{\prime} a\right)$, (4.5.29) gets
+$$
+\begin{array}{ll}
+\cos \left(k^{\prime} a\right)-\frac{k^{\prime}}{\tilde{k}} \sin \left(k^{\prime} a\right)=0 & \text { for parity }+ \\
+\sin \left(k^{\prime} a\right)+\frac{k^{\prime}}{\tilde{k}} \cos \left(k^{\prime} a\right)=0 & \text { for parity }- \tag{4.5.31b}
+\end{array}
+$$
+from which the (4.5.30) follow.
+
+In (4.5.30), $k^{\prime}$ and $\tilde{k}$ are not independent, but are related according to (4.5.7). To solve eqs. (4.5.30), therefore, we have to make this relationship explicit. Set
+$$
+\begin{equation*}
+\xi=k^{\prime} a \tag{4.5.32}
+\end{equation*}
+$$
+
+By (4.5.7) and the fact that $U_{0}<w<0$, one has $0<\xi<\chi_{0}$, where
+$$
+\begin{equation*}
+\chi_{0}=\frac{\left(2 m\left|U_{0}\right|\right)^{1 / 2} a}{\hbar} \tag{4.5.33}
+\end{equation*}
+$$
+
+Eqs. (4.5.30) then can be cast more explicitly as
+$$
+\begin{align*}
+& \cot \xi=\frac{\xi}{\left[\chi_{0}^{2}-\xi^{2}\right]^{1 / 2}} \quad \text { for parity }+  \tag{4.5.34a}\\
+& \tan \xi=-\frac{\xi}{\left[\chi_{0}^{2}-\xi^{2}\right]^{1 / 2}} \quad \text { for parity }- \tag{4.5.34b}
+\end{align*}
+$$
+
+Proof. Since $U_{0}<w<0$, we have $0<w-U_{0}<-U_{0}$. Then,
+$$
+\begin{align*}
+(\tilde{k} a)^{2}= & \frac{2 m|w| a^{2}}{\hbar^{2}}=\frac{2 m\left|w-U_{0}+U_{0}\right| a^{2}}{\hbar^{2}}  \tag{4.5.35}\\
+& =-\frac{2 m\left(w-U_{0}\right) a^{2}}{\hbar^{2}}+\frac{2 m\left|U_{0}\right| a^{2}}{\hbar^{2}}=-\left(k^{\prime} a\right)^{2}+\frac{2 m\left|U_{0}\right| a^{2}}{\hbar^{2}}=-\xi^{2}+\chi_{0}{ }^{2}
+\end{align*}
+$$
+
+As $(\tilde{k} a)^{2}>0$, we have $0<\xi<\chi_{0}$. From (4.5.30) and (4.5.35), eqs. (4.5.34) are now
+evident.
+
+The transcendental equations (4.5.34) cannot be solved analytically. They can however be solved graphically easily enough. We plot the functions $\cot \xi, \tan \xi$ and $\pm \xi /\left(\chi_{0}{ }^{2}-\xi^{2}\right)^{1 / 2}$ on the same pair of Cartesian axes and then we find the values of $\xi$ in the range $0<\xi<\chi_{0}$ at which the plots of the first two functions intersects that of the third (cf. figs. 4.5.4, 4.5.5). One obtains a set of intercepts $\xi^{( \pm)}{ }_{n}, n=1,2, \ldots$ of the form
+$$
+\begin{align*}
+& \xi_{n}^{(+)}=\left(n-1+\delta^{(+)}{ }_{n}\right) \pi  \tag{4.5.36a}\\
+& \xi^{(-)}=\left(n-1 / 2+\delta^{(-)}{ }_{n}\right) \pi \tag{4.5.36b}
+\end{align*}
+$$
+with $\delta^{( \pm)}{ }_{n}>0 . \delta^{( \pm)}{ }_{n}$ decreases as $n$ grows. However, $n$ cannot grow arbitrarily large, since $\xi^{( \pm)}{ }_{n}<\chi_{0}$. Through (4.5.7), the intercepts thus found correspond to the energy eigenvalues
+$$
+\begin{equation*}
+w^{( \pm)}{ }_{n}=U_{0}+\frac{\hbar^{2} \xi^{( \pm)}{ }_{n}^{2}}{2 m a^{2}} \tag{4.5.37}
+\end{equation*}
+$$
+
+By (4.5.17) and (4.5.29), the corresponding energy eigenfunctions $\phi^{( \pm)}{ }_{n}$ are
+$$
+\begin{align*}
+& \phi^{(+)}{ }_{n}(x)=N^{(+)}{ }_{n} \cos \left({k^{\prime(+)}}_{n} x\right) \quad \text { if }|x|<a  \tag{4.5.38a}\\
+& \phi^{(+)}{ }_{n}(x)=N^{(+)}{ }_{n} \cos \left(k^{\prime(+)}{ }_{n} a\right) \exp \left(-\tilde{k}^{(+)}{ }_{n}(|x|-a)\right) \quad \text { if }|x|>a  \tag{4.5.38b}\\
+& \phi^{(-)}{ }_{n}(x)=N^{(-)}{ }_{n} \sin \left(k^{(-)}{ }_{n} x\right) \quad \text { if }|x|<a  \tag{4.5.38c}\\
+& \phi^{(-)}{ }_{n}(x)=N^{(-)}{ }_{n} \sin \left({k^{(-)}}_{n} a\right) \operatorname{sgn} x \exp \left(-\tilde{k}^{(-)}{ }_{n}(|x|-a)\right) \quad \text { if }|x|>a \tag{4.5.38d}
+\end{align*}
+$$
+where $k^{( \pm)}{ }_{n}=i \tilde{k}^{( \pm)}{ }_{n}, k^{\prime( \pm)}{ }_{n}$ are given respectively by (4.1.32) with $w=w^{( \pm)}{ }_{n}$ and (4.5.7) with $k=k^{( \pm)}{ }_{n}$ and $N^{( \pm)}{ }_{n}$ are the positive normalization constants
+$$
+\begin{align*}
+& N^{(+)}{ }_{n}=\left[\frac{\tilde{k}^{(+)}{ }_{n}}{1+\tilde{k}^{(+)} a}\right]^{1 / 2}  \tag{4.5.39a}\\
+& N^{(-)}{ }_{n}=\left[\frac{\tilde{k}_{n}^{(-)}}{1+\tilde{k}_{n}^{(-)} a}\right]^{1 / 2} \tag{4.5.39b}
+\end{align*}
+$$
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0438.jpg?height=1603&width=1139&top_left_y=478&top_left_x=444)
+
+Figure 4.5.4. Simultaneous plot of the functions $\cot \xi$ (blue) and $\xi /\left(\chi_{0}{ }^{2}-\xi^{2}\right)^{1 / 2}$ (red) and parity + discrete spectrum for a potential well.
+(cf. figs. 4.5.6, 4.5.7). They are determined by the normalization condition
+$$
+\begin{equation*}
+\int_{-\infty}^{\infty} d x \phi^{( \pm)}{ }_{n_{1}}{ }^{*} \phi^{( \pm)}{ }_{n_{2}}=\delta_{n_{1}, n_{2}} \tag{4.5.40}
+\end{equation*}
+$$
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0439.jpg?height=1598&width=1159&top_left_y=475&top_left_x=407)
+
+Figure 4.5.5. Simultaneous plot of the functions $\tan \xi$ (blue) and $-\xi /\left(\chi_{0}{ }^{2}-\xi^{2}\right)^{1 / 2}$ (red) and parity - discrete spectrum for a potential well.
+
+Proof. The expressions of $\phi^{( \pm)}{ }_{n}$ are obtained by setting $k=i \tilde{k}^{( \pm)}{ }_{n}$ and $k^{\prime}=k^{\prime( \pm)}{ }_{n}$ in (4.5.17). By construction, the coefficient of $\exp (-i k(|x|-a))$ in the right hand side
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0440.jpg?height=543&width=871&top_left_y=496&top_left_x=670)
+
+Figure 4.5.6. Parity + discrete spectrum energy eigenfunctions of a potential well for $n=1,2,3$ (blue, red, green) with conventional normalization.
+of (4.5.17b) vanishes for these values of $k$ and $k^{\prime}$. The vanishing of the coefficient of $\exp (-i k(|x|-a))$ provides the relation
+$$
+\begin{equation*}
+\exp \left(i k^{\prime} a\right) \pm \exp \left(-i k^{\prime} a\right)=\frac{k^{\prime}}{k}\left[\exp \left(i k^{\prime} a\right) \mp \exp \left(-i k^{\prime} a\right)\right] \tag{4.5.41}
+\end{equation*}
+$$
+
+This in turn allows to write the coefficient of $\exp (-i k(|x|-a))$ in a simpler fashion.
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0440.jpg?height=549&width=876&top_left_y=1704&top_left_x=668)
+
+Figure 4.5.7. Parity - discrete spectrum energy eigenfunctions of a potential well for $n=1,2,3$ (blue, red, green) with conventional normalization.
+
+We find in this way that the $\phi^{( \pm)}{ }_{n}$ are given by the expressions (4.5.38) with arbitrary non vanishing coefficients $N^{( \pm)}{ }_{n}$.
+
+The constants $N^{( \pm)}{ }_{n}$ are determined up to a phase by imposing the normalization condition (4.5.40) with $n_{1}=n_{2}$. Below, we shall take the $N^{( \pm)}{ }_{n}$ to be real for simplicity. To lighten the notation, we set temporarily $\phi^{( \pm)}{ }_{n}=\phi^{( \pm)}, \tilde{k}^{( \pm)}{ }_{n}=\tilde{k}^{( \pm)}, k^{\prime( \pm)}{ }_{n}=k^{\prime( \pm)}$ and $N^{( \pm)}{ }_{n}=N^{( \pm)}$. The expressions of the eigenfunctions $\phi^{( \pm)}$are then of the form
+$$
+\begin{align*}
+& \phi^{( \pm)}(x)=N^{( \pm)} f^{( \pm)}\left(k^{\prime( \pm)} x\right) \quad \text { if }|x|<a  \tag{4.5.42a}\\
+& \phi^{( \pm)}(x)=N^{( \pm)} f^{( \pm)}\left(k^{\prime \pm)} a\right) \exp \left(-\tilde{k}^{( \pm)}(|x|-a)\right) \quad \text { if }|x|>a \tag{4.5.42b}
+\end{align*}
+$$
+where $f^{(+)}(x)=\cos x, f^{(-)}(x)=\sin x$. Therefore,
+$$
+\begin{align*}
+& \int_{-\infty}^{\infty} d x \phi^{( \pm) 2}=\int_{-a}^{a} d x N^{( \pm) 2} f^{( \pm) 2}\left(k^{\prime( \pm)} x\right)  \tag{4.5.43}\\
+& \quad+\left(\int_{-\infty}^{-a}+\int_{a}^{\infty}\right) d x N^{( \pm) 2} f^{( \pm) 2}\left(k^{\prime( \pm)} a\right) \exp \left(-2 \tilde{k}^{( \pm)}(|x|-a)\right) \\
+& =2 N^{( \pm) 2}\left[\int_{0}^{a} d x f^{( \pm) 2}\left(k^{\prime( \pm)} x\right)+f^{( \pm) 2}\left(k^{\prime( \pm)} a\right) \int_{a}^{\infty} d x \exp \left(-2 \tilde{k}^{( \pm)}(x-a)\right)\right]
+\end{align*}
+$$
+
+We now compute the two integrals appearing in this expression
+$$
+\begin{align*}
+& \int_{0}^{a} d x f^{( \pm) 2}\left(k^{\prime( \pm)} x\right)=\frac{1}{2} \int_{0}^{a} d x\left[1 \pm \cos \left(2 k^{\prime( \pm)} x\right)\right]=\frac{1}{2}\left(a \pm \frac{\sin \left(2 k^{\prime( \pm)} a\right)}{2 k^{\prime( \pm)}}\right)  \tag{4.5.44}\\
+& \int_{a}^{\infty} d x \exp \left(-2 \tilde{k}^{( \pm)}(x-a)\right)=\frac{1}{2 \tilde{k}^{( \pm)}} \tag{4.5.45}
+\end{align*}
+$$
+
+Inserting (4.5.44), (4.5.45) into (4.5.43), we obtain
+$$
+\begin{equation*}
+\int_{-\infty}^{\infty} d x \phi^{( \pm) 2}=N^{( \pm) 2}\left[a \pm \frac{\sin \left(k^{\prime( \pm)} a\right) \cos \left(k^{\prime( \pm)} a\right)}{k^{\prime( \pm)}}+\frac{f^{( \pm) 2}\left(k^{\prime( \pm)} a\right)}{\tilde{k}^{( \pm)}}\right] \tag{4.5.46}
+\end{equation*}
+$$
+
+Now, the (4.5.31) imply that
+$$
+\begin{equation*}
+\pm \frac{\sin \left(k^{\prime( \pm)} a\right) \cos \left(k^{\prime( \pm)} a\right)}{k^{\prime( \pm)}}=\frac{f^{(\mp) 2}\left(k^{\prime( \pm)} a\right)}{\tilde{k}^{( \pm)}} \tag{4.5.47}
+\end{equation*}
+$$
+
+Since $f^{(\mp) 2}(u)+f^{(\mp) 2}(u)=1$, we conclude that
+$$
+\begin{equation*}
+\int_{-\infty}^{\infty} d x \phi^{( \pm) 2}=N^{( \pm) 2}\left[a+\frac{1}{\tilde{k}^{( \pm)}}\right] \tag{4.5.48}
+\end{equation*}
+$$
+
+Imposing that $\int_{-\infty}^{\infty} d x \phi^{( \pm) 2}=1$ gives
+$$
+\begin{equation*}
+N^{( \pm)}=\left[\frac{\tilde{k}^{( \pm)}}{1+\tilde{k}^{( \pm)} a}\right]^{1 / 2} \tag{4.5.49}
+\end{equation*}
+$$
+
+Therefore, (4.5.40) holds precisely if $N^{( \pm)}{ }_{n}$ are given by the (4.5.39).
+
+Thus, in the energy range $U_{0}<w<0$, one has a non degenerate discrete spectrum with normalizable eigenfunctions real up to a constant and with definite parity, as expected. Note that there always is at least one energy level, viz $w^{(+)}{ }_{1}$, regardless how small $\left|U_{0}\right|$ is, since eq. (4.5.34a) has at least one solution.
+
+The potential well can be seen as a potential box, whose wall are not wholly impenetrable (cf. sect. 4.4). In a well, unlike a box, there always is a non vanishing probability for the particle being found outside the lowest potential region. This is so even when the particle has negative energy. In that case, classically, the particle could not escape from the well without violating energy conservation, because the energy of the particle outside the well in necessarily positive. Quantically, the particle can be found outside the well with non vanishing probability without any energy non conservation.
+
+\subsection*{4.6. 1-dimensional potential Dirac wall/sink}
+
+A potential barrier/well (cf. sect. 4.5) whose half width $a$ is small and whose energy height/depth $U_{0}$ is large with respect to some relevant length and energy scale, respectively, can be modelled as a Dirac delta shaped potential,
+$$
+\begin{equation*}
+U(x)=\frac{\hbar^{2} \Omega}{m} \delta(x) \tag{4.6.1}
+\end{equation*}
+$$
+where $\Omega \neq 0$ is a constant with the dimensions of an inverse length. The potential is a Dirac wall for $\Omega>0$ and a Dirac sink for $\Omega<0$ (cf. fig. 4.6.1). In the former case, $\Omega$ represents the stiffness of the wall, in the latter, $\Omega$ measures the depth of
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0443.jpg?height=1071&width=936&top_left_y=1248&top_left_x=584)
+
+Figure 4.6.1. Plot of a potential Dirac wall/sink. The Dirac delta singularity is represented by a vertical arrow.
+the sink. We want to find the energy eigenvalues and eigenfunctions of the particle in this potential. Since $U_{+}=U_{-}=0$, the energy spectrum is continuous and doubly degenerated with non normalizable eigenfunction which may be chosen to be real up to a constant in the energy range $w \geq 0$. Further, when $\Omega$ is negative and of sufficiently large magnitude, a non degenerate discrete energy spectrum with normalizable eigenfunctions real up to a constant may occur in the energy range $w<0$. Finally, since $U(x)=U(-x)$, the energy eigenfunctions (can be chosen to) have a definite parity.
+
+The energy eigenvalues $w$ and eigenfunctions $\phi$ are yielded by solving the time independent Schroedinger problem for the potential $U(x)$. In the present case, this involves solving the Schroedinger equation (4.1.34)
+$$
+\begin{equation*}
+\frac{d^{2} \phi}{d x^{2}}+\left(k^{2}-2 \Omega \delta(x)\right) \phi=0 \tag{4.6.2}
+\end{equation*}
+$$
+with $k$ given by (4.1.32), which, as $\delta(x)=0$ for $x \neq 0$, reduces to
+$$
+\begin{equation*}
+\frac{d^{2} \phi}{d x^{2}}+k^{2} \phi=0 \quad \text { if } x \neq 0 \tag{4.6.3}
+\end{equation*}
+$$
+with the requirement that $\phi(x)$ and $d \phi(x) / d x$ fulfill the appropriate regularity condition at $x=0$ and that $\phi(x)$ is bounded as $|x| \rightarrow \infty$. Since the potential is proportional to a Dirac delta function at $x=0$, the wave function $\phi(x)$ must be continuous at $x=0$ whilst the derivative $d \phi(x) / d x$ must suffer a jump discontinuity. This becomes evident upon noting that $\delta(x)=(1 / 2) d \operatorname{sgn} x / d x$ and that $\operatorname{sgn} x=d|x| / d x$, as is well-known from elementary distribution theory. By the continuity of $\phi(x)$ at $x=0$, one has
+$$
+\begin{equation*}
+\phi(0+0)=\phi(0-0) \tag{4.6.4}
+\end{equation*}
+$$
+
+The discontinuity of $d \phi(x) / d x$ at $x=0$ can be computed by using the Schroedinger equation (4.6.2) and the properties of the Dirac delta function
+$$
+\begin{equation*}
+\frac{d \phi(0+0)}{d x}-\frac{d \phi(0-0)}{d x}=\Omega[\phi(0+0)+\phi(0-0)] \tag{4.6.5}
+\end{equation*}
+$$
+
+Proof. Indeed, using (4.6.2), we find
+$$
+\begin{align*}
+& \frac{d \phi(0+0)}{d x}-\frac{d \phi(0-0)}{d x}=\lim _{\epsilon \rightarrow 0+}\left[\frac{d \phi(\epsilon)}{d x}-\frac{d \phi(-\epsilon)}{d x}\right]=\lim _{\epsilon \rightarrow 0+} \int_{-\epsilon}^{\epsilon} d x \frac{d^{2} \phi}{d x^{2}}  \tag{4.6.6}\\
+& =-\lim _{\epsilon \rightarrow 0+} \int_{-\epsilon}^{\epsilon} d x\left(k^{2}-2 \Omega \delta(x)\right) \phi=2 \Omega \phi(0)=\Omega[\phi(0+0)+\phi(0-0)]
+\end{align*}
+$$
+showing (4.6.5).
+
+Since $\delta(x)=\delta(-x)$, the energy potential $U(x)$ is parity invariant and, so, we can demand that $\phi$ has definite parity
+$$
+\begin{equation*}
+\phi(-x)= \pm \phi(x) \tag{4.6.7}
+\end{equation*}
+$$
+simplifying the solution of (4.6.3).
+The general solution of (4.6.3) satisfying the definite parity condition (4.6.7) is reads as
+$$
+\begin{equation*}
+\phi^{( \pm)}(x)=\sigma_{ \pm}(x)\left[A^{( \pm)} \exp (i k|x|)+B^{( \pm)} \exp (-i k|x|)\right] \quad \text { if } x \neq 0 \tag{4.6.8}
+\end{equation*}
+$$
+where the sign $\pm$ refers to parity, $\sigma_{ \pm}(x)=1$ for $x>0$ and $\sigma_{ \pm}(x)= \pm 1$ for $x<0$ and $A^{( \pm)}, B^{( \pm)}$are arbitrary complex constants. The relation $\sigma_{ \pm}(-x)= \pm \sigma_{ \pm}(x)$ ensures that (4.6.7) holds.
+
+Proof. The general solution of the Schroedinger equation (4.6.3) is an arbitrary linear combination $\exp ( \pm i k x)$ in the symmetrical intervals $0<x$ and $x<0$. Hence, $\phi^{( \pm)}$can be expressed as
+$$
+\begin{array}{ll}
+\phi^{( \pm)}(x)=A^{( \pm)} \exp (i k x)+B^{( \pm)} \exp (-i k x) & \text { if } 0<x \\
+\phi^{( \pm)}(x)=\tilde{A}^{( \pm)} \exp (-i k x)+\tilde{B}^{( \pm)} \exp (i k x) & \text { if } x<0 \tag{4.6.9~b}
+\end{array}
+$$
+where $A^{( \pm)}, \tilde{A}^{( \pm)}, B^{( \pm)}, \tilde{B}^{( \pm)}$are arbitrary complex coefficients. By (4.6.9), we have
+$$
+\begin{equation*}
+\phi^{( \pm)}(-x)=\tilde{A}^{( \pm)} \exp (i k x)+\tilde{B}^{( \pm)} \exp (-i k x) \quad \text { if } 0<x \tag{4.6.10a}
+\end{equation*}
+$$
+$$
+\begin{equation*}
+\phi^{( \pm)}(-x)=A^{( \pm)} \exp (-i k x)+B^{( \pm)} \exp (i k x) \quad \text { if } x<0 \tag{4.6.10b}
+\end{equation*}
+$$
+
+Requiring that (4.6.7) holds entails that
+$$
+\begin{equation*}
+\tilde{A}^{( \pm)}= \pm A^{( \pm)}, \quad \tilde{B}^{( \pm)}= \pm B^{( \pm)} \tag{4.6.11}
+\end{equation*}
+$$
+
+Inserting the relaltions (4.6.11) into (4.6.9), one gets
+$$
+\begin{align*}
+& \phi^{( \pm)}(x)=A^{( \pm)} \exp (i k x)+B^{( \pm)} \exp (-i k x) \quad \text { if } 0<x  \tag{4.6.12a}\\
+& \phi^{( \pm)}(x)= \pm\left[A^{( \pm)} \exp (-i k x)+B^{( \pm)} \exp (i k x)\right] \quad \text { if } x<0 \tag{4.6.12b}
+\end{align*}
+$$
+
+Noting that $x=|x|$ for $0<x$ and $x=-|x|$ for $x<0$,(4.6.12) are summarized by the single expression (4.6.8).
+
+From (4.6.4), (4.6.5), we get the following set of linear system
+$$
+\begin{align*}
+& A^{( \pm)}+B^{( \pm)} \mp\left(A^{( \pm)}+B^{( \pm)}\right)=0  \tag{4.6.13a}\\
+& A^{( \pm)}-B^{( \pm)} \pm\left(A^{( \pm)}-B^{( \pm)}\right)=\frac{\Omega}{i k}\left[A^{( \pm)}+B^{( \pm)} \pm\left(A^{( \pm)}+B^{( \pm)}\right)\right] \tag{4.6.13b}
+\end{align*}
+$$
+where the upper/lower sign refers to the $\pm$ parity, respectively.
+
+Proof. From (4.6.12), we compute
+$$
+\begin{array}{ll}
+\frac{d \phi^{( \pm)}(x)}{d x}=i k\left[A^{( \pm)} \exp (i k x)-B^{( \pm)} \exp (-i k x)\right] & \text { if } 0<x \\
+\frac{d \phi^{( \pm)}(x)}{d x}=\mp i k\left[A^{( \pm)} \exp (-i k x)-B^{( \pm)} \exp (i k x)\right] & \text { if } x<0 \tag{4.6.14b}
+\end{array}
+$$
+
+Using (4.6.12) and (4.6.14), we obtain immediately that $\phi^{( \pm)}(0+0)=A^{( \pm)}+B^{( \pm)}$, $\phi^{( \pm)}(0-0)= \pm\left(A^{( \pm)}+B^{( \pm)}\right)$and $d \phi^{( \pm)}(0+0) / d x=i k\left(A^{( \pm)}-B^{( \pm)}\right), d \phi^{( \pm)}(0-0) / d x$ $=\mp i k\left(A^{( \pm)}-B^{( \pm)}\right)$. Inserting these expressions into (4.6.4), (4.6.5) and rearranging, we find (4.6.13) immediately.
+
+The system (4.6.13) consists of four linear equations only two of which, one for each parity, is non trivial, namely
+$$
+\begin{align*}
+& \left(1-\frac{\Omega}{i k}\right) A^{(+)}-\left(1+\frac{\Omega}{i k}\right) B^{(+)}=0  \tag{4.6.15a}\\
+& A^{(-)}+B^{(-)}=0 \tag{4.6.15b}
+\end{align*}
+$$
+
+The solution of these equations reads as
+$$
+\begin{align*}
+& A^{(+)}=\frac{C^{(+)}}{2}\left(1+\frac{\Omega}{i k}\right), \quad B^{(+)}=\frac{C^{(+)}}{2}\left(1-\frac{\Omega}{i k}\right)  \tag{4.6.16a}\\
+& A^{(-)}=\frac{C^{(-)}}{2 i}, \quad B^{(-)}=-\frac{C^{(-)}}{2 i} \tag{4.6.16b}
+\end{align*}
+$$
+where $C^{( \pm)}$are non zero constants. Inserting (4.6.16) into (4.6.8),
+$$
+\begin{align*}
+& \phi^{(+)}(x)=\frac{C^{(+)}}{2}\left[\left(1+\frac{\Omega}{i k}\right) \exp (i k|x|)+\left(1-\frac{\Omega}{i k}\right) \exp (-i k|x|)\right]  \tag{4.6.17a}\\
+& \phi^{(-)}(x)=\frac{C^{(-)}}{2 i}[\exp (i k x)-\exp (-i k x)] \tag{4.6.17b}
+\end{align*}
+$$
+
+To complete the solution of the problem, we have to take into account the boundedness requirement of the eigenfunction $\phi^{( \pm)}(x)$ as $|x| \rightarrow \infty$. This will determine the allowed values of the wave vector $k$ and, through (4.1.32), the energy eigenvalues $w_{k}$. Via (4.6.17), it will determine also the energy eigenfunctions $\phi^{( \pm)}{ }_{k}(x)$ belonging to $w_{k}$, once a normalization convention has been chosen to fix the value of the constant $C^{( \pm)}$.
+
+If $w>0$, one has that $k>0$ by (4.1.32). Then, since $|\exp ( \pm i k x)|=1$, $\phi^{( \pm)}(x)$ is automatically bounded by (4.6.17). Therefore, from (4.1.32), for each $k>0$, one has the energy eigenvalue
+$$
+\begin{equation*}
+w_{k}=\frac{\hbar^{2} k^{2}}{2 m} \tag{4.6.18}
+\end{equation*}
+$$
+
+By (4.6.17), there are two linearly independent eigenfunctions $\phi^{( \pm)}{ }_{k}$ belonging to $w_{k}$ with opposite parity
+$$
+\begin{align*}
+\phi^{(+)}{ }_{k}(x) & =\left[\frac{2}{1+\Omega^{2} / k^{2}}\right]^{1 / 2}\left[\cos (k|x|)+\frac{\Omega}{k} \sin (k|x|)\right]  \tag{4.6.19a}\\
+\phi^{(-)}{ }_{k}(x) & =2^{1 / 2} \sin (k x) \tag{4.6.19b}
+\end{align*}
+$$
+
+The $\phi^{( \pm)}{ }_{k}$ are plotted in figs. 4.6.2, 4.6.3, where the discontinuity of the derivative
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0448.jpg?height=964&width=903&top_left_y=483&top_left_x=622)
+
+Figure 4.6.2. Continuous spectrum energy eigenfunctions of a potential Dirac wall for $k /|\Omega|=0.97$ for both parities with conventional normalizations. Ticks on the ascissa axis correspond to multiples of 4. Notice the discontinuity of the derivative $d \phi^{(+)}{ }_{k}(x) / d x$ at $x=0$.
+of $\phi^{(+)}{ }_{k}$ in $x=0$ is apparent. $\phi^{( \pm)}{ }_{k}$ are normalized according to
+$$
+\begin{equation*}
+\int_{-\infty}^{\infty} d x \phi^{( \pm)}{ }_{k_{1}}^{*} \phi_{k_{2}}^{( \pm)}=2 \pi \delta\left(k_{1}-k_{2}\right) \tag{4.6.20}
+\end{equation*}
+$$
+
+Proof. Using the Euler relations $\exp ( \pm i z)=\cos z \pm i \sin z$, we can express the exponentials $\exp ( \pm i k|x|)$ and $\exp ( \pm i k x)$ appearing in (4.6.17) in terms of $\cos (k|x|)$, $\sin (k|x|)$ and $\cos (k x), \sin (k x)$. After a straightforward algebraic arrangement, this allows one to recast the expressions (4.6.17) in the form (4.6.19) with arbitrary non vanishing normalization coefficients $N^{( \pm)}{ }_{k}$. The constants $N^{( \pm)}{ }_{k}$ are determined by imposing the normalization conditions (4.5.32).
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0449.jpg?height=960&width=903&top_left_y=485&top_left_x=622)
+
+Figure 4.6.3. Continuous spectrum energy eigenfunctions of a potential Dirac sink for $k /|\Omega|=0.97$ for both parities with conventional normalization. Ticks on the abscissa correspond to multiples of 4 . Notice again the discontinuity of $d \phi^{(+)}{ }_{k}(x) / d x$ at $x=0$.
+
+For parity + , the right hand side of (4.6.20) is given by
+$$
+\begin{align*}
+& \int_{-\infty}^{\infty} d x \phi^{(+)}{ }_{k_{1}}{ }^{*}{ }^{(+)}{ }_{k_{2}}  \tag{4.6.21}\\
+&=\int_{-\infty}^{\infty} d x N^{(+)}{ }_{k_{1}}{ }^{*}\left[\cos \left(k_{1}|x|\right)+\frac{\Omega}{k_{1}} \sin \left(k_{1}|x|\right)\right] N^{(+)}{ }_{k_{2}}\left[\cos \left(k_{2}|x|\right)+\frac{\Omega}{k_{2}} \sin \left(k_{2}|x|\right)\right] \\
+&=2 N^{(+)}{ }_{k_{1}}{ }^{*} N^{(+)}{ }_{k_{2}} \int_{0}^{\infty} d x\left[\cos \left(k_{1} x\right)+\frac{\Omega}{k_{1}} \sin \left(k_{1} x\right)\right]\left[\cos \left(k_{2} x\right)+\frac{\Omega}{k_{2}} \sin \left(k_{2} x\right)\right] \\
+&=2 N^{(+)}{ }_{k_{1}}{ }^{*} N^{(+)}{ }_{k_{2}}\left\{\int_{0}^{\infty} d x \cos \left(k_{1} x\right) \cos \left(k_{2} x\right)+\frac{\Omega^{2}}{k_{1} k_{2}} \int_{0}^{\infty} d x \sin \left(k_{1} x\right) \sin \left(k_{2} x\right)\right. \\
+&\left.+\frac{\Omega}{k_{1}} \int_{0}^{\infty} d x \sin \left(k_{1} x\right) \cos \left(k_{2} x\right)+\frac{\Omega}{k_{2}} \int_{0}^{\infty} d x \cos \left(k_{1} x\right) \sin \left(k_{2} x\right)\right\} .
+\end{align*}
+$$
+
+The integrals in (4.6.21) can be computed using the distributional relations (14.16.1)
+of app. 14.16. We find so
+$$
+\begin{align*}
+& \int_{-\infty}^{\infty} d x \phi^{(+)}{ }_{k_{1}}{ }^{*} \phi^{(+)}{ }_{k_{2}}  \tag{4.6.22}\\
+&=\pi N^{(+)}{ }_{k_{1}}{ }^{*} N^{(+)}{ }_{k_{2}}\{\left(1+\frac{\Omega^{2}}{k_{1} k_{2}}\right) \delta\left(k_{1}-k_{2}\right)+\left(1-\frac{\Omega^{2}}{k_{1} k_{2}}\right) \delta\left(k_{1}+k_{2}\right) \\
+&\left.+\frac{\Omega}{\pi}\left(\frac{1}{k_{1}}-\frac{1}{k_{2}}\right) P \frac{1}{k_{1}-k_{2}}+\frac{\Omega}{\pi}\left(\frac{1}{k_{1}}+\frac{1}{k_{2}}\right) P \frac{1}{k_{1}+k_{2}}\right\}
+\end{align*}
+$$
+
+As $k_{1}+k_{2}>0$, the second term within braces vanishes identically. Further, the third and fourth terms combine and yield a vanishing contribution. It follows that
+$$
+\begin{equation*}
+\int_{-\infty}^{\infty} d x \phi^{(+)}{ }_{k_{1}}{ }^{*} \phi^{(+)}{ }_{k_{2}}=\pi N^{(+)}{ }_{k_{1}}{ }^{*} N^{(+)}{ }_{k_{1}}\left(1+\frac{\Omega^{2}}{k_{1}^{2}}\right) \delta\left(k_{1}-k_{2}\right) \tag{4.6.23}
+\end{equation*}
+$$
+
+Therefore, in order (4.5.32) to be satisfied, the constants $N^{(+)}{ }_{k}$ must satisfy
+$$
+\begin{equation*}
+N^{(+)}{ }_{k}^{*} N^{(+)}{ }_{k}=\frac{2}{1+\Omega^{2} / k^{2}} \tag{4.6.24}
+\end{equation*}
+$$
+$\phi^{(+)}{ }_{k}$ is thus normalized as indicated in (4.6.19a).
+For parity + , the right hand side of (4.6.20) is given by
+$$
+\begin{align*}
+& \int_{-\infty}^{\infty} d x \phi^{(-)}{ }_{k_{1}}{ }^{*} \phi^{(-)}{ }_{k_{2}}=\int_{-\infty}^{\infty} d x N^{(-)}{ }_{k_{1}}{ }^{*} \sin \left(k_{1} x\right) N^{(-)}{ }_{k_{2}} \sin \left(k_{2} x\right)  \tag{4.6.25}\\
+& =2 N^{(-)} k_{1}{ }^{*} N^{(-)} k_{k_{2}} \int_{0}^{\infty} d x \sin \left(k_{1} x\right) \sin \left(k_{2} x\right) .
+\end{align*}
+$$
+
+Using relation (14.16.1b), we find
+$$
+\begin{equation*}
+\int_{-\infty}^{\infty} d x \phi^{(-)}{k_{1}}^{*} \phi^{(-)} k_{2}=\pi N^{(-)}{k_{1}}^{*} N^{(-)}{ }_{k_{2}}\left[\delta\left(k_{1}-k_{2}\right)-\delta\left(k_{1}+k_{2}\right)\right] \tag{4.6.26}
+\end{equation*}
+$$
+
+As $k_{1}+k_{2}>0$, the second term of the right hand side vanishes identically. We are thus left with
+$$
+\begin{equation*}
+\int_{-\infty}^{\infty} d x \phi^{(-)}{ }_{k_{1}}{ }^{*} \phi^{(-)}{ }_{k_{2}}=\pi N^{(-)}{ }_{k_{1}}{ }^{*} N^{(-)}{ }_{k_{2}} \delta\left(k_{1}-k_{2}\right) \tag{4.6.27}
+\end{equation*}
+$$
+
+Therefore, in order (4.5.32) to be satisfied, the constants $N^{(+)}{ }_{k}$ must satisfy
+$$
+\begin{equation*}
+N^{(-)} k^{*} N^{(-)}{ }_{k}=2 \tag{4.6.28}
+\end{equation*}
+$$
+$\phi^{(-)}{ }_{k}$ is thus normalized as indicated in (4.6.19b).
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0451.jpg?height=483&width=1009&top_left_y=493&top_left_x=539)
+
+Figure 4.6.4. The unique discrete spectrum energy level of a Dirac sink.
+
+In the energy range $w \geq 0$, so, one has a doubly degenerate continuous spectrum with non normalizable eigenfunctions real up to a constant and with definite parity, as expected.
+
+If $w<0$, which of course can happen only when $\Omega<0$, one has that $k=i \tilde{k}$ with $\tilde{k}>0$. Then, as $|\exp ( \pm i k x)|=\exp (\mp \tilde{k} x), \phi^{( \pm)}(x)$ is not bounded, unless the coefficients of the diverging exponential in (4.6.17) vanishes. From (4.6.17), it appears that this is possible for $\phi^{(+)}$provided that
+$$
+\begin{equation*}
+\tilde{k}=-\Omega \tag{4.6.29}
+\end{equation*}
+$$
+whilst it is never possible for $\phi^{(-)}$. Thus, the discrete spectrum consists of a single energy level $w_{0}$, which from (4.1.32) is given by
+$$
+\begin{equation*}
+w_{0}=-\frac{\hbar^{2} \Omega^{2}}{2 m} \tag{4.6.30}
+\end{equation*}
+$$
+(cf. fig. 4.6.4). By (4.6.17a), the corresponding eigenfunction is
+$$
+\begin{equation*}
+\phi^{(+)}{ }_{0}(x)=|\Omega|^{1 / 2} \exp (-|\Omega x|) . \tag{4.6.31}
+\end{equation*}
+$$
+where the normalization constant is determined requiring that
+$$
+\begin{equation*}
+\int_{-\infty}^{\infty} d x\left|\phi^{(+)}{ }_{0}\right|^{2}=1 \tag{4.6.32}
+\end{equation*}
+$$
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0452.jpg?height=497&width=895&top_left_y=478&top_left_x=623)
+
+Figure 4.6.5. Discrete spectrum energy eigenfunctions of a potential Dirac sink with conventional normalization. Ticks on the abscissa axis correspond to multiples of 4 . Notice the discontinuity of $d \phi_{0}(x) / d x$ at $x=0$.
+(cf. fig. 4.6.5).
+
+Proof. Indeed, we have
+$$
+\begin{align*}
+\int_{-\infty}^{\infty} d x \exp (-|\Omega x|)^{2}=2 \int_{0}^{\infty} & d x \exp (-2|\Omega| x)  \tag{4.6.33}\\
+& =\frac{1}{|\Omega|} \int_{0}^{\infty} d \xi \exp (-\xi)=\frac{1}{|\Omega|}
+\end{align*}
+$$
+where we have set $\xi=2|\Omega| x$. (4.6.31) follows.
+
+Thus, in the energy range $w<0$, one has a non degenerate discrete spectrum with normalizable eigenfunctions real up to a constant and with definite parity, as expected on general grounds. The distinguishing feature of the Dirac sink is that the discrete spectrum contains a single energy eigenvalue.
+
+The Dirac wall/sink potential finds several physical applications. The interface between two conducting materials can be modelled as a Dirac wall. In the bulk of the materials, the electrons behave much as free particles endowed with an effective mass $m^{*}$ different from the physical one $m_{e}$. If the interface is covered with an oxide layer, it becomes non conducting and acts as a very high and
+narrow potential barrier, which can be approximated as a Dirac wall. Electrons may then tunnel through the wall from one material to the other giving rise to a current, that can be observed.
+
+\subsection*{4.7. Semiinfinite 1-dimensional potential well and barrier}
+
+We want to find the energy eigenvalue and eigenfunction for the potential well and barrier defined by the expression
+$$
+\begin{align*}
+& U(x)=-U_{0}{ }^{\prime} \quad \text { if } 0<x<a^{\prime},  \tag{4.7.1a}\\
+& U(x)=U_{0} \quad \text { if } a^{\prime}<x<a,  \tag{4.7.1b}\\
+& U(x)=0 \quad \text { if } a<x \tag{4.7.1c}
+\end{align*}
+$$
+where $U_{0}{ }^{\prime}, U_{0}>0$ are energy scales (cf. fig. 4.7.1). The potential is a rectangular well screened by a barrier. The half space $x<0$ is not accessible to the particle. As $U_{+}=0$ the energy spectrum is continuous and non degenerated with non normalizable eigenfunctions real up to a constant in the energy range $w \geq 0$. Further, as $U_{*}=-U_{0}{ }^{\prime}$, when $U_{0}{ }^{\prime}$ is sufficiently large, a non degenerate discrete energy spectrum may occur with normalizable eigenfunctions real up to a constant in the energy range $-U_{0}{ }^{\prime}<w<0$.
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0455.jpg?height=602&width=1094&top_left_y=1683&top_left_x=510)
+
+Figure 4.7.1. Continuous spectrum energy eigenfunctions of a potential well and barrier.
+
+The energy eigenvalues $w$ and eigenfunctions $\phi$ are yielded by solving the time independent Schroedinger problem for the potential $U(x)$. In the present case, this involves solving the Schroedinger equation (4.1.34), here reading as
+$$
+\begin{align*}
+& \frac{d^{2} \phi}{d x^{2}}+\left(k^{2}+u_{0}^{\prime}\right) \phi=0 \quad \text { if } 0<x<a^{\prime}  \tag{4.7.2a}\\
+& \frac{d^{2} \phi}{d x^{2}}+\left(k^{2}-u_{0}\right) \phi=0 \quad \text { if } a^{\prime}<x<a  \tag{4.7.2b}\\
+& \frac{d^{2} \phi}{d x^{2}}+k^{2} \phi=0 \quad \text { if } a<x \tag{4.7.2c}
+\end{align*}
+$$
+with the wave vector $k$ given by (4.1.32) and
+$$
+\begin{align*}
+& u_{0}=\frac{2 m U_{0}}{\hbar^{2}}  \tag{4.7.3a}\\
+& u_{0}^{\prime}=\frac{2 m U_{0}^{\prime}}{\hbar^{2}} \tag{4.7.3b}
+\end{align*}
+$$
+and subject to the boundary condition
+$$
+\begin{equation*}
+\phi(0)=0 \tag{4.7.4}
+\end{equation*}
+$$
+the requirement that $\phi(x)$ and $d \phi(x) / d x$ are continuous at $x=a^{\prime}, a$,
+$$
+\begin{align*}
+& \phi\left(a^{\prime}+0\right)=\phi\left(a^{\prime}-0\right)  \tag{4.7.5}\\
+& \frac{d \phi\left(a^{\prime}+0\right)}{d x}=\frac{d \phi\left(a^{\prime}-0\right)}{d x}  \tag{4.7.6}\\
+& \phi(a+0)=\phi(a-0)  \tag{4.7.7}\\
+& \frac{d \phi(a+0)}{d x}=\frac{d \phi(a-0)}{d x} \tag{4.7.8}
+\end{align*}
+$$
+and that $\phi(x)$ is bounded as $x \rightarrow \infty$.
+To solve the Schroedinger problem, it turns out to be advantageous to introduce the wave vectors
+$$
+\begin{align*}
+& k^{\prime}=\left(k^{2}-u_{0}\right)^{1 / 2}  \tag{4.7.9a}\\
+& k^{\prime \prime}=\left(k^{2}+u_{0}^{\prime}\right)^{1 / 2} \tag{4.7.9~b}
+\end{align*}
+$$
+
+Then, the general solution of (4.7.2) satisfying the boundary condition (4.7.4) reads as
+$$
+\begin{array}{ll}
+\phi(x)=A \sin \left(k^{\prime \prime} x\right) \quad \text { if } 0<x<a^{\prime} \\
+\phi(x)=B \exp \left(i k^{\prime} x\right)+C \exp \left(-i k^{\prime} x\right) & \text { if } a^{\prime}<x<a \\
+\phi(x)=D \exp (i k x)+E \exp (-i k x) & \text { if } a<x \tag{4.7.10c}
+\end{array}
+$$
+where $A, B, C, D, E$ are complex constants. We have now to impose the regularity conditions of $\phi(x)$ and $d \phi(x) / d x$ at $x=a^{\prime}, a$, eqs. (4.7.5)-(4.7.8). These result in the linear system
+$$
+\begin{align*}
+& \exp \left(i k^{\prime} a^{\prime}\right) B+\exp \left(-i k^{\prime} a^{\prime}\right) C=A \sin \left(k^{\prime \prime} a^{\prime}\right)  \tag{4.7.11a}\\
+& \exp \left(i k^{\prime} a^{\prime}\right) B-\exp \left(-i k^{\prime} a^{\prime}\right) C=A \frac{k^{\prime \prime}}{i k^{\prime}} \cos \left(k^{\prime \prime} a^{\prime}\right)  \tag{4.7.11b}\\
+& \exp (i k a) D+\exp (-i k a) E=\exp \left(i k^{\prime} a\right) B+\exp \left(-i k^{\prime} a\right) C  \tag{4.7.11c}\\
+& \exp (i k a) D-\exp (-i k a) E=\frac{k^{\prime}}{k}\left(\exp \left(i k^{\prime} a\right) B-\exp \left(-i k^{\prime} a\right) C\right) \tag{4.7.11d}
+\end{align*}
+$$
+
+Proof. From (4.7.10), we have
+$$
+\begin{array}{ll}
+\frac{d \phi(x)}{d x}=k^{\prime \prime} A \cos \left(k^{\prime \prime} x\right) \quad \text { if } 0<x<a^{\prime}, & \\
+\frac{d \phi(x)}{d x}=i k^{\prime}\left[B \exp \left(i k^{\prime} x\right)-C \exp \left(-i k^{\prime} x\right)\right] & \text { if } a^{\prime}<x<a, \\
+\frac{d \phi(x)}{d x}=i k[D \exp (i k x)-E \exp (-i k x)] & \text { if } a<x, \tag{4.7.12c}
+\end{array}
+$$
+
+By virtue of (4.7.10) and (4.7.12), imposing the conditions (4.7.5)-(4.7.8) yields the relations (4.7.11) immediately.
+
+The solution of the system is a bit lengthy but, upon proceeding recursively, the calculation involved is totally straightforward. This computation leads to the following expressions:
+$$
+\begin{align*}
+& B= \frac{A}{2} \exp \left(-i k^{\prime} a^{\prime}\right)\left[\sin \left(k^{\prime \prime} a^{\prime}\right)-\frac{i k^{\prime \prime}}{k^{\prime}} \cos \left(k^{\prime \prime} a^{\prime}\right)\right]  \tag{4.7.13a}\\
+& C= \frac{A}{2} \exp \left(i k^{\prime} a^{\prime}\right)\left[\sin \left(k^{\prime \prime} a^{\prime}\right)+\frac{i k^{\prime \prime}}{k^{\prime}} \cos \left(k^{\prime \prime} a^{\prime}\right)\right]  \tag{4.7.13b}\\
+& D= \frac{A}{2} \exp (-i k a)\left[\cos \left(k^{\prime}\left(a-a^{\prime}\right)\right) \sin \left(k^{\prime \prime} a^{\prime}\right)\right.  \tag{4.7.13c}\\
+&+\frac{k^{\prime \prime}}{k^{\prime}} \sin \left(k^{\prime}\left(a-a^{\prime}\right)\right) \cos \left(k^{\prime \prime} a^{\prime}\right)+\frac{i k^{\prime}}{k} \sin \left(k^{\prime}\left(a-a^{\prime}\right)\right) \sin \left(k^{\prime \prime} a^{\prime}\right) \\
+& E=\frac{A}{2} \exp (i k a)\left[\cos \left(k^{\prime}\left(a-a^{\prime}\right)\right) \sin \left(k^{\prime \prime} a^{\prime}\right)\right. \\
+&\left.+\frac{k^{\prime \prime}}{k^{\prime}} \sin \left(k^{\prime}\left(a-a^{\prime}\right)\right) \cos \left(k^{\prime}\left(a-a^{\prime}\right)\right) \cos \left(k^{\prime \prime} a^{\prime}\right)\right]  \tag{4.7.13d}\\
+& \quad+\frac{i k^{\prime}}{k} \sin \left(k^{\prime}\left(a-a^{\prime}\right)\right) \sin \left(k^{\prime \prime} a^{\prime}\right) \\
+&\left.\cos \left(k^{\prime}\left(a-a^{\prime}\right)\right) \cos \left(k^{\prime \prime} a^{\prime}\right)\right]
+\end{align*}
+$$
+
+Proof. Solving (4.7.11a), (4.7.11b) for $B, C$ and (4.7.11c), (4.7.11d) for $D, E$,
+$$
+\begin{align*}
+& B=\frac{A}{2} \exp \left(-i k^{\prime} a^{\prime}\right)\left[\sin \left(k^{\prime \prime} a^{\prime}\right)+\frac{k^{\prime \prime}}{i k^{\prime}} \cos \left(k^{\prime \prime} a^{\prime}\right)\right],  \tag{4.7.14a}\\
+& C=\frac{A}{2} \exp \left(i k^{\prime} a^{\prime}\right)\left[\sin \left(k^{\prime \prime} a^{\prime}\right)-\frac{k^{\prime \prime}}{i k^{\prime}} \cos \left(k^{\prime \prime} a^{\prime}\right)\right],  \tag{4.7.14b}\\
+& D=\frac{1}{2} \exp (-i k a)\left[\left(1+\frac{k^{\prime}}{k}\right) \exp \left(i k^{\prime} a\right) B\right.  \tag{4.7.14c}\\
+& \left.+\left(1-\frac{k^{\prime}}{k}\right) \exp \left(-i k^{\prime} a\right) C\right] \\
+& E=\frac{1}{2} \exp (i k a)\left[\left(1-\frac{k^{\prime}}{k}\right) \exp \left(i k^{\prime} a\right) B\right.  \tag{4.7.14d}\\
+& \left.+\left(1+\frac{k^{\prime}}{k}\right) \exp \left(-i k^{\prime} a\right) C\right] .
+\end{align*}
+$$
+
+The first two relations are already the expressions (4.7.13a), (4.7.13b) of $B, C$. Inserting (4.7.14a), (4.7.14b) into (4.7.14c), (4.7.14d)
+$$
+\begin{equation*}
+D=\frac{A}{4} \exp (-i k a)\left\{( 1 + \frac { k ^ { \prime } } { k } ) \operatorname { e x p } ( i k ^ { \prime } ( a - a ^ { \prime } ) ) \left[\sin \left(k^{\prime \prime} a^{\prime}\right)\right.\right. \tag{4.7.15a}
+\end{equation*}
+$$
+$$
+\begin{align*}
+& \left.\left.+\frac{k^{\prime \prime}}{i k^{\prime}} \cos \left(k^{\prime \prime} a^{\prime}\right)\right]+\left(1-\frac{k^{\prime}}{k}\right) \exp \left(-i k^{\prime}\left(a-a^{\prime}\right)\right)\left[\sin \left(k^{\prime \prime} a^{\prime}\right)-\frac{k^{\prime \prime}}{i k^{\prime}} \cos \left(k^{\prime \prime} a^{\prime}\right)\right]\right\}, \\
+E= & \frac{A}{4} \exp (i k a)\left\{( 1 - \frac { k ^ { \prime } } { k } ) \operatorname { e x p } ( i k ^ { \prime } ( a - a ^ { \prime } ) ) \left[\sin \left(k^{\prime \prime} a^{\prime}\right)\right.\right.  \tag{4.7.15b}\\
+& \left.\left.+\frac{k^{\prime \prime}}{i k^{\prime}} \cos \left(k^{\prime \prime} a^{\prime}\right)\right]+\left(1+\frac{k^{\prime}}{k}\right) \exp \left(-i k^{\prime}\left(a-a^{\prime}\right)\right)\left[\sin \left(k^{\prime \prime} a^{\prime}\right)-\frac{k^{\prime \prime}}{i k^{\prime}} \cos \left(k^{\prime \prime} a^{\prime}\right)\right]\right\},
+\end{align*}
+$$
+
+Substituting now the relation $\exp \left( \pm i k^{\prime}\left(a-a^{\prime}\right)\right)=\cos \left(k^{\prime}\left(a-a^{\prime}\right)\right) \pm i \sin \left(k^{\prime}\left(a-a^{\prime}\right)\right)$ into (4.7.15a), (4.7.15b) and simplifying, we get the remaining expressions (4.7.13c), (4.7.13d).
+
+Inserting (4.7.13) into (4.7.10), we get the fully explicit expression of the wave function $\phi$,
+$$
+\begin{align*}
+& \phi(x)= A \sin \left(k^{\prime \prime} x\right) \quad \text { if } 0<x<a^{\prime},  \tag{4.7.16a}\\
+& \begin{align*}
+\phi(x)= & \frac{A}{2} \sin \left(k^{\prime \prime} a^{\prime}\right)\left\{\left[1-\frac{i k^{\prime \prime}}{k^{\prime}} \cot \left(k^{\prime \prime} a^{\prime}\right)\right] \exp \left(i k^{\prime}\left(x-a^{\prime}\right)\right)\right. \\
+& \left.+\left[1+\frac{i k^{\prime \prime}}{k^{\prime}} \cot \left(k^{\prime \prime} a^{\prime}\right)\right] \exp \left(-i k^{\prime}\left(x-a^{\prime}\right)\right)\right\} \quad \text { if } a^{\prime}<x<a \\
+\phi(x)= & \frac{A}{2} \sin \left(k^{\prime}\left(a-a^{\prime}\right)\right) \sin \left(k^{\prime \prime} a^{\prime}\right)\left\{\left[\cot \left(k^{\prime}\left(a-a^{\prime}\right)\right)\right.\right. \\
++ & \left.\frac{k^{\prime \prime}}{k^{\prime}} \cot \left(k^{\prime \prime} a^{\prime}\right)+\frac{i k^{\prime}}{k}-\frac{i k^{\prime \prime}}{k} \cot \left(k^{\prime}\left(a-a^{\prime}\right)\right) \cot \left(k^{\prime \prime} a^{\prime}\right)\right] \exp (i k(x-a)) \\
++ & {\left[\cot \left(k^{\prime}\left(a-a^{\prime}\right)\right)+\frac{k^{\prime \prime}}{k^{\prime}} \cot \left(k^{\prime \prime} a^{\prime}\right)-\frac{i k^{\prime}}{k}\right.} \\
+& \left.\left.\quad+\frac{i k^{\prime \prime}}{k} \cot \left(k^{\prime}\left(a-a^{\prime}\right)\right) \cot \left(k^{\prime \prime} a^{\prime}\right)\right] \exp (-i k(x-a))\right\} \quad \text { if } a<x .
+\end{align*} \tag{4.7.16b}
+\end{align*}
+$$
+
+To complete the solution of the problem, we have to take into account the boundedness requirement of the eigenfunction $\phi(x)$ as $x \rightarrow \infty$. This will determine the allowed values of the wave vector $k$ and, through (4.1.32), the energy eigenvalues $w_{k}$. Via (4.7.16), it will determine also the energy eigenfunctions $\phi_{k}(x)$ belonging to $w_{k}$, once a normalization convention has been chosen to fix the value of the constant $A$.
+
+If $w \geq 0$, one has that $k>0$ by (4.1.32). Then, by (4.7.16c), as $\mid \exp ( \pm i k(x-$ $a)) \mid=1, \phi(x)$ is automatically bounded as $x \rightarrow \infty$. Therefore, from (4.1.32), for each $k>0$, we have the energy eigenvalue
+$$
+\begin{equation*}
+w_{k}=\frac{\hbar^{2} k^{2}}{2 m} \tag{4.7.17}
+\end{equation*}
+$$
+
+By (4.7.16), the only linearly independent eigenfunction $\phi_{k}$ belonging to $w_{k}$ is
+$$
+\begin{align*}
+& \phi_{k}(x)=N_{k} \sin \left(k^{\prime \prime} x\right) \quad \text { if } 0<x<a^{\prime},  \tag{4.7.18a}\\
+& \begin{align*}
+\phi_{k}(x)= & N_{k} \sin \left(k^{\prime \prime} a^{\prime}\right)\left[\cos \left(k^{\prime}\left(x-a^{\prime}\right)\right)\right. \\
+& \left.+\frac{k^{\prime \prime}}{k^{\prime}} \cot \left(k^{\prime \prime} a^{\prime}\right) \sin \left(k^{\prime}\left(x-a^{\prime}\right)\right)\right] \quad \text { if } a^{\prime}<x<a, \\
+\phi_{k}(x)= & N_{k} \sin \left(k^{\prime}\left(a-a^{\prime}\right)\right) \sin \left(k^{\prime \prime} a^{\prime}\right) \\
+\times & \left\{\left[\cot \left(k^{\prime}\left(a-a^{\prime}\right)\right)+\frac{k^{\prime \prime}}{k^{\prime}} \cot \left(k^{\prime \prime} a^{\prime}\right)\right] \cos (k(x-a))\right. \\
+& \left.\quad-\left[\frac{k^{\prime}}{k}-\frac{k^{\prime \prime}}{k} \cot \left(k^{\prime}\left(a-a^{\prime}\right)\right) \cot \left(k^{\prime \prime} a^{\prime}\right)\right] \sin (k(x-a))\right\} \quad \text { if } a<x
+\end{align*} \tag{4.7.18b}
+\end{align*}
+$$
+where $N_{k}$ is the normalization constant
+$$
+\begin{align*}
+N_{k}=2\left\{\sin ^{2}\left(k^{\prime}\left(a-a^{\prime}\right)\right) \sin ^{2}\left(k^{\prime \prime} a^{\prime}\right)\right. & {\left[\left(\cot \left(k^{\prime}\left(a-a^{\prime}\right)\right)+\frac{k^{\prime \prime}}{k^{\prime}} \cot \left(k^{\prime \prime} a^{\prime}\right)\right)^{2}\right.}  \tag{4.7.19}\\
++ & \left.\left.\left(\frac{k^{\prime}}{k}-\frac{k^{\prime \prime}}{k} \cot \left(k^{\prime}\left(a-a^{\prime}\right)\right) \cot \left(k^{\prime \prime} a^{\prime}\right)\right)^{2}\right]\right\}^{-1 / 2}
+\end{align*}
+$$
+(cf. fig. 4.7.2). Its expression is determined by the normalization condition
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0460.jpg?height=126&width=563&top_left_y=1978&top_left_x=762)
+as usual.
+
+Proof. Using the Euler relations $\exp ( \pm i z)=\cos z \pm i \sin z$, we can express the exponentials $\exp \left( \pm i k^{\prime} x\right)$ and $\exp ( \pm i k(x-a))$ and $\exp \left( \pm i k^{\prime}(x-a)\right)$, appearing in (4.7.16) in terms of $\cos (k x), \sin (k x)$ and $\cos \left(k^{\prime} x\right), \sin \left(k^{\prime} x\right)$. After a straightforward algebraic arrangement, this allows one to recast the expressions (4.7.16) in the form (4.7.18) with
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0461.jpg?height=557&width=1088&top_left_y=513&top_left_x=497)
+
+Figure 4.7.2. Continuous spectrum energy eigenfunctions of a potential well and barrier for $k a^{\prime}=8.00, k a^{\prime}=10.00$ (blue, red) corresponding to $w_{k} \gtrless U_{0}$ with conventional normalization. The growth of the eigenfunction in the region $a^{\prime}<x<a$ in the first case is generic.
+arbitrary non vanishing coefficients $N_{k}$.
+The constants $N_{k}$ are determined up to a phase by the normalization conditions (4.7.20). The delta function singularity in (4.5.21) is yielded only by the contributions to the integral in the left hand side which diverge when $k_{1}, k_{2}$ approach each other. In turn, the divergence arises necessarily in the large $x$ portion of the integration domain. For the purpose of our computation, we can therefore use the expression of the integrand valid for $x>a$ and retain only the terms which lead to integration divergences.
+
+Expanding $\cos (k(x-a), \sin (k(x-a))$, using the trigonometric identities $\cos (u-v)=$ $\cos u \cos v+\sin u \sin v, \sin (u-v)=\sin u \cos v-\cos u \sin v$, we can cast the expressions of $\phi_{k}$ in the domain $x>a$ as linear combinations of $\cos (k x), \sin (k x)$. Thus, we write
+$$
+\begin{equation*}
+\phi_{k}(x)=N_{k}\left[a\left(k, k^{\prime}, k^{\prime \prime}\right) \cos (k x)+b\left(k, k^{\prime}, k^{\prime \prime}\right) \sin (k x)\right] \tag{4.7.21}
+\end{equation*}
+$$
+where $a\left(k, k^{\prime}, k^{\prime \prime}\right), b\left(k, k^{\prime}, k^{\prime \prime}\right)$ are certain realvalued functions of $k, k^{\prime}, k^{\prime \prime}$ which we shall explicitly compute later on. Using this identity as an approximant of the integrand in the right hand side of (4.7.20), we obtain
+$$
+\begin{align*}
+& \frac{1}{N_{k_{1}}{ }^{*} N_{k_{2}}} \int_{0}^{\infty} d x \phi_{k_{1}}{ }^{*} \phi_{k_{2}}  \tag{4.7.22}\\
+& \simeq \int_{0}^{\infty} d x\left[a\left(k_{1}, k_{1}{ }^{\prime}, k_{1}{ }^{\prime \prime}\right) \cos \left(k_{1} x\right)+b\left(k_{1}, k_{1}{ }^{\prime}, k_{1}{ }^{\prime \prime}\right) \sin \left(k_{1} x\right)\right] \\
+& \times\left[a\left(k_{2}, k_{2}{ }^{\prime}, k_{2}{ }^{\prime \prime}\right) \cos \left(k_{2} x\right)+b\left(k_{2}, k_{2}{ }^{\prime}, k_{2}{ }^{\prime \prime}\right) \sin \left(k_{2} x\right)\right] \\
+& =a\left(k_{1}, k_{1}{ }^{\prime}, k_{1}{ }^{\prime \prime}\right) a\left(k_{2}, k_{2}{ }^{\prime}, k_{2}{ }^{\prime \prime}\right) \int_{0}^{\infty} d x \cos \left(k_{1} x\right) \cos \left(k_{2} x\right) \\
+& +b\left(k_{1}, k_{1}{ }^{\prime}, k_{1}{ }^{\prime \prime}\right) b\left(k_{2}, k_{2}{ }^{\prime}, k_{2}{ }^{\prime \prime}\right) \int_{0}^{\infty} d x \sin \left(k_{1} x\right) \sin \left(k_{2} x\right) \\
+& +b\left(k_{1}, k_{1}{ }^{\prime}, k_{1}{ }^{\prime \prime}\right) a\left(k_{2}, k_{2}{ }^{\prime}, k_{2}{ }^{\prime \prime}\right) \int_{0}^{\infty} d x \sin \left(k_{1} x\right) \cos \left(k_{2} x\right) \\
+& +a\left(k_{1}, k_{1}{ }^{\prime}, k_{1}{ }^{\prime \prime}\right) b\left(k_{2}, k_{2}{ }^{\prime}, k_{2}{ }^{\prime \prime}\right) \int_{0}^{\infty} d x \cos \left(k_{1} x\right) \sin \left(k_{2} x\right) .
+\end{align*}
+$$
+
+The integrals appearing in (4.7.22) have been computed earlier using the expressions (14.16.1) of app. 14.16. Proceeding as in the calculation yielding (4.5.24), we obtain
+$$
+\begin{align*}
+\frac{1}{N_{k_{1}}{ }^{*} N_{k_{2}}} & \int_{0}^{\infty} d x \phi_{k_{1}}{ }^{*} \phi_{k_{2}}  \tag{4.7.23}\\
+& \simeq \frac{\pi}{2}\left(a\left(k_{1}, k_{1}{ }^{\prime}, k_{1}{ }^{\prime \prime}\right) a\left(k_{2}, k_{2}{ }^{\prime}, k_{2}{ }^{\prime \prime}\right)+b\left(k_{1}, k_{1}{ }^{\prime}, k_{1}{ }^{\prime \prime}\right) b\left(k_{2}, k_{2}{ }^{\prime}, k_{2}{ }^{\prime \prime}\right)\right) \delta\left(k_{1}-k_{2}\right) \\
+& +\frac{1}{2}\left(b\left(k_{1}, k_{1}{ }^{\prime}, k_{1}{ }^{\prime \prime}\right) a\left(k_{2}, k_{2}{ }^{\prime}, k_{2}{ }^{\prime \prime}\right)-a\left(k_{1}, k_{1}{ }^{\prime}, k_{1}{ }^{\prime \prime}\right) b\left(k_{2}, k_{2}{ }^{\prime}, k_{2}{ }^{\prime \prime}\right)\right) P \frac{1}{k_{1}-k_{2}}
+\end{align*}
+$$
+
+As $k_{1}, k_{2}>0, \delta\left(k_{1}+k_{2}\right)$ and $P 1 /\left(k_{1}+k_{2}\right)$ are not singular and so their contribution has been neglected in the calculation. When $k_{1}, k_{2}$ tend to each other, the coefficient of $P 1 /\left(k_{1}-k_{2}\right)$ vanishes. Thus, the second term in the right hand side of (4.7.23) is non singular. We are therefore left with
+$$
+\begin{align*}
+& \frac{1}{N_{k_{1}}{ }^{*} N_{k_{2}}} \int_{0}^{\infty} d x \phi_{k_{1}}{ }^{*} \phi_{k_{2}}  \tag{4.7.24}\\
+& \simeq \frac{\pi}{2}\left(a\left(k_{1}, k_{1}{ }^{\prime}, k_{1}{ }^{\prime \prime}\right)^{2}+b\left(k_{1}, k_{1}{ }^{\prime}, k_{1}^{\prime \prime}\right)^{2}\right) \delta\left(k_{1}-k_{2}\right)
+\end{align*}
+$$
+
+Imposing (4.7.20) so implies that
+$$
+\begin{equation*}
+N_{k}{ }^{*} N_{k}=\frac{4}{a\left(k, k^{\prime}, k^{\prime \prime}\right)^{2}+b\left(k, k^{\prime}, k^{\prime \prime}\right)^{2}} \tag{4.7.25}
+\end{equation*}
+$$
+
+To obtain the expression of $N_{k}$, we must now compute the coefficients $a\left(k, k^{\prime}, k^{\prime \prime}\right)$, $b\left(k, k^{\prime}, k^{\prime \prime}\right)$.
+
+Expanding $\cos (k(x-a)), \sin (k(x-a))$ using the trigonometric identities $\cos (u-v)=$ $\cos u \cos v+\sin u \sin v, \sin (u-v)=\sin u \cos v-\cos u \sin v$, we can cast (4.7.18c) as
+$$
+\begin{align*}
+\phi_{k}(x)=N_{k} & \sin \left(k^{\prime}\left(a-a^{\prime}\right)\right) \sin \left(k^{\prime \prime} a^{\prime}\right)  \tag{4.7.26}\\
+\times & \left\{\left[\left(\cot \left(k^{\prime}\left(a-a^{\prime}\right)\right)+\frac{k^{\prime \prime}}{k^{\prime}} \cot \left(k^{\prime \prime} a^{\prime}\right)\right) \cos (k a)\right.\right. \\
+& \left.\quad+\left(\frac{k^{\prime}}{k}-\frac{k^{\prime \prime}}{k} \cot \left(k^{\prime}\left(a-a^{\prime}\right)\right) \cot \left(k^{\prime \prime} a^{\prime}\right)\right) \sin (k a)\right] \cos (k x) \\
++ & {\left[\left(\cot \left(k^{\prime}\left(a-a^{\prime}\right)\right)+\frac{k^{\prime \prime}}{k^{\prime}} \cot \left(k^{\prime \prime} a^{\prime}\right)\right) \sin (k a)\right.} \\
+& \left.\left.\quad-\left(\frac{k^{\prime}}{k}-\frac{k^{\prime \prime}}{k} \cot \left(k^{\prime}\left(a-a^{\prime}\right)\right) \cot \left(k^{\prime \prime} a^{\prime}\right)\right) \cos (k a)\right] \sin (k x)\right\}
+\end{align*}
+$$
+
+From here, we deduce that
+$$
+\begin{align*}
+& a\left(k, k^{\prime}, k^{\prime \prime}\right)= \sin \left(k^{\prime}\left(a-a^{\prime}\right)\right) \sin \left(k^{\prime \prime} a^{\prime}\right)  \tag{4.7.27a}\\
+& \times {\left[\left(\cot \left(k^{\prime}\left(a-a^{\prime}\right)\right)+\frac{k^{\prime \prime}}{k^{\prime}} \cot \left(k^{\prime \prime} a^{\prime}\right)\right) \cos (k a)\right.} \\
+&\left.+\left(\frac{k^{\prime}}{k}-\frac{k^{\prime \prime}}{k} \cot \left(k^{\prime}\left(a-a^{\prime}\right)\right) \cot \left(k^{\prime \prime} a^{\prime}\right)\right) \sin (k a)\right] \\
+& b\left(k, k^{\prime}, k^{\prime \prime}\right)=\sin \left(k^{\prime}\left(a-a^{\prime}\right)\right) \sin \left(k^{\prime \prime} a^{\prime}\right)  \tag{4.7.27b}\\
+& \times {\left[\left(\cot \left(k^{\prime}\left(a-a^{\prime}\right)\right)+\frac{k^{\prime \prime}}{k^{\prime}} \cot \left(k^{\prime \prime} a^{\prime}\right)\right) \sin (k a)\right.} \\
+&\left.\quad-\left(\frac{k^{\prime}}{k}-\frac{k^{\prime \prime}}{k} \cot \left(k^{\prime}\left(a-a^{\prime}\right)\right) \cot \left(k^{\prime \prime} a^{\prime}\right)\right) \cos (k a)\right]
+\end{align*}
+$$
+
+Inserting the (4.7.27) into (4.7.25), we obtain (4.7.19) after some simple algebraic manipulations.
+
+Therefore, in the energy range $w \geq 0$, one has a non degenerate continuous spectrum with non normalizable eigenfunctions real up to a constant, as predicted by the general theory.
+
+If $-U_{0}{ }^{\prime}<w<0$, then one has $k=i \tilde{k}, k^{\prime}=i \tilde{k}^{\prime}$ with $\tilde{k}^{\prime}, \tilde{k}>0$. Then, as $|\exp ( \pm i k x)|=\exp (\mp \tilde{k} x), \phi(x)$ is not bounded, unless the coefficient of $\exp (-i k x)$ in $(4.7 .16 \mathrm{c})$ vanishes. This yields the eigenvalue equation
+$$
+\begin{equation*}
+\cot \left(k^{\prime \prime} a^{\prime}\right)=-\frac{\tilde{k}^{\prime}}{k^{\prime \prime}} \frac{\tilde{k} \operatorname{coth}\left(\tilde{k}^{\prime}\left(a-a^{\prime}\right)\right)+\tilde{k}^{\prime}}{\tilde{k}^{\prime} \operatorname{coth}\left(\tilde{k}^{\prime}\left(a-a^{\prime}\right)\right)+\tilde{k}} \tag{4.7.28}
+\end{equation*}
+$$
+
+Proof. Requiring that the coefficient of $\exp (-i k x)$ in (4.7.16c) vanishes yields the equation
+$$
+\begin{equation*}
+\operatorname{coth}\left(\tilde{k}^{\prime}\left(a-a^{\prime}\right)\right)+\frac{k^{\prime \prime}}{\tilde{k}^{\prime}} \cot \left(k^{\prime \prime} a^{\prime}\right)+\frac{\tilde{k}^{\prime}}{\tilde{k}}+\frac{k^{\prime \prime}}{\tilde{k}} \operatorname{coth}\left(\tilde{k}^{\prime}\left(a-a^{\prime}\right)\right) \cot \left(k^{\prime \prime} a^{\prime}\right)=0 \tag{4.7.29}
+\end{equation*}
+$$
+
+Factorizing $\left(k^{\prime \prime} / \tilde{k}^{\prime}\right) \cot \left(k^{\prime \prime} a^{\prime}\right)$, (4.7.29) becomes
+$$
+\begin{equation*}
+\frac{k^{\prime \prime}}{\tilde{k}^{\prime}} \cot \left(k^{\prime \prime} a^{\prime}\right)\left[\frac{\tilde{k}^{\prime}}{\tilde{k}} \operatorname{coth}\left(\tilde{k}^{\prime}\left(a-a^{\prime}\right)\right)+1\right]+\operatorname{coth}\left(\tilde{k}^{\prime}\left(a-a^{\prime}\right)\right)+\frac{\tilde{k}^{\prime}}{\tilde{k}}=0 \tag{4.7.30}
+\end{equation*}
+$$
+from which (4.7.28) follows immediately.
+(4.7.28) is a transcendental equation in $w$ that determines the discrete spectrum energy levels. It can be solved only approximately by semianalytic methods. We consider the situation where $\chi \gg 1$, where
+$$
+\begin{equation*}
+\chi=\frac{\left(2 m U_{0}\right)^{1 / 2}\left(a-a^{\prime}\right)}{\hbar} \tag{4.7.31}
+\end{equation*}
+$$
+
+Then, eq. (4.7.28) simplifies into
+$$
+\begin{equation*}
+\cot \left(k^{\prime \prime} a^{\prime}\right) \simeq-\frac{\tilde{k}^{\prime}}{k^{\prime \prime}} \tag{4.7.32}
+\end{equation*}
+$$
+
+Proof. When $\chi \gg 1$, we have that $\tilde{k}^{\prime}\left(a-a^{\prime}\right) \gg 1$, by (4.7.9a) and the fact that $k^{2}=-\tilde{k}^{2}<0$. Therefore, $\operatorname{coth}\left(\tilde{k}^{\prime}\left(a-a^{\prime}\right)\right) \simeq 1$. By this relation, (4.7.28) simplifies so into $(4.7 .32)$.
+
+In (4.7.32), $k^{\prime \prime}$ and $\tilde{k}^{\prime}$ are not independent, as they both are functions of the energy value $w$ by (4.7.9b), (4.7.9a). To solve eqs. (4.7.32), therefore, we have to make this relationship explicit. Set for convenience
+$$
+\begin{equation*}
+\xi=k^{\prime \prime} a^{\prime} \tag{4.7.33}
+\end{equation*}
+$$
+
+By (4.7.9b) and the fact that $-U_{0}{ }^{\prime}<w<0$, one has $0<\xi<\chi^{\prime}$, where
+$$
+\begin{equation*}
+\chi^{\prime}=\frac{\left(2 m U_{0}^{\prime}\right)^{1 / 2} a^{\prime}}{\hbar} \tag{4.7.34}
+\end{equation*}
+$$
+
+Eqs. (4.7.32) then can be cast more explicitly as
+$$
+\begin{equation*}
+\cot \xi=-\frac{\left(\chi^{* 2}-\xi^{2}\right)^{1 / 2}}{\xi} \tag{4.7.35}
+\end{equation*}
+$$
+where $\chi^{*}$ is given by
+$$
+\begin{equation*}
+\chi^{*}=\frac{\left(2 m\left(U_{0}{ }^{\prime}+U_{0}\right)\right)^{1 / 2} a^{\prime}}{\hbar} \tag{4.7.36}
+\end{equation*}
+$$
+
+Proof. Since $-U_{0}{ }^{\prime}<w<0$, we have $0<w+U_{0}{ }^{\prime}<U_{0}{ }^{\prime}$. Then, by (4.7.9b), $\xi^{2}=\left(k^{\prime \prime} a^{\prime}\right)^{2}=2 m\left(w+U_{0}{ }^{\prime}\right) a^{\prime 2} / \hbar^{2}<2 m U_{0}{ }^{\prime} a^{\prime 2} / \hbar^{2}=\chi^{\prime 2}$, from which it follows that $0<\xi<\chi^{\prime}$. Further, by (4.7.9a),
+$$
+\begin{align*}
+\left(\tilde{k}^{\prime} a^{\prime}\right)^{2}= & \frac{2 m\left|w-U_{0}\right| a^{\prime 2}}{\hbar^{2}}=\frac{2 m\left|w+U_{0}^{\prime}-U_{0}{ }^{\prime}-U_{0}\right| a^{\prime 2}}{\hbar^{2}}  \tag{4.7.37}\\
+& =-\frac{2 m\left(w+U_{0}^{\prime}\right) a^{\prime 2}}{\hbar^{2}}+\frac{2 m\left(U_{0}^{\prime}+U_{0}\right) a^{\prime 2}}{\hbar^{2}}=-\xi^{2}+\chi^{* 2}
+\end{align*}
+$$
+
+From (4.7.32) and (4.7.37), eqs. (4.7.35) is evident.
+
+The transcendental equations (4.7.35) can be solved by plotting the functions $\xi \rightarrow \cot \xi$ and $\xi \rightarrow-\left[\chi^{* 2}-\xi^{2}\right]^{1 / 2} / \xi$ on the same pair of Cartesian axes and then by finding the values of $\xi$ in the range $0<\xi<\chi^{\prime}$ at which the plot of the first function intersects that of the second (cf. fig. 4.7.3). One gets a set of intercepts $\xi_{n}, n=1,2, \ldots$ of the form
+$$
+\begin{equation*}
+\xi_{n}=\left(n-1 / 2+\delta_{n}\right) \pi \tag{4.7.38}
+\end{equation*}
+$$
+with $\delta_{n}>0 . \delta_{n}$ decreases as $n$ grows. However, $n$ cannot grow arbitrarily large, as one must have $\xi_{n}<\chi^{\prime}$. The intercepts correspond to the energy eigenvalues
+$$
+\begin{equation*}
+w_{n}=-U_{0}^{\prime}+\frac{\hbar^{2} \xi_{n}^{2}}{2 m a^{\prime 2}} \tag{4.7.39}
+\end{equation*}
+$$
+by (4.7.9b). The corresponding energy eigenfunctions $\phi_{n}$ are given by the follow-
+ing expressions
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0466.jpg?height=1666&width=1188&top_left_y=599&top_left_x=383)
+
+Figure 4.7.3. Simultaneous plot of $\cot \xi$ (blue) and $-\left(\chi^{* 2}-\right.$ $\left.\xi^{2}\right)^{1 / 2} / \xi$ (red) and the discrete energy spectrum for a potential well and barrier.
+$$
+\begin{align*}
+& \phi_{n}(x)=N_{n} \sin \left(k^{\prime \prime}{ }_{n} x\right) \quad \text { if } 0<x<a^{\prime},  \tag{4.7.40a}\\
+& \phi_{n}(x)=N_{n} \sin \left(k^{\prime \prime}{ }_{n} a^{\prime}\right)\left[\cosh \left(\tilde{k}_{n}^{\prime}\left(x-a^{\prime}\right)\right)\right.  \tag{4.7.40b}\\
+& \left.+\frac{k^{\prime \prime}{ }_{n}}{\tilde{k}_{n}^{\prime}} \cot \left(k^{\prime \prime}{ }_{n} a^{\prime}\right) \sinh \left(\tilde{k}_{n}^{\prime}\left(x-a^{\prime}\right)\right)\right] \quad \text { if } a^{\prime}<x<a, \\
+& \phi_{n}(x)=N_{n} \sinh \left(\tilde{k}^{\prime}{ }_{n}\left(a-a^{\prime}\right)\right) \sin \left(k^{\prime \prime}{ }_{n} a^{\prime}\right)\left[\operatorname{coth}\left(\tilde{k}^{\prime}{ }_{n}\left(a-a^{\prime}\right)\right)\right.  \tag{4.7.40c}\\
+& \left.+\frac{k^{\prime \prime}{ }_{n}}{\tilde{k}^{\prime}{ }_{n}} \cot \left(k^{\prime \prime}{ }_{n} a^{\prime}\right)\right] \exp \left(-\tilde{k}_{n}(x-a)\right) \quad \text { if } a<x .
+\end{align*}
+$$
+where $k_{n}=i \tilde{k}_{n}, k^{\prime}{ }_{n}=i \tilde{k}^{\prime}{ }_{n}, k^{\prime}{ }_{n}$ are given respectively by (4.1.32) with $w=w_{n}$ and by (4.7.9) with $k=k_{n}$ and $N_{n}$ is a positive normalization constant,
+$$
+\begin{align*}
+& N_{n}=2^{1 / 2}\left\{\frac{1}{\tilde{k}_{n}}+a-\frac{\sin \left(2 k^{\prime \prime}{ }_{n} a^{\prime}\right)}{2}\left(1+\frac{k^{\prime \prime}{ }_{n}{ }^{2}}{\tilde{k}_{n}^{\prime}{ }^{2}}\right)\right.  \tag{4.7.41}\\
+& \left.\times\left[\frac{1}{k^{\prime \prime}{ }_{n}}+\left(\frac{1}{\tilde{k}_{n}}+a-a^{\prime}\right) \cot \left(k^{\prime \prime}{ }_{n} a^{\prime}\right)\right]\right\}^{-1 / 2}
+\end{align*}
+$$
+(cf. fig. 4.7.4). $N_{n}$ is determined through the normalization condition
+$$
+\begin{equation*}
+\int_{0}^{\infty} d x \phi_{n_{1}}^{*} \phi_{n_{2}}=\delta_{n_{1}, n_{2}} \tag{4.7.42}
+\end{equation*}
+$$
+as usual.
+
+Proof. The expressions of $\phi_{n}$ are obtained by setting $k=i \tilde{k}_{n}, k^{\prime}=i \tilde{k}^{\prime}{ }_{n}$ and $k^{\prime \prime}=k^{\prime \prime}{ }_{n}$ in (4.7.16). By construction, the coefficient of $\exp (-i k x)$ in the right hand side of (4.7.16c) vanishes for these values of $k, k^{\prime}$ and $k^{\prime \prime}$. The vanishing of the coefficient of $\exp (-i k x)$ provides the relation
+$$
+\begin{equation*}
+\frac{\tilde{k}^{\prime}}{\tilde{k}}+\frac{k^{\prime \prime}}{\tilde{k}} \operatorname{coth}\left(\tilde{k}^{\prime}\left(a-a^{\prime}\right)\right) \cot \left(k^{\prime \prime} a^{\prime}\right)=-\operatorname{coth}\left(\tilde{k}^{\prime}\left(a-a^{\prime}\right)\right)-\frac{k^{\prime \prime}}{\tilde{k}^{\prime}} \cot \left(k^{\prime \prime} a^{\prime}\right) \tag{4.7.43}
+\end{equation*}
+$$
+following form (4.7.29). This in turn allows to write the coefficient of $\exp (-i k x)$ in a simpler fashion. We find in this way that the $\phi_{n}$ are given by the expressions (4.7.40) with arbitrary non vanishing coefficients $N_{n}$.
+
+The constants $N^{( \pm)}{ }_{n}$ are determined up to a phase by the normalization condition (4.7.42) with $n_{1}=n_{2}$. Below, we shall take the $N^{( \pm)}{ }_{n}$ to be positive. To lighten the
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0468.jpg?height=565&width=1088&top_left_y=517&top_left_x=497)
+
+Figure 4.7.4. Discrete spectrum energy eigenfunction for $n=$ 1,2 (blue, red).
+notation, we set temporarily $\phi_{n}=\phi, \tilde{k}_{n}=\tilde{k}, \tilde{k}^{\prime}{ }_{n}=\tilde{k}^{\prime}, k^{\prime \prime}{ }_{n}=k^{\prime \prime}$ and $N_{n}=N$. The structure of the eigenfunctions $\phi$ has therefore the form
+$$
+\begin{align*}
+& \phi(x)=N \sin \left(k^{\prime \prime} x\right) \quad \text { if } 0<x<a^{\prime},  \tag{4.7.44a}\\
+& \phi(x)=N\left[f\left(\tilde{k}^{\prime}, k^{\prime \prime}\right) \cosh \left(\tilde{k}^{\prime}\left(x-a^{\prime}\right)\right)\right.  \tag{4.7.44b}\\
+& \left.+g\left(\tilde{k}^{\prime}, k^{\prime \prime}\right) \sinh \left(\tilde{k}^{\prime}\left(x-a^{\prime}\right)\right)\right] \quad \text { if } a^{\prime}<x<a, \\
+& \phi(x)=N h\left(\tilde{k}^{\prime}, k^{\prime \prime}\right) \exp (-\tilde{k}(x-a)) \quad \text { if } a<x \tag{4.7.44c}
+\end{align*}
+$$
+where the functions $f\left(\tilde{k}^{\prime}, k^{\prime \prime}\right), g\left(\tilde{k}^{\prime}, k^{\prime \prime}\right), h\left(\tilde{k}^{\prime}, k^{\prime \prime}\right)$ are given by
+$$
+\begin{align*}
+& f\left(\tilde{k}^{\prime}, k^{\prime \prime}\right)=\sin \left(k^{\prime \prime} a^{\prime}\right)  \tag{4.7.45a}\\
+& g\left(\tilde{k}^{\prime}, k^{\prime \prime}\right)=\frac{k^{\prime \prime}}{\tilde{k}^{\prime}} \sin \left(k^{\prime \prime} a^{\prime}\right) \cot \left(k^{\prime \prime} a^{\prime}\right),  \tag{4.7.45b}\\
+& h\left(\tilde{k}^{\prime}, k^{\prime \prime}\right)=\sinh \left(\tilde{k}^{\prime}\left(a-a^{\prime}\right)\right) \sin \left(k^{\prime \prime} a^{\prime}\right)\left[\operatorname{coth}\left(\tilde{k}^{\prime}\left(a-a^{\prime}\right)\right)+\frac{k^{\prime \prime}}{\tilde{k}^{\prime}} \cot \left(k^{\prime \prime} a^{\prime}\right)\right] . \tag{4.7.45c}
+\end{align*}
+$$
+
+Therefore,
+$$
+\begin{align*}
+\int_{-\infty}^{\infty} d x \phi^{2} & =\int_{0}^{a^{\prime}} d x N^{2} \sin ^{2}\left(k^{\prime \prime} a^{\prime}\right)  \tag{4.7.46}\\
+& +\int_{a^{\prime}}^{a} d x N^{2}\left[f\left(\tilde{k}^{\prime}, k^{\prime \prime}\right) \cosh \left(\tilde{k}^{\prime}\left(x-a^{\prime}\right)\right)+g\left(\tilde{k}^{\prime}, k^{\prime \prime}\right) \sinh \left(\tilde{k}^{\prime}\left(x-a^{\prime}\right)\right)\right]^{2}
+\end{align*}
+$$
+$$
+\begin{aligned}
+& +\int_{a}^{\infty} d x N^{2}\left[h\left(\tilde{k}^{\prime}, k^{\prime \prime}\right) \exp (-\tilde{k}(x-a))\right]^{2} \\
+=N^{2}[ & \int_{0}^{a^{\prime}} d x \sin ^{2}\left(k^{\prime \prime} a^{\prime}\right)+f\left(\tilde{k}^{\prime}, k^{\prime \prime}\right)^{2} \int_{a^{\prime}}^{a} d x \cosh ^{2}\left(\tilde{k}^{\prime}\left(x-a^{\prime}\right)\right) \\
+& +g\left(\tilde{k}^{\prime}, k^{\prime \prime}\right)^{2} \int_{a^{\prime}}^{a} d x \sinh ^{2}\left(\tilde{k}^{\prime}\left(x-a^{\prime}\right)\right) \\
+& +2 f\left(\tilde{k}^{\prime}, k^{\prime \prime}\right) g\left(\tilde{k}^{\prime}, k^{\prime \prime}\right) \int_{a^{\prime}}^{a} d x \cosh \left(\tilde{k}^{\prime}\left(x-a^{\prime}\right)\right) \sinh \left(\tilde{k}^{\prime}\left(x-a^{\prime}\right)\right) \\
+& \left.+h\left(\tilde{k}^{\prime}, k^{\prime \prime}\right)^{2} \int_{a}^{\infty} d x \exp (-2 \tilde{k}(x-a))\right] \\
+=N^{2}[ & \frac{1}{2}\left(a^{\prime}-\frac{\sin \left(2 k^{\prime \prime} a^{\prime}\right)}{2 k^{\prime \prime}}\right)+\frac{f\left(\tilde{k}^{\prime}, k^{\prime \prime}\right)^{2}}{2}\left(a-a^{\prime}+\frac{\sinh \left(2 \tilde{k}^{\prime}\left(a-a^{\prime}\right)\right)}{2 \tilde{k}^{\prime}}\right) \\
+& +\frac{g\left(\tilde{k}^{\prime}, k^{\prime \prime}\right)^{2}}{2}\left(-a+a^{\prime}+\frac{\sinh \left(2 \tilde{k}^{\prime}\left(a-a^{\prime}\right)\right)}{2 \tilde{k}^{\prime}}\right) \\
+& \left.+\frac{f\left(\tilde{k}^{\prime}, k^{\prime \prime}\right) g\left(\tilde{k}^{\prime}, k^{\prime \prime}\right)}{2 \tilde{k}^{\prime}}\left(\cosh \left(2 \tilde{k}^{\prime}\left(a-a^{\prime}\right)\right)-1\right)+\frac{h\left(\tilde{k}^{\prime}, k^{\prime \prime}\right)^{2}}{2 \tilde{k}}\right] \\
+=\frac{N^{2}}{2}\{ & a^{\prime}-\frac{\sin ^{2}\left(k^{\prime \prime} a^{\prime}\right) \cot \left(k^{\prime \prime} a^{\prime}\right)}{k^{\prime \prime}}+\left(f\left(\tilde{k}^{\prime}, k^{\prime \prime}\right)^{2}-g\left(\tilde{k}^{\prime}, k^{\prime \prime}\right)^{2}\right)\left(a-a^{\prime}\right) \\
+& +\frac{\sinh ^{2}\left(\tilde{k}^{\prime}\left(a-a^{\prime}\right)\right)}{\tilde{k}^{\prime}}\left[\left(f\left(\tilde{k}^{\prime}, k^{\prime \prime}\right)^{2}+g\left(\tilde{k}^{\prime}, k^{\prime \prime}\right)^{2}\right) \operatorname{coth}\left(\tilde{k}^{\prime}\left(a-a^{\prime}\right)\right)\right. \\
+& \left.\left.+2 f\left(\tilde{k}^{\prime}, k^{\prime \prime}\right) g\left(\tilde{k}^{\prime}, k^{\prime \prime}\right)\right]+\frac{h\left(\tilde{k}^{\prime}, k^{\prime \prime}\right)^{2}}{\tilde{k}}\right\} .
+\end{aligned}
+$$
+
+Substituting the expressions (4.7.45) into (4.7.46), we get
+$$
+\begin{align*}
+& \int_{-\infty}^{\infty} d x \phi^{2}=\frac{N^{2}}{2}\left\{a^{\prime}+\sin ^{2}\left(k^{\prime \prime} a^{\prime}\right)\left[+\left(a-a^{\prime}\right)\left(1-\frac{k^{\prime \prime} 2}{\tilde{k}^{\prime 2}} \cot ^{2}\left(k^{\prime \prime} a^{\prime}\right)\right)\right.\right.  \tag{4.7.47}\\
+&-\frac{\cot \left(k^{\prime \prime} a^{\prime}\right)}{k^{\prime \prime}}+\frac{\sinh ^{2}\left(\tilde{k}^{\prime}\left(a-a^{\prime}\right)\right)}{\tilde{k}^{\prime}}\left(\left(1+\frac{k^{\prime \prime 2}}{\tilde{k}^{\prime 2}} \cot ^{2}\left(k^{\prime \prime} a^{\prime}\right)\right) \operatorname{coth}\left(\tilde{k}^{\prime}\left(a-a^{\prime}\right)\right)\right. \\
+&\left.\left.\left.+2 \frac{k^{\prime \prime}}{\tilde{k}^{\prime}} \cot \left(k^{\prime \prime} a^{\prime}\right)+\frac{\tilde{k}^{\prime}}{\tilde{k}}\left(\operatorname{coth}\left(\tilde{k}^{\prime}\left(a-a^{\prime}\right)\right)+\frac{k^{\prime \prime}}{\tilde{k}^{\prime}} \cot \left(k^{\prime \prime} a^{\prime}\right)\right)^{2}\right)\right]\right\}
+\end{align*}
+$$
+
+Using (4.7.43), we can simplify some of the terms in the right hand side of (4.7.47),
+$$
+\begin{align*}
+&\left(1+\frac{k^{\prime \prime 2}}{\tilde{k}^{\prime 2}} \cot ^{2}\left(k^{\prime \prime} a^{\prime}\right)\right) \operatorname{coth}\left(\tilde{k}^{\prime}\left(a-a^{\prime}\right)\right)+2 \frac{k^{\prime \prime}}{\tilde{k}^{\prime}} \cot \left(k^{\prime \prime} a^{\prime}\right)  \tag{4.7.48}\\
+&=\operatorname{coth}\left(\tilde{k}^{\prime}\left(a-a^{\prime}\right)\right)+\frac{k^{\prime \prime}}{\tilde{k}^{\prime}} \cot \left(k^{\prime \prime} a^{\prime}\right) \\
+&+\frac{k^{\prime \prime} \tilde{k}}{\tilde{k}^{\prime 2}} \cot \left(k^{\prime \prime} a^{\prime}\right)\left(\frac{\tilde{k}^{\prime}}{\tilde{k}}+\frac{k^{\prime \prime}}{\tilde{k}} \operatorname{coth}\left(\tilde{k}^{\prime}\left(a-a^{\prime}\right)\right) \cot \left(k^{\prime \prime} a^{\prime}\right)\right)
+\end{align*}
+$$
+$$
+=\left(1-\frac{k^{\prime \prime} \tilde{k}}{\tilde{k}^{\prime 2}} \cot \left(k^{\prime \prime} a^{\prime}\right)\right)\left(\operatorname{coth}\left(\tilde{k}^{\prime}\left(a-a^{\prime}\right)\right)+\frac{k^{\prime \prime}}{\tilde{k}^{\prime}} \cot \left(k^{\prime \prime} a^{\prime}\right)\right)
+$$
+
+Inserting (4.7.48) into (4.7.47), we obtain
+$$
+\begin{align*}
+& \int_{-\infty}^{\infty} d x \phi^{2}=\frac{N^{2}}{2}\left\{a^{\prime}+\sin ^{2}\left(k^{\prime \prime} a^{\prime}\right)\left[+\left(a-a^{\prime}\right)\left(1-\frac{k^{\prime \prime 2}}{\tilde{k}^{\prime 2}} \cot ^{2}\left(k^{\prime \prime} a^{\prime}\right)\right)\right.\right.  \tag{4.7.49}\\
+& -\frac{\cot \left(k^{\prime \prime} a^{\prime}\right)}{k^{\prime \prime}}+\frac{\sinh ^{2}\left(\tilde{k}^{\prime}\left(a-a^{\prime}\right)\right)}{\tilde{k}^{\prime}}\left(\operatorname{coth}\left(\tilde{k}^{\prime}\left(a-a^{\prime}\right)\right)+\frac{k^{\prime \prime}}{\tilde{k}^{\prime}} \cot \left(k^{\prime \prime} a^{\prime}\right)\right) \\
+& \left.\left.\quad \times\left(1-\frac{k^{\prime \prime} \tilde{k}}{\tilde{k}^{\prime 2}} \cot \left(k^{\prime \prime} a^{\prime}\right)+\frac{\tilde{k}^{\prime}}{\tilde{k}}\left(\operatorname{coth}\left(\tilde{k}^{\prime}\left(a-a^{\prime}\right)\right)+\frac{k^{\prime \prime}}{\tilde{k}^{\prime}} \cot \left(k^{\prime \prime} a^{\prime}\right)\right)\right)\right]\right\}
+\end{align*}
+$$
+
+To further develop this expression we express $\operatorname{coth}\left(\tilde{k}^{\prime}\left(a-a^{\prime}\right)\right)$ in terms of $\cot \left(k^{\prime \prime} a^{\prime}\right)$ using (4.7.29). We obtain
+$$
+\begin{equation*}
+\operatorname{coth}\left(\tilde{k}^{\prime}\left(a-a^{\prime}\right)\right)=-\frac{k^{\prime \prime} \cot \left(k^{\prime \prime} a^{\prime}\right) / \tilde{k}^{\prime}+\tilde{k}^{\prime} / \tilde{k}}{k^{\prime \prime} \cot \left(k^{\prime \prime} a^{\prime}\right) / \tilde{k}+1} \tag{4.7.50}
+\end{equation*}
+$$
+
+Using (4.7.50), we compute
+$$
+\begin{align*}
+& \sinh ^{2}\left(\tilde{k}^{\prime}\left(a-a^{\prime}\right)\right)=\frac{1}{\operatorname{coth}^{2}\left(\tilde{k}^{\prime}\left(a-a^{\prime}\right)\right)-1}  \tag{4.7.51}\\
+& =\left\{\left(\frac{k^{\prime \prime} \cot \left(k^{\prime \prime} a^{\prime}\right) / \tilde{k}^{\prime}+\tilde{k}^{\prime} / \tilde{k}}{k^{\prime \prime} \cot \left(k^{\prime \prime} a^{\prime}\right) / \tilde{k}+1}\right)^{2}-1\right\}^{-1}=\frac{\left(k^{\prime \prime} \cot \left(k^{\prime \prime} a^{\prime}\right) / \tilde{k}+1\right)^{2}}{\left(\tilde{k}^{\prime 2} / \tilde{k}^{2}-1\right)\left(1-k^{\prime \prime 2} \cot ^{2}\left(k^{\prime \prime} a^{\prime}\right) / \tilde{k}^{\prime 2}\right)}, \\
+& \operatorname{coth}\left(\tilde{k}^{\prime}\left(a-a^{\prime}\right)\right)+\frac{k^{\prime \prime}}{\tilde{k}^{\prime}} \cot \left(k^{\prime \prime} a^{\prime}\right)=-\frac{k^{\prime \prime} \cot \left(k^{\prime \prime} a^{\prime}\right) / \tilde{k}^{\prime}+\tilde{k}^{\prime} / \tilde{k}}{k^{\prime \prime} \cot \left(k^{\prime \prime} a^{\prime}\right) / \tilde{k}+1}+\frac{k^{\prime \prime}}{\tilde{k}^{\prime}} \cot \left(k^{\prime \prime} a^{\prime}\right)  \tag{4.7.52}\\
+& =-\frac{\left(\tilde{k}^{\prime} / \tilde{k}\right)\left(1-k^{\prime \prime 2} \cot ^{2}\left(k^{\prime \prime} a^{\prime}\right) / \tilde{k}^{\prime 2}\right)}{k^{\prime \prime} \cot \left(k^{\prime \prime} a^{\prime}\right) / \tilde{k}+1} .
+\end{align*}
+$$
+
+Inserting (4.7.51), (4.7.52) into (4.7.50) and carrying out the algebra, we obtain
+$$
+\begin{align*}
+\int_{-\infty}^{\infty} d x \phi^{2}=\frac{N^{2}}{2}\left\{\frac{1}{\tilde{k}}+a-\right. & \frac{\sin \left(2 k^{\prime \prime} a^{\prime}\right)}{2}\left(1+\frac{k^{\prime \prime 2}}{\tilde{k}^{\prime 2}}\right)  \tag{4.7.53}\\
+& \left.\times\left[\frac{1}{k^{\prime \prime}}+\left(\frac{1}{\tilde{k}}+a-a^{\prime}\right) \cot \left(k^{\prime \prime} a^{\prime}\right)\right]\right\}
+\end{align*}
+$$
+
+Equating this expression to 1 , we obtain expression (4.7.41).
+
+Thus, in the energy range $-U_{0}{ }^{\prime}<w<0$, one has possibly a non degenerate discrete spectrum with normalizable eigenfunctions real up to a constant, again as expected on general grounds.
+
+As we have found, in the energy range $w \geq 0$, one has a non degenerate continuous spectrum with non normalizable eigenfunctions real up to a constant. For $w$ in the range $0<w<U_{0}$, the eigenfunction $\phi_{k}$ is sinusoidal in the regions $0<x<a^{\prime}$ and $a<x$ and, since it is not normalizable, its amplitude is comparable in the two regions. However, it may happen that for certain values of $w$ in the range indicated the amplitude of $\phi_{k}$ is much smaller in the region $a<x$ than in that $0<x<a^{\prime}$. If we write the $\phi_{k}$ in the intermediate region $a^{\prime}<x<a$ as
+$$
+\begin{align*}
+\phi_{k}(x)=\frac{N_{k}}{2} \sin \left(k^{\prime \prime} a^{\prime}\right)\{ & {\left[1-\frac{k^{\prime \prime}}{\tilde{k}^{\prime}} \cot \left(k^{\prime \prime} a^{\prime}\right)\right] \exp \left(-\tilde{k}^{\prime}\left(x-a^{\prime}\right)\right) }  \tag{4.7.54}\\
+& \left.+\left[1+\frac{k^{\prime \prime}}{\tilde{k}^{\prime}} \cot \left(k^{\prime \prime} a^{\prime}\right)\right] \exp \left(\tilde{k}^{\prime}\left(x-a^{\prime}\right)\right)\right\}
+\end{align*}
+$$
+using (4.7.16b), we realize that this occurs if $(i)$ the coefficients of $\exp \left(\tilde{k}^{\prime}\left(x-a^{\prime}\right)\right)$ above vanishes and and (ii) $\tilde{k}^{\prime}\left(a-a^{\prime}\right) \gg 1$. The first condition reads just as (4.7.32), while the second in ensured if $\chi \gg 1$, where $\chi$ is given by (4.7.31). We are lead again, so, to the equation (4.7.35) for $\xi$, which earlier furnished us the discrete spectrum energy levels. But since now we are in the energy range
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0471.jpg?height=594&width=1088&top_left_y=1687&top_left_x=497)
+
+Figure 4.7.5. Virtual discrete energy spectrum for a potential well and barrier.
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0472.jpg?height=572&width=1083&top_left_y=538&top_left_x=510)
+
+Figure 4.7.6. Virtual bound state energy eigenfunction formlly corresponding to $n=3$. It is actually non normalizable. Compare with the generic continuous spectrum eigenfunctions plotted in fig. 4.7.2 and the discrete spectrum eigenfunctions plotted in fig. 4.7.4.
+$0<w<U_{0}$ instead of $-U_{0}{ }^{\prime}<w<0, \xi$ is restricted to belong to the interval $\chi^{\prime}<\xi<\chi^{*}$ instead of $0<\xi<\chi^{\prime}$. Its solutions, if any, form a finite discrete series $\xi_{n}$ extending that found earlier (cf. fig. 4.7.3). They correspond to energy values $w_{n}$ given by (4.7.39), but now lying in the range $0<w<U_{0}$. (cf. fig. 4.7.5). They are called virtual levels in spite of the fact that they belong to the continuous spectrum. This name is justified by the property that the corresponding eigenfunctions $\phi_{k_{n}}$, though non normalizable, are concentrated in the region $0<x<a^{\prime}$, as explained above, and thus are akin to the eigenfunctions of the discrete spectrum energy eigenvalues (cf. fig. 4.7.6).
+
+\subsection*{4.8. The harmonic oscillator}
+
+Consider a 1-dimensional harmonic oscillator of mass $m$ and frequency $\omega$. The oscillator moves along the whole $x$ axis with potential energy
+$$
+\begin{equation*}
+U(x)=\frac{1}{2} m \omega^{2} x^{2} \tag{4.8.1}
+\end{equation*}
+$$
+(cf. fig. 4.8.1). We want to find the energy eigenvalues and eigenfunctions of the oscillator. As $U_{*}=0$ and $U_{+}=U_{-}=\infty$, we have only a non degenerate discrete energy spectrum with real normalizable eigenfunctions in the range $0<$ $w$. Further, as $U(x)=U(-x)$, the eigenfunctions have a definite parity.
+
+The energy eigenvalues $w$ and eigenfunctions $\phi$ of the oscillator are yielded by solving the time independent Schroedinger equation (4.1.34), which reads as
+$$
+\begin{equation*}
+\frac{d^{2} \phi}{d x^{2}}+\left(k^{2}-\frac{x^{2}}{\ell^{4}}\right) \phi=0 \tag{4.8.2}
+\end{equation*}
+$$
+with $-\infty<x<\infty$, where
+$$
+\begin{equation*}
+\ell=\left(\frac{\hbar}{m \omega}\right)^{1 / 2} \tag{4.8.3}
+\end{equation*}
+$$
+with the condition that $\phi$ is non vanishing and bounded as $|x| \rightarrow \infty$. Above, $\ell$ is a length scale characterizing the oscillator quantically.
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0473.jpg?height=502&width=766&top_left_y=1890&top_left_x=666)
+
+Figure 4.8.1. The harmonic oscillator potential.
+
+To solve the Schroedinger equation (4.8.2), it is advantageous to express it in terms of the dimensionless variable
+$$
+\begin{equation*}
+\xi=\frac{x}{\ell} \tag{4.8.4}
+\end{equation*}
+$$
+
+It is also convenient to express the energy value $w$ in terms of dimensionless parameter $n$ defined by
+$$
+\begin{equation*}
+n=\frac{k^{2} \ell^{2}-1}{2} \tag{4.8.5}
+\end{equation*}
+$$
+
+Upon doing so eq. (4.8.2) takes the compact form
+$$
+\begin{equation*}
+\frac{d^{2} \phi}{d \xi^{2}}+\left(2 n+1-\xi^{2}\right) \phi=0 \tag{4.8.6}
+\end{equation*}
+$$
+with $-\infty<\xi<\infty$.
+
+Proof. From (4.8.4) and the chain derivation rule, it follows that
+$$
+\begin{equation*}
+\frac{d f}{d x}=\frac{d \xi}{d x} \frac{d f}{d \xi}=\frac{1}{\ell} \frac{d f}{d \xi} \tag{4.8.7}
+\end{equation*}
+$$
+for any function $f$. Using (4.8.4), (4.8.5) together with (4.8.7), we get
+$$
+\begin{align*}
+\frac{d^{2} \phi}{d x^{2}}+\left(k^{2}-\frac{x^{2}}{\ell^{4}}\right) \phi=\frac{1}{\ell^{2}} \frac{d^{2} \phi}{d \xi^{2}}+ & \left(\frac{2 n+1}{\ell^{2}}-\frac{\xi^{2}}{\ell^{2}}\right) \phi  \tag{4.8.8}\\
+& =\frac{1}{\ell^{2}}\left[\frac{d^{2} \phi}{d \xi^{2}}+\left(2 n+1-\xi^{2}\right) \phi\right]
+\end{align*}
+$$
+
+Eq.(4.8.2) is thus equivalent to eq. (4.8.6). From the fact that $-\infty<x<\infty$ and (4.8.4), it is clear $-\infty<\xi<\infty$.
+
+On account of (4.8.4), the condition that $\phi$ stays bounded in the far space limit $|x| \rightarrow \infty$ turns into in the equivalent one that $\phi$ is bounded in the asymptotic limit $|\xi| \rightarrow \infty$.
+
+Eq. (4.8.6) can be reduced to a standard equation of mathematical physics by a suitable ansatz. To understand its form, it is useful to analyze the asymptotic form of (4.8.6), which reads
+$$
+\begin{equation*}
+\frac{d^{2} \phi_{\mathrm{as}}}{d \xi^{2}}-\xi^{2} \phi_{\mathrm{as}} \approx 0, \quad|\xi| \gg 1 \tag{4.8.9}
+\end{equation*}
+$$
+
+This equation has an obvious solution that is bounded
+$$
+\begin{equation*}
+\phi_{\mathrm{as}}(\xi)=\exp \left(-\xi^{2} / 2\right) \tag{4.8.10}
+\end{equation*}
+$$
+
+Proof. Indeed, if $\phi_{\text {as }}$ is given by (4.8.10), we have
+$$
+\begin{equation*}
+\frac{d^{2} \phi_{\mathrm{as}}}{d \xi^{2}}-\xi^{2} \phi_{\mathrm{as}}=\left(\xi^{2}-1\right) \exp \left(-\xi^{2} / 2\right)-\xi^{2} \exp \left(-\xi^{2} / 2\right)=-\phi_{\mathrm{as}} \tag{4.8.11}
+\end{equation*}
+$$
+
+From this relation, we obtain then that
+$$
+\begin{equation*}
+\frac{d^{2} \phi_{\mathrm{as}}}{d \xi^{2}}-\xi^{2} \phi_{\mathrm{as}} \approx \frac{d^{2} \phi_{\mathrm{as}}}{d \xi^{2}}-\left(\xi^{2}-1\right) \phi_{\mathrm{as}}=0, \quad|\xi| \gg 1 \tag{4.8.12}
+\end{equation*}
+$$
+(4.8.10) thus solves (4.8.9) asymptotically.
+
+The asymptotic form of the wave function now suggests that
+$$
+\begin{equation*}
+\phi(\xi)=\exp \left(-\xi^{2} / 2\right) H(\xi) \tag{4.8.13}
+\end{equation*}
+$$
+
+Eq. (4.8.6) then translates into
+$$
+\begin{equation*}
+\frac{d^{2} H}{d \xi^{2}}-2 \xi \frac{d H}{d \xi}+2 n H=0 \tag{4.8.14}
+\end{equation*}
+$$
+
+Proof. If $\phi$ is given by expression (4.8.13), we have
+$$
+\begin{align*}
+& \frac{d^{2} \phi}{d \xi^{2}}+\left(2 n+1-\xi^{2}\right) \phi  \tag{4.8.15}\\
+& =\left(\xi^{2}-1\right) \exp \left(-\xi^{2} / 2\right) H-2 \xi \exp \left(-\xi^{2} / 2\right) \frac{d H}{d \xi} \\
+& +\exp \left(-\xi^{2} / 2\right) \frac{d^{2} H}{d \xi^{2}}+\left(2 n+1-\xi^{2}\right) \exp \left(-\xi^{2} / 2\right) H \\
+& =\exp \left(-\xi^{2} / 2\right)\left[\frac{d^{2} H}{d \xi^{2}}-2 \xi \frac{d H}{d \xi}+2 n H\right]
+\end{align*}
+$$
+
+Therefore, eq. (4.8.6) is equivalent to eq. (4.8.14).
+
+Since $\phi$ must be bounded as $|\xi| \rightarrow \infty, H$ must have at most polynomial growth.
+
+The differential equation (4.8.14) is an instance of the Hermite equation
+$$
+\begin{equation*}
+\frac{d^{2} H}{d \xi^{2}}-2 \xi \frac{d H}{d \xi}+2 \nu H=0 \tag{4.8.16}
+\end{equation*}
+$$
+where $\nu$ is a parameter called degree. As all ordinary second order linear differential equations, (4.8.16) has two linearly independent solutions (cf. app. 14.11, eqs. (14.11.7a), (14.11.7b)). Except for special values of $\nu$ however, both such solutions grow as $\exp \left(\xi^{2}\right)$ as $|\xi| \rightarrow \infty$ and, so, they are not acceptable. When however $\nu=n$ with $n$ integer and $n \geq 0$, there exists a solution unique up to normalization that is a polynomial and, so, admissible, while the other still grows as $\exp \left(\xi^{2}\right)$ as $|\xi| \rightarrow \infty$. With a conventional choice of normalization, the polynomial solution is denoted by $H_{n}$ and is called degree $n$ Hermite polynomial.
+
+The Hermite polynomials $H_{n}$ are given by the Rodrigues' formula
+$$
+\begin{equation*}
+H_{n}(\xi)=(-1)^{n} \exp \left(\xi^{2}\right) \frac{d^{n}}{d \xi^{n}} \exp \left(-\xi^{2}\right) \tag{4.8.17}
+\end{equation*}
+$$
+with $n$ integer and $n \geq 0$. For the first few values of $n$, the $H_{n}$ are explicitly given by
+$$
+\begin{align*}
+& H_{0}(\xi)=1, \quad H_{1}(\xi)=2 \xi, \quad H_{2}(\xi)=4 \xi^{2}-2  \tag{4.8.18}\\
+& H_{3}(\xi)=8 \xi^{3}-12 \xi, \quad H_{4}(\xi)=16 \xi^{4}-48 \xi^{2}+12
+\end{align*}
+$$
+etc. The Hermite polynomials $H_{n}$ satisfy also the orthogonality relations
+$$
+\begin{equation*}
+\int_{-\infty}^{\infty} d \xi \exp \left(-\xi^{2}\right) H_{n^{\prime}} H_{n}=\pi^{1 / 2} 2^{n} n!\delta_{n^{\prime}, n} \tag{4.8.19}
+\end{equation*}
+$$
+which we will apply shortly.
+We now have the information necessary to obtain the energy eigenvalues and eigenfunctions of the oscillator. By (4.1.35) and (4.8.5), the energy spectrum of the oscillator is discrete and consists of the energy levels
+$$
+\begin{equation*}
+w_{n}=\hbar \omega\left(n+\frac{1}{2}\right) \tag{4.8.20}
+\end{equation*}
+$$
+with $n$ integer and $n \geq 0$. They relevant feature is their being equispaced. By
+(4.8.4), (4.8.13), the corresponding energy eigenfunction is given by
+$$
+\begin{equation*}
+\phi_{n}(x)=\frac{1}{\ell^{1 / 2}} \frac{1}{\pi^{1 / 4}\left(2^{n} n!\right)^{1 / 2}} \exp \left(-\frac{x^{2}}{2 \ell^{2}}\right) H_{n}\left(\frac{x}{\ell}\right) \tag{4.8.21}
+\end{equation*}
+$$
+
+The normalization constant of $\phi_{n}$ is determined by imposing the usual normalization conditions
+$$
+\begin{equation*}
+\int_{-\infty}^{\infty} d x \phi_{n_{1}}^{*} \phi_{n_{2}}=\delta_{n_{1}, n_{2}} \tag{4.8.22}
+\end{equation*}
+$$
+
+Proof. From (4.1.35) and (4.8.5), we have
+$$
+\begin{equation*}
+w=\frac{\hbar^{2} k^{2}}{2 m}=\frac{\hbar^{2}(2 n+1)}{2 m \ell^{2}}=\hbar \omega\left(n+\frac{1}{2}\right) \tag{4.8.23}
+\end{equation*}
+$$
+
+Since $n$ is integer and $n \geq 0$, the spectrum is discrete with the energy levels given by (4.8.20), as stated. The expression (4.8.21) follows readily from (4.8.13) expressing $\xi$ through (4.8.4). The normalization constant is determined by imposing the normalization condition (4.8.22) upon using the Hermite polynomials' orthonormality relation (4.8.19).
+
+The eigenfunctions $\phi_{n}$ satisfy
+$$
+\begin{equation*}
+\phi_{n}(-x)=(-1)^{n} \phi_{n}(x) \tag{4.8.24}
+\end{equation*}
+$$
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0477.jpg?height=483&width=765&top_left_y=1900&top_left_x=672)
+
+Figure 4.8.2. The energy spectrum of the harmonic oscillator.
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0478.jpg?height=532&width=817&top_left_y=498&top_left_x=665)
+
+Figure 4.8.3. The energy eigenfunctions of the harmonic oscillator for $n=0,1,2,3$ (blue, red, green, orange).
+as $H_{n}(-\xi)=(-1)^{n} H_{n}(\xi)$. Thus, $\phi_{n}$ has parity $(-1)^{n}$.
+For the first few values of $n$, the oscillator's energy levels are depicted in fig. 4.8.2. The corresponding energy eigenfunctions read explicitly as follows,
+$$
+\begin{align*}
+& \phi_{0}(x)=\frac{1}{\pi^{1 / 4}} \frac{1}{\ell^{1 / 2}} \exp \left(-\frac{x^{2}}{2 \ell^{2}}\right)  \tag{4.8.25a}\\
+& \phi_{1}(x)=\frac{2^{1 / 2}}{\pi^{1 / 4}} \frac{1}{\ell^{1 / 2}} \exp \left(-\frac{x^{2}}{2 \ell^{2}}\right) \frac{x}{\ell}  \tag{4.8.25b}\\
+& \phi_{2}(x)=\frac{2^{1 / 2}}{\pi^{1 / 4}} \frac{1}{\ell^{1 / 2}} \exp \left(-\frac{x^{2}}{2 \ell^{2}}\right)\left[\left(\frac{x}{\ell}\right)^{2}-\frac{1}{2}\right]  \tag{4.8.25c}\\
+& \phi_{3}(x)=\frac{2}{3^{1 / 2} \pi^{1 / 4}} \frac{1}{\ell^{1 / 2}} \exp \left(-\frac{x^{2}}{2 \ell^{2}}\right)\left[\left(\frac{x}{\ell}\right)^{3}-\frac{3}{2} \frac{x}{\ell}\right] \tag{4.8.25d}
+\end{align*}
+$$
+
+These wave functions are plotted in fig. 4.8.3. The $\phi_{n}$ are real.
+Since an arbitrary potential can be approximated by a harmonic potential in the vicinity of a stable equilibrium point, the harmonic oscillator is one of the most important ideal systems in classical mechanics. For the very same reason, the harmonic oscillator is also one of the most important ideal systems in quantum mechanics. Small vibrations of the ions of a crystal lattice as well as those of the atoms of polyatomic molecule can be described as oscillations of many decoupled one dimensional harmonic oscillators. Furthermore, the harmonic oscillator is one
+of the few quantum-mechanical systems for which an exact, analytical solution can be explicitly found.
+
+\subsection*{4.9. Periodic potentials}
+
+In an approximate description of the quantum dynamics of the electrons in a crystal, each electron is subject to the effective potential force field collectively generated by crystal's ions and electrons. The complicated problem of the treatment of the mutual electrostatic interaction of the electrons is thus avoided and the electrons can be considered as decoupled from each other. The effective potential is complicated depending as it does on the state of the system of all electrons. However, on general grounds, it must have the same periodicity of the crystal's geometric structure.
+
+Although crystals lattices are three dimensional structures, it is convenient for the sake of analytical simplicity to consider a simplified model of an infinite 1-dimensional crystal. Being periodic, the potential obeys
+$$
+\begin{equation*}
+U(x+a)=U(x) \tag{4.9.1}
+\end{equation*}
+$$
+for $-\infty<x<\infty$, where $a$ is the lattice constant (cf. fig. 4.9.1).
+We now tackle the problem of studying the qualitative features of the energy eigenvalues and eigenfunctions of the electrons in the crystal. In the present case, the Schroedinger problem consists in finding the energy values $w$ and the non
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0480.jpg?height=389&width=1031&top_left_y=1909&top_left_x=531)
+
+Figure 4.9.1. The periodic potential of a 1-dimensional crystal.
+The gray disks represent the crystal's ions.
+vanishing wave functions $\phi$ satisfying the Schroedinger equation
+$$
+\begin{equation*}
+\frac{d^{2} \phi}{d x^{2}}+\frac{2 m}{\hbar^{2}}(w-U) \phi=0 \tag{4.9.2}
+\end{equation*}
+$$
+the regularity conditions that $\phi$ and $d \phi / d x$ are everywhere continuous and the requirement that $\phi$ is bounded when $x \rightarrow \pm \infty$.
+
+The absence of boundary conditions for the wave functions in an infinite crystal entails that there are no selective restrictions on the energy eigenvalues $w$. The energy spectrum is thus totally continuous. By the same reason, there are two linearly independent eigenfunctions $\phi_{w 1}, \phi_{w 2}$ belonging to each energy eigenvalue $w$. Since the $\phi_{w i}$ are only required to be bounded at spacial infinity, they are not normalizable. We choose to normalize them so that
+$$
+\begin{equation*}
+\int_{-\infty}^{\infty} d x \phi_{w i}{ }^{*} \phi_{w^{\prime} j}=\delta_{i j} \delta\left(w-w^{\prime}\right) \tag{4.9.3}
+\end{equation*}
+$$
+
+Since the crystal is periodic, it is important to study the behaviour of the wave functions under a space translation by a distance equal the lattice constant $a$. For a wave function $\phi$, we set therefore
+$$
+\begin{equation*}
+\phi^{T}(x)=\phi(x+a) \tag{4.9.4}
+\end{equation*}
+$$
+$T$ is a linear operation on wave functions preserving orthonormality.
+
+Proof. To show that $T$ is a linear operation, we observe that, for any two scalars scalars $c, c^{\prime}$ and any two wave functions $\phi, \phi^{\prime}$,
+$$
+\begin{equation*}
+\left(c \phi+c^{\prime} \phi^{\prime}\right)^{T}(x)=c \phi(x+a)+c^{\prime} \phi^{\prime}(x+a)=c \phi^{T}(x)+c^{\prime} \phi^{T T}(x) . \tag{4.9.5}
+\end{equation*}
+$$
+
+To show the unitarity of $T$, we verify that $T$ preserves overlap integrals. In fact, for any two wave functions $\phi, \phi^{\prime}$,
+$$
+\begin{equation*}
+\int_{-\infty}^{\infty} d x \phi^{T}(x)^{*} \phi^{T}(x)=\int_{-\infty}^{\infty} d x \phi(x+a)^{*} \phi^{\prime}(x+a)=\int_{-\infty}^{\infty} d x^{\prime} \phi\left(x^{\prime}\right)^{*} \phi^{\prime}\left(x^{\prime}\right) \tag{4.9.6}
+\end{equation*}
+$$
+where we put $x^{\prime}=x+a$.
+$T$ has furthermore the following basic property. If $\phi$ is an energy eigenfunction belonging to the energy eigenvalue $w$, then $\phi^{T}$ also is.
+
+Proof. Indeed, using the periodicity of $U$, eq. (4.9.1), we have
+$$
+\begin{align*}
+\frac{d^{2} \phi^{T}(x)}{d x^{2}}+ & \frac{2 m}{\hbar^{2}}(w-U(x)) \phi^{T}(x)  \tag{4.9.7}\\
+& =\frac{d^{2} \phi\left(x^{\prime}\right)}{d x^{2}}+\left.\frac{2 m}{\hbar^{2}}\left(w-U\left(x^{\prime}\right)\right) \phi\left(x^{\prime}\right)\right|_{x^{\prime}=x+a}=0
+\end{align*}
+$$
+
+Further, as $\phi^{T}(x)=\phi(x+a)$ and $d \phi^{T}(x) / d x=d \phi(x+a) / d x, \phi^{T}$ and $d \phi^{T} / d x$ are continuous as $\phi$ and $d \phi / d x$ are and $\phi^{T}$ is bounded as $\phi$ is.
+
+Because of the last property of $T$, for each energy eigenvalue $w$ the two linearly independent energy eigenfunctions $\phi_{w 1}, \phi_{w 2}$ belonging to $w$ can be chosen to obey the relations
+$$
+\begin{equation*}
+\phi_{w 1}^{T}=\exp \left(i K_{w} a\right) \phi_{w 1}, \quad \phi_{w 2}^{T}=\exp \left(-i K_{w} a\right) \phi_{w 2} \tag{4.9.8}
+\end{equation*}
+$$
+where $K_{w}$ is a wave vector depending on $w$, called Bloch wave vector, which we may choose to lie in the range $-\pi / a \leq K_{w} \leq \pi / a$.
+
+Proof. Since the proof is rather long, we divide it in steps for the sake of clarity.
+Step 1. Suppose that $\hat{\phi}_{w i}$ is an orthonormal basis of energy eigenfunctions. Relation (4.9.3) then holds. Fix the energy eigenvalue $w$. Since the wave functions $\hat{\phi}_{w i}{ }^{T}$ are also energy eigenfunctions belonging to $w$, we have
+$$
+\begin{equation*}
+\hat{\phi}_{w i}^{T}=\sum_{j} t_{w j i} \hat{\phi}_{w j} \tag{4.9.9}
+\end{equation*}
+$$
+where the $t_{w j i}$ are complex coefficients depending on $w$. The $t_{w j i}$ obey
+$$
+\begin{equation*}
+\sum_{k} t_{w k i}{ }^{*} t_{w^{\prime} k j}=\delta_{i j} \tag{4.9.10}
+\end{equation*}
+$$
+which means that the matrix $t_{w j i}$ is unitary. In fact, as the operation $T$ preserves orthonormality,
+$$
+\begin{align*}
+\delta_{i j} \delta\left(w-w^{\prime}\right) & =\int_{-\infty}^{\infty} d x \hat{\phi}_{w i}{ }^{*} \hat{\phi}_{w^{\prime} j}=\int_{-\infty}^{\infty} d x \hat{\phi}_{w i}{ }^{T *} \hat{\phi}_{w^{\prime} j}^{T}  \tag{4.9.11}\\
+& =\int_{-\infty}^{\infty} d x\left(\sum_{k} t_{w k i} \hat{\phi}_{w k}\right)^{*} \sum_{l} t_{w^{\prime} l j} \hat{\phi}_{w^{\prime} l}=\sum_{k, l} t_{w k i}{ }^{*} t_{w^{\prime} l j} \int_{-\infty}^{\infty} d x \hat{\phi}_{w k}{ }^{*} \hat{\phi}_{w^{\prime} l} \\
+& =\sum_{k, l} t_{w k i}{ }^{*} t_{w^{\prime} l j} \delta_{k l} \delta\left(w-w^{\prime}\right)=\sum_{k} t_{w k i}{ }^{*} t_{w^{\prime} k j} \delta\left(w-w^{\prime}\right)
+\end{align*}
+$$
+from which (4.9.10) follows readily.
+Step 2. There is a non identically vanishing linear combination
+$$
+\begin{equation*}
+\phi=\sum_{i} c_{i} \hat{\phi}_{w i} \tag{4.9.12}
+\end{equation*}
+$$
+with the property that
+$$
+\begin{equation*}
+\phi^{T}=z \phi \tag{4.9.13}
+\end{equation*}
+$$
+for some complex number $z$ such that $|z|=1$. To show this, we insert the expansion (4.9.12) into the each of the two sides of eq. (4.9.13), getting
+$$
+\begin{gather*}
+\phi^{T}=\left(\sum_{i} c_{i} \hat{\phi}_{w i}\right)^{T}=\sum_{i} c_{i} \hat{\phi}_{w i}^{T}  \tag{4.9.14}\\
+=\sum_{i} c_{i}\left(\sum_{j} t_{w j i} \hat{\phi}, w j\right)=\sum_{j}\left(\sum_{i} t_{w j i} c_{i}\right) \hat{\phi}_{w j} \\
+z \phi=z\left(\sum_{j} c_{j} \hat{\phi}_{w j}\right)=\sum_{j}\left(\sum_{i} z \delta_{j i} c_{i}\right) \hat{\phi}_{w j} \tag{4.9.15}
+\end{gather*}
+$$
+
+Imposing that (4.9.13) holds, we obtain a system of two linear equations
+$$
+\begin{equation*}
+\sum_{i}\left(t_{w j i}-z \delta_{j i}\right) c_{i}=0 \tag{4.9.16}
+\end{equation*}
+$$
+in the unknown $c_{i}$. Let $D_{w}(z)$ be the determinant of the matrix $t_{w j i}-z \delta_{j i} . D_{w}(z)$ is a 2 nd degree polynomial in $z$. (4.9.16) has a non trivial solution $c_{i}$ provided $z$ satisfies
+$$
+\begin{equation*}
+D_{w}(z)=0 \tag{4.9.17}
+\end{equation*}
+$$
+
+This is a quadratic equation which always has at least one root. The statement so follows.
+
+If $n$ is a positive integer, we have
+$$
+\begin{equation*}
+\phi(x+n a)=\phi^{T}(x+(n-1) a)=z \phi(x+(n-1) a) \tag{4.9.18}
+\end{equation*}
+$$
+
+Proceeding by induction, we conclude that
+$$
+\begin{equation*}
+\phi(x+n a)=z^{n} \phi(x) \tag{4.9.19}
+\end{equation*}
+$$
+
+Replacing $x$ by $x-n a$, we see that $\phi(x-n a)=z^{-n} \phi(x)$. Thus, (4.9.19) holds for arbitrary integer $n$.
+
+We note that $\phi$ is bounded as $x \rightarrow \pm \infty$ as $\hat{\phi}_{w 1}, \hat{\phi}_{w 2}$ are. Suppose by absurd that $|z| \neq 1$. Let $x_{0}$ be a point such that $\phi\left(x_{0}\right) \neq 0$. Such $x_{0}$ must exist since $\phi$ is not identically vanishing. Then
+$$
+\begin{equation*}
+\lim _{x \rightarrow \pm \infty} \phi(x)=\lim _{n \rightarrow \infty} \phi\left(x_{0}+n a\right)=\lim _{n \rightarrow \infty} z^{n} \phi\left(x_{0}\right) \tag{4.9.20}
+\end{equation*}
+$$
+
+As $|z| \neq 1$, at least one of these limit is not finite. This however is not possible since $\phi$ is bounded. We conclude that
+$$
+\begin{equation*}
+|z|=1 \tag{4.9.21}
+\end{equation*}
+$$
+
+Step 3. (4.9.16) is the eigenvalue equation of the matrix $t_{w j i}$. The eigenvalues $z$ are the solutions of the quadratic equation (4.9.17), which has either two distinct solutions $z_{w 1}, z_{w 2}$ or a single solution $z_{w 0}$. Let $r$ be an index that takes the values 1,2 in the former case and the value 0 in the latter one. Let further $r_{w}(z)$ be the rank of the matrix $t_{w j i}-z \delta_{j i}$. The number of linearly independent eigenvectors $c_{i}$ belonging to the eigenvalue $z_{w r}$ is then $\nu_{w r}=2-r_{w}\left(z_{w r}\right)$. By (4.9.17), $r_{w}\left(z_{w r}\right) \leq 1$ so that $\nu_{w r}>0$. Further, $\sum_{r} \nu_{w r} \leq 2$, since there are at most two linearly independent vectors. It turns out that $\nu_{w r}=1$ for $r=1,2$ and $\nu_{w r}=2$ for $r=0$. Let us show this. If there are two distinct eigenvalues, then $\nu_{w 1}=\nu_{w 2}=1$, necessarily. If there is a single eigenvalue, then either $\nu_{w 0}=1$ or $\nu_{w 0}=2$. For the value $\nu_{w 0}=1$ to occur, it is necessary that $t_{w 11}=t_{w 22}$ and either $t_{w 12} \neq 0=t_{w 21}$ or $t_{w 12}=0 \neq t_{w 21}$. The latter condition is however incompatible with the unitarity relations (4.9.10).
+
+Let us now conveniently change the labelling and denote the eigenvalues by $z_{w i}$, $i=1,2$, allowing them to be either distinct or equal. The components of the two linearly independent eigenvectors whose existence was shown above form a $2 \times 2$ matrix $c_{w i j}$. By definition, we have
+$$
+\begin{equation*}
+\sum_{k}\left(t_{w j k}-z_{w i} \delta_{j k}\right) c_{w i k}=0 \tag{4.9.22}
+\end{equation*}
+$$
+
+Let us show that the $c_{w i j}$ satisfy the unitarity relations
+$$
+\begin{equation*}
+\sum_{k} c_{w i k}{ }^{*} c_{w j k}=\delta_{i j} \tag{4.9.23}
+\end{equation*}
+$$
+
+Let $z_{w 1}=z_{w 2}$. Then, any two linearly independent vectors are eigenvectors of $t_{w i j}$. We are thus free to choose them normalized and orthogonal. Upon doing so we get (4.9.23) when $z_{w 1}=z_{w 2}$. Let $z_{w 1} \neq z_{w 2}$. Since we are free to normalize the eigenvectors of $t_{w i j}$ as we like, we can make (4.9.23) hold when $i=j$. We have now
+$$
+\begin{align*}
+& z_{w i}{ }^{*} z_{w j} \sum_{k} c_{w i k}{ }^{*} c_{w j k}=\sum_{k}\left(z_{w i} c_{w i k}\right)^{*} z_{w j} c_{w j k}  \tag{4.9.24}\\
+& =\sum_{k}\left(\sum_{l} t_{w k l} c_{w i l}\right)^{*}\left(\sum_{m} t_{w k m} c_{w i m}\right)=\sum_{l, m}\left(\sum_{k} t_{w k l}{ }^{*} t_{w k m}\right) c_{w i l}{ }^{*} c_{w i m} \\
+& \quad=\sum_{l, m} \delta_{l m} c_{w i l}{ }^{*} c_{w i m}=\sum_{k} c_{w i k}{ }^{*} c_{w i k}
+\end{align*}
+$$
+
+Since $\left|z_{w i}\right|=1$, we can write this relation as
+$$
+\begin{equation*}
+\left(z_{w i}-z_{w j}\right) \sum_{k} c_{w i}{ }^{*} c_{w i k}=0 \tag{4.9.25}
+\end{equation*}
+$$
+
+As $z_{w 1} \neq z_{w 2}, \sum_{k} c_{w i k}{ }^{*} c_{w i k}=0$ for $i \neq j$. (4.9.23) is proven also when $z_{w 1}=z_{w 2}$.
+Step 4. Let us introduce the wave functions
+$$
+\begin{equation*}
+\phi_{w i}=\sum_{j} c_{w i j} \hat{\phi}_{w j} \tag{4.9.26}
+\end{equation*}
+$$
+
+Since the $c_{w i}$ are linearly independent 2 vectors, the $\phi_{w i}$ are energy eigenfunctions belonging to the eigenvalue $w$. Furthermore, the $\phi_{w i}$ obey the generalized orthonormality relations (4.9.3). Indeed, by (4.9.23) and (4.9.26),
+$$
+\begin{gather*}
+\int_{-\infty}^{\infty} d x \phi_{w i}{ }^{*} \phi_{w j}=\int_{-\infty}^{\infty} d x\left(\sum_{k} c_{w i k} \hat{\phi}_{w k}\right)^{*} \sum_{l} c_{w^{\prime} j l} \hat{\phi}_{w^{\prime} l}  \tag{4.9.27}\\
+=\sum_{k, l} c_{w i k}{ }^{*} c_{w^{\prime} j l} \int_{-\infty}^{\infty} d x \hat{\phi}_{w k}{ }^{*} \hat{\phi}_{w^{\prime} l}=\sum_{k, l} c_{w i k}{ }^{*} c_{w^{\prime} j l} \delta_{k l} \delta\left(w-w^{\prime}\right) \\
+=\sum_{k} c_{w i k}{ }^{*} c_{w^{\prime} j k} \delta\left(w-w^{\prime}\right)=\delta_{i j} \delta\left(w-w^{\prime}\right)
+\end{gather*}
+$$
+as claimed. Finally, under the operation $T$, the $\phi_{w i}$ obey
+$$
+\begin{equation*}
+\phi_{w i}{ }^{T}=z_{w i} \phi_{w i} \tag{4.9.28}
+\end{equation*}
+$$
+
+Indeed, in virtue of relations (4.9.9) and (4.9.22), we have
+$$
+\begin{align*}
+\phi_{w i}{ }^{T}=\sum_{j} c_{w i j} \hat{\phi}_{w j}{ }^{T} & =\sum_{j} c_{w i j}\left(\sum_{k} t_{w k j} \hat{\phi}_{w k}\right)=\sum_{k}\left(\sum_{j} t_{w k j} c_{w i j}\right) \hat{\phi}_{w k}  \tag{4.9.29}\\
+& =\sum_{k}\left(\sum_{j} z_{w i} \delta_{k j} c_{w i j}\right) \hat{\phi}_{w k}=\sum_{k} z_{w i} c_{w i k} \hat{\phi}_{w k}=z_{w i} \phi_{w i}
+\end{align*}
+$$
+
+Step 5. Let $W\left(\phi_{w 1}, \phi_{w 2}\right)$ be the Wronskian of $\phi_{w 1}, \phi_{w 2}$ (cf. eq. (4.1.8)). Then,
+$$
+\begin{equation*}
+W\left(\phi_{w 1}, \phi_{w 2}\right)^{T}=z_{w 1} z_{w 2} W\left(\phi_{w 1}, \phi_{w 2}\right) \tag{4.9.30}
+\end{equation*}
+$$
+
+Indeed, by (4.9.28), we have
+$$
+\begin{align*}
+& W\left(\phi_{w 1}, \phi_{w 2}\right)^{T}(x)=W\left(\phi_{w 1}, \phi_{w 2}\right)(x+a)=  \tag{4.9.31}\\
+& \quad=\phi_{w 1}(x+a) \frac{d \phi_{w 2}(x+a)}{d x}-\phi_{w 2}(x+a) \frac{d \phi_{w 1}(x+a)}{d x} \\
+& \quad=\phi_{w 1}{ }^{T}(x) \frac{d \phi_{w 2}^{T}(x)}{d x}-\phi_{w 2}^{T}(x) \frac{d \phi_{w 1}{ }^{T}(x)}{d x} \\
+& \quad=z_{w 1} \phi_{w 1}(x) z_{w 2} \frac{d \phi_{w 2}(x)}{d x}-z_{w 2} \phi_{w 2}(x) z_{w 1} \frac{d \phi_{w 1}(x)}{d x}=z_{w 1} z_{w 2} W\left(\phi_{w 1}, \phi_{w 2}\right)(x)
+\end{align*}
+$$
+
+But as the Wronskian $W\left(\phi_{w 1}, \phi_{w 2}\right)$ is constant (cf. eq. (4.1.9)), we also have
+$$
+\begin{equation*}
+W\left(\phi_{w 1}, \phi_{w 2}\right)^{T}=W\left(\phi_{w 1}, \phi_{w 2}\right) \tag{4.9.32}
+\end{equation*}
+$$
+
+Indeed,
+$$
+\begin{equation*}
+\left.W\left(\phi_{w 1}, \phi_{w 2}\right)^{T}\right)(x)=W\left(\phi_{w 1}, \phi_{w 2}\right)(x+a)=W\left(\phi_{w 1}, \phi_{w 2}\right)(x) \tag{4.9.33}
+\end{equation*}
+$$
+
+Comparing (4.9.30) and (4.9.33), we find
+$$
+\begin{equation*}
+W\left(\phi_{w 1}, \phi_{w 2}\right)=z_{w 1} z_{w 2} W\left(\phi_{w 1}, \phi_{w 2}\right) \tag{4.9.34}
+\end{equation*}
+$$
+
+Since $\phi_{w 1}, \phi_{w 2}$ are orthogonal and thus linearly independent, $W\left(\phi_{w 1}, \phi_{w 2}\right) \neq 0$. From (4.9.34), it follows then that necessarily
+$$
+\begin{equation*}
+z_{w 1} z_{w 2}=1 \tag{4.9.35}
+\end{equation*}
+$$
+
+Since $\left|z_{w i}\right|=1$, it follows that
+$$
+\begin{equation*}
+z_{w 2}=z_{w 1}{ }^{*} \tag{4.9.36}
+\end{equation*}
+$$
+
+From (4.9.21) and this relation, we can write
+$$
+\begin{equation*}
+z_{w 1}=\exp \left(i K_{w} a\right), \quad z_{w 2}=\exp \left(-i K_{w} a\right) \tag{4.9.37}
+\end{equation*}
+$$
+
+Step 6. Combining (4.9.21) and (4.9.37), we reach relations (4.9.8) immediately.
+
+By (4.9.8), the energy eigenfunction $\phi_{w i}$ factorizes as
+$$
+\begin{equation*}
+\phi_{w i}(x)=\exp \left(i K_{w} x\right) u_{w i}(x) \tag{4.9.38}
+\end{equation*}
+$$
+where the Bloch amplitude $u_{w i}$ is a periodic wave functions,
+$$
+\begin{equation*}
+u_{w i}{ }^{T}(x)=u_{w i}(x+a)=u_{w i}(x) \tag{4.9.39}
+\end{equation*}
+$$
+
+This is the Bloch theorem (F. Bloch, 1928) (cf. fig. 4.9.2).
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0487.jpg?height=1003&width=1093&top_left_y=1160&top_left_x=516)
+
+Figure 4.9.2. The structure of am energy eigenfunction $\phi_{w}(x)$ according to the Bloch theorem. The periodic Bloch amplitude $u_{w}(x)(a)$ and the Bloch plane wave $\exp \left(i K_{w} x\right)$ (b) give rise as factors to the Bloch eigenfunction $\phi_{w}(x)(c)$.
+
+Proof. Define the function $u_{w i}$ by
+$$
+\begin{equation*}
+u_{w i}(x)=\exp \left(-i K_{w} x\right) \phi_{w i}(x) \tag{4.9.40}
+\end{equation*}
+$$
+
+Then, (4.9.38) holds. Furthermore, by (4.9.8), we find that
+$$
+\begin{align*}
+& u_{w i}^{T}(x)=u_{w i}(x+a)=\exp \left(-i K_{w}(x+a)\right) \phi_{w i}(x+a)=  \tag{4.9.41}\\
+& \quad=\exp \left(-i K_{w}(x+a)\right) \exp \left(i K_{w} a\right) \phi_{w i}(x)=\exp \left(-i K_{w} x\right) \phi_{w i}(x)=u_{w i}(x)
+\end{align*}
+$$
+proving (4.9.39).
+
+The wave vector $K_{w}$ entering relations (4.9.8) characterize therefore the energy spectrum of the periodic potential $U(x)$. As a function of the energy eigenvalue $w, K_{w}$ is given explicitly by the equation
+$$
+\begin{equation*}
+\cos \left(K_{w} a\right)=F(w) \tag{4.9.42}
+\end{equation*}
+$$
+where the function $F(w)$ is defined by
+$$
+\begin{equation*}
+F(w)=\frac{W\left(\chi_{w 1}^{T}, \chi_{w 2}\right)+W\left(\chi_{w 1}, \chi_{w 2}^{T}\right)}{2 W\left(\chi_{w 1}, \chi_{w 2}\right)} \tag{4.9.43}
+\end{equation*}
+$$
+with $\chi_{w i}, i=1,2$, any two linearly independent solutions of the Schroedinger equation (4.9.2) for the energy $w$ and $W\left(\phi_{1}, \phi_{2}\right)$ denotes the Wronskian of two wave functions $\phi_{1}, \phi_{2} . F(w)$ is independent from the choice of the $\chi_{w i}$.
+
+Proof. Let $\phi_{w}$ be an energy eigenfunction of the energy eigenvalue $w$ such that
+$$
+\begin{equation*}
+\phi_{w}{ }^{T}=\exp \left(i K_{w} a\right) \phi_{w} \tag{4.9.44}
+\end{equation*}
+$$
+for some wave vector $K_{w}$. This implies also that
+$$
+\begin{equation*}
+\frac{d \phi_{w}{ }^{T}}{d x}=\exp \left(i K_{w} a\right) \frac{d \phi_{w}}{d x} \tag{4.9.45}
+\end{equation*}
+$$
+$\phi_{w}$ can be expanded as a linear combinations of the $\chi_{w i}$,
+$$
+\begin{equation*}
+\phi_{w}=\sum_{j} b_{w j} \chi_{w j} \tag{4.9.46}
+\end{equation*}
+$$
+
+Inserting (4.9.46) into (4.9.44), (4.9.45), we get the equations
+$$
+\begin{align*}
+& \sum_{j}\left[\chi_{w j}^{T}-\exp \left(i K_{w} a\right) \chi_{w j}\right] b_{w j}=0  \tag{4.9.47a}\\
+& \sum_{j}\left[\frac{d \chi_{w j}^{T}}{d x}-\exp \left(i K_{w} a\right) \frac{d \chi_{w j}}{d x}\right] b_{w j}=0 \tag{4.9.47b}
+\end{align*}
+$$
+
+Since the $b_{w j}$ are not both vanishing, the determinant of the system must vanish,
+$$
+\begin{align*}
+& 0=\left[\chi_{w 1}{ }^{T}-\exp \left(i K_{w} a\right) \chi_{w 1}\right]\left[\frac{d \chi_{w 2}{ }^{T}}{d x}-\exp \left(i K_{w} a\right) \frac{d \chi_{w 2}}{d x}\right]  \tag{4.9.48}\\
+& -\left[\chi_{w 2}{ }^{T}-\exp \left(i K_{w} a\right) \chi_{w 2}\right]\left[\frac{d \chi_{w 1}{ }^{T}}{d x}-\exp \left(i K_{w} a\right) \frac{d \chi_{w 1}}{d x}\right] \\
+& =\chi_{w 1}{ }^{T} \frac{d \chi_{w 2}{ }^{T}}{d x}-\chi_{w 2}{ }^{T} \frac{d \chi_{w 1}{ }^{T}}{d x}+\exp \left(2 i K_{w} a\right)\left[\chi_{w 1} \frac{d \chi_{w 2}}{d x}-\chi_{w 2} \frac{d \chi_{w 1}}{d x}\right] \\
+& -\exp \left(i K_{w} a\right)\left[\chi_{w 1} \frac{d \chi_{w 2}{ }^{T}}{d x}-\chi_{w 2}{ }^{T} \frac{d \chi_{w 1}}{d x}-\chi_{w 2} \frac{d \chi_{w 1}{ }^{T}}{d x}+\chi_{w 1}{ }^{T} \frac{d \chi_{w 2}}{d x}\right]
+\end{align*}
+$$
+
+We notice now that
+$$
+\begin{equation*}
+\chi_{w 1} \frac{d \chi_{w 2}}{d x}-\chi_{w 2} \frac{d \chi_{w 1}}{d x}=W\left(\chi_{w 1}, \chi_{w 2}\right) \tag{4.9.49}
+\end{equation*}
+$$
+
+By a calculation analogous to (4.9.31) and (4.9.33), we have
+$$
+\begin{equation*}
+\chi_{w 1}^{T} \frac{d \chi_{w 2}^{T}}{d x}-\chi_{w 2}^{T} \frac{d \chi_{w 1}^{T}}{d x}=W\left(\chi_{w 1}, \chi_{w 2}\right)^{T}=W\left(\chi_{w 1}, \chi_{w 2}\right) \tag{4.9.50}
+\end{equation*}
+$$
+
+Finally, by definition, we have
+$$
+\begin{align*}
+& \chi_{w 1}^{T} \frac{d \chi_{w 2}}{d x}-\chi_{w 2} \frac{d \chi_{w 1}^{T}}{d x}=W\left(\chi_{w 1}^{T}, \chi_{w 2}\right)  \tag{4.9.51}\\
+& \chi_{w 1} \frac{d \chi_{w 2}{ }^{T}}{d x}-\chi_{w 2}^{T} \frac{d \chi_{w 1}}{d x}=W\left(\chi_{w 1}, \chi_{w 2}^{T}\right) \tag{4.9.52}
+\end{align*}
+$$
+
+Using (4.9.49)-(4.9.52) in (4.9.48), we get
+$$
+\begin{align*}
+0=[ & \left.\exp \left(i K_{w} a\right)+\exp \left(-i K_{w} a\right)\right] W\left(\chi_{w 1}, \chi_{w 2}\right)  \tag{4.9.53}\\
+& -\left[W\left(\chi_{w 1}^{T}, \chi_{w 2}\right)+W\left(\chi_{w 1}, \chi_{w 2}^{T}\right)\right]
+\end{align*}
+$$
+which can be cast in the form (4.9.43) readily. (4.9.43) implies that the expression in the right hand side is independent from the choice of the $\chi_{w i}$, as $\cos \left(K_{w}\right)$ obviously is.
+
+By virtue of (4.9.43), since $\left|\cos \left(K_{w} a\right)\right| \leq 1$, only those energy values $w$ belong to the energy spectrum which are such that
+$$
+\begin{equation*}
+-1 \leq F(w) \leq 1 \tag{4.9.54}
+\end{equation*}
+$$
+
+Generically, so, the energy spectrum thus consists of continuous energy intervals or energy bands.
+
+To study the structure of the energy bands, it is more natural to parametrize the energy eigenvalue $w$ in terms of the kinematic wave vector $k \geq 0$ setting
+$$
+\begin{equation*}
+w=w_{k}=\frac{\hbar^{2} k^{2}}{2 m}+w_{0} \tag{4.9.55}
+\end{equation*}
+$$
+where $w_{0}$ is the lowest energy eigenvalue. Correspondingly, we set $K_{k}=K_{w_{k}}$, $\chi_{k i}=\chi_{w_{k} i}$. We also put $F(k a)=F\left(w_{k}\right)$. Eq. (4.9.43) now reads
+$$
+\begin{equation*}
+\cos \left(K_{k} a\right)=F(k a) \tag{4.9.56}
+\end{equation*}
+$$
+
+Further, condition (4.9.54) defining the energy bands takes the form
+$$
+\begin{equation*}
+-1 \leq F(k a) \leq 1 \tag{4.9.57}
+\end{equation*}
+$$
+
+In fig. (4.9.3), we show a typical shape of the function $F(k a)$ indicating how this determines the allowed wave vectors intervals and, from these, the energy spectrum's bands.
+
+Though the wave vector $k$ is restricted to be non negative by convention, it enters the energy $w_{k}$ quadratically. For this reason, the function $F(k a)=F\left(w_{k}\right)$ is defined also for all real $k$ values and, once so extended, it satisfies $F(-k a)=$ $F(k a)$. When solving eq. (4.9.56) for the Bloch wave vector $K_{k}$, to make $K_{k}$ a singlevalued function of $k$, it is more convenient to extend the range of variation of $K_{k}$ from the restricted interval $-\pi / a$ to $\pi / a$ to the whole real axis as well. We shall do so in what follows.
+
+At large energy $w$, the wave functions $\chi_{k i}$ can be chose to be approximately
+$$
+\begin{equation*}
+\chi_{k 1}(x) \simeq \exp (i k x) \quad \chi_{k 2}(x) \simeq \exp (-i k x) \tag{4.9.58}
+\end{equation*}
+$$
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0491.jpg?height=445&width=955&top_left_y=542&top_left_x=542)
+
+Figure 4.9.3. The energy spectrum's bands of a periodic potential in terms of the allowed kinematic wave vectors intervals for a typical shape of the function $F(k a)$. The energy spectrum consists of continuous bands (light brown) alternated with gaps (white). The width of the gaps decreases as energy grows.
+as the effect of the potential at high energy becomes negligible and the dynamic is effectively free. Inserting the (4.9.58) into the expression (4.9.43), we find
+$$
+\begin{equation*}
+F(k a) \simeq \cos (k a) \tag{4.9.59}
+\end{equation*}
+$$
+
+Proof. By (4.9.58), we have
+$$
+\begin{align*}
+& W\left(\chi_{k 1}, \chi_{k 2}\right)  \tag{4.9.60}\\
+& \quad \simeq \exp (i k x) \frac{d}{d x} \exp (-i k x)-\exp (-i k x) \frac{d}{d x} \exp (i k x)=-i k
+\end{align*}
+$$
+
+By (4.9.58), we have also
+$$
+\begin{align*}
+\chi_{w i}^{T}(x)=\chi_{w i}(x+a) & \simeq \exp ( \pm i k(x+a))  \tag{4.9.61}\\
+& =\exp ( \pm i k a) \exp ( \pm i k x) \simeq \exp ( \pm i k a) \chi_{w i}(x)
+\end{align*}
+$$
+
+It follows from here that
+$$
+\begin{equation*}
+W\left(\chi_{k 1}^{T}, \chi_{k 2}\right)=\exp (i k a) W\left(\chi_{k 1}, \chi_{k 2}\right) \tag{4.9.62}
+\end{equation*}
+$$
+$$
+\begin{equation*}
+W\left(\chi_{k 1}, \chi_{k 2}^{T}\right)=\exp (-i k a) W\left(\chi_{k 1}, \chi_{k 2}\right) \tag{4.9.63}
+\end{equation*}
+$$
+
+Inserting (4.9.60), (4.9.62), (4.9.63) into (4.9.43), we get thus
+$$
+\begin{equation*}
+F(k a)=\frac{-i k \exp (i k a)-i k \exp (-i k a)}{-2 i k}=\cos (k a) \tag{4.9.64}
+\end{equation*}
+$$
+as was to be shown.
+
+From (4.9.59), (4.9.57), it follows that all the sufficiently large $k$ values are allowed. The higher energy spectrum thus is essentially that of a free particle, as it is intuitively physically obvious. Further, in the high energy limit where $F(k a)$ is given by (4.9.59), eq. (4.9.56) clearly implies that
+$$
+\begin{equation*}
+K_{k} \simeq k \tag{4.9.65}
+\end{equation*}
+$$
+for large $k$.
+At finite wave vector $k$, the function $F(k a)$ takes values in the range from -1 to 1 only for certain intervals of allowed $k$ values. If we order the intervals on the real $k$ axis from left to right, then $F(k a)$ is alternatively increasing and decreasing as we shift from an interval to the next one. By eq. (4.9.56), $\cos \left(K_{k}\right)$ increases from -1 to 1 on a $k$ interval on which $F(k a)$ is increasing and decreases from 1 to -1 on a $k$ interval on which $F(k a)$ is decreasing. Therefore, $K_{k}$ is an increasing function of $k$ such that at the left and right ends of the $n$-th $k$ interval $K_{k}$ takes the values $n \pi / a$ and $(n+1) \pi / a$, respectively. Consequently, when $k$ jumps from the right end of one interval to the left end of the next $K_{k}$ does not change value.
+
+We can thus express the kinematic wave vector $k_{K}$ as a function of the Bloch wave vector $K$. This function suffers jump discontinuities at the $K$ values $n \pi / a$ with $n$ an integer. The jumps correspond precisely to the gaps separating the allowed $k$ intervals.
+
+Using (4.9.55), we can now represent the energy $w_{K}$ as a function of the Bloch wave vector $K$ setting $w_{K}=w_{k_{K}}$. The resulting functional dependence of the
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0493.jpg?height=551&width=784&top_left_y=516&top_left_x=649)
+
+Figure 4.9.4. The energy $w_{K}$ expressed as a function of the Bloch wave vector $K$ with the energy band exhibited.
+energy $w_{K}$ on $K$ takes the typical form shown in fig. 4.9.4. The energy gaps at the $K$ values $n \pi / a$ originate from the jumps discontinuities of $k_{K}$. In this way, the band structure of the energy spectrum emerges. The dashed curve represents the free particle energy $\hbar^{2} K^{2} / 2 m$.
+
+Even though the above theory is 1-dimensional, the periodicity of the potential yields the energy spectrum band structure actually observed in crystalline solids. By the Pauli principle, studied later in sect. 10.5, only two electrons can occupy a single energy level. In metals, the highest occupied energy band is only partially filled. If an external electric field is applied, the electrons of this band are accelerated and will occupy the higher energy levels of the band that are still free. This manifests itself as an electric current. In insulators, the highest occupied energy band is completely filled. If an external electric field is applied, the electrons have no free energy levels in their hosting band at their disposal. So no current shows up. If however the field is strong enough, the electrons can jump the energy gap separating the band they fill from the next totally unfilled band. This gives rise to a discharge resulting in the break down of the insulator.
+
+\subsection*{4.10. The Kroenig-Penney model}
+
+The Kroenig-Penney model (R. de L. Kroenig and W. G. Penney, 1930) is a simple model of the periodic potential of a 1-dimensional crystal for which the energy spectrum's bands can be explicitly computed.
+
+The crystal's potential is defined analytically by
+$$
+\begin{array}{ll}
+U(x)=U_{0}, & n c-b<x<n c \\
+U(x)=0, & n c<x<n c+a \tag{4.10.1b}
+\end{array}
+$$
+for $n$ a varying integer number, where $a, b>0$ are length scales and $c=a+b$. The potential profile is shown in fig. 4.10.1
+
+By (4.10.1), the potential $U(x)$ does not change its value under a translation on a distance equal to $c$,
+$$
+\begin{equation*}
+U(x+c)=U(x) \tag{4.10.2}
+\end{equation*}
+$$
+
+It is thus periodic, as required, with lattice constant $c$.
+
+Proof. Let $n$ be an arbitrary integer. For $n a-b<x<n c$, we have $(n+1) c-$ $b<x<(n+1) c$. Thus, $U(x+c)=U(x)=U_{0}$. For $n c<x<n c+a$, we have
+
+![](https://cdn.mathpix.com/cropped/2024_09_22_5d1e855547710648961eg-0494.jpg?height=367&width=1028&top_left_y=1925&top_left_x=532)
+
+Figure 4.10.1. The periodic potential of a 1-dimensional crystal.
+The gray disks represent the crystal's ions.
+$(n+1) c<x+c<(n+1) c+a$. Thus, $U(x+c)=U(x)=0$. (4.10.2) follows.
+
+The Schroedinger problem for an electron in the crystal consists finding the energy values $w$ for which there exists a non trivial wave functions $\phi$ satisfying the Schroedinger equation
+$$
+\begin{array}{ll}
+\frac{d \phi}{d x^{2}}+\frac{2 m\left(w-U_{0}\right)}{\hbar^{2}} \phi=0, & n c-b<x<n c \\
+\frac{d \phi}{d x^{2}}+\frac{2 m w}{\hbar^{2}} \phi=0, & n c<x<n c+a \tag{4.10.3b}
+\end{array}
+$$
+subject to the regularity conditions
+$$
+\begin{align*}
+& \phi(n c-b+0)=\phi(n c-b-0)  \tag{4.10.4a}\\
+& \frac{d \phi(n c-b+0)}{d x}=\frac{d \phi(n c-b-0)}{d x} \tag{4.10.4b}
+\end{align*}
+$$
+at the points $n c-b$ and
+$$
+\begin{align*}
+& \phi(n c+0)=\phi(n c-0)  \tag{4.10.4c}\\
+& \frac{d \phi(n c+0)}{d x}=\frac{d \phi(n c-0)}{d x} \tag{4.10.4d}
+\end{align*}
+$$
+at the points $n c$, where $n$ is an arbitrary integer. Let us set as usual
+$$
+\begin{align*}
+& k=\frac{(2 m w)^{1 / 2}}{\hbar}  \tag{4.10.5a}\\
+& k^{\prime}=\frac{\left(2 m\left(w-U_{0}\right)\right)^{1 / 2}}{\hbar} \tag{4.10.5b}
+\end{align*}
+$$
+
+Then, the general solution of eqs. (4.10.3) is given by
+$$
+\begin{array}{r}
+\phi(x)=A_{n} \exp \left(i k^{\prime}(x-n c)\right)+B_{n} \exp \left(-i k^{\prime}(x-n c)\right) \\
+n c-b<x<n c \\
+\phi(x)=C_{n} \exp (i k(x-n c))+D_{n} \exp (-i k(x-n c))  \tag{4.10.6b}\\
+n c<x<n c+a
+\end{array}
+$$
+
+Imposing first the junction conditions (4.10.4c), (4.10.4d), we obtain
+$$
+\begin{align*}
+& C_{n}+D_{n}=A_{n}+B_{n}  \tag{4.10.7a}\\
+& C_{n}-D_{n}=\frac{k^{\prime}}{k}\left(A_{n}-B_{n}\right) \tag{4.10.7b}
+\end{align*}
+$$
+
+These allow to express $C_{n}, D_{n}$ in terms of $A_{n}, B_{n}$
+$$
+\begin{align*}
+C_{n} & =\frac{1}{2}\left[\left(1+\frac{k^{\prime}}{k}\right) A_{n}+\left(1-\frac{k^{\prime}}{k}\right) B_{n}\right]  \tag{4.10.8a}\\
+D_{n} & =\frac{1}{2}\left[\left(1-\frac{k^{\prime}}{k}\right) A_{n}+\left(1+\frac{k^{\prime}}{k}\right) B_{n}\right] \tag{4.10.8b}
+\end{align*}
+$$
+
+Substituting the (4.10.8) into the (4.10.6), we get
+$$
+\begin{align*}
+& \phi(x)=A_{n} \exp \left(i k^{\prime}(x-n c)\right)+B_{n} \exp \left(-i k^{\prime}(x-n c)\right)  \tag{4.10.9a}\\
+& n c-b<x<n c \\
+& \phi(x)=\left(A_{n}+B_{n}\right) \cos (k(x-n c))+\frac{i k^{\prime}}{k}\left(A_{n}-B_{n}\right) \sin (k(x-n c))  \tag{4.10.9b}\\
+& n c<x<n c+a
+\end{align*}
+$$
+
+Proof. Indeed, the (4.10.8) into the (4.10.6), we get
+$$
+\begin{align*}
+& \phi(x)=\frac{1}{2}\left[\left(1+\frac{k^{\prime}}{k}\right) A_{n}+\left(1-\frac{k^{\prime}}{k}\right) B_{n}\right] \exp (i k(x-n c))  \tag{4.10.10}\\
+&+\frac{1}{2}\left[\left(1-\frac{k^{\prime}}{k}\right) A_{n}+\left(1+\frac{k^{\prime}}{k}\right) B_{n}\right] \exp (-i k(x-n c))
+\end{align*}
+$$
+for $n c<x<n c+a$. The (4.10.9) follow by using that $\exp ( \pm i k(x-n c))=\cos (k(x-$ $n c)) \pm i \sin (k(x-n c))$.
+
+Imposing next the remaining junction conditions (4.10.4a), (4.10.4b), we find the equations
+$$
+\begin{align*}
+A_{n} \exp \left(-i k^{\prime} b\right) & +B_{n} \exp \left(i k^{\prime} b\right)  \tag{4.10.11a}\\
+= & \left(A_{n-1}+B_{n-1}\right) \cos (k a)+\frac{i k^{\prime}}{k}\left(A_{n-1}-B_{n-1}\right) \sin (k a)
+\end{align*}
+$$
+$$
+\begin{align*}
+A_{n} \exp \left(-i k^{\prime} b\right) & -B_{n} \exp \left(i k^{\prime} b\right)  \tag{4.10.11b}\\
+& =\left(A_{n-1}-B_{n-1}\right) \cos (k a)+\frac{i k}{k^{\prime}}\left(A_{n-1}+B_{n-1}\right) \sin (k a)
+\end{align*}
+$$
+
+Proof. Observe that, since $c=a+b$, one has $n c-b=(n-1) c+a$. Eq. (4.10.11a) is obtained by equating the right hand side of (4.10.9a) at $x=n c-b$ and the right hand side of (4.10.9b) with $n$ replaced by $n-1$ at $(n-1) c+a$. Analogously, eq. (4.10.11b) is obtained by equating the derivative of the right hand side of (4.10.9a) at $x=n c-b$ and the derivative of the right hand side of $(4.10 .9 \mathrm{~b})$ with $n$ replaced by $n-1$ at $(n-1) c+a$. The derivation changes the relative sign of the exponential and introduces factors $k^{\prime}$ and $k$, respectively.
+
+Solving (4.10.11) for $A_{n}, B_{n}$, we obtain
+$$
+\begin{align*}
+& A_{n}=\left[\cos (k a)+\frac{i}{2}\left(\frac{k}{k^{\prime}}+\frac{k^{\prime}}{k}\right) \sin (k a)\right] \exp \left(i k^{\prime} b\right) A_{n-1}  \tag{4.10.12a}\\
+& +\frac{i}{2}\left(\frac{k}{k^{\prime}}-\frac{k^{\prime}}{k}\right) \sin (k a) \exp \left(i k^{\prime} b\right) B_{n-1} \\
+& B_{n}=-\frac{i}{2}\left(\frac{k}{k^{\prime}}-\frac{k^{\prime}}{k}\right) \sin (k a) \exp \left(-i k^{\prime} b\right) A_{n-1}  \tag{4.10.12b}\\
+& +\left[\cos (k a)-\frac{i}{2}\left(\frac{k}{k^{\prime}}+\frac{k^{\prime}}{k}\right) \sin (k a)\right] \exp \left(-i k^{\prime} b\right) B_{n-1}
+\end{align*}
+$$
+
+Proof. Relations (4.10.12) follow readily by adding and subtracting eqs. (4.10.11).
+
+As we learned in sect. 4.9, for each energy eigenvalue $w$, the energy eigenfunctions belonging to $w$ can be chosen so that
+$$
+\begin{equation*}
+\phi(x+c)=\exp \left( \pm i K_{k} c\right) \phi(x) \tag{4.10.13}
+\end{equation*}
+$$
+
+Then, $A_{n}, B_{n}$ are related to $A_{n-1}, B_{n-1}$ by
+$$
+\begin{equation*}
+A_{n}=\exp \left( \pm i K_{k} c\right) A_{n-1}, \quad B_{n}=\exp \left( \pm i K_{k} c\right) B_{n-1} \tag{4.10.14}
+\end{equation*}
+$$
+
+Proof. Let $n$ be an integer and let $(n-1) c-b<x<(n-1) c$. Then, $n c-b<$ $x+c<n c$. From (4.10.9a) and (4.10.13), it follows that
+$$
+\begin{align*}
+& A_{n} \exp \left(i k^{\prime}(x+c-n c)\right)+B_{n} \exp \left(-i k^{\prime}(x+c-n c)\right)  \tag{4.10.15}\\
+& \quad=\exp \left( \pm i K_{k} c\right)\left[A_{n-1} \exp \left(i k^{\prime}(x-(n-1) c)\right)+B_{n-1} \exp \left(-i k^{\prime}(x-(n-1) c)\right)\right]
+\end{align*}
+$$
+
+This relation implies (4.10.14) immediately.
+
+Inserting (4.10.14) into the (4.10.12), we get
+$$
+\begin{align*}
+& \left\{\left[\cos (k a)+\frac{i}{2}\left(\frac{k}{k^{\prime}}+\frac{k^{\prime}}{k}\right) \sin (k a)\right] \exp \left(i k^{\prime} b\right)-\exp \left( \pm i K_{k} c\right)\right\} A_{n-1}  \tag{4.10.16a}\\
+& +\frac{i}{2}\left(\frac{k}{k^{\prime}}-\frac{k^{\prime}}{k}\right) \sin (k a) \exp \left(i k^{\prime} b\right) B_{n-1}=0, \\
+& -\frac{i}{2}\left(\frac{k}{k^{\prime}}-\frac{k^{\prime}}{k}\right) \sin (k a) \exp \left(-i k^{\prime} b\right) A_{n-1}  \tag{4.10.16b}\\
+& +\left\{\left[\cos (k a)-\frac{i}{2}\left(\frac{k}{k^{\prime}}+\frac{k^{\prime}}{k}\right) \sin (k a)\right] \exp \left(-i k^{\prime} b\right)-\exp \left( \pm i K_{k} c\right)\right\} B_{n-1}=0 .
+\end{align*}
+$$
+
+This is a linear system in the unknown $A_{n-1}, B_{n-1}$. In order it to have non trivial solutions, the determinant of its coefficient matrix must vanish. This leads to the equation
+$$
+\begin{equation*}
+\cos \left(K_{k} c\right)=\cos (k a) \cos \left(k^{\prime} b\right)-\frac{1}{2}\left(\frac{k}{k^{\prime}}+\frac{k^{\prime}}{k}\right) \sin (k a) \sin \left(k^{\prime} b\right) \tag{4.10.17}
+\end{equation*}
+$$
+
+Proof. Imposing the vanishing of the determinant of the coefficient matrix of the linear system (4.10.16) yields the condition
+$$
+\begin{align*}
+0=\{ & {\left.\left[\cos (k a)+\frac{i}{2}\left(\frac{k}{k^{\prime}}+\frac{k^{\prime}}{k}\right) \sin (k a)\right] \exp \left(i k^{\prime} b\right)-\exp \left( \pm i K_{k} c\right)\right\} }  \tag{4.10.18}\\
+& \times\left\{\left[\cos (k a)-\frac{i}{2}\left(\frac{k}{k^{\prime}}+\frac{k^{\prime}}{k}\right) \sin (k a)\right] \exp \left(-i k^{\prime} b\right)-\exp \left( \pm i K_{k} c\right)\right\} \\
+& \quad-\frac{1}{4}\left(\frac{k}{k^{\prime}}-\frac{k^{\prime}}{k}\right)^{2} \sin ^{2}(k a) \\
+& \exp \left( \pm 2 i K_{k} c\right)-2\left[\cos (k a) \cos \left(k^{\prime} b\right)-\frac{1}{2}\left(\frac{k}{k^{\prime}}+\frac{k^{\prime}}{k}\right) \sin (k a) \sin \left(k^{\prime} b\right)\right] \exp \left( \pm i K_{k} c\right)
+\end{align*}
+$$
+\end{document}
+
