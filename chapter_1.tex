@@ -809,7 +809,7 @@ Statistical mechanics is based on an abstract model of ideal gas, construed as a
 
 An ensemble is a collection of a large number of systems, as shown in fig. 1.9.1. The systems can be of different types labelled by $\tau$. The systems of the same type are identical but distinguishable: they have the same physical properties but a distinct individuality, much as identical twins do. (for example in a system with two identical twins and two different job the conifuration twin A job C and twin B job D is different to twin B job C twin A job D) The number $N_{\tau}$ of systems of type $\tau$ is fixed: the systems can be neither created nor destroyed nor exchanged with the rest of the universe, this systems are called canonical systems, the gran canonical ones can exchange also matter (non sicuro sia gran canonico).
 
-The states of the systems of type $\tau$ form a discrete set labelled by one or more indices denoted collectively by $s^{2}$ (Boltzmann believed that all in nature has quantized value). When a system of type $\tau$ is in the state $s$, it has an energy $e_{\tau s}$. The value of $e_{\tau s}$ depends on the external conditions $a_{x}$ on the systems, such as the volume available, applied force fields, etc.
+The states of the systems of type $\tau$ form a discrete set labelled by one or more indices denoted collectively by $s$ (Boltzmann believed that all in nature has quantized value). When a system of type $\tau$ is in the state $s$, it has an energy $e_{\tau s}$. The value of $e_{\tau s}$ depends on the external conditions $a_{x}$ on the systems, such as the volume available, applied force fields, etc.
 
 Further, the ensemble is assumed to be in equilibrium. So, the amount of energy exchanged at any time by each system is small compared to the energy owned by the system. A mechanical state of the ensemble is specified by the states of the sum total of its constituent systems. A configuration $\underline{n}$ of the ensemble is a statistical property recording the numbers $n_{\tau s}$ of systems of each type $\tau$ in each state $s$. The configuration numbers $n_{\tau s}$ cannot be arbitrary. Indeed, since each system is always in one and only one state, one must have
  
@@ -835,11 +835,8 @@ The basic problem of ensemble theory can be stated as follows: to determine the 
 ${ }^{2}$ In classical statistical mechanics, the set of states is continuous and is discretized here to make certain quantities well-defined. At the end, continuity will be restored. In quantum statistical mechanics, the set of state is instead truly discrete.
 }
 
-At equilibrium, all the mechanical states of the ensemble compatible with an energy value $U^{m}$ have the same probability to occur.
-
-Consequently,
-
-The probability of a configuration $\underline{n}$ of the ensemble compatible with $U^{m}$ to come about is proportional to the number $\Gamma(\underline{n})$ of mechanical states which determine that configuration.
+\textbf{At equilibrium, all the mechanical states of the ensemble compatible with an energy value $U^{m}$ have the same probability to occur}. Consequently,
+\textbf{The probability of a configuration $\underline{n}$ of the ensemble compatible with $U^{m}$ to come about is proportional to the number $\Gamma(\underline{n})$ of mechanical states which determine that configuration.}
 
 From here, it is possible to show that there is a most probable configuration $\underline{\underline{n}}$ of the ensemble and compute it. In fact, $\underline{\bar{n}}$ is the configuration that maximizes $\Gamma(\underline{n})$ or, what is the same, the Boltzmann entropy
 
@@ -869,14 +866,14 @@ Is now necessary to introduce some hypotheses supported by physical reasoning an
 \bar{U}^{m}=U \tag{1.9.25}
 \end{equation*}
 
-Assumed as selfevident because no other form of energy not appear to be present, this because if $\bar{U}^{m}$ were different from $U$, the difference $\bar{U}^{m}-U$ would be a non mechanical form of energy explainable only through a more complicated and less predictive theory.
+Assumed as selfevident because no other form of energy appear to be present, this because if $\bar{U}^{m}$ were different from $U$, the difference $\bar{U}^{m}-U$ would be a non mechanical form of energy explainable only through a more complicated and less predictive theory.
 
 It is known from standard thermodynamics that the internal energy $U$ and
 the external conditions $a_{x}$ constitute a set of thermodynamical coordinates: their assignment determines the thermodynamical state of the system. By (1.9.25), therefore, any thermodynamical state function can be expressed as a function of $\bar{U}^{m}$ and $a_{x}$ and any such function defines a thermodynamical state function.
 
 The quantity $\beta$ is determined by (1.9.2) via (1.9.4) as a function of $\bar{U}^{m}$ and the $a_{x}$. Thus, $\beta$ is a thermodynamical state function.
 
-The configuration $\underline{n}$ is determined by $\bar{U}^{m}$ and the $a_{x}$. Thus any quantity that is a function of $\underline{\bar{n}}$ is also a function of of $\bar{U}^{m}$ and the $a_{x}$ and, so, a thermodynamical state function.
+The configuration $\underline{n}$ is determined by $\bar{U}^{m}$ and the $a_{x}$. Thus any quantity that is a function of $\underline{\bar{n}}$ is also a function of $\bar{U}^{m}$ and the $a_{x}$ and, so, a thermodynamical state function.
 
 By the 1st law of thermodynamics, in an infinitesimal transformation of the ensemble's thermodynamical state, the variation $d U$ of the internal energy $U$ is
 
@@ -966,7 +963,7 @@ where $k_{B}$ is a constant with the dimensions of energy/temperature, called Bo
 k_{B}=1.3806488(13) \times 10^{-16} \operatorname{erg}^{\circ} \mathrm{K}^{-1} \tag{1.9.39}
 \end{equation*}
 
-($1 erg= 1 10^-7J$)
+($1 erg= 10^-7J$)
 The thermodynamical free energy (of helmholtz) of the ensemble is (used only for technical reason for simplify the results)
 
 \begin{equation*}
@@ -1015,7 +1012,7 @@ P & =-\left(\frac{\partial F}{\partial V}\right)_{T} \tag{1.9.50}
 
 In this section, we shall illustrate a few simple applications of the theoretical framework of statistical mechanics expounded in sect. 1.9
 
-Consider a chemically pure (so the $\tau$ index doesn't appear) ideal gas of pointlike molecules. Since they are of a single chemical specie, the molecules are identical. Since the gas is ideal, the molecules are weakly interacting and, so, almost free. The dynamical state of a molecule is specified by its position $\boldsymbol{q}$ and momentum $\boldsymbol{p}$, that is by its phase. The energy of a molecule in such a state reduces to its kinetic energy,
+Consider a chemically pure (so the $\tau$ index doesn't appear, identical molecules) ideal (he molecules are weakly interacting) gas of pointlike molecules. The dynamical state of a molecule is specified by its position $\boldsymbol{q}$ and momentum $\boldsymbol{p}$, that is by its phase. The energy of a molecule in such a state reduces to its kinetic energy,
 
 \begin{equation*}
 e(\boldsymbol{p})=\frac{\boldsymbol{p}^{2}}{2 m} \tag{1.10.1}
@@ -1023,7 +1020,7 @@ e(\boldsymbol{p})=\frac{\boldsymbol{p}^{2}}{2 m} \tag{1.10.1}
 
 where $m$ is the molecular mass.
 
-The application of the formal methods of statistical mechanics to the study of the gas begins with the calculation of its partition function $Z$. By (1.9.47), on account of (1.10.1), this is given by
+The application of the formal methods of statistical mechanics to the study of the gas begins with the calculation of its partition function $Z$. By (1.9.47), on account of (1.10.1), this is given by (passing from discrete to continue quantities because of the huge number of molecules)
 
 \begin{equation*}
 Z=\int d^{3} \boldsymbol{q} \int d^{3} \boldsymbol{p} \exp \left(-\frac{\boldsymbol{p}^{2}}{2 m k_{B} T}\right) \tag{1.10.2}
@@ -1150,8 +1147,7 @@ $Z$ can be computed easily,
 Z=\frac{2 \pi k_{B} T}{\omega} \tag{1.10.19}
 \end{equation*}
  
-
-Proof. Both the $q$ and the $p$ integrals are Gaussian and can be computed using the formula (1.10.4) yielding the factors $\left(2 \pi m k_{B} T\right)^{1 / 2}$ and $\left(2 \pi k_{B} T / m \omega^{2}\right)^{1 / 2}$. (1.10.19) follows.
+Both the $q$ and the $p$ integrals are Gaussian and can be computed using the formula (1.10.4).
 
 By (1.9.4), taking (1.10.17), (1.10.19) into account, the fraction of oscillators whose coordinates and momenta lie in the small intervals $d q, d p$ around $q, p$ is
  
